@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exclusif flux</title>
+    <title>Exclusif Flux</title>
     <style>
     /* Importation de la police Spicy Rice */
     @import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
@@ -208,17 +208,35 @@
     .paypal-button:focus {
         outline: none;
     }
+
+
+        .snapchatButton {
+    background-color: #e83e8c; /* Couleur de fond */
+    color: #fff; /* Couleur du texte */
+    border: none; /* Pas de bordure */
+    padding: 10px 20px; /* Rembourrage autour du texte */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Curseur pointer au survol */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition fluide */
+    margin-top: 10px; /* Marge en haut */
+}
+
+.snapchatButton:hover {
+    background-color: #d6336c; /* Changement de couleur au survol */
+    transform: scale(1.1); /* Légère augmentation de taille */
+}
         </style>
 </head>
 <body>
-    <header>
+    
+<header>
         <h1>OLDEST Contenu Exclusif !</h1>
         <div class="button-group">
-            <button class="fluxButton" onclick="redirectToFlux();" title="Voir le flux">Flux</button>
-            <button class="emptyButton" title="Bouton vierge">Bouton vierge</button>
-        </div>
-    </header>
-
+            <button class="fluxButton" onclick="redirectToFlux(this);" title="Voir le flux" data-url="https://lucious-lion04.github.io/flux/">Flux</button>
+            <button class="emptyButton snapchatButton" title="CompteSnapchat #" onclick="window.location.href='https://www.snapchat.com/add/lucious-lion04?share_id=9j7Aqz5BzCA&locale=fr-FR'">
+  CompteSnapchat #
+            </button>
+</header>
     <div class="main-content">
         <div class="video video-godzilla">
             <div class="video-frame">
@@ -383,6 +401,12 @@ document.querySelectorAll('.video').forEach((video, index) => {
     // Charger la première vidéo par défaut
     loadVideo(section, 0);
 });
+</script>
+<script>
+   function redirectToFlux(button) {
+    const url = button.getAttribute('data-url');
+    window.open(url, '_blank'); // Ouvre l'URL dans une nouvelle fenêtre/tab
+   }
 </script>
 
 </body>
