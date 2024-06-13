@@ -1,124 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap" rel="stylesheet">
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navigation entre les vidéos</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
+         
+/* Importation de la police Spicy Rice */
+@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
 
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-        }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: #fff;
+}
 
-        .main-content {
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
+header {
+    background-color: #1e1e1e;
+    color: #fff;
+    padding: 20px 40px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
 
-        .video {
-            margin: 20px;
-            padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 300px;
-            text-align: center;
-        }
+header h1 {
+    font-size: 3em;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #00ffcc, #3333ff); /* Couleur modifiée */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 2s linear infinite;
+    font-family: 'Spicy Rice', serif;
+}
 
-        .video h2 {
-            margin-bottom: 10px;
-            font-size: 20px;
-        }
+@keyframes shine {
+    0% {
+        background-position: -500%;
+    }
+    100% {
+        background-position: 500%;
+    }
+}
 
-        .video p {
-            margin-bottom: 10px;
-        }
+.main-content {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-        .video iframe {
-            width: 100%;
-            height: 200px;
-            border: none;
-            border-radius: 5px;
-            margin-bottom: 10px;
-        }
+.video {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    background-color: #222;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
 
-        .episodeButton {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: background-color 0.3s ease;
-        }
+.video:hover {
+    transform: scale(1.05);
+}
 
-        .episodeButton:hover {
-            background-color: #0056b3;
-        }
+.video h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #00ffcc; /* Couleur modifiée */
+    font-family: 'Spicy Rice', serif; /* Police modifiée */
+}
 
-        /* Bouton retour stylisé */
-        .returnButton {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 10px;
-            border-radius: 50%;
-            cursor: pointer;
-            transition: background-color 0.3s ease, opacity 0.3s ease;
-            display: none; /* Initialement caché */
-        }
+.video p {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #ccc;
+    font-family: 'Spicy Rice', serif; /* Police modifiée */
+}
 
-        .returnButton:hover {
-            background-color: #0056b3;
-        }
+.video iframe {
+    width: 100%;
+    height: 200px;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
 
-        .returnButton.show {
-            display: block; /* Afficher lorsque la page est scrollée vers le haut */
-        }
-/* Bouton Flux */
-        .fluxButton {
-            background-color: #28a745;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-            transition: background-color 0.3s ease;
-        }
+.episodeButton {
+    background-color: #00cc99; /* Couleur modifiée */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
 
-        .fluxButton:hover {
-            background-color: #218838;
-        }
-        
+.episodeButton:hover {
+    background-color: #009977; /* Couleur modifiée */
+    transform: scale(1.1);
+}
+
+/* Bouton retour stylisé */
+.returnButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00cc99; /* Couleur modifiée */
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: none; /* Initialement caché */
+}
+
+.returnButton:hover {
+    background-color: #009977; /* Couleur modifiée */
+    transform: scale(1.1);
+}
+
+.returnButton.show {
+    display: block; /* Afficher lorsque la page est scrollée vers le haut */
+}
+
+/* Boutons Flux et vierge */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.fluxButton, .emptyButton {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.fluxButton:hover, .emptyButton:hover {
+    background-color: #218838;
+    transform: scale(1.1);
+    }
+    
+
     </style>
 </head>
 <body>
     <header>
-        <h1>OLDEST Contenu Exclusif !</h1>         <!-- Bouton Flux -->
-
-
-        <button class="fluxButton" onclick="redirectToFlux();" title="Voir le flux">Flux</button>
-
-<script>
-    // Fonction pour rediriger vers le flux
-    function redirectToFlux() {
-        window.location.href = 'https://lucious-lion04.github.io/flux/'; // Remplacez cette URL par l'URL de votre flux
-    }
-</script>
+        <h1>OLDEST Contenu Exclusif !</h1>
+        <div class="button-group">
+            <button class="fluxButton" onclick="redirectToFlux();" title="Voir le flux">Flux</button>
+            <button class="emptyButton" title="Bouton vierge">Bouton vierge</button>
+        </div>
     </header>
 
     <div class="main-content">
@@ -128,6 +179,7 @@
                 <iframe src="https://mega.nz/embed/5vckRYyK#DKEEA996g_FBkpktM-Ai4YpfFcyqFHPPuQC-5sBveFc" allowfullscreen></iframe>
             </div>
             <h2>Godzilla</h2>
+            <p>Regardez l'aventure épique de Godzilla.</p>
             <button class="episodeButton prevEpisodeButton">Épisode précédent</button>
             <button class="episodeButton nextEpisodeButton">Épisode suivant</button>
         </div>
@@ -135,6 +187,7 @@
         <div class="video video-kirikou">
             <div class="video-frame"></div>
             <h2>Kirikou</h2>
+            <p>Découvrez les aventures de Kirikou.</p>
             <button class="episodeButton prevEpisodeButton">Épisode précédent</button>
             <button class="episodeButton nextEpisodeButton">Épisode suivant</button>
         </div>
@@ -142,6 +195,7 @@
         <div class="video video-nouvelle-section">
             <div class="video-frame"></div>
             <h2>Nouvelle Section</h2>
+            <p>Explorez notre nouvelle section vidéo.</p>
             <button class="episodeButton prevEpisodeButton">Épisode précédent</button>
             <button class="episodeButton nextEpisodeButton">Épisode suivant</button>
         </div>
@@ -149,7 +203,6 @@
 
     <!-- Bouton de retour en haut de page -->
     <button class="returnButton" onclick="scrollToTop();" title="Retour en haut de page">&#9650;</button>
-
 
     <script>
         const videos = {
@@ -202,7 +255,6 @@
 
         // Fonction pour rediriger vers le flux
         function redirectToFlux() {
-            // Remplacez l'URL ci-dessous par l'URL de votre flux
             window.location.href = 'https://lucious-lion04.github.io/flux/';
         }
 
@@ -220,14 +272,18 @@
             });
 
             nextButton.addEventListener('click', () => {
-                const currentVideoIndex = videos[section].indexOf(video.querySelector('iframe').getAttribute('src'));
+                
+
+
+
+                    const currentVideoIndex = videos[section].indexOf(video.querySelector('iframe').getAttribute('src'));
                 const newIndex = (currentVideoIndex + 1) % videos[section].length;
                 loadVideo(section, newIndex);
             });
 
-            // Charger la première vidéo au chargement de la page
+            // Charger la première vidéo par défaut
             loadVideo(section, 0);
         });
     </script>
 </body>
-    </html>
+</html>
