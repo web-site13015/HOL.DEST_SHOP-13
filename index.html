@@ -1,167 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap" rel="stylesheet">
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation entre les vidéos</title>
+    <title>Exclusif flux</title>
     <style>
-         
-/* Importation de la police Spicy Rice */
-@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+    /* Importation de la police Spicy Rice */
+    @import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #121212;
-    color: #fff;
-}
-
-header {
-    background-color: #1e1e1e;
-    color: #fff;
-    padding: 20px 40px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-header h1 {
-    font-size: 3em;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-weight: 700;
-    background: linear-gradient(90deg, #00ffcc, #3333ff); /* Couleur modifiée */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shine 2s linear infinite;
-    font-family: 'Spicy Rice', serif;
-}
-
-@keyframes shine {
-    0% {
-        background-position: -500%;
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #121212;
+        color: #fff;
     }
-    100% {
-        background-position: 500%;
+
+    header {
+        background-color: #1e1e1e;
+        color: #fff;
+        padding: 20px 40px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
     }
-}
 
-.main-content {
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.video {
-    margin: 20px;
-    padding: 20px;
-    border: 1px solid #444;
-    border-radius: 10px;
-    width: 300px;
-    text-align: center;
-    background-color: #222;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease;
-}
-
-.video:hover {
-    transform: scale(1.05);
-}
-
-.video h2 {
-    margin-bottom: 10px;
-    font-size: 24px;
-    color: #00ffcc; /* Couleur modifiée */
-    font-family: 'Spicy Rice', serif; /* Police modifiée */
-}
-
-.video p {
-    margin-bottom: 10px;
-    font-size: 16px;
-    color: #ccc;
-    font-family: 'Spicy Rice', serif; /* Police modifiée */
-}
-
-.video iframe {
-    width: 100%;
-    height: 200px;
-    border: none;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.episodeButton {
-    background-color: #00cc99; /* Couleur modifiée */
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.episodeButton:hover {
-    background-color: #009977; /* Couleur modifiée */
-    transform: scale(1.1);
-}
-
-/* Bouton retour stylisé */
-.returnButton {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #00cc99; /* Couleur modifiée */
-    color: #fff;
-    border: none;
-    padding: 15px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    display: none; /* Initialement caché */
-}
-
-.returnButton:hover {
-    background-color: #009977; /* Couleur modifiée */
-    transform: scale(1.1);
-}
-
-.returnButton.show {
-    display: block; /* Afficher lorsque la page est scrollée vers le haut */
-}
-
-/* Boutons Flux et vierge */
-.button-group {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.fluxButton, .emptyButton {
-    background-color: #28a745;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.fluxButton:hover, .emptyButton:hover {
-    background-color: #218838;
-    transform: scale(1.1);
+    header h1 {
+        font-size: 3em;
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-weight: 700;
+        background: linear-gradient(90deg, #00ffcc, #3333ff); /* Couleur modifiée */
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shine 2s linear infinite;
+        font-family: 'Spicy Rice', serif;
     }
-    
 
-    </style>
+    @keyframes shine {
+        0% {
+            background-position: -500%;
+        }
+        100% {
+            background-position: 500%;
+        }
+    }
+
+    .main-content {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .video {
+        margin: 20px;
+        padding: 20px;
+        border: 1px solid #444;
+        border-radius: 10px;
+        width: 300px;
+        text-align: center;
+        background-color: #222;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease;
+    }
+
+    .video:hover {
+        transform: scale(1.05);
+    }
+
+    .video h2 {
+        margin-bottom: 10px;
+        font-size: 24px;
+        color: #00ffcc; /* Couleur modifiée */
+        font-family: 'Spicy Rice', serif; /* Police modifiée */
+    }
+
+    .video p {
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: #ccc;
+        font-family: 'Spicy Rice', serif; /* Police modifiée */
+    }
+
+    .video iframe {
+        width: 100%;
+        height: 200px;
+        border: none;
+        border-radius: 10px;
+        margin-bottom: 10px;
+    }
+
+    .episodeButton {
+        background-color: #00cc99; /* Couleur modifiée */
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-top: 10px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .episodeButton:hover {
+        background-color: #009977; /* Couleur modifiée */
+        transform: scale(1.1);
+    }
+
+    /* Bouton retour stylisé */
+    .returnButton {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #00cc99; /* Couleur modifiée */
+        color: #fff;
+        border: none;
+        padding: 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        display: none; /* Initialement caché */
+    }
+
+    .returnButton:hover {
+        background-color: #009977; /* Couleur modifiée */
+        transform: scale(1.1);
+    }
+
+    .returnButton.show {
+        display: block; /* Afficher lorsque la page est scrollée vers le haut */
+    }
+
+    /* Boutons Flux et vierge */
+    .button-group {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .fluxButton, .emptyButton {
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .fluxButton:hover, .emptyButton:hover {
+        background-color: #218838;
+        transform: scale(1.1);
+    }
+
+    /* Style pour la boîte de paiement */
+    .payment-box {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #333;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        display: none;
+    }
+
+    .payment-box h2 {
+        color: #fff;
+        margin-bottom: 10px;
+    }
+
+    .payment-box p {
+        color: #ccc;
+        margin-bottom: 20px;
+    }
+
+    .close-payment {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .paypal-button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        display: block;
+        margin: 0 auto;
+        text-decoration: none;
+    }
+
+    .paypal-button:hover {
+        background-color: #0056b3;
+        transform: scale(1.1);
+    }
+
+    .paypal-button:focus {
+        outline: none;
+    }
+        </style>
 </head>
 <body>
     <header>
@@ -175,13 +222,12 @@ header h1 {
     <div class="main-content">
         <div class="video video-godzilla">
             <div class="video-frame">
-                <!-- URL de la vidéo de Godzilla -->
                 <iframe src="https://mega.nz/embed/5vckRYyK#DKEEA996g_FBkpktM-Ai4YpfFcyqFHPPuQC-5sBveFc" allowfullscreen></iframe>
             </div>
             <h2>Godzilla</h2>
             <p>Regardez l'aventure épique de Godzilla.</p>
             <button class="episodeButton prevEpisodeButton">Épisode précédent</button>
-            <button class="episodeButton nextEpisodeButton">Épisode suivant</button>
+            <button class="episodeButton nextEpisodeButton" onclick="promptForPayment('video-godzilla');">Épisode suivant</button>
         </div>
 
         <div class="video video-kirikou">
@@ -189,7 +235,7 @@ header h1 {
             <h2>Kirikou</h2>
             <p>Découvrez les aventures de Kirikou.</p>
             <button class="episodeButton prevEpisodeButton">Épisode précédent</button>
-            <button class="episodeButton nextEpisodeButton">Épisode suivant</button>
+            <button class="episodeButton nextEpisodeButton" onclick="promptForPayment('video-kirikou');">Épisode suivant</button>
         </div>
 
         <div class="video video-nouvelle-section">
@@ -197,93 +243,147 @@ header h1 {
             <h2>Nouvelle Section</h2>
             <p>Explorez notre nouvelle section vidéo.</p>
             <button class="episodeButton prevEpisodeButton">Épisode précédent</button>
-            <button class="episodeButton nextEpisodeButton">Épisode suivant</button>
+            <button class="episodeButton nextEpisodeButton" onclick="promptForPayment('video-nouvelle-section');">Épisode suivant</button>
         </div>
     </div>
 
     <!-- Bouton de retour en haut de page -->
     <button class="returnButton" onclick="scrollToTop();" title="Retour en haut de page">&#9650;</button>
 
-    <script>
-        const videos = {
-            "video-godzilla": [
-                "https://mega.nz/embed/CRVCjTjC#EkxvXRV0l4wHUPiUfD43wp5einV9dEaOvZGmXYIB6uo",
-                "https://mega.nz/embed/UjMznIYB#T1zlXpV_GpHS7ryEyEicn9hGHXp8YHgpA6G3cfJbbyY",
-                "https://mega.nz/embed/NncAHSDT#4d6GNuwvcaM94Nm2BB1FitQg3S_zOkIHptIImptLXMY"
-            ],
-            "video-kirikou": [
-                "https://mega.nz/embed/UjMznIYB#T1zlXpV_GpHS7ryEyEicn9hGHXp8YHgpA6G3cfJbbyY",
-                "https://mega.nz/embed/UjMznIYB#T1zlXpV_GpHS7ryEyEicn9hGHXp8YHgpA6G3cfJbbyY",
-                "https://mega.nz/embed/aU8XxaTT#WAtEXi_odyk89h_IuJEWxVzpKa0MQHvh0OG1EtEQYRA"
-            ],
-            "video-nouvelle-section": [
-                "https://mega.nz/embed/UjMznIYB#T1zlXpV_GpHS7ryEyEicn9hGHXp8YHgpA6G3cfJbbyY",
-                "https://mega.nz/embed/NncAHSDT#4d6GNuwvcaM94Nm2BB1FitQg3S_zOkIHptIImptLXMY",
-                "https://mega.nz/embed/CRVCjTjC#EkxvXRV0l4wHUPiUfD43wp5einV9dEaOvZGmXYIB6uo"
-            ]
-        };
+    <!-- Boîte de paiement -->
+    <div class="payment-box" id="paymentBox">
+        <span class="close-payment" onclick="closePaymentBox();">&times;</span>
+        <h2>Paiement Requis</h2>
+        <p>Pour accéder à cette vidéo, veuillez effectuer le paiement requis via PayPal.</p>
+        <button class="paypal-button" onclick="processPayment();">Payer 10 EUR</button>
+    </div>
 
-        function loadVideo(section, index) {
-            const videoFrame = document.querySelector(`.${section} .video-frame`);
-            const videosInSection = videos[section];
-            videoFrame.style.transform = 'scale(0.9)';
-            setTimeout(() => {
-                videoFrame.innerHTML = `
-                    <iframe src="${videosInSection[index]}" allowfullscreen></iframe>
-                `;
-                videoFrame.style.transform = 'scale(1)';
-            }, 300);
-        }
+<script>
+   // Définition des vidéos avec leurs liens
+const videos = {
+    "video-godzilla": [
+        "https://mega.nz/embed/5vckRYyK#DKEEA996g_FBkpktM-Ai4YpfFcyqFHPPuQC-5sBveFc",
+        "https://mega.nz/embed/CRVCjTjC#EkxvXRV0l4wHUPiUfD43wp5einV9dEaOvZGmXYIB6uo",
+        "https://mega.nz/embed/UjMznIYB#T1zlXpV_GpHS7ryEyEicn9hGHXp8YHgpA6G3cfJbbyY"
+    ],
+    "video-kirikou": [
+        "https://mega.nz/embed/UjMznIYB#T1zlXpV_GpHS7ryEyEicn9hGHXp8YHgpA6G3cfJbbyY",
+        "https://mega.nz/embed/UjMznIYB#T1zlXpV_GpHS7ryEyEicn9hGHXp8YHgpA6G3cfJbbyY",
+        "https://mega.nz/embed/aU8XxaTT#WAtEXi_odyk89h_IuJEWxVzpKa0MQHvh0OG1EtEQYRA"
+    ],
+    "video-nouvelle-section": [
+        "https://mega.nz/embed/UjMznIYB#T1zlXpV_GpHS7ryEyEicn9hGHXp8YHgpA6G3cfJbbyY",
+        "https://mega.nz/embed/NncAHSDT#4d6GNuwvcaM94Nm2BB1FitQg3S_zOkIHptIImptLXMY",
+        "https://mega.nz/embed/CRVCjTjC#EkxvXRV0l4wHUPiUfD43wp5einV9dEaOvZGmXYIB6uo"
+    ]
+};
 
-        // Écouteur pour le bouton de retour en haut de page
-        window.addEventListener('scroll', () => {
-            const returnButton = document.querySelector('.returnButton');
-            if (window.scrollY > 100) {
-                returnButton.classList.add('show');
-            } else {
-                returnButton.classList.remove('show');
-            }
-        });
+// Variable pour suivre l'état du formulaire de paiement
+let paymentBoxClosedWithoutPayment = false;
 
-        // Fonction pour remonter en haut de page
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
+// Variable pour stocker l'état d'activation du bouton suivant
+let nextButtonEnabled = true;
 
-        // Fonction pour rediriger vers le flux
-        function redirectToFlux() {
-            window.location.href = 'https://lucious-lion04.github.io/flux/';
-        }
+// Fonction pour charger une vidéo dans une section donnée à un index spécifique
+function loadVideo(section, index) {
+    const videoFrame = document.querySelector(`.${section} .video-frame`);
+    videoFrame.style.transform = 'scale(0.9)';
+    setTimeout(() => {
+        videoFrame.innerHTML = `
+            <iframe src="${videos[section][index]}" allowfullscreen></iframe>
+        `;
+        videoFrame.style.transform = 'scale(1)';
+    }, 300);
+}
 
-        // Pour chaque section de vidéo
-        document.querySelectorAll('.video').forEach((video, index) => {
-            const section = video.classList[1]; // Obtenez la classe spécifique de la section
-            const prevButton = video.querySelector('.prevEpisodeButton');
-            const nextButton = video.querySelector('.nextEpisodeButton');
+// Fonction pour afficher la boîte de paiement et couvrir l'écran
+function openPaymentBox() {
+    const paymentBox = document.getElementById('paymentBox');
+    paymentBox.style.display = 'block';
+    disableNextButton();
 
-            // Ajoutez les écouteurs d'événements pour les boutons de navigation
-            prevButton.addEventListener('click', () => {
-                const currentVideoIndex = videos[section].indexOf(video.querySelector('iframe').getAttribute('src'));
-                const newIndex = (currentVideoIndex - 1 + videos[section].length) % videos[section].length;
-                loadVideo(section, newIndex);
-            });
+    // Ajouter un élément flou pour couvrir l'écran
+    const blurOverlay = document.createElement('div');
+    blurOverlay.classList.add('blur-overlay');
+    document.body.appendChild(blurOverlay);
+}
 
-            nextButton.addEventListener('click', () => {
-                
+// Fonction pour fermer la boîte de paiement et supprimer l'élément flou
+function closePaymentBox() {
+    const paymentBox = document.getElementById('paymentBox');
+    paymentBox.style.display = 'none';
+    enableNextButton();
 
+    // Supprimer l'élément flou
+    const blurOverlay = document.querySelector('.blur-overlay');
+    if (blurOverlay) {
+        document.body.removeChild(blurOverlay);
+    }
+}
 
+// Fonction pour désactiver le bouton Épisode suivant
+function disableNextButton() {
+    const nextButtons = document.querySelectorAll('.nextEpisodeButton');
+    nextButtons.forEach(button => {
+        button.disabled = true;
+        button.classList.add('disabled');
+    });
+    nextButtonEnabled = false;
+}
 
-                    const currentVideoIndex = videos[section].indexOf(video.querySelector('iframe').getAttribute('src'));
-                const newIndex = (currentVideoIndex + 1) % videos[section].length;
-                loadVideo(section, newIndex);
-            });
+// Fonction pour réactiver le bouton Épisode suivant
+function enableNextButton() {
+    const nextButtons = document.querySelectorAll('.nextEpisodeButton');
+    nextButtons.forEach(button => {
+        button.disabled = false;
+        button.classList.remove('disabled');
+    });
+    nextButtonEnabled = true;
+}
 
-            // Charger la première vidéo par défaut
-            loadVideo(section, 0);
-        });
-    </script>
+// Fonction pour traiter le paiement via PayPal (simulé)
+function processPayment() {
+    alert('Redirection vers PayPal pour effectuer le paiement.');
+    setTimeout(() => {
+        closePaymentBox(); // Fermer la boîte de paiement après le paiement simulé
+        grantAccessToAllVideos(); // Accorder l'accès à toutes les vidéos après paiement
+    }, 1000); // Simuler un délai de traitement
+}
+
+// Fonction pour accorder l'accès à toutes les vidéos après le paiement
+function grantAccessToAllVideos() {
+    // Ici, vous pouvez ajouter la logique pour permettre l'accès à toutes les vidéos
+    alert('Accès accordé à toutes les vidéos !');
+    // Par exemple, charger toutes les vidéos sans restriction
+    Object.keys(videos).forEach(section => loadVideo(section, 0));
+}
+
+// Fonction pour demander le paiement avant de charger la vidéo suivante
+function promptForPayment(section) {
+    openPaymentBox(); // Afficher la boîte de paiement
+}
+
+// Pour chaque section de vidéo
+document.querySelectorAll('.video').forEach((video, index) => {
+    const section = video.classList[1]; // Obtenez la classe spécifique de la section
+    const prevButton = video.querySelector('.prevEpisodeButton');
+    const nextButton = video.querySelector('.nextEpisodeButton');
+
+    // Ajoutez les écouteurs d'événements pour les boutons de navigation
+    prevButton.addEventListener('click', () => {
+        const currentVideoIndex = videos[section].indexOf(video.querySelector('iframe').getAttribute('src'));
+        const newIndex = (currentVideoIndex - 1 + videos[section].length) % videos[section].length;
+        loadVideo(section, newIndex);
+    });
+
+    nextButton.addEventListener('click', () => {
+        promptForPayment(section); // Appeler la fonction pour demander le paiement avant de charger la vidéo suivante
+    });
+
+    // Charger la première vidéo par défaut
+    loadVideo(section, 0);
+});
+</script>
+
 </body>
-</html>
+    </html>
