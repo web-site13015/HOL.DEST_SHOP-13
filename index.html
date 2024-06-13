@@ -1,810 +1,233 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exclusif OLDEST</title>
-    <link rel="stylesheet" href="styles.css">
-   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5074406904097551"
-     crossorigin="anonymous"></script>
+    <title>Navigation entre les vidéos</title>
     <style>
-        /* Vos styles CSS */
-body {
-        margin: 0;
-        font-family: 'Arial', sans-serif;
-        background-color: #121212;
-        color: #ffffff;
-        overflow-x: hidden;
-      }
-
-      .container {
-        width: 90%;
-        margin: 0 auto;
-        padding: 5px;
-        animation: fadeIn 2s ease-in;
-      }
-
-      header {
-        text-align: center;
-        padding: 20px 0;
-        border-bottom: 2px solid #444;
-        animation: slideInFromLeft 1.5s ease-out;
-      }
-
-      header h1 {
-        font-size: 3em;
-        color: #00ffcc;
-        text-transform: uppercase;
-        position: relative;
-      }
-
-      header h1 span {
-        color: #ff00ff;
-        position: relative;
-        display: inline-block;
-      }
-
-      header h1 span::after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 3px;
-        background-color: #ff00ff;
-        bottom: -5px;
-        left: 0;
-        animation: underline 2s infinite;
-      }
-
-      @keyframes underline {
-        0% { width: 0; }
-        100% { width: 100%; }
-      }
-
-      .content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding-top: 20px;
-        animation: fadeIn 3s ease-in;
-      }
-
-      .item {
-        width: 100%;
-        max-width: 300px;
-        margin: 20px;
-        background-color: #1e1e1e;
-        padding: 10px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        transition: transform 0.3s, background-color 0.3s;
-        position: relative;
-        overflow: hidden;
-        animation: grow 1.5s ease-in-out;
-      }
-
-      .item video {
-        width: 100%;
-        height: auto;
-        border-radius: 2px;
-      }
-
-      .item:hover {
-        transform: scale(1.05);
-        background-color: #333;
-      }
-
-      .item img {
-        width: 100%;
-        border-radius: 10px;
-        transition: transform 0.5s ease;
-      }
-
-      .item:hover img {
-        transform: scale(1.1);
-      }
-
-      .description {
-        padding-top: 10px;
-        font-size: 1em;
-        animation: fadeInUp 2s ease-in-out;
-      }
-
-      .actions {
-        display: flex;
-        justify-content: space-between;
-        padding-top: 10px;
-      }
-
-      .actions button {
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        background-color: #00ffcc;
-        color: #121212;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
-
-      .actions button:hover {
-        background-color: #ff00ff;
-      }
-
-      .like-count {
-        padding: 10px 0;
-        color: #00ffcc;
-      }
-
-      .comments {
-        margin-top: 10px;
-        max-height: 150px; /* Fixe la hauteur maximale des commentaires */
-        overflow-y: auto; /* Ajoute un défilement vertical */
-      }
-
-      .comments .comment {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .comments input {
-        padding: 10px;
-        margin-top: 10px;
-        border: none;
-        border-radius: 5px;
-        width: 100%;
-        box-sizing: border-box;
-      }
-
-      @media (orientation: landscape) and (max-width: 767px) {
-        .item video {
-            width: auto; 
-            height: 80%;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-      }
 
-      @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-      }
-
-      @keyframes slideInFromLeft {
-        from { transform: translateX(-100%); }
-        to { transform: translateX(0); }
-      }
-
-      @keyframes grow {
-        from { transform: scale(0); }
-        to { transform: scale(1); }
-      }
-
-      @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
         }
-        to {
-            opacity: 1;
-            transform: translateY(0);
+
+        .main-content {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
         }
-      }
 
-      .form-section {
-        margin-top: 40px;
-        padding: 20px;
-        background-color: #1e1e1e;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        animation: fadeIn 2s ease-in;
-        display: none;
-      }
+        .video {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+            text-align: center;
+        }
 
-      .form-section h2 {
-        text-align: center;
-        color: #00ffcc;
-      }
+        .video h2 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
 
-      .form-section form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
+        .video p {
+            margin-bottom: 10px;
+        }
 
-      .form-section label {
-        margin-top: 10px;
-      }
+        .video iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
 
-      .form-section input[type="text"],
-      .form-section input[type="text"],
-      .form-section textarea {
-        width: 90%;
-        padding: 10px;
-        margin: 10px 0;
-        border: none;
-        border-radius: 5px;
-      }
+        .episodeButton {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
 
-      .form-section button {
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        background-color: #00ffcc;
-        color: #121212;
-        font-size: 1em;
-        cursor: pointer;
-        transition: background-color 0.3s;
-      }
+        .episodeButton:hover {
+            background-color: #0056b3;
+        }
 
-      .form-section button:hover {
-        background-color: #ff00ff;
-      }
+        /* Bouton retour stylisé */
+        .returnButton {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease, opacity 0.3s ease;
+            display: none; /* Initialement caché */
+        }
 
-      .toggle-button {
-        display: block;
-        margin: 20px auto;
-        padding: 10px 20px;
-        background-color: #00ffcc;
-        color: #121212;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-size: 1em;
-        text-align: center;
-        transition: background-color 0.3s;
-      }
+        .returnButton:hover {
+            background-color: #0056b3;
+        }
 
-      .toggle-button:hover {
-        background-color: #ff00ff;
-      }
+        .returnButton.show {
+            display: block; /* Afficher lorsque la page est scrollée vers le haut */
+        }
+/* Bouton Flux */
+        .fluxButton {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
 
-      .rating {
-        unicode-bidi: bidi-override;
-        direction: rtl;
-        font-size: 1.5em;
-      }
-
-      .rating > span {
-        display: inline-block;
-        cursor: pointer;
-        color: #ccc;
-      }
-
-      .rating > span:hover:before,
-      .rating > span:hover ~ span:before {
-        content: "\2605";
-        color: #ff00ff;
-      }
-
-      .pagination {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-      }
-
-      .pagination button {
-        padding: 10px 20px;
-        border: none;
-        border-radius: 5px;
-        background-color: #00ffcc;
-        color: #121212;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        margin: 0 5px;
-      }
-
-      .pagination button:disabled {
-        background-color: #444;
-        cursor: not-allowed;
-      }
-
-      .pagination button:hover:not(:disabled) {
-        background-color: #ff00ff;
-          }
-
-
-
-
-
-
-
-.item-row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.item {
-  margin-bottom: 20px; /* Ajoutez de l'espace entre les vidéos */
-}
-
-
-
-
-        /* Styles pour la bande noire */
-.bande-noire {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 99%; /* Prend toute la largeur du conteneur de l'iframe */
-    background-color: black; /* Couleur de fond noire */
-    color: white;
-    padding: 4px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 14px;
-    border-radius: 0 0 10px 10px; /* Coins arrondis uniquement en bas */
-}
-
-
-
-
-
-    .password-prompt-content {
-    position: relative;
-}
-
-.close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-}
+        .fluxButton:hover {
+            background-color: #218838;
+        }
+        
     </style>
 </head>
 <body>
-    
-    <div class="container">
-        <header>
-            <h1>Exclusif <span>OLDEST</span></h1>
-        </header>
-        <section class="content">
-            <div class="item-row">
-                <div class="item">
-                    <iframe src="https://mega.nz/embed/eI1TQCpD#YqvYrfUQBbVi6hmdOo2xJKF1JPOm5tMypln9g7lk65o" width="297" height="360" allowfullscreen></iframe>
-                    <div class="bande-noire">
-            Godzilla x Kong : Le Nouvel Empire 
-                        <br />
-                        il y a 5 mois.
-</p>
-                    </div>
+    <header>
+        <h1>Bienvenue sur notre site !</h1>         <!-- Bouton Flux -->
 
-                    <p class="description">Description : Le tout-puissant Kong et le redoutable Godzilla unissent leurs forces contre une terrible menace encore secrète qui risque de les anéantir et qui met en danger la survie même de l’espèce humaine. GODZILLA X KONG : LE NOUVEL EMPIRE remonte à l’origine des deux titans et aux mystères de Skull Island, tout en révélant le combat mythique qui a contribué à façonner ces deux créatures hors du commun et lié leur sort à celui de l’homme pour toujours…
-</p>
-                    <div class="rating">
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                    </div>
-                    <div class="actions">
-                        <button class="like-button">Like</button>
-                        <span class="like-count">0 Likes</span>
-                        <button class="comment-button">Commenter</button>
-                    </div>
-                    <div class="comments">
-                        <div class="comment">
-                            <p>Aucun commentaire pour le moment</p>
-                            <input type="text" placeholder="Ajouter un commentaire...">
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <iframe src="https://mega.nz/embed/CRVCjTjC#EkxvXRV0l4wHUPiUfD43wp5einV9dEaOvZGmXYIB6uo" width="297" height="360" allowfullscreen></iframe>
-                    <div class="bande-noire">
-            <p>Atlas Shepherd
-ajouté récent il y a 5 jour.
-            </p>
-                    </div>
-                    <p class="description">Description : Brillante analyste de données, Atlas Shepherd est misanthrope et se méfie totalement de l’intelligence artificielle. Tandis qu’elle se lance dans une mission destinée à capturer un robot rebelle, elle comprend qu’elle a déjà eu affaire à cette mystérieuse machine par le passé. Alors que la mission ne se déroule pas comme prévu, il ne reste plus à Atlas qu’à faire enfin confiance à l’IA si elle veut sauver l’avenir de l’humanité...</p>
-                    <div class="rating">
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                    </div>
-                    <div class="actions">
-                        <button class="like-button">Like</button>
-                        <span class="like-count">0 Likes</span>
-                        <button class="comment-button">Commenter</button>
-                    </div>
-                    <div class="comments">
-                        <div class="comment">
-                            <p>Aucun commentaire pour le moment</p>
-                            <input type="text" placeholder="Ajouter un commentaire...">
-                        </div>
-                    </div>
-                </div>
+
+        <button class="fluxButton" onclick="redirectToFlux();" title="Voir le flux">Flux</button>
+
+<script>
+    // Fonction pour rediriger vers le flux
+    function redirectToFlux() {
+        window.location.href = 'https://lucious-lion04.github.io/flux/'; // Remplacez cette URL par l'URL de votre flux
+    }
+</script>
+    </header>
+
+    <div class="main-content">
+        <div class="video video-godzilla">
+            <div class="video-frame">
+                <!-- URL de la vidéo de Godzilla -->
+                <iframe src="https://mega.nz/embed/5vckRYyK#DKEEA996g_FBkpktM-Ai4YpfFcyqFHPPuQC-5sBveFc" allowfullscreen></iframe>
             </div>
-            <div class="item-row" style="display: none;">
-                <div class="item">
-                 <iframe src="https://mega.nz/embed/aU8XxaTT#WAtEXi_odyk89h_IuJEWxVzpKa0MQHvh0OG1EtEQYRA!1a" width="297" height="360" allowfullscreen></iframe>   
-
-
-
-                    
-                    <div class="bande-noire">
-            <p>Civil War</p>
-                    </div>
-                    <p class="description">Description : Interdit - 12 ans avec avertissement
-Une course effrénée à travers une Amérique fracturée qui, dans un futur proche, est plus que jamais sur le fil du rasoir.</p>
-                    <div class="rating">
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                    </div>
-                    <div class="actions">
-                        <button class="like-button">Like</button>
-                        <span class="like-count">0 Likes</span>
-                        <button class="comment-button">Commenter</button>
-                    </div>
-                    <div class="comments">
-                        <div class="comment">
-                            <p>Aucun commentaire pour le moment</p>
-                            <input type="text" placeholder="Ajouter un commentaire...">
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <iframe src="https://mega.nz/embed/eI1TQCpD#YqvYrfUQBbVi6hmdOo2xJKF1JPOm5tMypln9g7lk65o" width="297" height="360" allowfullscreen></iframe>
-                    <div class="bande-noire">
-            <p>Description de la vidéo ou autre contenu ici...</p>
-                    </div>
-                    <p class="description">Description de la vidéo 4</p>
-                    <div class="rating">
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                    </div>
-                    <div class="actions">
-                        <button class="like-button">Like</button>
-                        <span class="like-count">0 Likes</span>
-                        <button class="comment-button">Commenter</button>
-                    </div>
-                    <div class="comments">
-                        <div class="comment">
-                            <p>Aucun commentaire pour le moment</p>
-                            <input type="text" placeholder="Ajouter un commentaire...">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item-row" style="display: none;">
-                <div class="item">
-                    <iframe src="https://mega.nz/embed/eI1TQCpD#YqvYrfUQBbVi6hmdOo2xJKF1JPOm5tMypln9g7lk65o" width="297" height="360" allowfullscreen></iframe>
-                    <div class="bande-noire">
-            <p>Description de la vidéo ou autre contenu ici...</p>
-                    </div>
-                    <p class="description">Description de la vidéo 5</p>
-                    <div class="rating">
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                    </div>
-                    <div class="actions">
-                        <button class="like-button">Like</button>
-                        <span class="like-count">0 Likes</span>
-                        <button class="comment-button">Commenter</button>
-                    </div>
-                    <div class="comments">
-                        <div class="comment">
-                            <p>Aucun commentaire pour le moment</p>
-                            <input type="text" placeholder="Ajouter un commentaire...">
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <iframe src="https://mega.nz/embed/eI1TQCpD#YqvYrfUQBbVi6hmdOo2xJKF1JPOm5tMypln9g7lk65o" width="297" height="360" allowfullscreen></iframe>
-                    <div class="bande-noire">
-            <p>Description de la vidéo ou autre contenu ici...</p>
-                    </div>
-                    <p class="description">Description de la vidéo 6</p>
-                    <div class="rating">
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                        <span class="star">&#9733;</span>
-                    </div>
-                    <div class="actions">
-                        <button class="like-button">Like</button>
-                        <span class="like-count">0 Likes</span>
-                        <button class="comment-button">Commenter</button>
-                    </div>
-                    <div class="comments">
-                        <div class="comment">
-                            <p>Aucun commentaire pour le moment</p>
-                            <input type="text" placeholder="Ajouter un commentaire...">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="pagination">
-            <button class="prev-page">Précédent</button>
-            <span class="current-page">1</span>
-            <button class="next-page">Suivant</button>
+            <h2>Godzilla</h2>
+            <button class="episodeButton prevEpisodeButton">Épisode précédent</button>
+            <button class="episodeButton nextEpisodeButton">Épisode suivant</button>
         </div>
-        <button class="toggle-button">Partagez votre contenu</button>
-        <section class="form-section">
-            <h2>Partagez votre contenu</h2>
-            <form id="content-form">
-                <label for="video-url">URL de la vidéo :</label>
-                <input type="text" id="video-url" name="video-url" required>
-                <label for="description">Description :</label>
-                <textarea id="description" name="description" rows="4" required></textarea>
-                <button type="submit">Soumettre</button>
-            </form>
-        </section>
+
+        <div class="video video-kirikou">
+            <div class="video-frame"></div>
+            <h2>Kirikou</h2>
+            <button class="episodeButton prevEpisodeButton">Épisode précédent</button>
+            <button class="episodeButton nextEpisodeButton">Épisode suivant</button>
+        </div>
+
+        <div class="video video-nouvelle-section">
+            <div class="video-frame"></div>
+            <h2>Nouvelle Section</h2>
+            <button class="episodeButton prevEpisodeButton">Épisode précédent</button>
+            <button class="episodeButton nextEpisodeButton">Épisode suivant</button>
+        </div>
     </div>
 
+    <!-- Bouton de retour en haut de page -->
+    <button class="returnButton" onclick="scrollToTop();" title="Retour en haut de page">&#9650;</button>
+
+
     <script>
-        // Récupérez tous les éléments "item-row"
-        const itemRows = document.querySelectorAll('.item-row');
+        const videos = {
+            "video-godzilla": [
+                "https://mega.nz/embed/CRVCjTjC#EkxvXRV0l4wHUPiUfD43wp5einV9dEaOvZGmXYIB6uo",
+                "https://mega.nz/embed/UjMznIYB#T1zlXpV_GpHS7ryEyEicn9hGHXp8YHgpA6G3cfJbbyY",
+                "https://mega.nz/embed/NncAHSDT#4d6GNuwvcaM94Nm2BB1FitQg3S_zOkIHptIImptLXMY"
+            ],
+            "video-kirikou": [
+                "https://mega.nz/embed/UjMznIYB#T1zlXpV_GpHS7ryEyEicn9hGHXp8YHgpA6G3cfJbbyY",
+                "https://mega.nz/embed/UjMznIYB#T1zlXpV_GpHS7ryEyEicn9hGHXp8YHgpA6G3cfJbbyY",
+                "https://mega.nz/embed/aU8XxaTT#WAtEXi_odyk89h_IuJEWxVzpKa0MQHvh0OG1EtEQYRA"
+            ],
+            "video-nouvelle-section": [
+                "https://mega.nz/embed/UjMznIYB#T1zlXpV_GpHS7ryEyEicn9hGHXp8YHgpA6G3cfJbbyY",
+                "https://mega.nz/embed/NncAHSDT#4d6GNuwvcaM94Nm2BB1FitQg3S_zOkIHptIImptLXMY",
+                "https://mega.nz/embed/CRVCjTjC#EkxvXRV0l4wHUPiUfD43wp5einV9dEaOvZGmXYIB6uo"
+            ]
+        };
 
-        // Nombre d'éléments à afficher par page
-        const itemsPerPage = 1; // Nous affichons une ligne d'éléments par page
+        function loadVideo(section, index) {
+            const videoFrame = document.querySelector(`.${section} .video-frame`);
+            const videosInSection = videos[section];
+            videoFrame.style.transform = 'scale(0.9)';
+            setTimeout(() => {
+                videoFrame.innerHTML = `
+                    <iframe src="${videosInSection[index]}" allowfullscreen></iframe>
+                `;
+                videoFrame.style.transform = 'scale(1)';
+            }, 300);
+        }
 
-        // Fonction pour afficher une page spécifique
-        function showPage(pageNumber) {
-            // Masquer toutes les lignes d'éléments
-            itemRows.forEach(row => row.style.display = 'none');
-
-            // Afficher la ligne d'éléments correspondant à la page actuelle
-            const currentRow = itemRows[pageNumber - 1];
-            if (currentRow) {
-                currentRow.style.display = 'flex';
+        // Écouteur pour le bouton de retour en haut de page
+        window.addEventListener('scroll', () => {
+            const returnButton = document.querySelector('.returnButton');
+            if (window.scrollY > 100) {
+                returnButton.classList.add('show');
             } else {
-                // Si la ligne n'existe pas, créer une nouvelle ligne vide
-                const newRow = document.createElement('div');
-                newRow.classList.add('item-row');
-                const contentSection = document.querySelector('.content');
-                contentSection.appendChild(newRow);
-            }
-        }
-
-        // Gérer les clics sur les boutons de pagination
-        const prevButton = document.querySelector('.prev-page');
-        const nextButton = document.querySelector('.next-page');
-        const currentPageSpan = document.querySelector('.current-page');
-
-        let currentPage = 1;
-        const totalPages = itemRows.length;
-
-        prevButton.addEventListener('click', () => {
-            if (currentPage > 1) {
-                currentPage--;
-                showPage(currentPage);
-                currentPageSpan.textContent = currentPage;
+                returnButton.classList.remove('show');
             }
         });
 
-        nextButton.addEventListener('click', () => {
-            if (currentPage < totalPages) {
-                currentPage++;
-                showPage(currentPage);
-                currentPageSpan.textContent = currentPage;
-            }
-        });
-
-        // Afficher la première page au chargement
-        showPage(1);
-
-        // Votre structure de base
-        document.querySelector('.toggle-button').addEventListener('click', function() {
-            const formSection = document.querySelector('.form-section');
-            formSection.style.display = formSection.style.display === 'none' || formSection.style.display === '' ? 'block' : 'none';
-        });
-
-        function addEventListenersToButtons(item) {
-            const likeButton = item.querySelector('.like-button');
-            const likeCount = item.querySelector('.like-count');
-            let likeCounter = 0;
-
-            likeButton.addEventListener('click', function() {
-                likeCounter++;
-                likeCount.textContent = `${likeCounter} Likes`;
-                alert('Vous avez aimé ce contenu.');
-            });
-
-            item.querySelector('.comment-button').addEventListener('click', function() {
-                const commentInput = item.querySelector('.comments input');
-                commentInput.style.display = commentInput.style.display === 'none' || commentInput.style.display === '' ? 'block' : 'none';
-            });
-
-            item.querySelector('.comments input').addEventListener('keypress', function(e) {
-                if (e.key === 'Enter') {
-                    const commentText = e.target.value;
-                    const commentSection = item.querySelector('.comments');
-                    const newComment = document.createElement('div');
-                    newComment.classList.add('comment');
-                    newComment.innerHTML = `<p>${commentText}</p>`;
-                    commentSection.insertBefore(newComment, commentSection.querySelector('.comment'));
-                    e.target.value = '';
-                }
+        // Fonction pour remonter en haut de page
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
             });
         }
 
-        itemRows.forEach(row => {
-            const items = row.querySelectorAll('.item');
-            items.forEach(item => {
-                addEventListenersToButtons(item);
-            });
-        });
-
-        document.getElementById('content-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const videoUrl = document.getElementById('video-url').value;
-            const description = document.getElementById('description').value;
-            const contentSection = document.querySelector('.content');
-
-            const newItem = document.createElement('div');
-            newItem.classList.add('item');
-            newItem.innerHTML = `
-                <iframe src="${videoUrl}" width="297" height="360" allowfullscreen></iframe>
-                <p class="description">${description}</p>
-                <div class="rating">
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                </div>
-                <div class="actions">
-                    <button class="like-button">Like</button>
-                    <span class="like-count">0 Likes</span>
-                    <button class="comment-button">Commenter</button>
-                </div>
-                <div class="comments">
-                    <div class="comment">
-                        <p>Aucun commentaire pour le moment</p>
-                        <input type="text" placeholder="Ajouter un commentaire...">
-                    </div>
-                </div>
-            `;
-
-            const newItemRow = document.createElement('div');
-            newItemRow.classList.add('item-row');
-            newItemRow.appendChild(newItem);
-            contentSection.appendChild(newItemRow);
-            addEventListenersToButtons(newItem);
-            document.getElementById('content-form').reset();
-        });
-
-        // Validation du formulaire
-        const form = document.getElementById('content-form');
-        const videoUrlInput = document.getElementById('video-url');
-        const descriptionInput = document.getElementById('description');
-
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            if (!videoUrlInput.value.trim() || !descriptionInput.value.trim()) {
-                alert('Veuillez remplir tous les champs obligatoires.');
-                return;
-            }
-
-            const videoUrl = videoUrlInput.value.trim();
-            const description = descriptionInput.value.trim();
-            const contentSection = document.querySelector('.content');
-
-            const newItem = document.createElement('div');
-            newItem.classList.add('item');
-            newItem.innerHTML = `
-                <iframe src="${videoUrl}" width="297" height="360" allowfullscreen></iframe>
-                <p class="description">${description}</p>
-                <div class="rating">
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                    <span class="star">&#9733;</span>
-                </div>
-                <div class="actions">
-                    <button class="like-button">Like</button>
-                    <span class="like-count">0 Likes</span>
-                    <button class="comment-button">Commenter</button>
-                </div>
-                <div class="comments">
-                    <div class="comment">
-                        <p>Aucun commentaire pour le moment</p>
-                        <input type="text" placeholder="Ajouter un commentaire...">
-                    </div>
-                </div>
-            `;
-
-            const newItemRow = document.createElement('div');
-            newItemRow.classList.add('item-row');
-            newItemRow.appendChild(newItem);
-            contentSection.appendChild(newItemRow);
-            addEventListenersToButtons(newItem);
-            document.getElementById('content-form').reset();
-        });
-
-        // Système de notation
-        const stars = document.querySelectorAll('.rating .star');
-
-        stars.forEach((star, index) => {
-            star.addEventListener('click', () => {
-                const allStars = star.parentElement.querySelectorAll('.star');
-                allStars.forEach((s, i) => {
-                    s.style.color = i <= index ? '#ff00ff' : '#ccc';
-                });
-            });
-        });
-
-
-
-
-
-
-
-// Masquer le formulaire de code secret par défaut
-const passwordPrompt = document.querySelector('.password-prompt');
-if (passwordPrompt) {
-    passwordPrompt.style.display = 'none';
-}
-
-// Fonction pour afficher le message de mot de passe
-function showPasswordPrompt() {
-    const secretPassword = "1991";
-
-    // Créer un élément div pour le message
-    const messageDiv = document.createElement('div');
-    messageDiv.classList.add('password-prompt');
-    messageDiv.innerHTML = `
-        <div class="password-prompt-content">
-            <span class="close-button">&times;</span>
-            <h3>Veuillez entrer le mot de passe secret</h3>
-            <input type="password" id="password-input" placeholder="Mot de passe">
-            <button id="submit-password">Soumettre</button>
-        </div>
-    `;
-
-    // Styles pour centrer le message
-    messageDiv.style.position = 'fixed';
-    messageDiv.style.top = '50%';
-    messageDiv.style.left = '50%';
-    messageDiv.style.transform = 'translate(-50%, -50%)';
-    messageDiv.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-    messageDiv.style.color = 'white';
-    messageDiv.style.padding = '20px';
-    messageDiv.style.borderRadius = '5px';
-    messageDiv.style.zIndex = '9999';
-
-    // Ajouter le message à la page
-    document.body.appendChild(messageDiv);
-
-    // Gestionnaire d'événement pour le bouton "Soumettre"
-    const submitButton = document.getElementById('submit-password');
-    submitButton.addEventListener('click', () => {
-        const enteredPassword = document.getElementById('password-input').value;
-
-        if (enteredPassword === secretPassword) {
-            // Supprimer le message de mot de passe
-            messageDiv.remove();
-            // Ajouter votre code pour afficher le formulaire ici
-        } else {
-            alert("Mot de passe incorrect. Vous n'êtes pas autorisé à ajouter du contenu.");
+        // Fonction pour rediriger vers le flux
+        function redirectToFlux() {
+            // Remplacez l'URL ci-dessous par l'URL de votre flux
+            window.location.href = 'https://example.com/flux';
         }
-    });
 
-    // Gestionnaire d'événement pour le bouton de fermeture
-    const closeButton = messageDiv.querySelector('.close-button');
-    closeButton.addEventListener('click', () => {
-        messageDiv.remove();
-    });
-}
+        // Pour chaque section de vidéo
+        document.querySelectorAll('.video').forEach((video, index) => {
+            const section = video.classList[1]; // Obtenez la classe spécifique de la section
+            const prevButton = video.querySelector('.prevEpisodeButton');
+            const nextButton = video.querySelector('.nextEpisodeButton');
 
-// Ajoutez cet événement au bouton "Partagez votre contenu"
-document.querySelector('.toggle-button').addEventListener('click', showPasswordPrompt);
+            // Ajoutez les écouteurs d'événements pour les boutons de navigation
+            prevButton.addEventListener('click', () => {
+                const currentVideoIndex = videos[section].indexOf(video.querySelector('iframe').getAttribute('src'));
+                const newIndex = (currentVideoIndex - 1 + videos[section].length) % videos[section].length;
+                loadVideo(section, newIndex);
+            });
+
+            nextButton.addEventListener('click', () => {
+                const currentVideoIndex = videos[section].indexOf(video.querySelector('iframe').getAttribute('src'));
+                const newIndex = (currentVideoIndex + 1) % videos[section].length;
+                loadVideo(section, newIndex);
+            });
+
+            // Charger la première vidéo au chargement de la page
+            loadVideo(section, 0);
+        });
     </script>
 </body>
-                                </html>
+    </html>
