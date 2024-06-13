@@ -225,6 +225,31 @@
     background-color: #d6336c; /* Changement de couleur au survol */
     transform: scale(1.1); /* Légère augmentation de taille */
 }
+
+
+        /* Bouton retour stylisé */
+.returnButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #00cc99; /* Couleur modifiée */
+    color: #fff;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: none; /* Initialement caché */
+}
+
+.returnButton:hover {
+    background-color: #009977; /* Couleur modifiée */
+    transform: scale(1.1);
+}
+
+.returnButton.show {
+    display: block; /* Afficher lorsque la page est scrollée vers le haut */
+}
         </style>
 </head>
 <body>
@@ -276,6 +301,10 @@
         <button class="paypal-button" onclick="processPayment();">Payer 10 EUR</button>
     </div>
 
+<!-- Bouton de retour en haut de page -->
+    <button class="returnButton" onclick="scrollToTop();" title="Retour en haut de page">&#9650;</button>
+
+    
 <script>
    // Définition des vidéos avec leurs liens
 const videos = {
@@ -408,6 +437,29 @@ document.querySelectorAll('.video').forEach((video, index) => {
     window.open(url, '_blank'); // Ouvre l'URL dans une nouvelle fenêtre/tab
    }
 </script>
+<script>
+// Écouteur pour le bouton de retour en haut de page
+        window.addEventListener('scroll', () => {
+            const returnButton = document.querySelector('.returnButton');
+            if (window.scrollY > 100) {
+                returnButton.classList.add('show');
+            } else {
+                returnButton.classList.remove('show');
+            }
+        });
 
+        // Fonction pour remonter en haut de page
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Fonction pour rediriger vers le flux
+        function redirectToFlux() {
+            window.location.href = 'https://lucious-lion04.github.io/flux/';
+        }
+</script>
 </body>
     </html>
