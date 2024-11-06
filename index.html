@@ -485,7 +485,63 @@ body {
         setInterval(updateStatus, 60000);
         updateStatus(); // Appelle une fois immédiatement pour initialiser le statut
     </script>
-   
+     <script>
+        // Fonction pour ouvrir la fenêtre de connexion Telegram
+        document.getElementById('telegram-button').addEventListener('click', function() {
+            const telegramBotUsername = "@GlobalGoods_StoreBot"; // Remplace par ton username de bot Telegram
+            const telegramAuthLink = `https://t.me/${telegramBotUsername}`;
+            window.open(telegramAuthLink, "_blank"); // Ouvre un nouvel onglet avec le lien d'authentification
+        });
+
+        // Fonction pour ouvrir la fenêtre de connexion Snapchat
+        document.getElementById('snapchat-button').addEventListener('click', function() {
+            const snapchatClientId = "VOTRE_CLIENT_ID"; // Remplace par ton client ID Snapchat
+            const snapchatRedirectUri = "VOTRE_URL_DE_REDIRECTION"; // Remplace par ton URL de redirection
+            const snapchatAuthLink = `https://accounts.snapchat.com/accounts/oauth2/auth?client_id=${snapchatClientId}&redirect_uri=${snapchatRedirectUri}&response_type=code&scope=snapchat_basic`;
+            window.open(snapchatAuthLink, "_blank"); // Ouvre un nouvel onglet avec le lien d'authentification
+        });
+
+        // Vérification si l'utilisateur est connecté avec Telegram
+        function isUserLoggedIn() {
+            return Telegram.WebApp.isExpanded;
+        }
+
+        // Fonction pour récupérer les informations de l'utilisateur depuis Telegram
+        function getTelegramUserData() {
+            if (Telegram.WebApp.user) {
+                return {
+                    id: Telegram.WebApp.user.id,
+                    username: Telegram.WebApp.user.username,
+                    photoUrl: Telegram.WebApp.user.photo_url || 'default-avatar.png'  // Photo par défaut si aucune photo
+                };
+            }
+            return null;
+        }
+
+        // Mettre à jour le profil avec les données utilisateur
+        function updateProfile(userData) {
+            if (userData) {
+                document.getElementById('profile-photo').src = userData.photoUrl;
+                document.getElementById('username').textContent = userData.username;
+                document.getElementById('user-id').querySelector('span').textContent = userData.id;
+            } else {
+                // Si l'utilisateur n'est pas connecté, masquer les éléments du profil
+                document.getElementById('profile-photo').style.display = 'none';
+                document.getElementById('username').style.display = 'none';
+                document.getElementById('user-id').style.display = 'none';
+            }
+        }
+
+        // Initialisation au chargement de la page
+        window.onload = function () {
+            if (isUserLoggedIn()) {
+                const userData = getTelegramUserData();
+                updateProfile(userData);
+            } else {
+                updateProfile(null);  // Masque le profil si l'utilisateur n'est pas connecté
+            }
+        };
+     </script>
   <script type="text/javascript" src="https://telegram.org/js/telegram-web-app.js"></script>
 </body>
 </html>
