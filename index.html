@@ -1,476 +1,491 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-
-
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XH2DNBFKJD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XH2DNBFKJD');
-</script>
+  <script type="text/javascript" src="https://telegram.org/js/telegram-web-app.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exclusif Flux</title>
+    <title>Profil Boutique</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/90a4d1138d.js" crossorigin="anonymous"></script>
     <style>
-    /* Importation de la police Spicy Rice */
-    @import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
-
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #121212;
-        color: #fff;
-    }
-
-    header {
-        background-color: #1e1e1e;
-        color: #fff;
-        padding: 20px 40px;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-    }
-
-    header h1 {
-        font-size: 3em;
-        margin: 0;
-        text-transform: uppercase;
-        letter-spacing: 5px;
-        font-weight: 700;
-        background: linear-gradient(90deg, #00ffcc, #3333ff); /* Couleur modifiée */
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: shine 2s linear infinite;
-        font-family: 'Spicy Rice', serif;
-    }
-
-    @keyframes shine {
-        0% {
-            background-position: -500%;
-        }
-        100% {
-            background-position: 500%;
-        }
-    }
-
-    .main-content {
-        padding: 20px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .video {
-        margin: 20px;
-        padding: 20px;
-        border: 1px solid #444;
-        border-radius: 10px;
-        width: 300px;
-        text-align: center;
-        background-color: #222;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-        transition: transform 0.3s ease;
-    }
-
-    .video:hover {
-        transform: scale(1.05);
-    }
-
-    .video h2 {
-        margin-bottom: 10px;
-        font-size: 24px;
-        color: #00ffcc; /* Couleur modifiée */
-        font-family: 'Spicy Rice', serif; /* Police modifiée */
-    }
-
-    .video p {
-        margin-bottom: 10px;
-        font-size: 16px;
-        color: #ccc;
-        font-family: 'Spicy Rice', serif; /* Police modifiée */
-    }
-
-    .video iframe {
-        width: 100%;
-        height: 200px;
-        border: none;
-        border-radius: 10px;
-        margin-bottom: 10px;
-    }
-
-    .episodeButton {
-        background-color: #00cc99; /* Couleur modifiée */
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 10px;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    .episodeButton:hover {
-        background-color: #009977; /* Couleur modifiée */
-        transform: scale(1.1);
-    }
-
-    /* Bouton retour stylisé */
-    .returnButton {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background-color: #00cc99; /* Couleur modifiée */
-        color: #fff;
-        border: none;
-        padding: 15px;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-        display: none; /* Initialement caché */
-    }
-
-    .returnButton:hover {
-        background-color: #009977; /* Couleur modifiée */
-        transform: scale(1.1);
-    }
-
-    .returnButton.show {
-        display: block; /* Afficher lorsque la page est scrollée vers le haut */
-    }
-
-    /* Boutons Flux et vierge */
-    .button-group {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-top: 20px;
-    }
-
-    .fluxButton, .emptyButton {
-        background-color: #28a745;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-    }
-
-    .fluxButton:hover, .emptyButton:hover {
-        background-color: #218838;
-        transform: scale(1.1);
-    }
-
-    /* Style pour la boîte de paiement */
-    .payment-box {
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #333;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-        z-index: 1000;
-        display: none;
-    }
-
-    .payment-box h2 {
-        color: #fff;
-        margin-bottom: 10px;
-    }
-
-    .payment-box p {
-        color: #ccc;
-        margin-bottom: 20px;
-    }
-
-    .close-payment {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        color: #fff;
-        cursor: pointer;
-    }
-
-    .paypal-button {
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.3s ease;
-        display: block;
-        margin: 0 auto;
-        text-decoration: none;
-    }
-
-    .paypal-button:hover {
-        background-color: #0056b3;
-        transform: scale(1.1);
-    }
-
-    .paypal-button:focus {
-        outline: none;
-    }
-
-
-        .snapchatButton {
-    background-color: #e83e8c; /* Couleur de fond */
-    color: #fff; /* Couleur du texte */
-    border: none; /* Pas de bordure */
-    padding: 10px 20px; /* Rembourrage autour du texte */
-    border-radius: 5px; /* Coins arrondis */
-    cursor: pointer; /* Curseur pointer au survol */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition fluide */
-    margin-top: 10px; /* Marge en haut */
+     /* Ajustements globaux */
+* {
+    box-sizing: border-box; /* Inclusion de padding et border dans la largeur */
 }
 
-.snapchatButton:hover {
-    background-color: #d6336c; /* Changement de couleur au survol */
-    transform: scale(1.1); /* Légère augmentation de taille */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #333;
+    margin: 0;
+    padding: 20px;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
+/* Conteneur principal */
+.container {
+    max-width: 700px;
+    margin: auto;
+    background-image: url('https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/bdaf7f2b-dedf-4816-1f47-04bcf5078c30.jpg'); /* Image de fond */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dfe3e8;
+    overflow: hidden; /* Cache les débordements éventuels */
+}
 
-        /* Bouton retour stylisé */
-.returnButton {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #00cc99; /* Couleur modifiée */
-    color: #fff;
-    border: none;
+        /* Titre avec animation de défilement */
+        .scrolling-title {
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+            animation: scrolling 15s linear infinite;
+            font-size: 2.5em;
+            color: #0088cc;
+            text-align: center;
+            border-bottom: 1px solid #dfe3e8;
+            padding-bottom: 10px;
+        }
+
+        @keyframes scrolling {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        /* Profil */
+        .profile-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #dfe3e8;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid #0088cc;
+            margin-right: 15px;
+        }
+
+        .profile-info h2 {
+            font-size: 1.5em;
+            color: #333;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-info p {
+            color: #666;
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+
+
+
+/* Badge vérifié Telegram */
+        .verified-badge {
+            color: #0088cc;
+            margin-left: 8px;
+            font-size: 1.2em;
+        }
+
+
+
+        /* Statut Boutique */
+        #status-text {
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        .status-circle {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .status-online {
+            background-color: green;
+        }
+
+        .status-offline {
+            background-color: red;
+        }
+
+        /* Icône de boutique */
+        .shop-icon {
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .shop-icon i {
+            font-size: 2em;
+            color: #fff;
+            background: linear-gradient(135deg, #ff4757, #1e90ff); /* Dégradé rouge à bleu */
+            border-radius: 50%;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .shop-icon p {
+            margin-top: 5px;
+            font-size: 1em;
+            color: #333;
+        }
+
+        .shop-icon:hover i {
+            transform: scale(1.1);
+        }
+
+        /* Section boutique */
+        .shop-section {
+            display: none;
+            margin-top: 20px;
+        }
+
+       /* Section boutique */
+.shop-section {
+    display: none;
+    margin-top: 20px;
+}
+
+.shop-items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ajuste les produits sur plusieurs lignes si l'espace est limité */
+}
+
+.shop-item {
+    width: 30%;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+        .shop-item:hover {
+            transform: scale(1.05);
+        }
+
+        .shop-item img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .shop-item p {
+            color: #333;
+            margin: 5px 0;
+        }
+
+        .shop-item .price {
+            color: #e74c3c;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+
+        .buy-button {
+            background-color: #0088cc;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background-color 0.3s;
+        }
+
+        .buy-button:hover {
+            background-color: #0056b3;
+        }
+/* Styles du panier */
+.cart {
+    display: none; /* Ou 'block' si tu veux qu'il soit visible par défaut */
+    background-color: #f0f8ff;
+    border: 1px solid #0088cc;
     padding: 15px;
-    border-radius: 50%;
+    border-radius: 10px;
+    margin-top: 20px;
+    position: fixed; /* Position fixe */
+    top: 20px; /* Distance du haut de l'écran */
+    right: 20px; /* Distance de la droite de l'écran */
+    z-index: 1000; /* S'assure que le panier soit au-dessus des autres éléments */
+}
+
+/* Autres styles du panier */
+.cart h3 {
+    margin: 0;
+    color: #333;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.cart-item span {
+    color: #666;
+}
+
+.remove-button {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    display: none; /* Initialement caché */
 }
 
-.returnButton:hover {
-    background-color: #009977; /* Couleur modifiée */
-    transform: scale(1.1);
+.remove-button:hover {
+    background-color: #c0392b;
 }
 
-.returnButton.show {
-    display: block; /* Afficher lorsque la page est scrollée vers le haut */
+.total {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 10px;
 }
-        </style>
+    
+    #email {
+    font-size: 1em; /* Taille de police */
+    color: #333; /* Couleur du texte */
+    margin-top: 10px; /* Espace au-dessus */
+}
+
+#email i {
+    margin-right: 5px; /* Espace entre l'icône et le texte */
+}
+    
+    
+    
+  /* Conteneur des boutons d'authentification */
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    justify-content: center;
+}
+
+/* Style de base pour les boutons d'authentification */
+.auth-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+/* Icônes dans les boutons */
+.auth-button i {
+    font-size: 1.5em;
+}
+
+/* Effets d'ombre et de zoom sur hover */
+.auth-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Bouton Telegram */
+.telegram {
+    background-color: #0088cc; /* Couleur spécifique à Telegram */
+}
+
+/* Bouton Snapchat */
+.snapchat {
+    background-color: #fffc00; /* Couleur spécifique à Snapchat */
+    color: #000; /* Texte noir pour bien contraster */
+} 
+  
+  
+  
+  
+  
+    </style>
 </head>
 <body>
-    
-<header>
-        <h1>OLDEST Contenu Exclusif !</h1>
-        <div class="button-group">
-            <button class="fluxButton" onclick="redirectToFlux(this);" title="Voir le flux" data-url="https://lucious-lion04.github.io/flux/">Flux</button>
-            <button class="emptyButton snapchatButton" title="CompteSnapchat #" onclick="window.location.href='https://www.snapchat.com/add/lucious-lion04?share_id=9j7Aqz5BzCA&locale=fr-FR'">
-  CompteSnapchat #
-            </button>
-</header>
-    <div class="main-content">
-        <div class="video video-godzilla">
-            <div class="video-frame">
-                <iframe src="https://mega.nz/embed/Y2ME0ZKL#SVYZ1HMRoDdqaliaPhXwx3joiTaB5KrzobAp4zGCljg" allowfullscreen></iframe>
-            </div>
-            <h2>FALLOUT E1/8</h2>
-            <p>Regardez l'aventure épique de Godzilla.</p>
-            <button class="episodeButton prevEpisodeButton">Épisode précédent</button>
-            <button class="episodeButton nextEpisodeButton" onclick="promptForPayment('video-godzilla');">Épisode suivant</button>
-        </div>
+    <div class="container">
+        <!-- Titre avec animation de défilement -->
+        <header>
+            <h1 class="scrolling-title">Global Goods</h1>
+        </header>
+<!-- Carte de Profil -->
+<div class="profile-card">
+    <div class="profile-header">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/9d499362-4b9c-b062-3568-40de722c34db.jpeg" alt="Photo de Profil" class="profile-pic">
+        <div class="profile-info">
+          
+            <h1>SHOP 🛍 <span class="verified-badge"></span></h1>
+            <p id="bio">Boutique de qualité avec des produits uniques.</p>
+            
+            <!-- Section de localisation -->
+            <p id="location">
+                <i class="fa-solid fa-map-marker-alt"></i> Localisation : Paris, France
+            </p>
 
-        <div class="video video-kirikou">
-            <div class="video-frame"></div>
-            <h2>Kirikou</h2>
-            <p>Découvrez les aventures de Kirikou.</p>
-            <button class="episodeButton prevEpisodeButton">Épisode précédent</button>
-            <button class="episodeButton nextEpisodeButton" onclick="promptForPayment('video-kirikou');">Épisode suivant</button>
-        </div>
+            <!-- Section de contact par e-mail avec icône -->
+            <p id="email">
+                <i class="fa-solid fa-envelope"></i> Contact : email@example.com
+            </p>
 
-        <div class="video video-nouvelle-section">
-            <div class="video-frame"></div>
-            <h2>Nouvelle Section</h2>
-            <p>Explorez notre nouvelle section vidéo.</p>
-            <button class="episodeButton prevEpisodeButton">Épisode précédent</button>
-            <button class="episodeButton nextEpisodeButton" onclick="promptForPayment('video-nouvelle-section');">Épisode suivant</button>
+            <p id="status-indicator">
+                <span class="status-circle" id="status-circle" class="status-online"></span>
+                <span id="status-text">Statut : En ligne</span>
+            </p>
+        </div>     
+    </div>
+  
+  
+    <!-- Icône Boutique -->
+    <div class="shop-icon">
+        <i class="fa-solid fa-store" id="shop-toggle"></i>
+        <p>Boutique</p>
+    </div>
+</div>
+        
+      <div class="auth-buttons">
+    <!-- Bouton de connexion Telegram -->
+    <button id="telegram-button" class="auth-button telegram">
+        <i class="fa-brands fa-telegram"></i> Se connecter avec Telegram
+    </button>
+
+    <!-- Bouton de connexion Snapchat -->
+    <button id="snapchat-button" class="auth-button snapchat">
+        <i class="fa-brands fa-snapchat"></i> Se connecter avec Snapchat
+    </button>
+</div>
+<!-- Section Boutique (masquée au départ) -->
+<div class="shop-section" id="shop-section">
+    <h2>Produits Disponibles</h2>
+    <div class="shop-items">
+        <div class="shop-item">
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/d9a62fd6-6faa-2c1d-d885-9fc764ff8dde.jpeg" alt="Produit 1">
+            <h3>RED-BULL Édition</h3>
+            <p class="detail">Fraîcheur</p> <!-- Détail du produit -->
+            <p class="price">3.99€</p>
+            <button class="buy-button" data-name="Produit 1" data-price="3.99">Acheter</button>
+        </div>
+        <div class="shop-item">
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/38caff65-3501-44ee-059f-09aa4bd0118f.jpeg" alt="Produit 2">
+            <h3>RED-BULL Édition</h3>
+            <p class="detail">Bonne qualité</p> <!-- Détail du produit -->
+            <p class="price">5.49€</p>
+            <button class="buy-button" data-name="Produit 2" data-price="5.49">Acheter</button>
+        </div>
+        <div class="shop-item">
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/b8115faa-40ff-fba9-fb77-6b23afc9362b.jpeg" alt="Produit 3">
+             <h3>RED-BULL Édition</h3>
+            <p class="detail">Goût fraise</p> <!-- Détail du produit -->
+            <p class="price">7.99€</p>
+            <button class="buy-button" data-name="Produit 3" data-price="7.99">Acheter</button>
+        </div>
+    </div>
+</div>
+
+        <!-- Panier -->
+        <div class="cart" id="cart">
+            <h3>Votre Panier</h3>
+            <div id="cart-items"></div>
+            <div class="total" id="total"></div>
         </div>
     </div>
 
-    <!-- Bouton de retour en haut de page -->
-    <button class="returnButton" onclick="scrollToTop();" title="Retour en haut de page">&#9650;</button>
-
-    <!-- Boîte de paiement -->
-    <div class="payment-box" id="paymentBox">
-        <span class="close-payment" onclick="closePaymentBox();">&times;</span>
-        <h2>Paiement Requis</h2>
-        <p>Pour accéder à cette vidéo, veuillez effectuer le paiement requis via PayPal.</p>
-        <button class="paypal-button" onclick="processPayment();">Payer 1 EUR</button>
-    </div>
-
-<!-- Bouton de retour en haut de page -->
-    <button class="returnButton" onclick="scrollToTop();" title="Retour en haut de page">&#9650;</button>
-
-    
-<script>
-   // Définition des vidéos avec leurs liens
-const videos = {
-    "video-godzilla": [
-        "https://mega.nz/embed/5vckRYyK#DKEEA996g_FBkpktM-Ai4YpfFcyqFHPPuQC-5sBveFc",
-        "https://mega.nz/embed/CRVCjTjC#EkxvXRV0l4wHUPiUfD43wp5einV9dEaOvZGmXYIB6uo",
-        "https://mega.nz/embed/UjMznIYB#T1zlXpV_GpHS7ryEyEicn9hGHXp8YHgpA6G3cfJbbyY"
-    ],
-    "video-kirikou": [
-        "https://mega.nz/embed/UjMznIYB#T1zlXpV_GpHS7ryEyEicn9hGHXp8YHgpA6G3cfJbbyY",
-        "https://mega.nz/embed/UjMznIYB#T1zlXpV_GpHS7ryEyEicn9hGHXp8YHgpA6G3cfJbbyY",
-        "https://mega.nz/embed/aU8XxaTT#WAtEXi_odyk89h_IuJEWxVzpKa0MQHvh0OG1EtEQYRA"
-    ],
-    "video-nouvelle-section": [
-        "https://mega.nz/embed/UjMznIYB#T1zlXpV_GpHS7ryEyEicn9hGHXp8YHgpA6G3cfJbbyY",
-        "https://mega.nz/embed/NncAHSDT#4d6GNuwvcaM94Nm2BB1FitQg3S_zOkIHptIImptLXMY",
-        "https://mega.nz/embed/CRVCjTjC#EkxvXRV0l4wHUPiUfD43wp5einV9dEaOvZGmXYIB6uo"
-    ]
-};
-
-// Variable pour suivre l'état du formulaire de paiement
-let paymentBoxClosedWithoutPayment = false;
-
-// Variable pour stocker l'état d'activation du bouton suivant
-let nextButtonEnabled = true;
-
-// Fonction pour charger une vidéo dans une section donnée à un index spécifique
-function loadVideo(section, index) {
-    const videoFrame = document.querySelector(`.${section} .video-frame`);
-    videoFrame.style.transform = 'scale(0.9)';
-    setTimeout(() => {
-        videoFrame.innerHTML = `
-            <iframe src="${videos[section][index]}" allowfullscreen></iframe>
-        `;
-        videoFrame.style.transform = 'scale(1)';
-    }, 300);
-}
-
-// Fonction pour afficher la boîte de paiement et couvrir l'écran
-function openPaymentBox() {
-    const paymentBox = document.getElementById('paymentBox');
-    paymentBox.style.display = 'block';
-    disableNextButton();
-
-    // Ajouter un élément flou pour couvrir l'écran
-    const blurOverlay = document.createElement('div');
-    blurOverlay.classList.add('blur-overlay');
-    document.body.appendChild(blurOverlay);
-}
-
-// Fonction pour fermer la boîte de paiement et supprimer l'élément flou
-function closePaymentBox() {
-    const paymentBox = document.getElementById('paymentBox');
-    paymentBox.style.display = 'none';
-    enableNextButton();
-
-    // Supprimer l'élément flou
-    const blurOverlay = document.querySelector('.blur-overlay');
-    if (blurOverlay) {
-        document.body.removeChild(blurOverlay);
-    }
-}
-
-// Fonction pour désactiver le bouton Épisode suivant
-function disableNextButton() {
-    const nextButtons = document.querySelectorAll('.nextEpisodeButton');
-    nextButtons.forEach(button => {
-        button.disabled = true;
-        button.classList.add('disabled');
-    });
-    nextButtonEnabled = false;
-}
-
-// Fonction pour réactiver le bouton Épisode suivant
-function enableNextButton() {
-    const nextButtons = document.querySelectorAll('.nextEpisodeButton');
-    nextButtons.forEach(button => {
-        button.disabled = false;
-        button.classList.remove('disabled');
-    });
-    nextButtonEnabled = true;
-}
-
-// Fonction pour traiter le paiement via PayPal (simulé)
-function processPayment() {
-    alert('Redirection vers PayPal pour effectuer le paiement.');
-    setTimeout(() => {
-        closePaymentBox(); // Fermer la boîte de paiement après le paiement simulé
-        grantAccessToAllVideos(); // Accorder l'accès à toutes les vidéos après paiement
-    }, 1000); // Simuler un délai de traitement
-}
-
-// Fonction pour accorder l'accès à toutes les vidéos après le paiement
-function grantAccessToAllVideos() {
-    // Ici, vous pouvez ajouter la logique pour permettre l'accès à toutes les vidéos
-    alert('Accès accordé à toutes les vidéos !');
-    // Par exemple, charger toutes les vidéos sans restriction
-    Object.keys(videos).forEach(section => loadVideo(section, 0));
-}
-
-// Fonction pour demander le paiement avant de charger la vidéo suivante
-function promptForPayment(section) {
-    openPaymentBox(); // Afficher la boîte de paiement
-}
-
-// Pour chaque section de vidéo
-document.querySelectorAll('.video').forEach((video, index) => {
-    const section = video.classList[1]; // Obtenez la classe spécifique de la section
-    const prevButton = video.querySelector('.prevEpisodeButton');
-    const nextButton = video.querySelector('.nextEpisodeButton');
-
-    // Ajoutez les écouteurs d'événements pour les boutons de navigation
-    prevButton.addEventListener('click', () => {
-        const currentVideoIndex = videos[section].indexOf(video.querySelector('iframe').getAttribute('src'));
-        const newIndex = (currentVideoIndex - 1 + videos[section].length) % videos[section].length;
-        loadVideo(section, newIndex);
-    });
-
-    nextButton.addEventListener('click', () => {
-        promptForPayment(section); // Appeler la fonction pour demander le paiement avant de charger la vidéo suivante
-    });
-
-    // Charger la première vidéo par défaut
-    loadVideo(section, 0);
-});
-</script>
-<script>
-   function redirectToFlux(button) {
-    const url = button.getAttribute('data-url');
-    window.open(url, '_blank'); // Ouvre l'URL dans une nouvelle fenêtre/tab
-   }
-</script>
-<script>
-// Écouteur pour le bouton de retour en haut de page
-        window.addEventListener('scroll', () => {
-            const returnButton = document.querySelector('.returnButton');
-            if (window.scrollY > 100) {
-                returnButton.classList.add('show');
+    <script>
+        // Fonction pour afficher/masquer la section boutique
+        document.getElementById('shop-toggle').addEventListener('click', function() {
+            const shopSection = document.getElementById('shop-section');
+            if (shopSection.style.display === 'block') {
+                shopSection.style.display = 'none';
             } else {
-                returnButton.classList.remove('show');
+                shopSection.style.display = 'block';
             }
         });
 
-        // Fonction pour remonter en haut de page
-        function scrollToTop() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+        // Panier
+        const cartItems = [];
+        const cartElement = document.getElementById('cart');
+        const cartContent = document.getElementById('cart-items');
+        const totalElement = document.getElementById('total');
+
+        // Affiche le panier
+        function updateCart() {
+            cartContent.innerHTML = '';
+            let total = 0;
+
+            cartItems.forEach((item, index) => {
+                total += parseFloat(item.price);
+                cartContent.innerHTML += `
+                    <div class="cart-item">
+                        <span>${item.name} - ${item.price}€</span>
+                        <button class="remove-button" onclick="removeFromCart(${index})">Supprimer</button>
+                    </div>
+                `;
             });
+
+            totalElement.innerHTML = `Total : ${total.toFixed(2)}€`;
+            cartElement.style.display = cartItems.length > 0 ? 'block' : 'none';
         }
 
-        // Fonction pour rediriger vers le flux
-        function redirectToFlux() {
-            window.location.href = 'https://lucious-lion04.github.io/flux/';
+        // Ajouter au panier
+        document.querySelectorAll('.buy-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const name = this.getAttribute('data-name');
+                const price = this.getAttribute('data-price');
+                cartItems.push({ name, price });
+                updateCart();
+            });
+        });
+
+        // Supprimer du panier
+        function removeFromCart(index) {
+            cartItems.splice(index, 1);
+            updateCart();
         }
-</script>
+
+        // Met à jour le statut de la boutique
+        function updateStatus() {
+            const now = new Date();
+            const hours = now.getHours();
+            const statusCircle = document.getElementById('status-circle');
+            const statusText = document.getElementById('status-text');
+
+            if (hours >= 11 && hours < 23) {
+                statusCircle.className = 'status-circle status-online';
+                statusText.textContent = 'Statut : Ouvert';
+            } else {
+                statusCircle.className = 'status-circle status-offline';
+                statusText.textContent = 'Statut : Fermer';
+            }
+        }
+
+        // Appelle la fonction de mise à jour du statut chaque minute
+        setInterval(updateStatus, 60000);
+        updateStatus(); // Appelle une fois immédiatement pour initialiser le statut
+    </script>
+   
+  
 </body>
-    </html>
+</html>
