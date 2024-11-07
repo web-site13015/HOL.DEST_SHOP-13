@@ -343,49 +343,44 @@
             overflow-y: auto; /* Permet de faire défiler le contenu si nécessaire */
         }
     /* Autres styles du panier */
-.cart h3{
- margin :0; 
- color:#333; 
+/* Autres styles du panier */
+.cart h3 {
+    margin: 0;
+    color: #333;
 }
 
-.cart-item{
- display:flex ; 
- justify-content :space-between ; 
- margin-bottom :10 px ; 
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
-.cart-item span{
- color:#666; 
+.cart-item span {
+    color: #666;
 }
 
-.remove-button{
- background-color:#ff4757; 
- color:white; 
- border:none; 
- padding :5 px10 px ; 
- border-radius :5 px ; 
- cursor:pointer; 
+.remove-button {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-.remove-button:hover{
- background-color:#c0392b; 
+.remove-button:hover {
+    background-color: #c0392b;
 }
 
-.total{
- font-weight:bold; 
- font-size :1.1 em; 
- color:#333; 
- margin-top :10 px; 
+.total {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 10px;
 }
     
     
-    
-    
-    
-    
-    
-    
-    
+  
     
     /* Styles pour la liste des produits */
 .product-list {
@@ -509,7 +504,7 @@
         <div class="shop-item">
             <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/38caff65-3501-44ee-059f-09aa4bd0118f.jpeg" alt="Produit 2">
             <h3>RED-BULL</h3>
-            <p class="detail">Bonne qualité</p> <!-- Détail du produit -->
+            <p class="detail">Qualité</p> <!-- Détail du produit -->
             <p class="price">5.49€</p>
             <button class="buy-button" data-name="Produit 2" data-price="5.49">Acheter</button>
         </div>
@@ -527,23 +522,19 @@
       
     </div>
 </div>
-        <!-- Panier -->
-        <!-- ... -->
+        
 <div class="cart" id="cart">
     <h3>Votre Panier</h3>
     <div id="cart-items"></div>
     <div class="total" id="total"></div>
     <!-- Formulaire pour envoyer la commande -->
-    <form action="https://formspree.io/f/xpwzdjnv" method="POST" id="orderForm">
+    <form action="https://formspree.io/f/mpwzznqo" method="POST" id="orderForm">
         <input type="hidden" name="productNames" id="productNames">
         <input type="hidden" name="productPrices" id="productPrices">
         <input type="hidden" name="totalPrice" id="totalPrice">
         <button type="submit">Envoyer la Commande</button>
     </form>
 </div>
-    
-    
-    
    <!-- Liste des produits -->
    <div class="product-list" id="product-list"></div>
 
@@ -787,69 +778,98 @@ const PREMIUM_LIMIT = 6; // Limite premium
         }
     });
 
-    // Panier
-    const cartItems = [];
-    const cartElement = document.getElementById('cart');
-    const cartContent = document.getElementById('cart-items');
-    const totalElement = document.getElementById('total');
+  // Panier
+const cartItems = [];
+const cartElement = document.getElementById('cart');
+const cartContent = document.getElementById('cart-items');
+const totalElement = document.getElementById('total');
 
-    // Affiche le panier
-    function updateCart() {
-        cartContent.innerHTML = '';
-        let total = 0;
+// Affiche le panier
+function updateCart() {
+    cartContent.innerHTML = '';
+    let total = 0;
 
-        cartItems.forEach((item, index) => {
-            total += parseFloat(item.price);
-            cartContent.innerHTML += `
-                <div class="cart-item">
-                    <span>${item.name} - ${item.price}€</span>
-                    <button class="remove-button" onclick="removeFromCart(${index})">Supprimer</button>
-                </div>
-            `;
-        });
-
-        totalElement.innerHTML = `Total : ${total.toFixed(2)}€`;
-        cartElement.style.display = cartItems.length > 0 ? 'block' : 'none';
-    }
-
-    // Ajouter au panier
-    document.querySelectorAll('.buy-button').forEach(button => {
-        button.addEventListener('click', function() {
-            const name = this.getAttribute('data-name');
-            const price = this.getAttribute('data-price');
-            cartItems.push({ name, price });
-            updateCart();
-        });
+    cartItems.forEach((item, index) => {
+        total += parseFloat(item.price);
+        cartContent.innerHTML += `
+            <div class="cart-item">
+                <span>${item.name} - ${item.price}€</span>
+                <button class="remove-button" onclick="removeFromCart(${index})">Supprimer</button>
+            </div>
+        `;
     });
 
-    // Supprimer du panier
-    function removeFromCart(index) {
-        cartItems.splice(index, 1);
+    totalElement.innerHTML = `Total : ${total.toFixed(2)}€`;
+    cartElement.style.display = cartItems.length > 0 ? 'block' : 'none';
+}
+
+// Ajouter au panier
+document.querySelectorAll('.buy-button').forEach(button => {
+    button.addEventListener('click', function() {
+        const name = this.getAttribute('data-name');
+        const price = this.getAttribute('data-price');
+        cartItems.push({ name, price });
         updateCart();
-    }
+    });
+});
 
+// Supprimer du panier
+function removeFromCart(index) {
+    cartItems.splice(index, 1);
+    updateCart();
+}
+
+// Mettre à jour et soumettre le formulaire de commande
+document.getElementById('orderForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const productNames = cartItems.map(item => item.name).join(', ');
+    const productPrices = cartItems.map(item => item.price).join(', ');
+    const totalPrice = totalElement.textContent.replace('Total : ', '');
+
+    document.getElementById('productNames').value = productNames;
+    document.getElementById('productPrices').value = productPrices;
+    document.getElementById('totalPrice').value = totalPrice;
+
+    // Soumettre le formulaire
+    this.submit();
+});
+   
     // Met à jour le statut de la boutique
-    function updateStatus() {
-        const now = new Date();
-        const hours = now.getHours();
-        const statusCircle = document.getElementById('status-circle');
-        const statusText = document.getElementById('status-text');
+        function updateStatus() {
+            const now = new Date();
+            const hours = now.getHours();
+            const statusCircle = document.getElementById('status-circle');
+            const statusText = document.getElementById('status-text');
 
-        if (hours >= 11 && hours < 23) {
-            statusCircle.className = 'status-circle status-online';
-            statusText.textContent = 'Statut : Ouvert';
-        } else {
-            statusCircle.className = 'status-circle status-offline';
-            statusText.textContent = 'Statut : Fermé';
+            if (hours >= 11 && hours < 23) {
+                statusCircle.className = 'status-circle status-online';
+                statusText.textContent = 'Statut : Ouvert';
+            } else {
+                statusCircle.className = 'status-circle status-offline';
+                statusText.textContent = 'Statut : Fermer';
+            }
         }
-    }
 
-    // Appelle la fonction de mise à jour du statut chaque minute
-    setInterval(updateStatus, 60000);
-    updateStatus(); // Appelle une fois immédiatement pour initialiser le statut
-
+        // Appelle la fonction de mise à jour du statut chaque minute
+        setInterval(updateStatus, 60000);
+        updateStatus(); // Appelle une fois immédiatement pour initialiser le statut
+ 
 </script>
+  <script>
+    document.getElementById('telegram-button').addEventListener('click', function() {
+    const telegramBotUsername = "@GlobalGoods_StoreBot";
+    const telegramAuthLink = `https://t.me/${telegramBotUsername}`;
+    window.open(telegramAuthLink, "_blank");
+});
 
+document.getElementById('snapchat-button').addEventListener('click', function() {
+    const snapchatClientId = "VOTRE_CLIENT_ID";
+    const snapchatRedirectUri = "VOTRE_URL_DE_REDIRECTION";
+    const snapchatAuthLink = `https://accounts.snapchat.com/accounts/oauth2/auth?client_id=${snapchatClientId}&redirect_uri=${snapchatRedirectUri}&response_type=code&scope=snapchat_basic`;
+    window.open(snapchatAuthLink, "_blank");
+});
+    </script>
 </body>
 
-                        </html>
+    </html>
