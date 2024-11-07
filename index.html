@@ -328,19 +328,20 @@
         }
     
     /* Styles du panier */
-.cart{
- display:none ; /* Ou 'block' si tu veux qu'il soit visible par défaut */
- background-color:#f0f8ff ;
- border :1 px solid #0088cc ;
- padding :15 px ;
- border-radius :10 px ;
- margin-top :20 px ;
- position :fixed ; /* Position fixe */
- top :20 px ; /* Distance du haut de l'écran */
- right :20 px ; /* Distance de la droite de l'écran */
- z-index :1000; /* S'assure que le panier soit au-dessus des autres éléments */
-}
-
+/* Styles du panier */
+        .cart {
+            display: none; /* Ou 'block' si tu veux qu'il soit visible par défaut */
+            background-color: #f0f8ff;
+            border: 1px solid #0088cc;
+            padding: 15px;
+            border-radius: 10px;
+            position: fixed; /* Position fixe */
+            top: 20px; /* Distance du haut de l'écran */
+            right: 20px; /* Distance de la droite de l'écran */
+            z-index: 1000; /* S'assure que le panier soit au-dessus des autres éléments */
+            max-width: 300px; /* Largeur maximale pour le panier */
+            overflow-y: auto; /* Permet de faire défiler le contenu si nécessaire */
+        }
     /* Autres styles du panier */
 .cart h3{
  margin :0; 
@@ -529,11 +530,17 @@
         <!-- Panier -->
         <!-- ... -->
 <div class="cart" id="cart">
-            <h3>Votre Panier</h3>
-            <div id="cart-items"></div>
-            <div class="total" id="total"></div>
-        </div>
-    </div>
+    <h3>Votre Panier</h3>
+    <div id="cart-items"></div>
+    <div class="total" id="total"></div>
+    <!-- Formulaire pour envoyer la commande -->
+    <form action="https://formspree.io/f/xpwzdjnv" method="POST" id="orderForm">
+        <input type="hidden" name="productNames" id="productNames">
+        <input type="hidden" name="productPrices" id="productPrices">
+        <input type="hidden" name="totalPrice" id="totalPrice">
+        <button type="submit">Envoyer la Commande</button>
+    </form>
+</div>
     
     
     
@@ -599,6 +606,22 @@
 </div >
 
 <script >
+   document.getElementById('orderForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const productNames = cartItems.map(item => item.name).join(', ');
+    const productPrices = cartItems.map(item => item.price).join(', ');
+    const totalPrice = totalElement.textContent.replace('Total : ', '');
+
+    document.getElementById('productNames').value = productNames;
+    document.getElementById('productPrices').value = productPrices;
+    document.getElementById('totalPrice').value = totalPrice;
+
+    // Soumettre le formulaire
+    this.submit();
+}); 
+    
+  
 document.getElementById('telegram-button').addEventListener('click', function() {
 // Simuler une connexion via Telegram
 simulateLogin('Telegram');
@@ -829,4 +852,4 @@ const PREMIUM_LIMIT = 6; // Limite premium
 
 </body>
 
-  </html>
+                        </html>
