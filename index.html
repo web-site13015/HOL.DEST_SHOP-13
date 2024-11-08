@@ -455,7 +455,7 @@
       <div class="profile-header">
          <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/9d499362-4b9c-b062-3568-40de722c34db.jpeg" alt="Photo de Profil" class="profile-pic" id="profile-photo">
          <div class="profile-info">
-              <h1>Shop 🛍 <span class="verified-badge"><i class="fab fa-telegram"></i></span></h1>
+              <h1>Shop<span class="verified-badge"><i class="fab fa-telegram"></i></span></h1>
              <h2 id="username">Nom d'utilisateur</h2>
              <p id="bio">Bienvenue dans votre boutique personnalisée.</p>
              <!-- Symbole Paramètres -->
@@ -860,20 +860,7 @@ document.getElementById('orderForm').addEventListener('submit', function(e) {
         updateStatus(); // Appelle une fois immédiatement pour initialiser le statut
  
 </script>
-  <script>
-    document.getElementById('telegram-button').addEventListener('click', function() {
-    const telegramBotUsername = "@GlobalGoods_StoreBot";
-    const telegramAuthLink = `https://t.me/${telegramBotUsername}`;
-    window.open(telegramAuthLink, "_blank");
-});
-
-document.getElementById('snapchat-button').addEventListener('click', function() {
-    const snapchatClientId = "VOTRE_CLIENT_ID";
-    const snapchatRedirectUri = "VOTRE_URL_DE_REDIRECTION";
-    const snapchatAuthLink = `https://accounts.snapchat.com/accounts/oauth2/auth?client_id=${snapchatClientId}&redirect_uri=${snapchatRedirectUri}&response_type=code&scope=snapchat_basic`;
-    window.open(snapchatAuthLink, "_blank");
-});
-    </script>
+  
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
