@@ -1,108 +1,103 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <link rel="canonical" href="https://example.com/page-url">
-    <meta name="description" content="Découvrez notre boutique en ligne avec des produits uniques et de qualité.">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <title>Profil Boutique - Nom de la Boutique</title>
+    <meta name="description" content="Découvrez notre boutique en ligne proposant des produits uniques de haute qualité. Contactez-nous pour plus d'informations.">
+    <meta name="keywords" content="boutique, produits uniques, Paris, achats en ligne">
+    <title>Profil Boutique</title>
+    <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/90a4d1138d.js" crossorigin="anonymous"></script>
     <style>
-        * {
-            box-sizing: border-box;
+        /* Styles globaux */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #333;
+            margin: 0;
+            padding: 20px;
         }
 
-        body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #333;
-    margin: 0;
-    padding: 20px;
-    overflow-x: hidden;
-}
-
         /* Conteneur principal */
-.container {
-    max-width: 700px;
-    margin: auto;
-    background-image: url('https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/bdaf7f2b-dedf-4816-1f47-04bcf5078c30.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #dfe3e8;
-    overflow: hidden;
-}
-
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background-image: url('https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/bdaf7f2b-dedf-4816-1f47-04bcf5078c30.jpg'); /* Ajout de l'image de fond */
+            background-size: cover; /* Pour couvrir toute la zone du conteneur */
+            background-position: center; /* Centrer l'image */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #dfe3e8;
+            overflow: hidden; /* Pour éviter le débordement du contenu */
+        }
 
         /* Titre avec animation de défilement */
-.scrolling-title {
-    white-space: nowrap;
-    overflow: hidden;
-    box-sizing: border-box;
-    animation: scrolling 15s linear infinite;
-    font-size: 2.5em;
-    color: #0088cc;
-    text-align: center;
-    border-bottom: 1px solid #dfe3e8;
-    padding-bottom: 10px;
-}
+        .scrolling-title {
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+            animation: scrolling 15s linear infinite;
+            font-size: 2.5em;
+            color: #0088cc;
+            text-align: center;
+            border-bottom: 1px solid #dfe3e8;
+            padding-bottom: 10px;
+        }
 
-   @keyframes scrolling {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}    
+        @keyframes scrolling {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
 
-    
-    
-  
-/* Profil */
-.profile-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    border-bottom: 1px solid #dfe3e8;
-}
+        /* Profil */
+        .profile-card {
+            display: flex;
+            flex-direction: column; /* Adapté aux mobiles */
+            align-items: center; /* Centre le contenu */
+            padding: 20px;
+            border-bottom: 1px solid #dfe3e8;
+        }
 
-.profile-header {
-    display: flex;
-    align-items: center;
-}
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px; /* Ajout d'espace en bas */
+        }
 
-.profile-pic {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 2px solid #0088cc;
-    margin-right: 15px;
-}
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid #0088cc;
+            margin-right: 15px;
+        }
 
-.profile-info h2 {
-    font-size: 1.5em;
-    color: #333;
-    margin: 0;
-}
+        .profile-info h1 {
+            font-size: 1.5em;
+            color: #333;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
 
-.profile-info p {
-    color: #666;
-    margin: 5px 0;
-    font-size: 0.9em;
-}
+        .profile-info p {
+            color: #666;
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
 
-/* Badge vérifié Telegram */
-.verified-badge {
-    color: #0088cc;
-    margin-left: 8px;
-}
+        /* Badge vérifié Telegram */
+        .verified-badge {
+            color: #0088cc;
+            margin-left: 8px;
+            font-size: 1.2em;
+        }
 
-
-   /* Statut Boutique */
+        /* Statut Boutique */
         #status-text {
             font-size: 0.9em;
             font-weight: bold;
@@ -116,7 +111,7 @@
             margin-right: 5px;
         }
 
-         .status-online {
+        .status-online {
             background-color: green;
         }
 
@@ -128,6 +123,7 @@
         .shop-icon {
             text-align: center;
             cursor: pointer;
+            margin-top: 20px; /* Ajout d'espace au-dessus */
         }
 
         .shop-icon i {
@@ -148,152 +144,30 @@
         .shop-icon:hover i {
             transform: scale(1.1);
         }
- 
-    
-    
+
        
-
-        #bio {
-            margin-bottom: 10px; 
-        }
-
-        #settings-icon {
-            display: none; 
-            margin-top: 5px; 
-            cursor: pointer; 
-        }
-
-        .auth-buttons {
-            display: flex;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .auth-button {
-            padding: 12px 20px;
-            border-radius: 5px;
-            cursor: pointer; 
-        }
-
-        .telegram {
-            background-color: #0088cc; 
-        }
-
-        .snapchat {
-            background-color: #fffc00; 
-        }
-    
-    /* Styles pour le popup */
-    .modal {
-        display: none; 
-        position: fixed; 
-        z-index: 1; 
-        left: 0;
-        top: 0;
-        width: 100%; 
-        height: 100%; 
-        overflow: auto; 
-        background-color: rgba(0,0,0,0.4); 
-    }
-
-    .modal-content {
-        background-color: #fefefe;
-        margin: 15% auto; 
-        padding: 20px;
-        border-radius: 10px;
-        width: 80%; 
-    }
-
-    .close {
-        color:#aaa ;
-       float:right ;
-       font-size :28 px ;
-       font-weight:bold ;
-   }
-   
-   .close:hover,
-   .close :focus{
-       color:black ;
-       text-decoration:none ;
-       cursor:pointer ;
-   }
-   
-   /* Styles pour la liste des produits */
-   .product-list{
-       margin-top :20 px ;
-   }
-   
-   .product-item{
-       display:flex ;
-       justify-content :space-between ;
-       align-items:center ;
-       padding :10 px ;
-       border-bottom :1 px solid #ddd ;
-   }
-   
-   .product-item img{
-       width :50 px ;
-       height:auto ;
-   }
-   
-   /* Style pour le bouton Premium */
-   #premiumButton{
-       background-color :gold ;
-       color:black ;
-       padding :10 px ;
-       border-radius :5 px ;
-       cursor:pointer ;
-       margin-top :20 px ;
-       display:block ;
-   }
-    
-   /* Style pour le bouton Valider */
-   #validateButton{
-       background-color:#4CAF50 ; /* Green */
-       color:white ;
-       padding :10 px ;
-       border-radius :5 px ;
-       cursor:pointer ;
-       margin-top :20 px ;
-       display:block ;
-   }
-    
-  #settings-icon {
-            display: none; 
-            margin-top: 5px; 
-            cursor: pointer; 
-        } 
-    
-    
-    
-    
-         /* Section boutique */
+     /* Section boutique */
         .shop-section {
             display: none;
             margin-top: 20px;
         }
 
-       /* Section boutique */
-.shop-section {
-    display: none;
-    margin-top: 20px;
-}
+        .shop-items {
+            display: flex;
+            justify-content: space-between;
+        }
 
-.shop-items {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap; /* Ajuste les produits sur plusieurs lignes si l'espace est limité */
-}
+        .shop-item {
+            width: 30%;
+            text-align: center;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            position: relative; /* Pour le bouton "Acheter" */
+        }
 
-.shop-item {
-    width: 30%;
-    text-align: center;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-}
         .shop-item:hover {
             transform: scale(1.05);
         }
@@ -330,8 +204,9 @@
             background-color: #0056b3;
         }
     
-    /* Styles du panier */
-/* Styles du panier */
+    
+
+        /* Styles du panier */
         .cart {
             display: none; /* Ou 'block' si tu veux qu'il soit visible par défaut */
             background-color: #f0f8ff;
@@ -345,538 +220,270 @@
             max-width: 300px; /* Largeur maximale pour le panier */
             overflow-y: auto; /* Permet de faire défiler le contenu si nécessaire */
         }
-    /* Autres styles du panier */
-/* Autres styles du panier */
-.cart h3 {
-    margin: 0;
-    color: #333;
-}
 
-.cart-item {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-.cart-item span {
-    color: #666;
-}
-
-.remove-button {
-    background-color: #ff4757;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.remove-button:hover {
-    background-color: #c0392b;
-}
-
-.total {
-    font-weight: bold;
-    font-size: 1.1em;
-    color: #333;
-    margin-top: 10px;
-}
-    
-    
-  
-    
-    /* Styles pour la liste des produits */
-.product-list {
-    margin-top: 20px;
-}
-
-.shop-item {
-    width: 30%;
-    text-align: center;
-    background-color: #f9f9f9;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    margin-bottom: 20px; /* Ajout d'un espace entre les produits */
-}
-
-.shop-item:hover {
-    transform: scale(1.05);
-}
-
-.shop-item img {
-    width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
-
-.shop-item h3 {
-    font-size: 1.2em;
-    color: #333;
-}
-
-.shop-item .detail {
-    color: #666;
-    margin: 5px 0;
-}
-
-.shop-item .price {
-    color: #e74c3c;
-    font-weight: bold;
-    margin: 5px 0;
-}
-
-.buy-button {
-    background-color: #0088cc;
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.9em;
-    transition: background-color 0.3s;
-}
-
-.buy-button:hover {
-    background-color: #0056b3;
-}
-</style>
-</head>
-<body>
-<div class="container">
-   <!-- Titre avec animation de défilement -->
-   <header>
-      <h1 class="scrolling-title">Global Goods</h1>
-   </header>
-
-   <!-- Carte de Profil -->
-   <div class="profile-card">
-      <div class="profile-header">
-         <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/9d499362-4b9c-b062-3568-40de722c34db.jpeg" alt="Photo de Profil" class="profile-pic" id="profile-photo">
-         <div class="profile-info">
-              <h1>Shop<span class="verified-badge"><i class="fab fa-telegram"></i></span></h1>
-             <h2 id="username">Nom d'utilisateur</h2>
-             <p id="bio">Bienvenue dans votre boutique personnalisée.</p>
-             <!-- Symbole Paramètres -->
-             <span id="settings-icon">⚙️ Paramètres</span>
-             <!-- Section de localisation -->
-             <p id="location"><i class="fa-solid fa-map-marker-alt"></i> Localisation : Inconnue</p>
-            <!-- Section de contact par e-mail avec icône -->
-                    <p id="email">
-                        <i class="fa-solid fa-envelope"></i> Contact : email@example.com </p>
-                    <p id="status-indicator">
-                        <span class="status-circle" id="status-circle" class="status-online"></span>
-                        <span id="status-text">Statut : En ligne</span>
-                    </p>
-                </div>              
-            </div>
-
-      <!-- Icône Boutique -->
-      <div class="shop-icon">
-         <i class="fa-solid fa-store" id="shop-toggle"></i>
-         <p>Boutique</p>
-      </div>
-   </div>
-
-   <!-- Boutons d'authentification -->
-   <div class="auth-buttons">
-      <!-- Bouton de connexion Telegram -->
-      <button id="telegram-button" class="auth-button telegram">
-         <i class="fa-brands fa-telegram"></i> Se connecter avec Telegram
-      </button>
-
-      <!-- Bouton de connexion Snapchat -->
-      <button id="snapchat-button" class="auth-button snapchat">
-         <i class="fa-brands fa-snapchat"></i> Se connecter avec Snapchat
-      </button>
-   </div>
-
-    
-    <!-- Section Boutique (masquée au départ) -->
-<div class="shop-section" id="shop-section">
-   <h1>Bienvenue dans notre Boutique</h1>
-<h2>Produits Disponibles</h2>
-    <div class="shop-items">
-        <div class="shop-item">
-            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/d9a62fd6-6faa-2c1d-d885-9fc764ff8dde.jpeg" alt="Produit 1">
-            <h3>RED-BULL</h3>
-            <p class="detail">Fraîcheur</p> <!-- Détail du produit -->
-            <p class="price">3.99€</p>
-            <button class="buy-button" data-name="Produit 1" data-price="3.99">Acheter</button>
-        </div>
-        <div class="shop-item">
-            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/38caff65-3501-44ee-059f-09aa4bd0118f.jpeg" alt="Produit 2">
-            <h3>RED-BULL</h3>
-            <p class="detail">Qualité</p> <!-- Détail du produit -->
-            <p class="price">5.49€</p>
-            <button class="buy-button" data-name="Produit 2" data-price="5.49">Acheter</button>
-        </div>
-        <div class="shop-item">
-            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/b8115faa-40ff-fba9-fb77-6b23afc9362b.jpeg" alt="Produit 3">
-             <h3>RED-BULL</h3>
-            <p class="detail">Goût fraise</p> <!-- Détail du produit -->
-            <p class="price">7.99€</p>
-            <button class="buy-button" data-name="Produit 3" data-price="7.99">Acheter</button>
-        </div>
-        
-         <!-- Liste des produits -->
-      
-   <div class="product-list" id="product-list"></div>
-      
-    </div>
-</div>
-        
-<div class="cart" id="cart">
-    <h3>Votre Panier</h3>
-    <div id="cart-items"></div>
-    <div class="total" id="total"></div>
-    <!-- Formulaire pour envoyer la commande -->
-    <form action="https://formspree.io/f/mpwzznqo" method="POST" id="orderForm">
-        <input type="hidden" name="productNames" id="productNames">
-        <input type="hidden" name="productPrices" id="productPrices">
-        <input type="hidden" name="totalPrice" id="totalPrice">
-        <button type="submit">Envoyer la Commande</button>
-    </form>
-</div>
-   <!-- Liste des produits -->
-   <div class="product-list" id="product-list"></div>
-
-   <!-- Fenêtre modale pour modifier les informations et ajouter des produits -->
-   <div id="myModal" class="modal">
-     <div class="modal-content">
-         <span class="close">&times;</span>
-         <h2>Modifier les Informations de l'Utilisateur et de la Boutique</h2>
-         <!-- Formulaire pour modifier les informations utilisateur et boutique -->
-         <form id="editForm">
-             <!-- Informations utilisateur -->
-             <label for ="usernameInput">Nom d'utilisateur :</label><br>
-             <input type ="text" id ="usernameInput" name ="usernameInput"><br><br>
-
-             <label for ="emailInput">Email :</label><br>
-             <input type ="email" id ="emailInput" name ="emailInput"><br><br>
-
-             <!-- Informations de la boutique -->
-             <label for ="shopName">Nom de la Boutique :</label><br>
-             <input type ="text" id ="shopName" name ="shopName"><br><br>
-
-             <label for ="shopBio">Description :</label><br>
-             <textarea id ="shopBio" name ="shopBio"></textarea><br><br>
-
-             <label for ="locationInput">Localisation :</label><br>
-             <input type ="text" id ="locationInput" name ="locationInput"><br><br>
-
-             <!-- Section pour créer un produit (initialement caché) -->
-             <div id="productSection" style="display:none;">
-                 <h3>Créer un Produit</h3>
-                 <label for ="productName">Nom du Produit :</label><br>
-                 <input type ="text" id ="productName" name ="productName"><br><br>
-
-                 <label for = "productDescription">Description du Produit :</label><br>
-                 <textarea id = "productDescription" name = "productDescription"></textarea><br><br>
-
-                 <label for = "productPrice">Prix :</label><br>
-                 <input type = "number" step = ".01"id = "productPrice"name = "productPrice"><br><br>
-
-                 <label for = "productImage">Image du Produit :</label><br>
-                 <input type = "file"id = "productImage"name = "productImage"accept = "image/*"><br><br >
-
-                 <!-- Bouton pour ajouter le produit -->
-                 <button type = "submit">Ajouter Produit</button >
-             </div>
-
-         </form >
-
-         <!-- Bouton Premium (visible par défaut) -->
-         <button id="premiumButton">Passer en Premium pour plus de produits</button>
-
-         <!-- Bouton Valider Informations -->
-         <button id="validateButton">Valider les Informations</button>
-
-         <!-- Message d'erreur si plus de trois produits sont ajoutés -->
-         <p id = "error-message" style = "color:red; display:none;">Vous avez atteint la limite de produits gratuits.</p >
-     </div >
-   </div >
-
-</div >
-
-<script >
-   document.getElementById('orderForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    const productNames = cartItems.map(item => item.name).join(', ');
-    const productPrices = cartItems.map(item => item.price).join(', ');
-    const totalPrice = totalElement.textContent.replace('Total : ', '');
-
-    document.getElementById('productNames').value = productNames;
-    document.getElementById('productPrices').value = productPrices;
-    document.getElementById('totalPrice').value = totalPrice;
-
-    // Soumettre le formulaire
-    this.submit();
-}); 
-    
-  
-document.getElementById('telegram-button').addEventListener('click', function() {
-// Simuler une connexion via Telegram
-simulateLogin('Telegram');
-});
-
-document.getElementById('snapchat-button').addEventListener('click', function() {
-// Simuler une connexion via Snapchat
-simulateLogin('Snapchat');
-});
-
-function simulateLogin(platform) {
-// Simule la récupération des données utilisateur
-const userData = {
-     username : platform === 'Telegram' ? 'UserTelegram' : 'UserSnapchat',
-     location : 'Paris, France',
-     email : 'user@example.com',
-     bio : 'Bienvenue dans votre boutique personnalisée.'
-};
-
-// Mise à jour du profil utilisateur
-document.getElementById('username').textContent = userData.username ;
-document.getElementById('location').innerHTML = `<i class='fa-solid fa-map-marker-alt'></i> Localisation : ${userData.location}`;
-document.getElementById('email').innerHTML = `<i class='fa-solid fa-envelope'></i> Contact : ${userData.email}`;
-document.getElementById('bio').textContent = userData.bio;
-
-// Pré-remplir le formulaire avec les données actuelles
-document.getElementById('usernameInput').value = userData.username ;
-document.getElementById('emailInput').value = userData.email ;
-document.getElementById('locationInput').value = userData.location;
-document.getElementById('shopBio').value = userData.bio;
-
-// Afficher le symbole ⚙️ à côté de la description
-document.getElementById('settings-icon').style.display = 'inline-block';
-}
-
-// Gestion du popup pour modifier les informations
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("settings-icon");
-var span = document.getElementsByClassName("close")[0];
-
-btn.onclick = function() {
- modal.style.display = "block";
-}
-
-span.onclick = function() {
- modal.style.display = "none";
-}
-
-window.onclick = function(event) {
- if (event.target == modal) {
-     modal.style.display = "none";
- }
-}
-
-// Gestion des produits et statut utilisateur
-let userStatus='standard';
-let productCount=0;
-
-document.getElementById('premiumButton').onclick=function(){
- userStatus='premium';
- alert("Vous êtes maintenant un utilisateur Premium !");
- document.getElementById('premiumButton').style.display='none';
- document.getElementById('productSection').style.display='block';
-};
-
-// Soumettre le formulaire et ajouter un produit
-document.getElementById('editForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-
-    if ((userStatus === 'standard' && productCount >= STANDARD_LIMIT) ||
-        (userStatus === 'premium' && productCount >= PREMIUM_LIMIT)) {
-        document.getElementById('error-message').style.display = 'block';
-        return;
-    }
-
-    // Ajouter un produit à la liste
-    const productList = document.getElementById('product-list');
-    const productName = document.getElementById('productName').value || 'Produit';
-    const productDetail = document.getElementById('productDescription').value || 'Description';
-    const productPrice = document.getElementById('productPrice').value || '0.00';
-    const productImage = document.getElementById('productImage').files[0];
-
-    const reader = new FileReader();
-    reader.onload = function(e) {
-        const productItem = document.createElement('div');
-        productItem.classList.add('shop-item'); // Utilise la même classe
-
-        productItem.innerHTML = `
-            <img src="${e.target.result}" alt="${productName}" class="product-img">
-            <h3>${productName}</h3>
-            <p class="detail">${productDetail}</p>
-            <p class="price">${parseFloat(productPrice).toFixed(2)}€</p>
-            <button class="buy-button" data-name="${productName}" data-price="${productPrice}">Acheter</button>
-        `;
-
-        productList.appendChild(productItem);
-        productCount++;
-
-        // Ajouter un événement au bouton d'achat
-        productItem.querySelector('.buy-button').addEventListener('click', function() {
-            const name = this.getAttribute('data-name');
-            const price = this.getAttribute('data-price');
-            addToCart(name, price);
-        });
-    };
-
-    if (productImage) {
-        reader.readAsDataURL(productImage);
-    } else {
-        const productItem = document.createElement('div');
-        productItem.classList.add('shop-item'); // Assure-toi d'utiliser la même classe
-
-        productItem.innerHTML = `
-            <h3>${productName}</h3>
-            <p class="detail">${productDetail}</p>
-            <p class="price">${parseFloat(productPrice).toFixed(2)}€</p>
-            <button class="buy-button" data-name="${productName}" data-price="${productPrice}">Acheter</button>
-        `;
-
-        productList.appendChild(productItem);
-        productCount++;
-
-        // Ajouter un événement au bouton d'achat
-        productItem.querySelector('.buy-button').addEventListener('click', function() {
-            const name = this.getAttribute('data-name');
-            const price = this.getAttribute('data-price');
-            addToCart(name, price);
-        });
-    }
-});
-
-// Fonction pour ajouter au panier
-function addToCart(name, price) {
-    console.log(`Ajouté au panier: ${name} - ${price}€`);
-}
-
-// Valider les informations modifiées
-document.getElementById('validateButton').onclick = function() {
-    document.getElementById('username').textContent = document.getElementById('usernameInput').value || 'Nom d\'utilisateur';
-    document.getElementById('email').innerHTML = `<i class='fa-solid fa-envelope'></i> Contact : ${document.getElementById('emailInput').value || 'email@example.com'}`;
-    document.getElementById('location').innerHTML = `<i class='fa-solid fa-map-marker-alt'></i> Localisation : ${document.getElementById('locationInput').value || 'Inconnue'}`;
-    document.getElementById('bio').textContent = document.getElementById('shopBio').value || 'Bienvenue dans votre boutique personnalisée.';
-
-    modal.style.display = 'none';
-    alert("Informations modifiées avec succès !");
-};
-
-const STANDARD_LIMIT = 3; // Limite standard
-const PREMIUM_LIMIT = 6; // Limite premium
-    
-    
-    
-    
-    
-    
-    // Fonction pour afficher/masquer la section boutique
-    document.getElementById('shop-toggle').addEventListener('click', function() {
-        const shopSection = document.getElementById('shop-section');
-        if (shopSection.style.display === 'block') {
-            shopSection.style.display = 'none';
-        } else {
-            shopSection.style.display = 'block';
+        /* Autres styles du panier */
+        .cart h3 {
+            margin: 0;
+            color: #333;
         }
-    });
 
-  // Panier
-const cartItems = [];
-const cartElement = document.getElementById('cart');
-const cartContent = document.getElementById('cart-items');
-const totalElement = document.getElementById('total');
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
 
-// Affiche le panier
-function updateCart() {
-    cartContent.innerHTML = '';
-    let total = 0;
+        .cart-item span {
+            color: #666;
+        }
 
-    cartItems.forEach((item, index) => {
-        total += parseFloat(item.price);
-        cartContent.innerHTML += `
-            <div class="cart-item">
-                <span>${item.name} - ${item.price}€</span>
-                <button class="remove-button" onclick="removeFromCart(${index})">Supprimer</button>
-            </div>
-        `;
-    });
+        .remove-button {
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-    totalElement.innerHTML = `Total : ${total.toFixed(2)}€`;
-    cartElement.style.display = cartItems.length > 0 ? 'block' : 'none';
-}
+        .remove-button:hover {
+            background-color: #c0392b;
+        }
 
-// Ajouter au panier
-document.querySelectorAll('.buy-button').forEach(button => {
-    button.addEventListener('click', function() {
-        const name = this.getAttribute('data-name');
-        const price = this.getAttribute('data-price');
-        cartItems.push({ name, price });
-        updateCart();
-    });
-});
+        .total {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #333;
+            margin-top: 10px;
+        }
 
-// Supprimer du panier
-function removeFromCart(index) {
-    cartItems.splice(index, 1);
-    updateCart();
-}
+        #email {
+            font-size: 1em; /* Taille de police */
+            color: #333; /* Couleur du texte */
+            margin-top: 10px; /* Espace au-dessus */
+        }
 
-// Mettre à jour et soumettre le formulaire de commande
-document.getElementById('orderForm').addEventListener('submit', function(e) {
-    e.preventDefault();
+        #email i {
+            margin-right: 5px; /* Espace entre l'icône et le texte */
+        }
 
-    const productNames = cartItems.map(item => item.name).join(', ');
-    const productPrices = cartItems.map(item => item.price).join(', ');
-    const totalPrice = totalElement.textContent.replace('Total : ', '');
-
-    document.getElementById('productNames').value = productNames;
-    document.getElementById('productPrices').value = productPrices;
-    document.getElementById('totalPrice').value = totalPrice;
-
-    // Soumettre le formulaire
-    this.submit();
-});
-   
-    // Met à jour le statut de la boutique
-        function updateStatus() {
-            const now = new Date();
-            const hours = now.getHours();
-            const statusCircle = document.getElementById('status-circle');
-            const statusText = document.getElementById('status-text');
-
-            if (hours >= 11 && hours < 23) {
-                statusCircle.className = 'status-circle status-online';
-                statusText.textContent = 'Statut : Ouvert';
-            } else {
-                statusCircle.className = 'status-circle status-offline';
-                statusText.textContent = 'Statut : Fermer';
+        /* Styles responsives */
+        @media (max-width: 768px) {
+            .shop-item {
+                width: calc(50% - 10px); /* Deux éléments par ligne pour les écrans plus petits */
             }
         }
 
-        // Appelle la fonction de mise à jour du statut chaque minute
-        setInterval(updateStatus, 60000);
-        updateStatus(); // Appelle une fois immédiatement pour initialiser le statut
- 
-</script>
-  
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Store",
-  "name": "Nom de la Boutique",
-  "image": "https://example.com/logo.jpg",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "123 Rue Exemple",
-    "addressLocality": "marseille",
-    "addressRegion": "Région",
-    "postalCode": "13015",
-    "addressCountry": "FR"
-  }
-}
-</script>
-</body>
+        @media (max-width: 480px) {
+            .shop-item {
+                width: 100%; /* Un élément par ligne pour les petits écrans */
+            }
 
-    </html>
+            .scrolling-title {
+                font-size: 2em; /* Ajuste la taille du titre sur petits écrans */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Titre avec animation de défilement -->
+        <div class="scrolling-title">Bienvenue sur notre Boutique en Ligne</div>
+
+        <!-- Profil -->
+        <div class="profile-card">
+            <div class="profile-header">
+                <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/3620eb8b-502d-7824-17a5-c87a6077dfd7.jpg" alt="Photo de Profil" class="profile-pic">
+                <div class="profile-info">
+                    <h1>Nom de la Boutique <span class="verified-badge"><i class="fab fa-telegram"></i></span></h1>
+                    <p><i class="fas fa-map-marker-alt"></i> Localisation : Paris, France</p>
+                    <p><i class="fas fa-envelope"></i> Contact : contact@boutique.com</p>
+                </div>
+            </div>
+            <div id="status-text">
+                <span class="status-circle status-online"></span> En ligne
+            </div>
+        </div>
+
+        <!-- Icône de boutique -->
+        <div class="shop-icon" onclick="toggleShopSection()">
+            <i class="fas fa-shopping-cart"></i>
+            <p>Afficher la Boutique</p>
+        </div>
+
+        <!-- Section Boutique -->
+        <div class="shop-section">
+            <div class="shop-items">
+                <div class="shop-item">
+                    <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/d9a62fd6-6faa-2c1d-d885-9fc764ff8dde.jpeg" alt="Produit 1">
+                    <p>Produit 1</p>
+                    <p class="price">€20.00</p>
+                    <button class="buy-button" onclick="addToCart('Produit 1', 20.00)">Acheter</button>
+                </div>
+                <div class="shop-item">
+                    <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/38caff65-3501-44ee-059f-09aa4bd0118f.jpeg" alt="Produit 2">
+                    <p>Produit 2</p>
+                    <p class="price">€30.00</p>
+                    <button class="buy-button" onclick="addToCart('Produit 2', 30.00)">Acheter</button>
+                </div>
+                <div class="shop-item">
+                    <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/b8115faa-40ff-fba9-fb77-6b23afc9362b.jpeg" alt="Produit 3">
+                    <p>Produit 3</p>
+                    <p class="price">€25.00</p>
+                    <button class="buy-button" onclick="addToCart('Produit 3', 25.00)">Acheter</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Panier -->
+        <div class="cart" id="cart">
+            <h3>Mon Panier</h3>
+            <div id="cart-items"></div>
+            <div class="total" id="total">Total : €0.00</div>
+            <button class="remove-button" onclick="clearCart()">Vider le Panier</button>
+            <button class="checkout-button" onclick="openCheckout()">Finaliser la commande</button>
+        </div>
+
+        <!-- Fenêtre pop-up de finalisation de commande -->
+        <div class="checkout-popup" id="checkout-popup" style="display:none;">
+            <div class="checkout-content">
+                <h3>Finalisation de Commande</h3>
+                <form id="checkout-form">
+                    <label for="address">Adresse de livraison :</label>
+                    <input type="text" id="address" name="address" required oninput="startLoadingAnimation()">
+                    <div id="delivery-fee">Frais de livraison : €0.00</div>
+                    <div class="total" id="final-total">Total avec livraison : €0.00</div>
+                    <button type="button" onclick="finalizeOrder()">Confirmer la Commande</button>
+                    <button type="button" onclick="closeCheckout()">Annuler</button>
+                </form>
+                <div id="loading" class="loading" style="display:none;">Calcul des frais...</div>
+            </div>
+        </div>
+
+        <div id="email">
+            <i class="fas fa-envelope"></i> Contactez-nous par email : contact@boutique.com
+        </div>
+    </div>
+
+    <script>
+        let cart = [];
+        let totalPrice = 0;
+
+        function toggleShopSection() {
+            const shopSection = document.querySelector('.shop-section');
+            shopSection.style.display = shopSection.style.display === 'none' ? 'block' : 'none';
+            closeCheckout();
+        }
+
+        function addToCart(productName, price) {
+            cart.push({ productName, price });
+            totalPrice += price;
+            updateCartDisplay();
+        }
+
+        function updateCartDisplay() {
+            const cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = '';
+            cart.forEach((item, index) => {
+                const div = document.createElement('div');
+                div.classList.add('cart-item');
+                div.innerHTML = `${item.productName} <span>€${item.price.toFixed(2)}</span> <button onclick="removeFromCart(${index})">Retirer</button>`;
+                cartItems.appendChild(div);
+            });
+            document.getElementById('total').innerHTML = `Total : €${totalPrice.toFixed(2)}`;
+            document.getElementById('cart').style.display = 'block';
+        }
+
+        function removeFromCart(index) {
+            totalPrice -= cart[index].price;
+            cart.splice(index, 1);
+            updateCartDisplay();
+            if (cart.length === 0) {
+                document.getElementById('cart').style.display = 'none';
+            }
+        }
+
+        function clearCart() {
+            cart = [];
+            totalPrice = 0;
+            updateCartDisplay();
+            document.getElementById('cart').style.display = 'none';
+        }
+
+        function openCheckout() {
+            document.getElementById('checkout-popup').style.display = 'block';
+            getDistanceToReference();
+        }
+
+        function closeCheckout() {
+            document.getElementById('checkout-popup').style.display = 'none';
+        }
+
+        function startLoadingAnimation() {
+            document.getElementById('loading').style.display = 'block';
+        }
+
+        function stopLoadingAnimation() {
+            document.getElementById('loading').style.display = 'none';
+        }
+
+        function calculateDeliveryFee(distance) {
+            let deliveryFee = totalPrice >= 30 ? 0 : 5 + (distance > 3 ? 5 : 0);
+            document.getElementById('delivery-fee').innerText = `Frais de livraison : €${deliveryFee.toFixed(2)}`;
+            document.getElementById('final-total').innerText = `Total avec livraison : €${(totalPrice + deliveryFee).toFixed(2)}`;
+            stopLoadingAnimation();
+        }
+
+        function getDistanceToReference() {
+            startLoadingAnimation();
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    (position) => {
+                        const userLat = position.coords.latitude;
+                        const userLon = position.coords.longitude;
+                        const refLat = 43.2965;
+                        const refLon = 5.3698;
+
+                        const distance = haversineDistance(userLat, userLon, refLat, refLon);
+                        calculateDeliveryFee(distance);
+                    },
+                    () => {
+                        alert("La géolocalisation a échoué. Veuillez activer la localisation pour un calcul automatique.");
+                        stopLoadingAnimation();
+                    }
+                );
+            } else {
+                alert("Géolocalisation non prise en charge par votre navigateur.");
+                stopLoadingAnimation();
+            }
+        }
+
+        function haversineDistance(lat1, lon1, lat2, lon2) {
+            const R = 6371; 
+            const dLat = (lat2 - lat1) * (Math.PI/ 180);
+            const dLon = (lon2 - lon1) * (Math.PI / 180);
+            const a =
+                Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                Math.cos(lat1 * (Math.PI / 180)) * Math.cos(lat2 * (Math.PI / 180)) *
+                Math.sin(dLon / 2) * Math.sin(dLon / 2);
+            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+            return R * c; // Distance en kilomètres
+        }
+
+        function finalizeOrder() {
+            const address = document.getElementById('address').value;
+            if (!address) {
+                alert('Veuillez entrer une adresse de livraison.');
+                return;
+            }
+            alert(`Merci pour votre commande ! Votre commande sera livrée à ${address}.`);
+            clearCart();
+            closeCheckout();
+        }
+
+        document.getElementById('address').addEventListener('input', () => {
+            startLoadingAnimation();
+            setTimeout(() => getDistanceToReference(), 1000); // Recalcule la distance après chaque modification de l'adresse
+        });
+    </script>
+    </body>
