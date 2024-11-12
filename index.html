@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Découvrez notre boutique en ligne proposant des produits uniques de haute qualité. Contactez-nous pour plus d'informations.">
     <meta name="keywords" content="boutique, produits uniques, Paris, achats en ligne">
-    <title>Profil Boutique</title>
+    <title>Strong Hold Shop</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/90a4d1138d.js" crossorigin="anonymous"></script>
     <style>
@@ -283,21 +283,62 @@
                 font-size: 2em; /* Ajuste la taille du titre sur petits écrans */
             }
         }
+    
+    
+    
+    .order-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    width: 90%;
+    max-width: 500px;
+}
+.order-form h3 {
+    margin-bottom: 20px;
+    color: #333;
+}
+.order-form input[type="text"],
+.order-form input[type="tel"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.order-form button {
+    background-color: #0088cc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.order-form button:hover {
+    background-color: #0056b3;
+}
     </style>
 </head>
+
+
 <body>
     <div class="container">
-        <!-- Titre avec animation de défilement -->
+        <!-- Titre et profil -->
         <div class="scrolling-title">Bienvenue sur notre Boutique en Ligne</div>
-
-        <!-- Profil -->
         <div class="profile-card">
             <div class="profile-header">
-                <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/3620eb8b-502d-7824-17a5-c87a6077dfd7.jpg" alt="Photo de Profil" class="profile-pic">
+                <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/5f832f01-0623-fe2e-7c6e-75734b59e082.jpg" alt="Profil" class="profile-pic">
                 <div class="profile-info">
-                    <h1>Nom de la Boutique <span class="verified-badge"><i class="fab fa-telegram"></i></span></h1>
-                    <p><i class="fas fa-map-marker-alt"></i> Localisation : Paris, France</p>
-                    <p><i class="fas fa-envelope"></i> Contact : contact@boutique.com</p>
+                    <h1>Strong Hold Shop <span class="verified-badge"><i class="fab fa-telegram"></i></span></h1>
+                    <p>Localisation : Paris, France</p>
+                    <p>Contact : contact@boutique.com</p>
                 </div>
             </div>
             <div id="status-text">
@@ -305,74 +346,81 @@
             </div>
         </div>
 
-        <!-- Icône de boutique -->
+        <!-- Icône de boutique et section boutique -->
         <div class="shop-icon" onclick="toggleShopSection()">
             <i class="fas fa-shopping-cart"></i>
             <p>Afficher la Boutique</p>
         </div>
 
-        <!-- Section Boutique -->
-        <div class="shop-section">
-            <div class="shop-items">
-                <div class="shop-item">
-                    <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/d9a62fd6-6faa-2c1d-d885-9fc764ff8dde.jpeg" alt="Produit 1">
-                    <p>Produit 1</p>
-                    <p class="price">€20.00</p>
-                    <button class="buy-button" onclick="addToCart('Produit 1', 20.00)">Acheter</button>
-                </div>
-                <div class="shop-item">
-                    <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/38caff65-3501-44ee-059f-09aa4bd0118f.jpeg" alt="Produit 2">
-                    <p>Produit 2</p>
-                    <p class="price">€30.00</p>
-                    <button class="buy-button" onclick="addToCart('Produit 2', 30.00)">Acheter</button>
-                </div>
-                <div class="shop-item">
-                    <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/b8115faa-40ff-fba9-fb77-6b23afc9362b.jpeg" alt="Produit 3">
-                    <p>Produit 3</p>
-                    <p class="price">€25.00</p>
-                    <button class="buy-button" onclick="addToCart('Produit 3', 25.00)">Acheter</button>
-                </div>
-            </div>
+   <div class="shop-section" style="display: none;">
+    <h3>Produits Disponibles</h3>
+    <div class="shop-items">
+        <!-- Produit 1 -->
+        <div class="shop-item">
+            <img src="path/to/image1.jpg" alt="Produit A" class="product-image">
+            <h4>Produit A</h4>
+            <p>Description du produit A</p>
+            <span class="price">Prix : €10.00</span>
+            <button class="buy-button" onclick="addToCart('Produit A', 10)">Ajouter au panier</button>
         </div>
-
-        <!-- Panier -->
-        <div class="cart" id="cart">
+        <!-- Produit 2 -->
+        <div class="shop-item">
+            <img src="path/to/image2.jpg" alt="Produit B" class="product-image">
+            <h4>Produit B</h4>
+            <p>Description du produit B</p>
+            <span class="price">Prix : €15.00</span>
+            <button class="buy-button" onclick="addToCart('Produit B', 15)">Ajouter au panier</button>
+        </div>
+        <!-- Produit 3 -->
+        <div class="shop-item">
+            <img src="path/to/image3.jpg" alt="Produit C" class="product-image">
+            <h4>Produit C</h4>
+            <p>Description du produit C</p>
+            <span class="price">Prix : €20.00</span>
+            <button class="buy-button" onclick="addToCart('Produit C', 20)">Ajouter au panier</button>
+        </div>
+    </div>
+</div>
+        <!-- Panier et formulaire d'adresse -->
+        <div class="cart" id="cart" style="display: none;">
             <h3>Mon Panier</h3>
             <div id="cart-items"></div>
             <div class="total" id="total">Total : €0.00</div>
             <button class="remove-button" onclick="clearCart()">Vider le Panier</button>
-            <button class="checkout-button" onclick="openCheckout()">Finaliser la commande</button>
+            <button class="remove-button" onclick="openOrderForm()">Finaliser la Commande</button>
         </div>
 
-        <!-- Fenêtre pop-up de finalisation de commande -->
-        <div class="checkout-popup" id="checkout-popup" style="display:none;">
-            <div class="checkout-content">
-                <h3>Finalisation de Commande</h3>
-                <form id="checkout-form">
-                    <label for="address">Adresse de livraison :</label>
-                    <input type="text" id="address" name="address" required oninput="startLoadingAnimation()">
-                    <div id="delivery-fee">Frais de livraison : €0.00</div>
-                    <div class="total" id="final-total">Total avec livraison : €0.00</div>
-                    <button type="button" onclick="finalizeOrder()">Confirmer la Commande</button>
-                    <button type="button" onclick="closeCheckout()">Annuler</button>
-                </form>
-                <div id="loading" class="loading" style="display:none;">Calcul des frais...</div>
-            </div>
-        </div>
-
-        <div id="email">
-            <i class="fas fa-envelope"></i> Contactez-nous par email : contact@boutique.com
+        <!-- Formulaire de finalisation commande -->
+        <div class="order-form" id="order-form" style="display: none;">
+            <h3>Finalisation de la commande</h3>
+            <form action="https://formspree.io/f/{your-form-id}" method="POST">
+                <input type="text" name="firstName" placeholder="Prénom" required>
+                <input type="text" name="lastName" placeholder="Nom" required>
+                <input type="text" name="address" id="userAddress" placeholder="Adresse ou code postal" required>
+                <input type="tel" name="phone" placeholder="Numéro de téléphone" required>
+                <input type="hidden" name="products" id="orderProducts">
+                <input type="hidden" name="totalPrice" id="orderTotalPrice">
+                <div id="shippingMessage"></div>
+                <button type="button" onclick="calculateShipping()">Calculer la livraison</button>
+                <button type="submit">Envoyer la Commande</button>
+                <button type="button" onclick="closeOrderForm()">Annuler</button>
+            </form>
         </div>
     </div>
 
     <script>
         let cart = [];
-        let totalPrice = 0;
+let totalPrice = 0;
+const shopLat = 43.296398; // latitude de Marseille
+const shopLon = 5.370000;  // longitude de Marseille
 
+function updateShopLocation() {
+    document.getElementById('shopLocation').textContent = "355 rue de Lyon, Marseille, France"; // Modifiez ici pour changer l'adresse
+    shopCoordinates = { lat: shopLat, lon: shopLon }; // Coordonnées pour Marseille
+}
         function toggleShopSection() {
             const shopSection = document.querySelector('.shop-section');
             shopSection.style.display = shopSection.style.display === 'none' ? 'block' : 'none';
-            closeCheckout();
         }
 
         function addToCart(productName, price) {
@@ -384,22 +432,22 @@
         function updateCartDisplay() {
             const cartItems = document.getElementById('cart-items');
             cartItems.innerHTML = '';
-            cart.forEach((item, index) => {
+            cart.forEach(item => {
                 const div = document.createElement('div');
                 div.classList.add('cart-item');
-                div.innerHTML = `${item.productName} <span>€${item.price.toFixed(2)}</span> <button onclick="removeFromCart(${index})">Retirer</button>`;
+                div.innerHTML = `${item.productName} <span>€${item.price.toFixed(2)}</span> <button onclick="removeFromCart('${item.productName}')">Supprimer</button>`;
                 cartItems.appendChild(div);
             });
             document.getElementById('total').innerHTML = `Total : €${totalPrice.toFixed(2)}`;
             document.getElementById('cart').style.display = 'block';
         }
 
-        function removeFromCart(index) {
-            totalPrice -= cart[index].price;
-            cart.splice(index, 1);
-            updateCartDisplay();
-            if (cart.length === 0) {
-                document.getElementById('cart').style.display = 'none';
+        function removeFromCart(productName) {
+            const index = cart.findIndex(item => item.productName === productName);
+            if (index !== -1) {
+                totalPrice -= cart[index].price;
+                cart.splice(index, 1);
+                updateCartDisplay();
             }
         }
 
@@ -410,80 +458,63 @@
             document.getElementById('cart').style.display = 'none';
         }
 
-        function openCheckout() {
-            document.getElementById('checkout-popup').style.display = 'block';
-            getDistanceToReference();
+        function openOrderForm() {
+            document.getElementById('order-form').style.display = 'block';
+            document.getElementById('orderProducts').value = JSON.stringify(cart);
+            document.getElementById('orderTotalPrice').value = totalPrice.toFixed(2);
         }
 
-        function closeCheckout() {
-            document.getElementById('checkout-popup').style.display = 'none';
+        function closeOrderForm() {
+            document.getElementById('order-form').style.display = 'none';
         }
 
-        function startLoadingAnimation() {
-            document.getElementById('loading').style.display = 'block';
-        }
-
-        function stopLoadingAnimation() {
-            document.getElementById('loading').style.display = 'none';
-        }
-
-        function calculateDeliveryFee(distance) {
-            let deliveryFee = totalPrice >= 30 ? 0 : 5 + (distance > 3 ? 5 : 0);
-            document.getElementById('delivery-fee').innerText = `Frais de livraison : €${deliveryFee.toFixed(2)}`;
-            document.getElementById('final-total').innerText = `Total avec livraison : €${(totalPrice + deliveryFee).toFixed(2)}`;
-            stopLoadingAnimation();
-        }
-
-        function getDistanceToReference() {
-            startLoadingAnimation();
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(
-                    (position) => {
-                        const userLat = position.coords.latitude;
-                        const userLon = position.coords.longitude;
-                        const refLat = 43.2965;
-                        const refLon = 5.3698;
-
-                        const distance = haversineDistance(userLat, userLon, refLat, refLon);
-                        calculateDeliveryFee(distance);
-                    },
-                    () => {
-                        alert("La géolocalisation a échoué. Veuillez activer la localisation pour un calcul automatique.");
-                        stopLoadingAnimation();
-                    }
-                );
+        function calculateShipping() {
+            const userAddress = document.getElementById('userAddress').value;
+            if (userAddress) {
+                // Utilisation de l'API Nominatim pour géocoder l'adresse
+                fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(userAddress)}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.length > 0) {
+                            const userLat = parseFloat(data[0].lat);
+                            const userLon = parseFloat(data[0].lon);
+                            const distance = calculateDistance(shopLat, shopLon, userLat, userLon);
+                            displayShippingCost(distance);
+                        } else {
+                            document.getElementById('shippingMessage').innerHTML = "Adresse non trouvée. Veuillez vérifier et réessayer.";
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Erreur lors de la géolocalisation:', error);
+                        document.getElementById('shippingMessage').innerHTML = "Erreur lors du calcul de la distance. Veuillez réessayer.";
+                    });
             } else {
-                alert("Géolocalisation non prise en charge par votre navigateur.");
-                stopLoadingAnimation();
+                document.getElementById('shippingMessage').innerHTML = "Veuillez entrer une adresse valide.";
             }
         }
 
-        function haversineDistance(lat1, lon1, lat2, lon2) {
-            const R = 6371; 
-            const dLat = (lat2 - lat1) * (Math.PI/ 180);
-            const dLon = (lon2 - lon1) * (Math.PI / 180);
-            const a =
-                Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-                Math.cos(lat1 * (Math.PI / 180)) * Math.cos(lat2 * (Math.PI / 180)) *
-                Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        function calculateDistance(lat1, lon1, lat2, lon2) {
+            const R = 6371; // Rayon de la Terre en km
+            const dLat = (lat2 - lat1) * Math.PI / 180;
+            const dLon = (lon2 - lon1) * Math.PI / 180;
+            const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+                      Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+                      Math.sin(dLon / 2) * Math.sin(dLon / 2);
             const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-            return R * c; // Distance en kilomètres
+            return R * c;
         }
 
-        function finalizeOrder() {
-            const address = document.getElementById('address').value;
-            if (!address) {
-                alert('Veuillez entrer une adresse de livraison.');
-                return;
-            }
-            alert(`Merci pour votre commande ! Votre commande sera livrée à ${address}.`);
-            clearCart();
-            closeCheckout();
-        }
+        function displayShippingCost(distance) {
+            let shippingCost;
+            if (distance <= 3) shippingCost = 2;
+            else if (distance <= 5) shippingCost = 4;
+            else if (distance <= 10) shippingCost = 5;
+            else shippingCost = 'Gratuit';
 
-        document.getElementById('address').addEventListener('input', () => {
-            startLoadingAnimation();
-            setTimeout(() => getDistanceToReference(), 1000); // Recalcule la distance après chaque modification de l'adresse
-        });
+            document.getElementById('shippingMessage').innerHTML = `Distance : ${distance.toFixed(2)} km<br>Coût de livraison : ${shippingCost === 'Gratuit' ? 'Gratuit' : '€' + shippingCost}`;
+        }
     </script>
-    </body>
+</body>
+</html>
+
+
