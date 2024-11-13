@@ -349,6 +349,37 @@
 .order-form button:hover {
     background-color: #0056b3;
 }
+  
+  
+  
+  
+  
+  
+  
+  #lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#lightbox-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.product-image {
+    width: 100px;
+    cursor: pointer;
+}
     </style>
 </head>
 
@@ -437,13 +468,17 @@
             </form>
         </div>
     </div>
-
+<!-- Lightbox -->
+<div id="lightbox" style="display:none;">
+    <div id="lightbox-content">
+        <img id="lightbox-img" src="" alt="">
+        <button onclick="closeLightbox()">Fermer</button>
+    </div>
+</div>
 <script>
 window.addEventListener("load", function() {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('product');  // Récupère l'ID du produit depuis l'URL
-
-    console.log("Product ID:", productId); // Vérifie si l'ID est bien récupéré
 
     if (productId) {
         // Masque tous les produits
@@ -452,13 +487,29 @@ window.addEventListener("load", function() {
             product.style.display = 'none';  // Cache tous les produits
         });
 
-        // Affiche le produit correspondant
+        // Affiche le produit correspondant et ouvre la lightbox
         const productElement = document.getElementById('product-' + productId);
         if (productElement) {
             productElement.style.display = 'block';  // Affiche le produit spécifié
+            openLightbox(productElement.querySelector('.product-image').src);
         }
     }
 });
+
+function openLightbox(imgSrc) {
+    document.getElementById('lightbox-img').src = imgSrc;
+    document.getElementById('lightbox').style.display = 'flex';
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+    
+    // Afficher tous les produits après fermeture de la lightbox
+    const allProducts = document.querySelectorAll('.shop-item');
+    allProducts.forEach(function(product) {
+        product.style.display = 'block';
+    });
+}
 </script>
     <script>
     
@@ -585,7 +636,11 @@ function updateShopLocation() {
 
             document.getElementById('shippingMessage').innerHTML = `Distance : ${distance.toFixed(2)} km<br>Coût de livraison : ${shippingCost === 'Gratuit' ? 'Gratuit' : '€' + shippingCost}`;
         }
+  
+ 
     </script>
+  
+  
 </body>
 </html>
 
