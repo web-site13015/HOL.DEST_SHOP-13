@@ -423,7 +423,34 @@ button {
    <div class="shop-section" style="display: none;">
     <h3>Produits Disponibles</h3>
 
+<div class="shop-items">
+    <!-- Produit 1 -->
+    <div class="shop-item" id="product-1">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/3506e966-94ff-790f-7e7c-42ae4c6b0b68.jpg" alt="Produit A" class="product-image">
+        <h4>Produit A</h4>
+        <p>Description du produit A</p>
+        <span class="price">Prix : €10.00</span>
+        <button class="buy-button" onclick="addToCart('Produit A', 10)">Ajouter au panier</button>
+    </div>
 
+    <!-- Produit 2 -->
+    <div class="shop-item" id="product-2">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/f3f5b58a-0386-18c4-b99f-9874a1631cb1.jpg" alt="Produit B" class="product-image">
+        <h4>Produit B</h4>
+        <p>Description du produit B</p>
+        <span class="price">Prix : €15.00</span>
+        <button class="buy-button" onclick="addToCart('Produit B', 15)">Ajouter au panier</button>
+    </div>
+
+    <!-- Produit 3 -->
+    <div class="shop-item" id="product-3">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/ca2ffb50-9a83-d784-6a80-0594c5a31366.jpg" alt="Produit C" class="product-image">
+        <h4>Produit C</h4>
+        <p>Description du produit C</p>
+        <span class="price">Prix : €20.00</span>
+        <button class="buy-button" onclick="addToCart('Produit C', 20)">Ajouter au panier</button>
+    </div>
+</div>
 
 
 </div>
@@ -454,35 +481,46 @@ button {
         </div>
     </div>
 <!-- Lightbox -->
-<!-- Lightbox -->
 <div id="lightbox" style="display:none;">
     <div id="lightbox-content">
         <img id="lightbox-img" src="" alt="">
-        <p id="lightbox-description"></p>
-        <span id="lightbox-price"></span>
         <button onclick="closeLightbox()">Fermer</button>
     </div>
 </div>
 <script>
-document.querySelectorAll('.shop-item img').forEach(img => {
-    img.addEventListener('click', function () {
-        const productElement = this.closest('.shop-item');
-        const description = productElement.querySelector('h4').innerText;
-        const price = productElement.querySelector('.price').innerText;
+window.addEventListener("load", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('product');  // Récupère l'ID du produit depuis l'URL
 
-        openLightbox(this.src, description, price);
-    });
+    if (productId) {
+        // Masque tous les produits
+        const allProducts = document.querySelectorAll('.shop-item');
+        allProducts.forEach(function(product) {
+            product.style.display = 'none';  // Cache tous les produits
+        });
+
+        // Affiche le produit correspondant et ouvre la lightbox
+        const productElement = document.getElementById('product-' + productId);
+        if (productElement) {
+            productElement.style.display = 'block';  // Affiche le produit spécifié
+            openLightbox(productElement.querySelector('.product-image').src);
+        }
+    }
 });
 
-function openLightbox(imgSrc, description, price) {
+function openLightbox(imgSrc) {
     document.getElementById('lightbox-img').src = imgSrc;
-    document.getElementById('lightbox-description').innerText = description;
-    document.getElementById('lightbox-price').innerText = price;
     document.getElementById('lightbox').style.display = 'flex';
 }
 
 function closeLightbox() {
     document.getElementById('lightbox').style.display = 'none';
+    
+    // Afficher tous les produits après fermeture de la lightbox
+    const allProducts = document.querySelectorAll('.shop-item');
+    allProducts.forEach(function(product) {
+        product.style.display = 'block';
+    });
 }
 </script>
     <script>
@@ -617,4 +655,3 @@ function updateShopLocation() {
   
 </body>
 </html>
-
