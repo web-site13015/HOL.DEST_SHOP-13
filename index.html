@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
+  <!-- Préconnecter les serveurs Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Lien pour importer la police Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+    
+       <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Découvrez notre boutique en ligne proposant des produits uniques de haute qualité. Contactez-nous pour plus d'informations.">
     <meta name="keywords" content="boutique, produits uniques, Paris, achats en ligne">
@@ -9,14 +17,14 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/90a4d1138d.js" crossorigin="anonymous"></script>
     <style>
-        /* Styles globaux */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #333;
-            margin: 0;
-            padding: 20px;
-        }
-
+        /* Styles globaux */    
+    body {
+  font-family: "Playfair Display", serif;
+  background-color: #333; /* Ton fond actuel, si tu veux garder le même */
+  margin: 0;
+  padding: 20px;
+  color: #333; /* Optionnel, pour que le texte soit blanc sur un fond sombre */
+}
         /* Conteneur principal */
         .container {
             max-width: 700px;
@@ -52,7 +60,12 @@
                 transform: translateX(-100%);
             }
         }
-
+.scrolling-title {
+    animation-play-state: running;
+}
+.scrolling-title:hover {
+    animation-play-state: paused;
+}
         /* Profil */
         .profile-card {
             display: flex;
@@ -204,22 +217,26 @@
 }
 
 /* Autres styles pour les descriptions et les boutons */
+.shop-item h3 {
+    margin-bottom: 5px;
+}
+
 .shop-item p {
     color: #333;
-    margin: 5px 0 10px 0;
+    margin: 5px 0; /* Ajuste les marges */
 }
 
 .shop-item .price {
     color: #e74c3c;
     font-weight: bold;
-    margin: 5px 0 10px 0;
+    margin: 5px 0;
 }
 
 .buy-button {
     background-color: #0088cc;
     color: white;
     border: none;
-    padding: 8px 15px;
+    padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
     font-size: 0.9em;
@@ -352,10 +369,7 @@
   
   
   
-  
-  
-  
-  
+ 
 #lightbox {
     display: none;
     position: fixed;
@@ -392,94 +406,225 @@ button {
     width: 100px;
     cursor: pointer;
 }
+    
+    
+    
+    /* Style du modale */
+.modal {
+    display: none; /* Caché par défaut */
+    position: fixed;
+    z-index: 1; /* Au-dessus du contenu */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.modal-content {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+    
+    
+   /* Style pour la fenêtre des paramètres */
+.settings-popup {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 250px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 8px;
+    display: none;
+}
+
+/* Bouton des paramètres */
+.settings-btn {
+    background-color: transparent;
+    border: none;
+    color: #3498db;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+/* Style pour la fenêtre des paramètres */
+.settings-popup {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 250px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 8px;
+    display: none;
+}
+
+
+/* Style de la flèche */
+#arrow-icon {
+    transition: transform 0.3s ease;
+}
+    
+    
+    h3 {
+    text-align: center;  /* Centre le texte horizontalement */
+    margin: 0;           /* Enlève les marges par défaut */
+    padding: 20px 0;     /* Ajoute de l'espace autour du texte (optionnel) */
+}
+  
+  
+
+
+
+/* Conteneur de la carte déplaçable */
+.draggable-card {
+    position: absolute; /* Position absolue pour pouvoir le déplacer librement */
+    top: 240px; /* Position initiale (à ajuster si nécessaire) */
+    left: 279px; /* Position initiale (à ajuster si nécessaire) */
+    z-index: 100; /* Assurez-vous que la carte soit au-dessus des autres éléments */
+    cursor: move; /* Afficher un curseur de déplacement */
+    width: 90px;  /* Réduit la largeur de la carte */
+    height: 80px; /* Réduit la hauteur de la carte */
+    border: 2px solid #ccc; /* Bordure pour la carte */
+    border-radius: 10px; /* Coins arrondis pour un meilleur effet visuel */
+    padding: 5px; /* Espace interne pour ne pas que le contenu touche les bords */
+    background-color: #fff; /* Arrière-plan blanc */
+}
+
+/* Pour rendre l'iframe à l'intérieur de la carte responsive et adapté */
+.draggable-card iframe {
+    width: 100%; /* Occuper toute la largeur de la carte */
+    height: 100%; /* Occuper toute la hauteur de la carte */
+    border-radius: 5px; /* Coins arrondis pour l'iframe */
+}
     </style>
 </head>
 
 
 <body>
-    <div class="container">
-        <!-- Titre et profil -->
-        <div class="scrolling-title">THE STRONGEST HOLDER</div>
-        <div class="profile-card">
-            <div class="profile-header">
-                <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/5f832f01-0623-fe2e-7c6e-75734b59e082.jpg" alt="Profil" class="profile-pic">
-                <div class="profile-info">
-                    <h1>S.H.S 🛒 <span class="verified-badge"><i class="fab fa-telegram"></i></span></h1>
-                    <p><i class="fas fa-map-marker-alt"></i> Localisation : Marseille, France</p>
-                    <p><i class="fas fa-envelope"></i> Contact : Oldestlucious@gmail.com</p>
-                </div>
-            </div>
-            <div id="status-text">
-                <span class="status-circle status-online"></span> En ligne
-            </div>
-        </div>
+<div class="container">
+    <!-- Titre et profil -->
+    <div class="scrolling-title">BIENVENUE chez</div>
+    <div class="profile-card">
+        <div class="profile-header">
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/5f832f01-0623-fe2e-7c6e-75734b59e082.jpg" alt="Profil" class="profile-pic">
+            <div class="profile-info">
+                <h1>T.S.H 🛒 <span class="verified-badge"><i class="fab fa-telegram"></i></span></h1>
+                <p><i class="fas fa-map-marker-alt"></i> Localisation : Marseille, France </p>
+                <p><i class="fas fa-envelope"></i> Contact : Oldestlucious@gmail.com</p>
+<button class="settings-btn" onclick="toggleSettings()">⚙️</button>
+              <button onclick="toggleCart()">Afficher le Panier</button>
+            <!-- Mini carte avec une carte interactive à droite -->
 
-        <!-- Icône de boutique et section boutique -->
-        <div class="shop-icon" onclick="toggleShopSection()">
-            <i class="fas fa-shopping-cart"></i>
-            <p>Afficher la Boutique</p>
+            </div>
+          
         </div>
+        <div id="status-text">
+            <span class="status-circle status-online"></span> En ligne
+        </div>
+        
+      <!-- Icône de la boutique avec la flèche -->
+<div class="shop-icon" onclick="toggleShopSection()">
+    <div class="draggable-card">
+        <iframe src="https://www.google.com/maps/embed?pb=..." width="200" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+    <i id="shop-icon" class="fas fa-store"></i> <!-- Icône de la boutique -->
+    <i id="arrow-icon" class="fas fa-chevron-down" style="display:none;"></i> <!-- Flèche cachée initialement -->
+    <p>Afficher la Boutique</p>
+</div>
+    </div>
 
-   <div class="shop-section" style="display: none;">
+   <!-- Paramètres (Fenêtre popup) -->
+<div class="settings-popup" id="settings-popup" style="display:none;">
+    <h3>Paramètres</h3>
+    <button onclick="closeSettings()">❌ Fermer</button> <!-- Bouton pour fermer -->
+    <p>Activer la localisation :</p>
+    <button onclick="toggleLocation()">Activer la localisation</button>
+    <p id="location-status">Localisation désactivée</p>
+</div>
+ 
+<div class="shop-section" style="display: none;">
     <h3>Produits Disponibles</h3>
+    <div class="shop-items">
+        <!-- Produit 1 -->
+        <div class="shop-item" id="product-1">
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/3506e966-94ff-790f-7e7c-42ae4c6b0b68.jpg" alt="Produit A" class="product-image">
+            <h4>Produit A</h4>
+            <p>Description du produit A</p>
+            <span class="price">Prix : €45.00</span>
+            <button class="buy-button" onclick="addToCart('Produit A', 10)">Ajouter au panier</button>
+        </div>
 
-<div class="shop-items">
-    <!-- Produit 1 -->
-    <div class="shop-item" id="product-1">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/3506e966-94ff-790f-7e7c-42ae4c6b0b68.jpg" alt="Produit A" class="product-image">
-        <h4>Produit A</h4>
-        <p>Description du produit A</p>
-        <span class="price">Prix : €45.00</span>
-        <button class="buy-button" onclick="addToCart('Produit A', 10)">Ajouter au panier</button>
-    </div>
+        <!-- Produit 2 -->
+        <div class="shop-item" id="product-2">
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/f3f5b58a-0386-18c4-b99f-9874a1631cb1.jpg" alt="Produit B" class="product-image">
+            <h4>Produit B</h4>
+            <p>Description du produit B</p>
+            <span class="price">Prix : €45.00</span>
+            <button class="buy-button" onclick="addToCart('Produit B', 15)">Ajouter au panier</button>
+        </div>
 
-    <!-- Produit 2 -->
-    <div class="shop-item" id="product-2">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/f3f5b58a-0386-18c4-b99f-9874a1631cb1.jpg" alt="Produit B" class="product-image">
-        <h4>Produit B</h4>
-        <p>Description du produit B</p>
-        <span class="price">Prix : €45.00</span>
-        <button class="buy-button" onclick="addToCart('Produit B', 15)">Ajouter au panier</button>
-    </div>
-
-    <!-- Produit 3 -->
-    <div class="shop-item" id="product-3">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/ca2ffb50-9a83-d784-6a80-0594c5a31366.jpg" alt="Produit C" class="product-image">
-        <h4>Produit C</h4>
-        <p>Description du produit C</p>
-        <span class="price">Prix : €45.00</span>
-        <button class="buy-button" onclick="addToCart('Produit C', 20)">Ajouter au panier</button>
+        <!-- Produit 3 -->
+        <div class="shop-item" id="product-3">
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/ca2ffb50-9a83-d784-6a80-0594c5a31366.jpg" alt="Produit C" class="product-image">
+            <h4>Produit C</h4>
+            <p>Description du produit C</p>
+            <span class="price">Prix : €45.00</span>
+            <button class="buy-button" onclick="addToCart('Produit C', 20)">Ajouter au panier</button>
+        </div>
     </div>
 </div>
 
-
+<!-- Panier et formulaire d'adresse -->
+<div class="cart" id="cart" style="display: none;">
+    <h3>Mon Panier</h3>
+    <div id="cart-items"></div>
+    <div class="total" id="total">Total : €0.00</div>
+    <button class="remove-button" onclick="clearCart()">Vider le Panier</button>
+    <button class="remove-button" onclick="openOrderForm()">Finaliser la Commande</button>
 </div>
-        <!-- Panier et formulaire d'adresse -->
-        <div class="cart" id="cart" style="display: none;">
-            <h3>Mon Panier</h3>
-            <div id="cart-items"></div>
-            <div class="total" id="total">Total : €0.00</div>
-            <button class="remove-button" onclick="clearCart()">Vider le Panier</button>
-            <button class="remove-button" onclick="openOrderForm()">Finaliser la Commande</button>
-        </div>
 
-        <!-- Formulaire de finalisation commande -->
-        <div class="order-form" id="order-form" style="display: none;">
-            <h3>Finalisation de la commande</h3>
-            <form action="https://formspree.io/f/{your-form-id}" method="POST">
-                <input type="text" name="firstName" placeholder="Prénom" required>
-                <input type="text" name="lastName" placeholder="Nom" required>
-                <input type="text" name="address" id="userAddress" placeholder="Adresse ou code postal" required>
-                <input type="tel" name="phone" placeholder="Numéro de téléphone" required>
-                <input type="hidden" name="products" id="orderProducts">
-                <input type="hidden" name="totalPrice" id="orderTotalPrice">
-                <div id="shippingMessage"></div>
-                <button type="button" onclick="calculateShipping()">Calculer la livraison</button>
-                <button type="submit">Envoyer la Commande</button>
-                <button type="button" onclick="closeOrderForm()">Annuler</button>
-            </form>
-        </div>
-    </div>
+<!-- Formulaire de finalisation commande -->
+<div class="order-form" id="order-form" style="display: none;">
+    <h3>Finalisation de la commande</h3>
+    <form action="https://formspree.io/f/{your-form-id}" method="POST">
+        <input type="text" name="firstName" placeholder="Prénom" required>
+        <input type="text" name="lastName" placeholder="Nom" required>
+        <input type="text" name="address" id="userAddress" placeholder="Adresse ou code postal" required>
+        <input type="tel" name="phone" placeholder="Numéro de téléphone" required>
+        <input type="hidden" name="products" id="orderProducts">
+        <input type="hidden" name="totalPrice" id="orderTotalPrice">
+        <div id="shippingMessage"></div>
+        <button type="button" onclick="calculateShipping()">Calculer la livraison</button>
+        <button type="submit">Envoyer la Commande</button>
+        <button type="button" onclick="closeOrderForm()">Annuler</button>
+    </form>
+</div>
+
 <!-- Lightbox -->
 <div id="lightbox" style="display:none;">
     <div id="lightbox-content">
@@ -487,7 +632,53 @@ button {
         <button onclick="closeLightbox()">Fermer</button>
     </div>
 </div>
+
+<!-- Modale de confirmation -->
+<div id="confirmation-modal" class="modal">
+    <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <p id="modal-message"></p>
+    </div>
+</div>
+
+  <script>
+// Fonction pour afficher ou masquer le panier
+function toggleCart() {
+    const cart = document.getElementById("cart");
+    
+    // Si le panier est actuellement caché, on l'affiche, sinon on le cache
+    if (cart.style.display === "none") {
+        cart.style.display = "block";
+    } else {
+        cart.style.display = "none";
+    }
+}
+
+// Fonction pour vider le panier (par exemple, supprimer tous les éléments du panier)
+function clearCart() {
+    const cartItems = document.getElementById("cart-items");
+    cartItems.innerHTML = ""; // Vide tous les éléments du panier
+    const total = document.getElementById("total");
+    total.innerHTML = "Total : €0.00"; // Réinitialise le total
+}
+
+// Fonction pour finaliser la commande (par exemple, rediriger vers un formulaire)
+function openOrderForm() {
+    // Ici, tu pourrais ouvrir un formulaire de commande ou rediriger vers une autre page
+    alert("Finalisation de la commande...");
+}
+</script>
 <script>
+   function toggleShopSection() {
+    const shopSection = document.querySelector('.shop-section');
+    shopSection.style.display = shopSection.style.display === 'none' ? 'block' : 'none';
+
+    const icon = document.querySelector('.shop-icon i');
+    icon.className = shopSection.style.display === 'block' ? 'fas fa-chevron-up' : 'fas fa-shopping-cart';
+}
+    
+    
+    
 window.addEventListener("load", function() {
     const urlParams = new URLSearchParams(window.location.search);
     const productId = urlParams.get('product');  // Récupère l'ID du produit depuis l'URL
@@ -508,19 +699,25 @@ window.addEventListener("load", function() {
     }
 });
 
-function openLightbox(imgSrc) {
-    document.getElementById('lightbox-img').src = imgSrc;
-    document.getElementById('lightbox').style.display = 'flex';
-}
-
-function closeLightbox() {
-    document.getElementById('lightbox').style.display = 'none';
-    
-    // Afficher tous les produits après fermeture de la lightbox
+function toggleLightbox(imgSrc = '') {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
     const allProducts = document.querySelectorAll('.shop-item');
-    allProducts.forEach(function(product) {
-        product.style.display = 'block';
-    });
+
+    if (lightbox.style.display === 'none' || lightbox.style.display === '') {
+        // Ouvre la lightbox
+        lightbox.style.display = 'flex';
+        lightboxImg.src = imgSrc;
+    } else {
+        // Ferme la lightbox
+        lightbox.style.display = 'none';
+        lightboxImg.src = '';
+
+        // Affiche tous les produits
+        allProducts.forEach(function (product) {
+            product.style.display = 'block';
+        });
+    }
 }
 </script>
     <script>
@@ -544,112 +741,184 @@ function closeLightbox() {
     </script>
     
     <script>
-        let cart = [];
+    // Fonction pour afficher ou masquer les paramètres
+function toggleSettings() {
+    const settingsPopup = document.getElementById('settings-popup');
+    settingsPopup.style.display = settingsPopup.style.display === 'none' ? 'block' : 'none';
+}
+
+// Fonction pour activer ou désactiver la localisation
+function toggleLocation() {
+    const locationStatus = document.getElementById('location-status');
+    if (locationStatus.textContent === "Localisation désactivée") {
+        locationStatus.textContent = "Localisation activée";
+        // Ajoute ici la logique pour activer la géolocalisation
+    } else {
+        locationStatus.textContent = "Localisation désactivée";
+        // Ajoute ici la logique pour désactiver la géolocalisation
+    }
+}
+    
+    // Fonction pour fermer la fenêtre des paramètres
+function closeSettings() {
+    const settingsPopup = document.getElementById('settings-popup');
+    settingsPopup.style.display = 'none';
+}
+   
+    
+     
+    
+       let cart = [];
 let totalPrice = 0;
 const shopLat = 43.296398; // latitude de Marseille
 const shopLon = 5.370000;  // longitude de Marseille
 
-function updateShopLocation() {
-    document.getElementById('shopLocation').textContent = "355 rue de Lyon, Marseille, France"; // Modifiez ici pour changer l'adresse
-    shopCoordinates = { lat: shopLat, lon: shopLon }; // Coordonnées pour Marseille
+// Fonction pour basculer la visibilité de la section boutique et afficher/masquer la flèche
+function toggleShopSection() {
+    const shopSection = document.querySelector('.shop-section');
+    const arrowIcon = document.getElementById('arrow-icon'); // Récupère l'icône de la flèche
+    const shopIcon = document.getElementById('shop-icon'); // Récupère l'icône de la boutique
+    
+    if (shopSection.style.display === 'none') {
+        shopSection.style.display = 'block'; // Affiche la boutique
+        shopIcon.style.display = 'none'; // Cache l'icône de la boutique
+        arrowIcon.style.display = 'inline'; // Affiche la flèche
+    } else {
+        shopSection.style.display = 'none'; // Cache la boutique
+        shopIcon.style.display = 'inline'; // Réaffiche l'icône de la boutique
+        arrowIcon.style.display = 'none'; // Cache la flèche
+    }
 }
-        function toggleShopSection() {
-            const shopSection = document.querySelector('.shop-section');
-            shopSection.style.display = shopSection.style.display === 'none' ? 'block' : 'none';
-        }
 
-        function addToCart(productName, price) {
-            cart.push({ productName, price });
-            totalPrice += price;
-            updateCartDisplay();
-        }
+// Fonction pour ajouter un produit au panier
+function addToCart(productName, price) {
+    cart.push({ productName, price });
+    totalPrice += price;
+    updateCartDisplay();
 
-        function updateCartDisplay() {
-            const cartItems = document.getElementById('cart-items');
-            cartItems.innerHTML = '';
-            cart.forEach(item => {
-                const div = document.createElement('div');
-                div.classList.add('cart-item');
-                div.innerHTML = `${item.productName} <span>€${item.price.toFixed(2)}</span> <button onclick="removeFromCart('${item.productName}')">Supprimer</button>`;
-                cartItems.appendChild(div);
+    // Affiche un message dans la modale
+    const modalMessage = document.getElementById('modal-message');
+    modalMessage.textContent = `${productName} a été ajouté au panier.`;
+
+    // Affiche un message de livraison estimée
+    document.getElementById('shippingMessage').innerHTML = "Livraison estimée : 5€.";
+
+    // Ouvre la modale de confirmation
+    const modal = document.getElementById('confirmation-modal');
+    modal.style.display = 'flex';
+
+    // Ferme la modale lorsqu'on clique sur la croix
+    const closeModal = document.getElementById('close-modal');
+    closeModal.onclick = function () {
+        modal.style.display = 'none';
+    };
+
+    // Ferme la modale si l'utilisateur clique en dehors
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    };
+}
+
+// Fonction pour mettre à jour l'affichage du panier
+function updateCartDisplay() {
+    const cartItems = document.getElementById('cart-items');
+    cartItems.innerHTML = '';
+    cart.forEach(item => {
+        const div = document.createElement('div');
+        div.classList.add('cart-item');
+        div.innerHTML = `${item.productName} <span>€${item.price.toFixed(2)}</span> <button onclick="removeFromCart('${item.productName}')">Supprimer</button>`;
+        cartItems.appendChild(div);
+    });
+    document.getElementById('total').innerHTML = `Total : €${totalPrice.toFixed(2)}`;
+    document.getElementById('cart').style.display = 'block';
+}
+
+// Fonction pour supprimer un produit du panier
+function removeFromCart(productName) {
+    const index = cart.findIndex(item => item.productName === productName);
+    if (index !== -1) {
+        totalPrice -= cart[index].price;
+        cart.splice(index, 1);
+        updateCartDisplay();
+    }
+}
+
+// Fonction pour vider le panier
+function clearCart() {
+    cart = [];
+    totalPrice = 0;
+    updateCartDisplay();
+    document.getElementById('cart').style.display = 'none';
+}
+
+// Fonction pour ouvrir le formulaire de commande
+function openOrderForm() {
+    document.getElementById('order-form').style.display = 'block';
+    document.getElementById('orderProducts').value = JSON.stringify(cart);
+    document.getElementById('orderTotalPrice').value = totalPrice.toFixed(2);
+}
+
+// Fonction pour fermer le formulaire de commande
+function closeOrderForm() {
+    document.getElementById('order-form').style.display = 'none';
+}
+
+// Fonction pour calculer le coût de la livraison en fonction de l'adresse de l'utilisateur
+function calculateShipping() {
+    const userAddress = document.getElementById('userAddress').value;
+    if (userAddress) {
+        // Utilisation de l'API Nominatim pour géocoder l'adresse
+        fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(userAddress)}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.length > 0) {
+                    const userLat = parseFloat(data[0].lat);
+                    const userLon = parseFloat(data[0].lon);
+                    const distance = calculateDistance(shopLat, shopLon, userLat, userLon);
+                    displayShippingCost(distance);
+                } else {
+                    document.getElementById('shippingMessage').innerHTML = "Adresse non trouvée. Veuillez vérifier et réessayer.";
+                }
+            })
+            .catch(error => {
+                console.error('Erreur lors de la géolocalisation:', error);
+                document.getElementById('shippingMessage').innerHTML = "Erreur lors du calcul de la distance. Veuillez réessayer.";
             });
-            document.getElementById('total').innerHTML = `Total : €${totalPrice.toFixed(2)}`;
-            document.getElementById('cart').style.display = 'block';
-        }
+    } else {
+        document.getElementById('shippingMessage').innerHTML = "Veuillez entrer une adresse valide.";
+    }
+}
 
-        function removeFromCart(productName) {
-            const index = cart.findIndex(item => item.productName === productName);
-            if (index !== -1) {
-                totalPrice -= cart[index].price;
-                cart.splice(index, 1);
-                updateCartDisplay();
-            }
-        }
+// Fonction pour calculer la distance entre la boutique et l'adresse de l'utilisateur
+function calculateDistance(lat1, lon1, lat2, lon2) {
+    const R = 6371; // Rayon de la Terre en kilomètres
+    const dLat = (lat2 - lat1) * Math.PI / 180; // Conversion des degrés en radians
+    const dLon = (lon2 - lon1) * Math.PI / 180; // Conversion des degrés en radians
+    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+              Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    return R * c; // Retourne la distance en kilomètres
+}
 
-        function clearCart() {
-            cart = [];
-            totalPrice = 0;
-            updateCartDisplay();
-            document.getElementById('cart').style.display = 'none';
-        }
+// Fonction pour afficher le coût de la livraison basé sur le total de la commande
+function displayShippingCost() {
+    let shippingCost = 5; // Frais de livraison par défaut
 
-        function openOrderForm() {
-            document.getElementById('order-form').style.display = 'block';
-            document.getElementById('orderProducts').value = JSON.stringify(cart);
-            document.getElementById('orderTotalPrice').value = totalPrice.toFixed(2);
-        }
+    // Si le total de la commande est supérieur à 20 € mais inférieur à 40 €
+    if (totalPrice >= 20 && totalPrice < 40) {
+        shippingCost = 3;  // Frais de livraison réduits
+    }
+    // Si le total de la commande dépasse 40 €, la livraison devient gratuite
+    else if (totalPrice >= 40) {
+        shippingCost = 0; // Livraison gratuite
+    }
 
-        function closeOrderForm() {
-            document.getElementById('order-form').style.display = 'none';
-        }
-
-        function calculateShipping() {
-            const userAddress = document.getElementById('userAddress').value;
-            if (userAddress) {
-                // Utilisation de l'API Nominatim pour géocoder l'adresse
-                fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(userAddress)}`)
-                    .then(response => response.json())
-                    .then(data => {
-                        if (data.length > 0) {
-                            const userLat = parseFloat(data[0].lat);
-                            const userLon = parseFloat(data[0].lon);
-                            const distance = calculateDistance(shopLat, shopLon, userLat, userLon);
-                            displayShippingCost(distance);
-                        } else {
-                            document.getElementById('shippingMessage').innerHTML = "Adresse non trouvée. Veuillez vérifier et réessayer.";
-                        }
-                    })
-                    .catch(error => {
-                        console.error('Erreur lors de la géolocalisation:', error);
-                        document.getElementById('shippingMessage').innerHTML = "Erreur lors du calcul de la distance. Veuillez réessayer.";
-                    });
-            } else {
-                document.getElementById('shippingMessage').innerHTML = "Veuillez entrer une adresse valide.";
-            }
-        }
-
-        function calculateDistance(lat1, lon1, lat2, lon2) {
-            const R = 6371; // Rayon de la Terre en km
-            const dLat = (lat2 - lat1) * Math.PI / 180;
-            const dLon = (lon2 - lon1) * Math.PI / 180;
-            const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-                      Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-                      Math.sin(dLon / 2) * Math.sin(dLon / 2);
-            const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-            return R * c;
-        }
-
-        function displayShippingCost(distance) {
-            let shippingCost;
-            if (distance <= 3) shippingCost = 2;
-            else if (distance <= 5) shippingCost = 4;
-            else if (distance <= 10) shippingCost = 5;
-            else shippingCost = 'Gratuit';
-
-            document.getElementById('shippingMessage').innerHTML = `Distance : ${distance.toFixed(2)} km<br>Coût de livraison : ${shippingCost === 'Gratuit' ? 'Gratuit' : '€' + shippingCost}`;
-        }
-  
- 
+    // Mise à jour de l'affichage des frais de livraison
+    document.getElementById('shippingMessage').innerHTML = `Coût de livraison : €${shippingCost}`;
+}
     </script>
   
   
