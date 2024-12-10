@@ -20,11 +20,15 @@
         /* Styles globaux */    
     body {
   font-family: "Playfair Display", serif;
-  background-color: #333; /* Ton fond actuel, si tu veux garder le même */
+      background-image: url('https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/3d25f4b1-1fdb-ee75-5cbc-26b0b608623f.jpg'); /* Chemin vers l'image de fond */
+ /* Empêche la répétition de l'image */
+  background-size: contain; /* Ajuste l'image pour qu'elle soit entièrement visible */
+  background-position: center; /* Centre l'image dans la fenêtre */
+  background-color: #ffffff; /* Couleur de fond si l'image ne remplit pas tout */
   margin: 0;
-  padding: 20px;
+  padding: 10px;
   color: #333; /* Optionnel, pour que le texte soit blanc sur un fond sombre */
-}
+    }
         /* Conteneur principal */
         .container {
             max-width: 700px;
@@ -388,10 +392,6 @@
 .order-form button:hover {
     background-color: #0056b3;
 }
-  
-  
-  
- 
 #lightbox {
     display: none;
     position: fixed;
@@ -428,9 +428,7 @@ button {
     width: 100px;
     cursor: pointer;
 }
-    
-    
-    
+        
     /* Style du modale */
 .modal {
     display: none; /* Caché par défaut */
@@ -518,10 +516,6 @@ button {
     padding: 20px 0;     /* Ajoute de l'espace autour du texte (optionnel) */
 }
   
-  
-
-
-
 /* Conteneur de la carte déplaçable */
 .draggable-card {
     position: absolute; /* Position absolue pour pouvoir le déplacer librement */
