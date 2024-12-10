@@ -352,7 +352,22 @@
             }
         }
     
-    
+    #toggle-cart-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #0088cc;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 18px;
+    }
     
     .order-form {
     display: none;
@@ -553,7 +568,7 @@ button {
                 <p><i class="fas fa-map-marker-alt"></i> Localisation : Marseille, France </p>
                 <p><i class="fas fa-envelope"></i> Contact : Oldestlucious@gmail.com</p>
 <button class="settings-btn" onclick="toggleSettings()">⚙️</button>
-              <button onclick="toggleCart()">Afficher le Panier</button>
+              <button id="toggle-cart-button" onclick="toggleCart()" style="display: none;">🛒</button>
             <!-- Mini carte avec une carte interactive à droite -->
 
             </div>
@@ -782,7 +797,26 @@ function closeSettings() {
 }
    
     
-     
+   // Fonction pour afficher le bouton panier 🛒
+function showCartButton() {
+    const cartButton = document.getElementById("toggle-cart-button");
+    cartButton.style.display = "block"; // Afficher le bouton
+}
+
+// Ajouter un événement sur chaque bouton "Ajouter au panier"
+document.querySelectorAll('.buy-button').forEach(button => {
+    button.addEventListener('click', showCartButton);
+});
+
+// Fonction pour afficher ou masquer le panier
+function toggleCart() {
+    const cart = document.getElementById("cart"); // Le panier
+    if (cart.style.display === "none" || cart.style.display === "") {
+        cart.style.display = "block"; // Affiche le panier
+    } else {
+        cart.style.display = "none"; // Cache le panier
+    }
+}  
     
        let cart = [];
 let totalPrice = 0;
