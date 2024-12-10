@@ -552,6 +552,25 @@ button {
     height: 100%; /* Occuper toute la hauteur de la carte */
     border-radius: 5px; /* Coins arrondis pour l'iframe */
 }
+
+      /* Bouton circulaire flottant */
+  #toggle-cart-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #ffcc00;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 18px;
+}
+   
     </style>
 </head>
 
@@ -569,7 +588,7 @@ button {
                 <p><i class="fas fa-envelope"></i> Contact : Oldestlucious@gmail.com</p>
 <button class="settings-btn" onclick="toggleSettings()">⚙️</button>
               <button id="toggle-cart-button" onclick="toggleCart()" style="display: none;">🛒</button>
-            <!-- Mini carte avec une carte interactive à droite -->
+              <!-- Mini carte avec une carte interactive à droite -->
 
             </div>
           
@@ -640,14 +659,16 @@ button {
 </div>
 
 <!-- Formulaire de finalisation commande -->
+<!-- Formulaire de finalisation commande -->
 <div class="order-form" id="order-form" style="display: none;">
     <h3>Finalisation de la commande</h3>
-    <form action="https://formspree.io/f/xgverrqa" method="POST">
+    <form action="https://formspree.io/f/{your-form-id}" method="POST">
         <input type="text" name="firstName" placeholder="Prénom" required>
         <input type="text" name="lastName" placeholder="Nom" required>
-        <input type="text" name="address" id="userAddress" placeholder="Adresse ou code postal" required>
         <input type="tel" name="phone" placeholder="Numéro de téléphone" required>
-        <input type="hidden" name="products" id="orderProducts">
+      <p>Veuillez entrer votre adresse pour calculer les frais de livraison.</p> <!-- Description ajoutée -->         
+        <input type="text" name="address" id="userAddress" placeholder="Adresse ou code postal" required>    
+           <input type="hidden" name="products" id="orderProducts">
         <input type="hidden" name="totalPrice" id="orderTotalPrice">
         <div id="shippingMessage"></div>
         <button type="button" onclick="calculateShipping()">Calculer la livraison</button>
@@ -797,7 +818,7 @@ function closeSettings() {
 }
    
     
-   // Fonction pour afficher le bouton panier 🛒
+// Fonction pour afficher le bouton panier 🛒
 function showCartButton() {
     const cartButton = document.getElementById("toggle-cart-button");
     cartButton.style.display = "block"; // Afficher le bouton
@@ -816,7 +837,7 @@ function toggleCart() {
     } else {
         cart.style.display = "none"; // Cache le panier
     }
-}  
+}
     
        let cart = [];
 let totalPrice = 0;
