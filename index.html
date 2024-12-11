@@ -638,6 +638,19 @@ button {
     transform: scale(1.1); /* Agrandir légèrement au survol */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre douce */
 }
+
+      #cookie-banner {
+    animation: slide-up 0.5s ease-in-out;
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
     </style>
 </head>
 
@@ -814,7 +827,17 @@ button {
         <p id="modal-message"></p>
     </div>
 </div>
-
+<!-- Bannière de consentement aux cookies -->
+<div id="cookie-banner" style="position: fixed; bottom: 10px; left: 10px; right: 10px; background: rgba(0, 0, 0, 0.9); color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; border-radius: 5px; z-index: 1000; display: none;">
+    <span>
+        Ce site utilise des cookies pour améliorer votre expérience. En continuant à naviguer, vous acceptez notre utilisation des cookies. 
+        <a href="/policy" style="color: #FFD700; text-decoration: underline;">En savoir plus</a>.
+    </span>
+    <div>
+        <button id="accept-cookies" style="background: #4CAF50; color: white; border: none; padding: 10px 15px; border-radius: 5px; margin-right: 10px; cursor: pointer;">Accepter</button>
+        <button id="decline-cookies" style="background: #f44336; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;">Refuser</button>
+    </div>
+</div>
   <script>
 // Fonction pour afficher ou masquer le panier
 function toggleCart() {
@@ -1113,7 +1136,46 @@ function displayShippingCost() {
     document.getElementById('shippingMessage').innerHTML = `Coût de livraison : €${shippingCost}`;
 }
     </script>
-  
+  <script>
+    // Vérifie si le cookie "cookies-accepted" existe
+    function getCookie(name) {
+        let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+        return match ? match[2] : null;
+    }
+
+    // Définit un cookie avec une durée en jours
+    function setCookie(name, value, days) {
+        let date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
+    }
+
+    // Affiche la bannière si le consentement n'est pas encore donné
+    document.addEventListener('DOMContentLoaded', () => {
+        if (!getCookie('cookies-accepted')) {
+            document.getElementById('cookie-banner').style.display = 'flex';
+        }
+
+        // Accepter les cookies
+        document.getElementById('accept-cookies').addEventListener('click', () => {
+            setCookie('cookies-accepted', 'true', 365);
+            document.getElementById('cookie-banner').style.display = 'none';
+        });
+
+        // Refuser les cookies
+        document.getElementById('decline-cookies').addEventListener('click', () => {
+            setCookie('cookies-accepted', 'false', 365);
+            document.getElementById('cookie-banner').style.display = 'none';
+        });
+    });
+  </script>
+  <script>
+    if (getCookie('cookies-accepted') === 'true') {
+        const recaptchaScript = document.createElement('script');
+        recaptchaScript.src = "https://www.google.com/recaptcha/enterprise.js?render=6Lfx0ZgqAAAAACuBGXsYgBHKE36ltUCI4wPOclPw";
+        document.head.appendChild(recaptchaScript);
+    }
+  </script>
   
 </body>
 </html>
