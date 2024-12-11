@@ -4,16 +4,13 @@
   <!-- Préconnecter les serveurs Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <!-- Lien pour importer la police Playfair Display -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-
-    
-       <meta charset="UTF-8">
+      <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Découvrez notre boutique en ligne proposant des produits uniques de haute qualité. Contactez-nous pour plus d'informations.">
     <meta name="keywords" content="boutique, produits uniques, Marseille, Bonbonne, Livraison à domicile,  achats en ligne">
-    <title>Strong Hold Shop</title>
+    <title>The strongest holder shop</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/90a4d1138d.js" crossorigin="anonymous"></script>
     <style>
@@ -26,17 +23,17 @@
   /* Centre l'image dans la fenêtre */
   background-color: #ffffff; /* Couleur de fond si l'image ne remplit pas tout */
   margin: 0;
-  padding: 10px;
+  padding: 5px;
   color: #333; /* Optionnel, pour que le texte soit blanc sur un fond sombre */
     }
         /* Conteneur principal */
-        .container {
+        .container {         
             max-width: 700px;
             margin: auto;
             background-image: url('https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/bdaf7f2b-dedf-4816-1f47-04bcf5078c30.jpg'); /* Ajout de l'image de fond */
             background-size: cover; /* Pour couvrir toute la zone du conteneur */
              /* Centrer l'image */
-            padding: 20px;
+            padding: 5px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border: 1px solid #dfe3e8;
@@ -171,18 +168,19 @@
 .shop-items {
     display: flex;
     justify-content: space-between;
-    gap: 15px; /* Ajoute un espacement horizontal entre les éléments côte à côte */
+    gap: 5px; /* Ajoute un espacement horizontal entre les éléments côte à côte */
 }
 
 .shop-item {
-    width: 30%;
+  margin: auto;
+    width: 60%;
     text-align: center;
     background-color: #f9f9f9;
     padding: 2px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
-    position: relative;
+    
     margin-bottom: 5px; /* Espacement sous chaque article */
 }
 
@@ -211,11 +209,12 @@
 
 /* Réduire l'espacement entre la description et le prix */
 .shop-item p {
-    margin-bottom: 5px; /* Réduit l'espacement sous la description */
+    margin-bottom: -2px; /* Réduit l'espacement sous la description */
 }
 
 /* Garder l'espacement normal pour le prix */
 .shop-item .price {
+  margin-bottom: -50px; 
     margin-top: 5px; /* Réduit l'espacement au-dessus du prix */
 }
 
@@ -289,7 +288,27 @@
     max-height: 240px; /* Limite à environ 3 produits (ajustez selon la hauteur réelle des produits) */
     overflow-y: auto; /* Permet de faire défiler le contenu si nécessaire */
 }
-        /* A
+        
+/* Style pour la mention "Livraison incluse" */
+.delivery-info {
+    color: green; /* Texte en vert pour "Livraison" */
+    font-size: 14px; /* Taille de police normale */
+    font-style: italic; /* Texte en italique */
+    margin-top: 5px; /* Espacement avec l'élément précédent */
+}
+
+/* Encadrement uniquement pour le mot "incluse" */
+.included-box {
+    color: white; /* Texte en blanc pour contraste */
+    background-color: green; /* Fond vert pour le mot "incluse" */
+    border: 2px solid green; /* Bordure verte autour du mot */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 2px 6px; /* Espacement interne pour un look aéré */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Ombre subtile autour du mot */
+    display: inline-block; /* Applique l'encadrement uniquement au mot "incluse" */
+}
+
+
 
         /* Autres styles du panier */
         .cart h3 {
@@ -483,20 +502,6 @@ button {
     cursor: pointer;
 }
     
-    
-   /* Style pour la fenêtre des paramètres */
-.settings-popup {
-    position: absolute;
-    top: 20%;
-    right: 10%;
-    width: 250px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    border-radius: 8px;
-    display: none;
-}
-
 /* Bouton des paramètres */
 .settings-btn {
     background-color: transparent;
@@ -533,28 +538,6 @@ button {
     padding: 20px 0;     /* Ajoute de l'espace autour du texte (optionnel) */
 }
   
-/* Conteneur de la carte déplaçable */
-.draggable-card {
-    position: absolute; /* Position absolue pour pouvoir le déplacer librement */
-    top: 290px; /* Position initiale (à ajuster si nécessaire) */
-    left: 279px; /* Position initiale (à ajuster si nécessaire) */
-    z-index: 100; /* Assurez-vous que la carte soit au-dessus des autres éléments */
-    cursor: move; /* Afficher un curseur de déplacement */
-    width: 90px;  /* Réduit la largeur de la carte */
-    height: 80px; /* Réduit la hauteur de la carte */
-    border: 2px solid #ccc; /* Bordure pour la carte */
-    border-radius: 10px; /* Coins arrondis pour un meilleur effet visuel */
-    padding: 5px; /* Espace interne pour ne pas que le contenu touche les bords */
-    background-color: #fff; /* Arrière-plan blanc */
-}
-
-/* Pour rendre l'iframe à l'intérieur de la carte responsive et adapté */
-.draggable-card iframe {
-    width: 100%; /* Occuper toute la largeur de la carte */
-    height: 100%; /* Occuper toute la hauteur de la carte */
-    border-radius: 5px; /* Coins arrondis pour l'iframe */
-}
-
       /* Bouton circulaire flottant */
   #toggle-cart-button {
     position: fixed;
@@ -573,6 +556,88 @@ button {
     font-size: 18px;
 }
    
+  
+  /* Shop details */
+.shop-details {
+    margin-top: 10px; /* Espacement entre la section et le contenu précédent */
+    padding: 5px 10px; /* Espacement interne compact */
+    border: 2px solid rgba(0, 0, 0, 0.4); /* Bordure initiale fine et semi-transparente */
+    border-radius: 5px; /* Coins légèrement arrondis */
+    background: rgba(255, 255, 255, 0.6); /* Fond semi-transparent blanc */
+    backdrop-filter: blur(5px); /* Applique un effet de flou */
+    -webkit-backdrop-filter: blur(5px); /* Compatibilité pour Safari */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre subtile pour ajouter de la profondeur */
+    transition: border 0.3s ease-in-out; /* Transition douce pour la bordure */
+}
+
+/* Effet animé de la bordure */
+.shop-details:hover {
+    border: 2px solid #b858bf; /* Changer la couleur de la bordure au survol (ex : violet pour Instagram) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre un peu plus forte pour un effet de survol */
+}
+
+/* Shop details h5 */
+.shop-details h5 {
+    font-size: 15px; /* Taille réduite pour le titre */
+    color: #333; /* Couleur sombre pour le titre */
+    margin: 0; /* Supprime les marges autour du titre */
+}
+
+.shop-details p {
+    font-size: 14px; /* Taille compacte pour le texte */
+    color: #555; /* Couleur légèrement plus claire */
+    margin: 2px 0; /* Très peu d'espace entre les paragraphes */
+    line-height: 1.2; /* Espacement serré entre les lignes */
+}
+  
+  
+  /* Conteneur des icônes */
+.social-icons {
+    margin-top: 10px; /* Espacement au-dessus */
+    display: flex; /* Disposition en ligne */
+    gap: 15px; /* Espacement entre les icônes */
+    justify-content: flex-start; /* Alignement des icônes à gauche */
+}
+
+/* Styles communs pour chaque icône */
+.social-icons i {
+    font-size: 24px; /* Taille des icônes */
+    width: 50px; /* Largeur du cercle */
+    height: 50px; /* Hauteur du cercle */
+    line-height: 50px; /* Centrage vertical du texte */
+    text-align: center; /* Centrage horizontal du texte */
+    border-radius: 50%; /* Cercle parfait */
+    border: 3px solid transparent; /* Contour initial transparent */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation douce */
+    color: white; /* Couleur de l'icône par défaut */
+}
+
+/* Snapchat */
+.social-icons i.fa-snapchat {
+    background-color: #FFFC00; /* Fond jaune Snapchat */
+    border: 2px solid #FFC107; /* Contour jaune clair */
+    color: black; /* Icône noire Snapchat */
+}
+
+/* TikTok */
+.social-icons i.fa-tiktok {
+    background: linear-gradient(45deg, #25F4EE, #FE2C55); /* Dégradé TikTok */
+    border: 2px solid #FE2C55; /* Contour rose TikTok */
+    color: white; /* Icône blanche TikTok */
+}
+
+/* Instagram */
+.social-icons i.fa-instagram {
+    background: linear-gradient(45deg, #FEDA77, #DD2A7B, #8134AF); /* Dégradé Instagram */
+    border: 2px solid #DD2A7B; /* Contour rose Instagram */
+    color: white; /* Icône blanche Instagram */
+}
+
+/* Effets au survol */
+.social-icons i:hover {
+    transform: scale(1.1); /* Agrandir légèrement au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre douce */
+}
     </style>
 </head>
 
@@ -580,18 +645,34 @@ button {
 <body>
 <div class="container">
     <!-- Titre et profil -->
-    <div class="scrolling-title">BIENVENUE 🛍</div>
+    <div class="scrolling-title">BIENVENUE 🏷 🛍</div>
     <div class="profile-card">
         <div class="profile-header">
-            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/5f832f01-0623-fe2e-7c6e-75734b59e082.jpg" alt="Profil" class="profile-pic">
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/c5b0223d-f147-e0a5-7a10-613ef3d99567.jpg" alt="Profil" class="profile-pic">
             <div class="profile-info">
-                <h1>T.S.H 🛒 <span class="verified-badge"><i class="fab fa-telegram"></i></span></h1>
+                <h1>SHOP 🛒 <span class="verified-badge"><i class="fab fa-telegram"></i></span></h1>
+               <!-- Détails de la boutique -->
+                <div class="shop-details">
+                    <h5>Détails de la boutique</h5>
+                    <p>Préparation rapide et 🚚 livraison gratuite à partir de 35€ ! 🚀</p>
+                </div>
                 <p><i class="fas fa-map-marker-alt"></i> Localisation : Marseille, France </p>
                 <p><i class="fas fa-envelope"></i> Contact : Oldestlucious@gmail.com</p>
-<button class="settings-btn" onclick="toggleSettings()">⚙️</button>
+                <!-- Ajout des icônes des réseaux sociaux -->
+<div class="social-icons">
+    <a href="https://www.snapchat.com" target="_blank">
+        <i class="fa-brands fa-snapchat"></i>
+    </a>
+    <a href="https://www.tiktok.com" target="_blank">
+        <i class="fa-brands fa-tiktok" style="color: #911d44;"></i>
+    </a>
+    <a href="https://www.instagram.com" target="_blank">
+        <i class="fa-brands fa-instagram" style="color: #b858bf;"></i>
+    </a>
+</div>
+<button class="settings-btn" onclick="toggleSettings()">⚙️ : paramètres</button>            
               <button id="toggle-cart-button" onclick="toggleCart()" style="display: none;">🛒</button>
               <!-- Mini carte avec une carte interactive à droite -->
-
             </div>
           
         </div>
@@ -600,10 +681,8 @@ button {
         </div>
         
       <!-- Icône de la boutique avec la flèche -->
-<div class="shop-icon" onclick="toggleShopSection()">
-    <div class="draggable-card">
-        <iframe src="https://www.google.com/maps/embed?pb=..." width="200" height="150" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
+<div class="shop-icon" onclick="toggleShopSection()">   
+  
     <i id="shop-icon" class="fas fa-store"></i> <!-- Icône de la boutique -->
     <i id="arrow-icon" class="fas fa-chevron-down" style="display:none;"></i> <!-- Flèche cachée initialement -->
     <p>Afficher la Boutique</p>
@@ -617,6 +696,11 @@ button {
     <p>Activer la localisation :</p>
     <button onclick="toggleLocation()">Activer la localisation</button>
     <p id="location-status">Localisation désactivée</p>
+  <h1>Carte Waze</h1>
+    <div style="text-align: right;">
+      <iframe src="https://embed.waze.com/iframe?zoom=13&lat=48.85661&lon=2.35222&pin=1"
+            width="100%" height="220"></iframe>
+            </div>
 </div>
  
 <div class="shop-section" style="display: none;">
@@ -628,6 +712,7 @@ button {
             <h4>TANK</h4>
             <p>Goût: 🍓 </p>
             <span class="price">Prix : €45.00</span>
+         <p class="delivery-info">Livraison <span class="included-box">incluse</span></p> 
             <button class="buy-button" onclick="addToCart('TANK Fraise 🍓', 45)">Ajouter au panier</button>
         </div>
 
@@ -637,6 +722,7 @@ button {
             <h4>TANK</h4>
             <p>Goût: 🍍 </p>
             <span class="price">Prix : €45.00</span>
+       <p class="delivery-info">Livraison <span class="included-box">incluse</span></p> 
             <button class="buy-button" onclick="addToCart('TANK Ananas 🍍', 45)">Ajouter au panier</button>
         </div>
 
@@ -646,6 +732,7 @@ button {
             <h4>TANK</h4>
             <p>Goût: 🫐 </p>
             <span class="price">Prix : €45.00</span>
+          <p class="delivery-info">Livraison <span class="included-box">incluse</span></p>
             <button class="buy-button" onclick="addToCart('TANK Myrtille 🫐', 45)">Ajouter au panier</button>
         </div>
     </div>
@@ -653,10 +740,11 @@ button {
         <!-- Produit 1 -->
         <div class="shop-item">
             <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/060177f9-9b70-2508-e41e-6aa0cc7b3be3.jpeg" alt="Produit A" class="product-image">
-            <h4>WATERMELON Bubble GUM</h4>
+            <h4>WATERMELON GUM</h4>
             <p>Goût: 🍈 🎈</p>
             <span class="price">Prix : €15.00</span>
-            <button class="buy-button" onclick="addToCart('WATERMELON Bubble GUM', 15)">Ajouter au panier</button>
+          <p class="delivery-info">Livraison incluse</p> 
+            <button class="buy-button" onclick="addToCart('WATERMELON Bubble GUM 🍈 🍉', 15)">Ajouter au panier</button>
         </div>
         <!-- Produit 2 -->
         <div class="shop-item">
@@ -664,6 +752,7 @@ button {
             <h4>BLUE SOUR RAS..</h4>
             <p>Goût: 🍇 🍒</p>
             <span class="price">Prix : €15.00</span>
+          <p class="delivery-info">Livraison incluse</p> 
             <button class="buy-button" onclick="addToCart('BLUE SOUR RAS 🍇 🍒', 15)">Ajouter au panier</button>
         </div>
         <!-- Produit 3 -->
@@ -672,6 +761,7 @@ button {
             <h4>MANGO PEACH Watermelon</h4>
             <p>Goût: 🍑</p>
             <span class="price">Prix : €15.00</span>
+          <p class="delivery-info">Livraison incluse</p> 
             <button class="buy-button" onclick="addToCart('MANGO PEACH 🍑', 15)">Ajouter au panier</button>
         </div>
      </div>
@@ -686,21 +776,25 @@ button {
     <button class="remove-button" onclick="openOrderForm()">Finaliser la Commande</button>
 </div>
 
-<!-- Formulaire de finalisation commande -->
+
 <!-- Formulaire de finalisation commande -->
 <div class="order-form" id="order-form" style="display: none;">
     <h3>Finalisation de la commande</h3>
-    <form action="https://formspree.io/f/{your-form-id}" method="POST">
+    <form id="orderForm" action="https://formspree.io/f/{your-form-id}" method="POST">
         <input type="text" name="firstName" placeholder="Prénom" required>
         <input type="text" name="lastName" placeholder="Nom" required>
         <input type="tel" name="phone" placeholder="Numéro de téléphone" required>
-      <p>Veuillez entrer votre adresse pour calculer les frais de livraison.</p> <!-- Description ajoutée -->         
+        <p>Veuillez entrer votre adresse pour calculer les frais de livraison.</p> <!-- Description ajoutée -->         
         <input type="text" name="address" id="userAddress" placeholder="Adresse ou code postal" required>    
-           <input type="hidden" name="products" id="orderProducts">
+        <input type="hidden" name="products" id="orderProducts">
         <input type="hidden" name="totalPrice" id="orderTotalPrice">
         <div id="shippingMessage"></div>
         <button type="button" onclick="calculateShipping()">Calculer la livraison</button>
-        <button type="submit">Envoyer la Commande</button>
+
+        <!-- Ajouter reCAPTCHA Enterprise avant le bouton de soumission -->
+        <div id="recaptcha-container"></div>
+
+        <button type="submit" onclick="onClick(event)">Envoyer la Commande</button>
         <button type="button" onclick="closeOrderForm()">Annuler</button>
     </form>
 </div>
@@ -900,7 +994,7 @@ function addToCart(productName, price) {
     modalMessage.textContent = `${productName} a été ajouté au panier.`;
 
     // Affiche un message de livraison estimée
-    document.getElementById('shippingMessage').innerHTML = "Livraison estimée : 5€.";
+    document.getElementById('shippingMessage').innerHTML = "Livraison gratuite dès 35 € d'achat !";
 
     // Ouvre la modale de confirmation
     const modal = document.getElementById('confirmation-modal');
@@ -1023,3 +1117,4 @@ function displayShippingCost() {
   
 </body>
 </html>
+
