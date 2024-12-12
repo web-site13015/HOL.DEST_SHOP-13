@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- URL canonique (pratique pour éviter le contenu dupliqué) -->
+    <link rel="canonical" href="https://web-site13015.github.io/tsh_shop13/">
+   <!-- Charset et autres informations -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- Twitter Card (si vous souhaitez un rendu optimisé sur Twitter) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TSH shop Profil Public Boutique">
+    <meta name="twitter:description" content="Découvrez le profil public de Nasdas et explorez sa boutique en ligne proposant des produits uniques et de qualité.">
+    <meta name="twitter:image" content="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/3ca1b1d0-884f-4686-3a32-80c79f9d91ca.jpg">
+   <!-- Social Media: Open Graph pour partager sur Facebook, Twitter, etc. -->
+    <meta property="og:title" content="TSH SHOP Profil Public Boutique">
+    <meta property="og:description" content="Découvrez le profil public de Nasdas et explorez sa boutique en ligne proposant des produits uniques et de qualité.">
+    <meta property="og:image" content="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/d12d81c5-4994-1d15-d5dc-dbb4d433828f.jpg">
+    <meta property="og:url" content="https://web-site13015.github.io/tsh_shop13/">
+    <meta property="og:type" content="website">
+
+  <link rel="icon" href="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/3ca1b1d0-884f-4686-3a32-80c79f9d91ca.jpg" type="image/png">
+  
   <!-- Préconnecter les serveurs Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -820,6 +838,122 @@ button {
 </div> 
 <div class="shop-section" style="display: none;">
     <h3>Produits Disponibles</h3>
+  <div class="shop-items">
+    <!-- Ballon Rouge -->
+    <div class="shop-item" id="product-1">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/73f742c5-174c-a08d-49cd-6c9e16919ad1.png" alt="Ballon Rouge" class="product-image">
+        <h4>Ballon</h4>
+        <p>Couleur : Rouge</p>
+        <span class="price">Prix : €5.50</span>
+        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
+        <button class="buy-button" onclick="addToCart('Ballon Rouge', 5.50)">Ajouter au panier</button>
+    </div>
+    <!-- Ballon Bleu Ciel -->
+    <div class="shop-item" id="product-2">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/3ee66306-d800-6cfc-d53b-7c9269c8fd61.png" alt="Ballon Bleu Ciel" class="product-image">
+        <h4>Ballon</h4>
+        <p>Couleur : Bleu</p>
+        <span class="price">Prix : €5.50</span>
+        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
+        <button class="buy-button" onclick="addToCart('Ballon Bleu Ciel', 5.50)">Ajouter au panier</button>
+    </div>
+    <!-- Ballon Beige -->
+    <div class="shop-item" id="product-3">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/cba2e071-d038-ec95-9414-eaff2e6fdb58.png" alt="Ballon Beige" class="product-image">
+        <h4>Ballon</h4>
+        <p>Couleur : Beige</p>
+        <span class="price">Prix : €5.50</span>
+        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
+        <button class="buy-button" onclick="addToCart('Ballon Beige', 5.50)">Ajouter au panier</button>
+    </div>
+</div>
+  <div class="shop-items">
+    <!-- Produit 1 -->
+    <div class="shop-item" id="product-1">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/0cdbf829-643f-74ed-5508-d5d68995d958.png" alt="Produit A" class="product-image">
+        <h4>Goût Crème </h4>
+        <p>Goût: Pastèque</p>
+        <span class="price">Prix : €8.00</span>
+        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
+        <button class="buy-button" onclick="addToCart('Goût Crème Pastèque', 8)">Ajouter au panier</button>
+    </div>
+    <!-- Produit 2 -->
+    <div class="shop-item" id="product-2">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/1919ecc3-90eb-9d34-fb6d-2f6a722179f2.png" alt="Produit B" class="product-image">
+        <h4>Goût Crème</h4>
+        <p>Goût: Sans goût</p>
+        <span class="price">Prix : €8.00</span>
+        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
+        <button class="buy-button" onclick="addToCart('Goût Crème Sans goût', 8)">Ajouter au panier</button>
+    </div>
+    <!-- Produit 3 -->
+    <div class="shop-item" id="product-3">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/e0e54a61-65de-c335-0c5e-586cfb7e866a.png" alt="Produit C" class="product-image">
+        <h4>Goût Crème</h4>
+        <p>Goût: Sans goût</p>
+        <span class="price">Prix : €8.00</span>
+        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
+        <button class="buy-button" onclick="addToCart('Goût Crème Sans goût', 8)">Ajouter au panier</button>
+    </div>
+</div>
+  <div class="shop-items">
+    <!-- Produit 1 -->
+    <div class="shop-item" id="product-1">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/c951c889-35c5-92a3-89d8-9efd59d3650c.png" alt="Produit A" class="product-image">
+        <h4>Cartouche Crème</h4>
+        <p>Goût: Sans goût</p>
+        <span class="price">Prix : €7.00</span>
+        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
+        <button class="buy-button" onclick="addToCart('Cartouche Crème Sans goût', 7)">Ajouter au panier</button>
+    </div>
+    <!-- Produit 2 -->
+    <div class="shop-item" id="product-2">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/66daeb29-f307-827a-d332-23ffaeb22b8e.png" alt="Produit B" class="product-image">
+        <h4>FAST GAZ</h4>
+        <p>Goût: Sans goût</p>
+        <span class="price">Prix : €25.00</span>
+        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
+        <button class="buy-button" onclick="addToCart('FAST GAZ Sans goût', 25)">Ajouter au panier</button>
+    </div>
+    <!-- Produit 3 -->
+    <div class="shop-item" id="product-3">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/cb745b07-4c3f-dea2-0ef9-ea66338bba45.png" alt="Produit C" class="product-image">
+        <h4>CREME DELUXE</h4>
+        <p>Goût: Sans goût</p>
+        <span class="price">Prix : €30.00</span>
+        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
+        <button class="buy-button" onclick="addToCart('CREME DELUXE Sans goût', 30)">Ajouter au panier</button>
+    </div>
+</div>
+  <div class="shop-items">
+    <!-- Produit 1 -->
+    <div class="shop-item" id="product-1">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/b446dc4d-66a2-2c85-6dd8-5757b46a85da.png" alt="Produit A" class="product-image">
+        <h4>FAST GAZ</h4>
+        <p>Goût: Sans goût</p>
+        <span class="price">Prix : €50.00</span>
+        <p class="delivery-info">Livraison <span class="included-box">incluse</span></p>
+        <button class="buy-button" onclick="addToCart('FAST GAZ Sans goût', 50)">Ajouter au panier</button>
+    </div>
+    <!-- Produit 2 -->
+    <div class="shop-item" id="product-2">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/296ad524-4f95-1bc7-650e-d5ec4e41f9b6.png" alt="Produit B" class="product-image">
+        <h4>CREME DELUXE</h4>
+        <p>Goût: Sans goût</p>
+        <span class="price">Prix : €60.00</span>
+        <p class="delivery-info">Livraison <span class="included-box">incluse</span></p>
+        <button class="buy-button" onclick="addToCart('CREME DELUXE Sans goût', 60)">Ajouter au panier</button>
+    </div>
+    <!-- Produit 3 -->
+    <div class="shop-item" id="product-3">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/3636a0ba-987a-529d-ad51-5fdd478fd968.png" alt="Produit C" class="product-image">
+        <h4>TANK</h4>
+        <p>Goût: Sans goût</p>
+        <span class="price">Prix : €45.00</span>
+        <p class="delivery-info">Livraison <span class="included-box">incluse</span></p>
+        <button class="buy-button" onclick="addToCart('TANK Sans goût', 45)">Ajouter au panier</button>
+    </div>
+</div>
     <div class="shop-items">
         <!-- Produit 1 -->
         <div class="shop-item" id="product-1">
@@ -1313,4 +1447,3 @@ function displayShippingCost() {
 </script>
 </body>
 </html>
-
