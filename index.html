@@ -1,15 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-      <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XJ14XZR9ZK"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-XJ14XZR9ZK');
-</script>
   <!-- Préconnecter les serveurs Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +13,6 @@
     <title>The strongest holder shop</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/90a4d1138d.js" crossorigin="anonymous"></script>
-
     <style>
         /* Styles globaux */    
     body {
@@ -317,6 +307,9 @@
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Ombre subtile autour du mot */
     display: inline-block; /* Applique l'encadrement uniquement au mot "incluse" */
 }
+
+
+
         /* Autres styles du panier */
         .cart h3 {
             margin: 0;
@@ -645,8 +638,8 @@ button {
     transform: scale(1.1); /* Agrandir légèrement au survol */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre douce */
 }
-
-      #cookie-banner {
+  
+  #cookie-banner {
     animation: slide-up 0.5s ease-in-out;
 }
 
@@ -658,10 +651,117 @@ button {
         transform: translateY(0);
     }
 }
+  
+
+/* Bannière de message */
+.message-banner {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #ffffff; /* Fond blanc pour un contraste classique */
+    border: 1px solid #ddd; /* Bordure grise légère */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Ombre subtile pour la profondeur */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 20px; /* Espacement intérieur confortable */
+    z-index: 1000;
+    display: block; /* Visible par défaut si pas masquée */
+    font-family: Arial, sans-serif; /* Police standard et propre */
+}
+
+.message-banner.hidden {
+    display: none; /* Masque la bannière */
+}
+
+.message-banner p {
+    font-size: 14px;
+    color: #333; /* Texte en gris foncé */
+    margin-bottom: 15px; /* Espacement sous le paragraphe */
+}
+
+.message-banner input,
+.message-banner textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px; /* Espacement entre les champs */
+    border: 1px solid #ccc; /* Bordure grise claire */
+    border-radius: 5px; /* Coins légèrement arrondis */
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.message-banner input:focus,
+.message-banner textarea:focus {
+    border-color: #4caf50; /* Bordure verte en focus */
+    outline: none; /* Supprime l'effet de focus par défaut */
+}
+
+.message-banner button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-family: inherit;
+    margin-bottom: 10px; /* Espacement entre les boutons */
+}
+
+/* Bouton "Envoyer" */
+.message-banner button[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+}
+
+.message-banner button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Bouton "Fermer" */
+.message-banner button[type="button"] {
+    background-color: #f44336;
+    color: white;
+}
+
+.message-banner button[type="button"]:hover {
+    background-color: #d32f2f;
+}
+
+/* Icône flottante pour rouvrir la bannière */
+.feedback-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Place l'icône à gauche */
+    width: 50px;
+    height: 50px;
+    background-color: #f4b400; /* Couleur jaune-orange */
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%; /* Forme circulaire */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.2s ease-in-out;
+}
+
+.feedback-button:hover {
+    transform: scale(1.1); /* Effet d'agrandissement au survol */
+}
+  .message-banner p {
+    font-size: 14px;
+    color: #333; /* Texte en gris foncé */
+    margin-bottom: 15px; /* Espacement sous le paragraphe */
+    background-color: #e3f2fd; /* Fond bleu clair */
+    padding: 10px; /* Espacement interne pour le fond bleu */
+    border: 1px solid #90caf9; /* Bordure bleu clair */
+    border-radius: 5px; /* Coins légèrement arrondis */
+    text-align: center; /* Centrer le texte */
+}
     </style>
 </head>
-
-
 <body>
 <div class="container">
     <!-- Titre et profil -->
@@ -680,26 +780,24 @@ button {
                 <p><i class="fas fa-envelope"></i> Contact : Oldestlucious@gmail.com</p>
                 <!-- Ajout des icônes des réseaux sociaux -->
 <div class="social-icons">
-    <a href="https://www.snapchat.com/add/lucious-lion04?share_id=XvkO3MB_frg&locale=fr-FR" target="_blank">
+    <a href="https://www.snapchat.com" target="_blank">
         <i class="fa-brands fa-snapchat"></i>
     </a>
-    <a href="https://www.tiktok.com/@tsh_shop13?_t=8s8vrCDGEgY&_r=1" target="_blank">
+    <a href="https://www.tiktok.com" target="_blank">
         <i class="fa-brands fa-tiktok" style="color: #911d44;"></i>
     </a>
-    <a href="https://www.instagram.com/tsh_shop13/profilecard/?igsh=Zmg5N3didm90dHBi" target="_blank">
+    <a href="https://www.instagram.com" target="_blank">
         <i class="fa-brands fa-instagram" style="color: #b858bf;"></i>
     </a>
 </div>
 <button class="settings-btn" onclick="toggleSettings()">⚙️ : paramètres</button>            
               <button id="toggle-cart-button" onclick="toggleCart()" style="display: none;">🛒</button>
               <!-- Mini carte avec une carte interactive à droite -->
-            </div>
-          
+            </div>          
         </div>
         <div id="status-text">
             <span class="status-circle status-online"></span> En ligne
-        </div>
-        
+        </div>       
       <!-- Icône de la boutique avec la flèche -->
 <div class="shop-icon" onclick="toggleShopSection()">   
   
@@ -708,7 +806,6 @@ button {
     <p>Afficher la Boutique</p>
 </div>
     </div>
-
    <!-- Paramètres (Fenêtre popup) -->
 <div class="settings-popup" id="settings-popup" style="display:none;">
     <h3>Paramètres</h3>
@@ -719,10 +816,8 @@ button {
   <h1>Carte Waze</h1>
     <div style="text-align: right;">
       <iframe src="https://embed.waze.com/iframe?zoom=13&lat=48.85661&lon=2.35222&pin=1"
-            width="100%" height="220"></iframe>
-            </div>
-</div>
- 
+            width="100%" height="220"></iframe>            </div>
+</div> 
 <div class="shop-section" style="display: none;">
     <h3>Produits Disponibles</h3>
     <div class="shop-items">
@@ -735,7 +830,6 @@ button {
          <p class="delivery-info">Livraison <span class="included-box">incluse</span></p> 
             <button class="buy-button" onclick="addToCart('TANK Fraise 🍓', 45)">Ajouter au panier</button>
         </div>
-
         <!-- Produit 2 -->
         <div class="shop-item" id="product-2">
             <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/f3f5b58a-0386-18c4-b99f-9874a1631cb1.jpg" alt="Produit B" class="product-image">
@@ -745,7 +839,6 @@ button {
        <p class="delivery-info">Livraison <span class="included-box">incluse</span></p> 
             <button class="buy-button" onclick="addToCart('TANK Ananas 🍍', 45)">Ajouter au panier</button>
         </div>
-
         <!-- Produit 3 -->
         <div class="shop-item" id="product-3">
             <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/ca2ffb50-9a83-d784-6a80-0594c5a31366.jpg" alt="Produit C" class="product-image">
@@ -786,7 +879,6 @@ button {
         </div>
      </div>
 </div>
-
 <!-- Panier et formulaire d'adresse -->
 <div class="cart" id="cart" style="display: none;">
     <h3>Mon Panier</h3>
@@ -795,8 +887,6 @@ button {
     <button class="remove-button" onclick="clearCart()">Vider le Panier</button>
     <button class="remove-button" onclick="openOrderForm()">Finaliser la Commande</button>
 </div>
-
-
 <!-- Formulaire de finalisation commande -->
 <div class="order-form" id="order-form" style="display: none;">
     <h3>Finalisation de la commande</h3>
@@ -810,10 +900,8 @@ button {
         <input type="hidden" name="totalPrice" id="orderTotalPrice">
         <div id="shippingMessage"></div>
         <button type="button" onclick="calculateShipping()">Calculer la livraison</button>
-
         <!-- Ajouter reCAPTCHA Enterprise avant le bouton de soumission -->
         <div id="recaptcha-container"></div>
-
         <button type="submit" onclick="onClick(event)">Envoyer la Commande</button>
         <button type="button" onclick="closeOrderForm()">Annuler</button>
     </form>
@@ -845,6 +933,45 @@ button {
         <button id="decline-cookies" style="background: #f44336; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;">Refuser</button>
     </div>
 </div>
+
+<!-- Bannière pour les avis des clients -->
+<div id="message-banner" class="message-banner hidden">
+    <p>Donnez-nous votre avis ou signalez des produits manquants :</p>
+    <form action="https://formspree.io/f/{your-form-id}" method="POST">
+        <input type="text" name="name" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <textarea name="message" placeholder="Votre message ou suggestion" rows="4" required></textarea>
+        <button type="submit">Envoyer</button>
+        <button type="button" onclick="hideBanner()">Fermer</button>
+    </form>
+</div>
+
+<!-- Icône flottante pour rouvrir la bannière -->
+<div id="feedback-button" class="feedback-button" onclick="showBanner()">
+    💬
+</div>
+
+<script>
+    // Fonction pour masquer la bannière
+    function hideBanner() {
+        const banner = document.getElementById("message-banner");
+        banner.classList.add("hidden"); // Ajoute la classe hidden pour masquer la bannière
+    }
+
+    // Fonction pour afficher la bannière
+    function showBanner() {
+        const banner = document.getElementById("message-banner");
+        banner.classList.remove("hidden"); // Supprime la classe hidden pour afficher la bannière
+    }
+
+    // Affiche la bannière automatiquement après 2 secondes
+    window.onload = function() {
+        const banner = document.getElementById("message-banner");
+        setTimeout(() => {
+            banner.classList.remove("hidden"); // Affiche la bannière
+        }, 2000);
+    };
+</script>
   <script>
 // Fonction pour afficher ou masquer le panier
 function toggleCart() {
@@ -1143,6 +1270,7 @@ function displayShippingCost() {
     document.getElementById('shippingMessage').innerHTML = `Coût de livraison : €${shippingCost}`;
 }
     </script>
+  
   <script>
     // Vérifie si le cookie "cookies-accepted" existe
     function getCookie(name) {
@@ -1175,15 +1303,14 @@ function displayShippingCost() {
             document.getElementById('cookie-banner').style.display = 'none';
         });
     });
-  </script>
+</script>
   <script>
     if (getCookie('cookies-accepted') === 'true') {
         const recaptchaScript = document.createElement('script');
         recaptchaScript.src = "https://www.google.com/recaptcha/enterprise.js?render=6Lfx0ZgqAAAAACuBGXsYgBHKE36ltUCI4wPOclPw";
         document.head.appendChild(recaptchaScript);
     }
-  </script>
-  
+</script>
 </body>
 </html>
 
