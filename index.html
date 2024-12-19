@@ -1404,7 +1404,27 @@ function displayShippingCost() {
     document.getElementById('shippingMessage').innerHTML = `Coût de livraison : €${shippingCost}`;
 }
     </script>
-  
+   <script>
+  // Fonction pour faire défiler jusqu'à la section boutique
+function scrollToShopSection() {
+    const shopSection = document.querySelector('.shop-section'); // Section de la boutique
+    const arrowIcon = document.getElementById('arrow-icon'); // Icône de la flèche
+    const toggleText = document.querySelector('.shop-icon p'); // Texte à côté de l'icône
+
+    // Affiche la section boutique si elle est masquée
+    if (shopSection.style.display === 'none') {
+        shopSection.style.display = 'block';
+        arrowIcon.style.display = 'inline-block'; // Affiche la flèche
+        toggleText.textContent = 'Masquer la Boutique'; // Change le texte
+    }
+
+    // Fais défiler jusqu'à la section boutique
+    shopSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Ajout d'un événement de clic pour l'icône et le texte
+document.querySelector('.shop-icon').addEventListener('click', scrollToShopSection);
+   </script>
   <script>
     // Vérifie si le cookie "cookies-accepted" existe
     function getCookie(name) {
@@ -1438,6 +1458,7 @@ function displayShippingCost() {
         });
     });
 </script>
+    
   <script>
     if (getCookie('cookies-accepted') === 'true') {
         const recaptchaScript = document.createElement('script');
