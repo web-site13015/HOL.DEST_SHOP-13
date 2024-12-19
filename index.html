@@ -1,1 +1,1539 @@
-<!DOCTYPE html> <html lang="fr"> <head> <!-- URL canonique (pratique pour éviter le contenu dupliqué) --> <link rel="canonical" href="https://web-site13015.github.io/tsh_shop13/"> <!-- Charset et autres informations --> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Twitter Card (si vous souhaitez un rendu optimisé sur Twitter) --> <meta name="twitter:card" content="summary_large_image"> <meta name="twitter:title" content="TSH shop Profil Public Boutique"> <meta name="twitter:description" content="Découvrez le profil public de Nasdas et explorez sa boutique en ligne proposant des produits uniques et de qualité."> <meta name="twitter:image" content="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/c5b0223d-f147-e0a5-7a10-613ef3d99567.jpg"> <!-- Social Media: Open Graph pour partager sur Facebook, Twitter, etc. --> <meta property="og:title" content="TSH SHOP Profil Public Boutique"> <meta property="og:description" content="Découvrez et explorez la boutique en ligne offrant des produits uniques et des avantages spéciaux pour les noctambules."> <meta property="og:image" content="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/83268e94-4952-4778-55c3-4d03c795192d.jpg"> <meta property="og:url" content="https://web-site13015.github.io/tsh_shop13/"> <meta property="og:type" content="website"> <link rel="icon" href="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/c5b0223d-f147-e0a5-7a10-613ef3d99567.jpg" type="image/png"> <!-- Préconnecter les serveurs Google Fonts --> <link rel="preconnect" href="https://fonts.googleapis.com"> <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> <!-- Lien pour importer la police Playfair Display --> <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta name="description" content="Découvrez notre boutique en ligne proposant des produits uniques de haute qualité. Contactez-nous pour plus d'informations."> <meta name="keywords" content="boutique, produits uniques, Marseille, Bonbonne, Livraison à domicile, achats en ligne"> <title>The strongest holder shop</title> <link rel="stylesheet" href="styles.css"> <script src="https://kit.fontawesome.com/90a4d1138d.js" crossorigin="anonymous"></script> <style> /* Styles globaux */ body { font-family: "Playfair Display", serif; background-image: url('https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/83268e94-4952-4778-55c3-4d03c795192d.jpg'); /* Chemin vers l'image de fond */ /* Empêche la répétition de l'image */ background-size: contain; /* Ajuste l'image pour qu'elle soit entièrement visible */ /* Centre l'image dans la fenêtre */ background-color: #ffffff; /* Couleur de fond si l'image ne remplit pas tout */ margin: 0; padding: 5px; color: #333; /* Optionnel, pour que le texte soit blanc sur un fond sombre */ } /* Conteneur principal */ .container { max-width: 700px; margin: auto; background-image: url('https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/bdaf7f2b-dedf-4816-1f47-04bcf5078c30.jpg'); /* Ajout de l'image de fond */ background-size: cover; /* Pour couvrir toute la zone du conteneur */ /* Centrer l'image */ padding: 5px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); border: 1px solid #dfe3e8; overflow: hidden; /* Pour éviter le débordement du contenu */ } /* Titre avec animation de défilement */ .scrolling-title { white-space: nowrap; overflow: hidden; box-sizing: border-box; animation: scrolling 15s linear infinite; font-size: 2.5em; color: #0088cc; text-align: center; border-bottom: 1px solid #dfe3e8; padding-bottom: 10px; } @keyframes scrolling { 0% { transform: translateX(100%); } 100% { transform: translateX(-100%); } } .scrolling-title { animation-play-state: running; } .scrolling-title:hover { animation-play-state: paused; } /* Profil */ .profile-card { display: flex; flex-direction: column; /* Adapté aux mobiles */ align-items: center; /* Centre le contenu */ padding: 20px; border-bottom: 1px solid #dfe3e8; } .profile-header { display: flex; align-items: center; margin-bottom: 10px; /* Ajout d'espace en bas */ } .profile-pic { width: 80px; height: 80px; border-radius: 50%; border: 2px solid #0088cc; margin-right: 15px; } .profile-info h1 { font-size: 1.5em; color: #333; margin: 0; display: flex; align-items: center; } .profile-info p { color: #666; margin: 5px 0; font-size: 0.9em; } /* Badge vérifié Telegram */ .verified-badge { color: #0088cc; margin-left: 8px; font-size: 1.2em; } /* Statut Boutique */ #status-text { font-size: 0.9em; font-weight: bold; } .status-circle { display: inline-block; width: 12px; height: 12px; border-radius: 50%; margin-right: 5px; } .status-online { background-color: green; } .status-offline { background-color: red; } /* Icône de boutique */ .shop-icon { text-align: center; cursor: pointer; margin-top: 20px; /* Ajout d'espace au-dessus */ } .shop-icon i { font-size: 2em; color: #fff; background: linear-gradient(135deg, #ff4757, #1e90ff); /* Dégradé rouge à bleu */ border-radius: 50%; padding: 10px; transition: transform 0.3s ease; } .shop-icon p { margin-top: 5px; font-size: 1em; color: #333; } .shop-icon:hover i { transform: scale(1.1); } /* Section boutique */ .shop-section { display: none; margin-top: 20px; } .shop-items { display: flex; justify-content: space-between; gap: 5px; /* Ajoute un espacement horizontal entre les éléments côte à côte */ } .shop-item { margin: auto; width: 60%; text-align: center; background-color: #f9f9f9; padding: 2px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); transition: transform 0.3s ease; margin-bottom: 5px; /* Espacement sous chaque article */ } .shop-item:hover { transform: scale(1.05); } .shop-item img { width: 100%; border-radius: 8px; margin-bottom: 10px; cursor: pointer; /* Change le curseur au survol */ } /* Réduire l'espacement entre l'image et le titre du produit */ .shop-item img { margin-bottom: -25px; /* Réduit l'espacement sous l'image */ } /* Réduire l'espacement entre le titre et la description du produit */ .shop-item h4 { margin-bottom: -10px; /* Réduit l'espacement sous le titre */ } /* Réduire l'espacement entre la description et le prix */ .shop-item p { margin-bottom: -2px; /* Réduit l'espacement sous la description */ } /* Garder l'espacement normal pour le prix */ .shop-item .price { margin-bottom: -50px; margin-top: 5px; /* Réduit l'espacement au-dessus du prix */ } /* Lightbox pour l'image en plein écran */ .fullscreen-img { display: none; /* Masqué par défaut */ position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background-color: rgba(0, 0, 0, 0.8); /* Fond sombre */ display: flex; justify-content: center; align-items: center; z-index: 1000; cursor: pointer; /* Clic pour fermer */ } .fullscreen-img img { max-width: 90%; max-height: 90%; object-fit: contain; border-radius: 8px; } /* Autres styles pour les descriptions et les boutons */ .shop-item h3 { margin-bottom: 5px; } .shop-item p { color: #333; margin: 5px 0; /* Ajuste les marges */ } .shop-item .price { color: #e74c3c; font-weight: bold; margin: 5px 0; } .buy-button { background-color: #0088cc; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; font-size: 0.9em; transition: background-color 0.3s; margin-top: 10px; } .buy-button:hover { background-color: #0056b3; } /* Styles du panier */ .cart { display: none; /* Ou 'block' si tu veux qu'il soit visible par défaut */ background-color: #f0f8ff; border: 1px solid #0088cc; padding: 15px; border-radius: 10px; position: fixed; /* Position fixe */ top: 20px; /* Distance du haut de l'écran */ right: 20px; /* Distance de la droite de l'écran */ z-index: 1000; /* S'assure que le panier soit au-dessus des autres éléments */ max-width: 300px; /* Largeur maximale pour le panier */ max-height: 240px; /* Limite à environ 3 produits (ajustez selon la hauteur réelle des produits) */ overflow-y: auto; /* Permet de faire défiler le contenu si nécessaire */ } /* Style pour la mention "Livraison incluse" */ .delivery-info { color: green; /* Texte en vert pour "Livraison" */ font-size: 14px; /* Taille de police normale */ font-style: italic; /* Texte en italique */ margin-top: 5px; /* Espacement avec l'élément précédent */ } /* Encadrement uniquement pour le mot "incluse" */ .included-box { color: white; /* Texte en blanc pour contraste */ background-color: green; /* Fond vert pour le mot "incluse" */ border: 2px solid green; /* Bordure verte autour du mot */ border-radius: 8px; /* Coins arrondis */ padding: 2px 6px; /* Espacement interne pour un look aéré */ box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Ombre subtile autour du mot */ display: inline-block; /* Applique l'encadrement uniquement au mot "incluse" */ } /* Autres styles du panier */ .cart h3 { margin: 0; color: #333; } .cart-item { display: flex; justify-content: space-between; margin-bottom: 10px; } .cart-item span { color: #666; } .remove-button { background-color: #ff4757; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer; } .remove-button:hover { background-color: #c0392b; } .total { font-weight: bold; font-size: 1.1em; color: #333; margin-top: 10px; } #email { font-size: 1em; /* Taille de police */ color: #333; /* Couleur du texte */ margin-top: 10px; /* Espace au-dessus */ } #email i { margin-right: 5px; /* Espace entre l'icône et le texte */ } /* Styles responsives */ @media (max-width: 768px) { .shop-item { width: calc(50% - 10px); /* Deux éléments par ligne pour les écrans plus petits */ } } @media (max-width: 480px) { .shop-item { width: 100%; /* Un élément par ligne pour les petits écrans */ } .scrolling-title { font-size: 2em; /* Ajuste la taille du titre sur petits écrans */ } } #toggle-cart-button { position: fixed; bottom: 20px; right: 20px; z-index: 1000; background-color: #0088cc; color: white; border: none; border-radius: 50%; padding: 15px; width: 60px; height: 60px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); cursor: pointer; font-size: 18px; } .order-form { display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); z-index: 1001; width: 90%; max-width: 500px; } .order-form h3 { margin-bottom: 20px; color: #333; } .order-form input[type="text"], .order-form input[type="tel"] { width: calc(100% - 20px); padding: 10px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 5px; } .order-form button { background-color: #0088cc; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; transition: background-color 0.3s; } .order-form button:hover { background-color: #0056b3; } #lightbox { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center; z-index: 1000; } #lightbox-content { background-color: white; padding: 20px; border-radius: 10px; text-align: center; max-width: 90%; /* Limite la largeur du contenu */ max-height: 90%; /* Limite la hauteur du contenu */ overflow: hidden; /* Évite le débordement */ } #lightbox-img { max-width: 100%; /* Limite la largeur de l'image à celle du conteneur */ max-height: 80vh; /* Limite la hauteur de l'image pour laisser de la place au bouton */ } button { margin-top: 10px; /* Espace entre l'image et le bouton */ } .product-image { width: 100px; cursor: pointer; } /* Style du modale */ .modal { display: none; /* Caché par défaut */ position: fixed; z-index: 1; /* Au-dessus du contenu */ left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */ justify-content: center; align-items: center; color: #fff; } .modal-content { background-color: #333; padding: 20px; border-radius: 8px; width: 300px; text-align: center; } .close { color: #aaa; float: right; font-size: 28px; font-weight: bold; } .close:hover, .close:focus { color: #fff; text-decoration: none; cursor: pointer; } /* Bouton des paramètres */ .settings-btn { background-color: transparent; border: none; color: #3498db; cursor: pointer; font-size: 16px; margin-left: 10px; } /* Style pour la fenêtre des paramètres */ .settings-popup { position: absolute; top: 20%; right: 10%; width: 250px; padding: 20px; background-color: rgba(0, 0, 0, 0.7); color: white; border-radius: 8px; display: none; } /* Style de la flèche */ #arrow-icon { transition: transform 0.3s ease; } h3 { text-align: center; /* Centre le texte horizontalement */ margin: 0; /* Enlève les marges par défaut */ padding: 20px 0; /* Ajoute de l'espace autour du texte (optionnel) */ } /* Bouton circulaire flottant */ #toggle-cart-button { position: fixed; bottom: 20px; right: 20px; z-index: 1000; background-color: #ffcc00; color: white; border: none; border-radius: 50%; padding: 15px; width: 60px; height: 60px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); cursor: pointer; font-size: 18px; } /* Shop details */ .shop-details { margin-top: 10px; /* Espacement entre la section et le contenu précédent */ padding: 5px 10px; /* Espacement interne compact */ border: 2px solid rgba(0, 0, 0, 0.4); /* Bordure initiale fine et semi-transparente */ border-radius: 5px; /* Coins légèrement arrondis */ background: rgba(255, 255, 255, 0.6); /* Fond semi-transparent blanc */ backdrop-filter: blur(5px); /* Applique un effet de flou */ -webkit-backdrop-filter: blur(5px); /* Compatibilité pour Safari */ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre subtile pour ajouter de la profondeur */ transition: border 0.3s ease-in-out; /* Transition douce pour la bordure */ } /* Effet animé de la bordure */ .shop-details:hover { border: 2px solid #b858bf; /* Changer la couleur de la bordure au survol (ex : violet pour Instagram) */ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre un peu plus forte pour un effet de survol */ } /* Shop details h5 */ .shop-details h5 { font-size: 15px; /* Taille réduite pour le titre */ color: #333; /* Couleur sombre pour le titre */ margin: 0; /* Supprime les marges autour du titre */ } .shop-details p { font-size: 14px; /* Taille compacte pour le texte */ color: #555; /* Couleur légèrement plus claire */ margin: 2px 0; /* Très peu d'espace entre les paragraphes */ line-height: 1.2; /* Espacement serré entre les lignes */ } /* Conteneur des icônes */ .social-icons { margin-top: 10px; /* Espacement au-dessus */ display: flex; /* Disposition en ligne */ gap: 15px; /* Espacement entre les icônes */ justify-content: flex-start; /* Alignement des icônes à gauche */ } /* Styles communs pour chaque icône */ .social-icons i { font-size: 24px; /* Taille des icônes */ width: 50px; /* Largeur du cercle */ height: 50px; /* Hauteur du cercle */ line-height: 50px; /* Centrage vertical du texte */ text-align: center; /* Centrage horizontal du texte */ border-radius: 50%; /* Cercle parfait */ border: 3px solid transparent; /* Contour initial transparent */ transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation douce */ color: white; /* Couleur de l'icône par défaut */ } /* Snapchat */ .social-icons i.fa-snapchat { background-color: #FFFC00; /* Fond jaune Snapchat */ border: 2px solid #FFC107; /* Contour jaune clair */ color: black; /* Icône noire Snapchat */ } /* TikTok */ .social-icons i.fa-tiktok { background: linear-gradient(45deg, #25F4EE, #FE2C55); /* Dégradé TikTok */ border: 2px solid #FE2C55; /* Contour rose TikTok */ color: white; /* Icône blanche TikTok */ } /* Instagram */ .social-icons i.fa-instagram { background: linear-gradient(45deg, #FEDA77, #DD2A7B, #8134AF); /* Dégradé Instagram */ border: 2px solid #DD2A7B; /* Contour rose Instagram */ color: white; /* Icône blanche Instagram */ } /* Effets au survol */ .social-icons i:hover { transform: scale(1.1); /* Agrandir légèrement au survol */ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre douce */ } #cookie-banner { animation: slide-up 0.5s ease-in-out; } @keyframes slide-up { from { transform: translateY(100%); } to { transform: translateY(0); } } /* Bannière de message */ .message-banner { position: fixed; bottom: 20px; right: 20px; width: 300px; background-color: #ffffff; /* Fond blanc pour un contraste classique */ border: 1px solid #ddd; /* Bordure grise légère */ box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Ombre subtile pour la profondeur */ border-radius: 10px; /* Coins arrondis */ padding: 20px; /* Espacement intérieur confortable */ z-index: 1000; display: block; /* Visible par défaut si pas masquée */ font-family: Arial, sans-serif; /* Police standard et propre */ } .message-banner.hidden { display: none; /* Masque la bannière */ } .message-banner p { font-size: 14px; color: #333; /* Texte en gris foncé */ margin-bottom: 15px; /* Espacement sous le paragraphe */ } .message-banner input, .message-banner textarea { width: 100%; padding: 10px; margin-bottom: 10px; /* Espacement entre les champs */ border: 1px solid #ccc; /* Bordure grise claire */ border-radius: 5px; /* Coins légèrement arrondis */ font-size: 14px; font-family: inherit; } .message-banner input:focus, .message-banner textarea:focus { border-color: #4caf50; /* Bordure verte en focus */ outline: none; /* Supprime l'effet de focus par défaut */ } .message-banner button { width: 100%; padding: 10px; font-size: 14px; border: none; border-radius: 5px; /* Coins arrondis */ cursor: pointer; transition: background-color 0.2s ease; font-family: inherit; margin-bottom: 10px; /* Espacement entre les boutons */ } /* Bouton "Envoyer" */ .message-banner button[type="submit"] { background-color: #4caf50; color: white; } .message-banner button[type="submit"]:hover { background-color: #45a049; } /* Bouton "Fermer" */ .message-banner button[type="button"] { background-color: #f44336; color: white; } .message-banner button[type="button"]:hover { background-color: #d32f2f; } /* Icône flottante pour rouvrir la bannière */ .feedback-button { position: fixed; bottom: 20px; left: 20px; /* Place l'icône à gauche */ width: 50px; height: 50px; background-color: #f4b400; /* Couleur jaune-orange */ color: white; font-size: 24px; text-align: center; line-height: 50px; border-radius: 50%; /* Forme circulaire */ box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); cursor: pointer; z-index: 1000; transition: transform 0.2s ease-in-out; } .feedback-button:hover { transform: scale(1.1); /* Effet d'agrandissement au survol */ } .message-banner p { font-size: 14px; color: #333; /* Texte en gris foncé */ margin-bottom: 15px; /* Espacement sous le paragraphe */ background-color: #e3f2fd; /* Fond bleu clair */ padding: 10px; /* Espacement interne pour le fond bleu */ border: 1px solid #90caf9; /* Bordure bleu clair */ border-radius: 5px; /* Coins légèrement arrondis */ text-align: center; /* Centrer le texte */ } </style> </head> <body> <div class="container"> <!-- Titre et profil --> <div class="scrolling-title">BIENVENUE 🏷 🛍</div> <div class="profile-card"> <div class="profile-header"> <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/c5b0223d-f147-e0a5-7a10-613ef3d99567.jpg" alt="Profil" class="profile-pic"> <div class="profile-info"> <h1>SHOP 🛒 <span class="verified-badge"><i class="fab fa-telegram"></i></span></h1> <!-- Détails de la boutique --> <div class="shop-details"> <h5>Détails de la boutique</h5> <p>Préparation rapide et 🚚 livraison gratuite à partir de 35€ ! 🚀</p> </div> <p><i class="fas fa-map-marker-alt"></i> Localisation : Marseille, France </p> <p><i class="fas fa-envelope"></i> Contact : Oldestlucious@gmail.com</p> <!-- Ajout des icônes des réseaux sociaux --> <div class="social-icons"> <a href="https://www.snapchat.com/add/lucious-lion04?share_id=e-B-MlzJM7c&locale=fr-FR" target="_blank"> <i class="fa-brands fa-snapchat"></i> </a> <a href="https://www.tiktok.com/@tsh_shop13?_t=8s9mzOpzEow&_r=1" target="_blank"> <i class="fa-brands fa-tiktok" style="color: #911d44;"></i> </a> <a href="https://www.instagram.com/tsh_shop13/profilecard/?igsh=Zmg5N3didm90dHBi" target="_blank"> <i class="fa-brands fa-instagram" style="color: #b858bf;"></i> </a> </div> <button class="settings-btn" onclick="toggleSettings()">⚙️ : paramètres</button> <button id="toggle-cart-button" onclick="toggleCart()" style="display: none;">🛒</button> <!-- Mini carte avec une carte interactive à droite --> </div> </div> <div id="status-text"> <span class="status-circle status-online"></span> En ligne </div> <!-- Icône de la boutique avec la flèche --> <div class="shop-icon" onclick="toggleShopSection()"> <i id="shop-icon" class="fas fa-store"></i> <!-- Icône de la boutique --> <i id="arrow-icon" class="fas fa-chevron-down" style="display:none;"></i> <!-- Flèche cachée initialement --> <p>Afficher la Boutique</p> </div> </div> <!-- Paramètres (Fenêtre popup) --> <div class="settings-popup" id="settings-popup" style="display:none;"> <h3>Paramètres</h3> <button onclick="closeSettings()">❌ Fermer</button> <!-- Bouton pour fermer --> <p>Activer la localisation :</p> <button onclick="toggleLocation()">Activer la localisation</button> <p id="location-status">Localisation désactivée</p> <h1>Carte Waze</h1> <div style="text-align: right;"> <iframe src="https://embed.waze.com/iframe?zoom=13&lat=48.85661&lon=2.35222&pin=1" width="100%" height="220"></iframe> </div> </div> <div class="shop-section" style="display: none;"> <h3>Produits Disponibles</h3> <div class="shop-items"> <!-- Ballon Rouge --> <div class="shop-item" id="product-1"> <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/73f742c5-174c-a08d-49cd-6c9e16919ad1.png" alt="Ballon Rouge" class="product-image"> <h4>Ballon</h4> <p>Couleur : Rouge</p> <span class="price">Prix : €5.50</span> <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p> <button class="buy-button" onclick="addToCart('Ballon Rouge', 5.50)">Ajouter au panier</button> </div> <!-- Ballon Bleu Ciel --> <div class="shop-item" id="product-2"> <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/3ee66306-d800-6cfc-d53b-7c9269c8fd61.png" alt="Ballon Bleu Ciel" class="product-image"> <h4>Ballon</h4> <p>Couleur : Bleu</p> <span class="price">Prix : €5.50</span> <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p> <button class="buy-button" onclick="addToCart('Ballon Bleu Ciel', 5.50)">Ajouter au panier</button> </div> <!-- Ballon Beige --> <div class="shop-item" id="product-3"> <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/cba2e071-d038-ec95-9414-eaff2e6fdb58.png" alt="Ballon Beige" class="product-image"> <h4>Ballon</h4> <p>Couleur : Beige</p> <span class="price">Prix : €5.50</span> <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p> <button class="buy-button" onclick="addToCart('Ballon Beige', 5.50)">Ajouter au panier</button> </div> </div> <div class="shop-items"> <!-- Produit 1 --> <div class="shop-item" id="product-1"> <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/0cdbf829-643f-74ed-5508-d5d68995d958.png" alt="Produit A" class="product-image"> <h4>Goût Crème </h4> <p>Goût: Pastèque</p> <span class="price">Prix : €8.00</span> <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p> <button class="buy-button" onclick="addToCart('Goût Crème Pastèque', 8)">Ajouter au panier</button> </div> <!-- Produit 2 --> <div class="shop-item" id="product-2"> <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/1919ecc3-90eb-9d34-fb6d-2f6a722179f2.png" alt="Produit B" class="product-image"> <h4>Goût Crème</h4> <p>Goût: Sans goût</p> <span class="price">Prix : €8.00</span> <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p> <button class="buy-button" onclick="addToCart('Goût Crème Sans goût', 8)">Ajouter au panier</button> </div> <!-- Produit 3 --> <div class="shop-item" id="product-3"> <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/e0e54a61-65de-c335-0c5e-586cfb7e866a.png" alt="Produit C" class="product-image"> <h4>Goût Crème</h4> <p>Goût: Sans goût</p> <span class="price">Prix : €8.00</span> <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p> <button class="buy-button" onclick="addToCart('Goût Crème Sans goût', 8)">Ajouter au panier</button> </div> </div> <div class="shop-items"> <!-- Produit 1 --> <div class="shop-item" id="product-1"> <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/c951c889-35c5-92a3-89d8-9efd59d3650c.png" alt="Produit A" class="product-image"> <h4>Cartouche </h4> <p>Goût: Sans goût</p> <span class="price">Prix : €7.00</span> <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p> <button class="buy-button" onclick="addToCart('Cartouche Crème Sans goût', 7)">Ajouter au panier</button> </div> <!-- Produit 2 --> <div class="shop-item" id="product-2"> <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/66daeb29-f307-827a-d332-23ffaeb22b8e.png" alt="Produit B" class="product-image"> <h4>FAST GAZ</h4> <p>Goût: Sans goût</p> <span class="price">Prix : €25.00</span> <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p> <button class="buy-button" onclick="addToCart('FAST GAZ Sans goût', 25)">Ajouter au panier</button> </div> <!-- Produit 3 --> <div class="shop-item" id="product-3"> <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/cb745b07-4c3f-dea2-0ef9-ea66338bba45.png" alt="Produit C" class="product-image"> <h4>DELUXE</h4> <p>Goût: Sans goût</p> <span class="price">Prix : €30.00</span> <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p> <button class="buy-button" onclick="addToCart('CREME DELUXE Sans goût', 30)">Ajouter au panier</button> </div> </div> <div class="shop-items"> <!-- Produit 1 --> <div class="shop-item" id="product-1"> <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/b446dc4d-66a2-2c85-6dd8-5757b46a85da.png" alt="Produit A" class="product-image"> <h4>FAST GAZ</h4> <p>Goût: Sans goût</p> <span class="price">Prix : €50.00</span> <p class="delivery-info">Livraison <span class="included-box">incluse</span></p> <button class="buy-button" onclick="addToCart('FAST GAZ Sans goût', 50)">Ajouter au panier</button> </div> <!-- Produit 2 --> <div class="shop-item" id="product-2"> <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/296ad524-4f95-1bc7-650e-d5ec4e41f9b6.png" alt="Produit B" class="product-image"> <h4>DELUXE</h4> <p>Goût: Sans goût</p> <span class="price">Prix : €60.00</span> <p class="delivery-info">Livraison <span class="included-box">incluse</span></p> <button class="buy-button" onclick="addToCart('CREME DELUXE Sans goût', 60)">Ajouter au panier</button> </div> <!-- Produit 3 --> <div class="shop-item" id="product-3"> <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/3636a0ba-987a-529d-ad51-5fdd478fd968.png" alt="Produit C" class="product-image"> <h4>TANK</h4> <p>Goût: Sans goût</p> <span class="price">Prix : €45.00</span> <p class="delivery-info">Livraison <span class="included-box">incluse</span></p> <button class="buy-button" onclick="addToCart('TANK Sans goût', 45)">Ajouter au panier</button> </div> </div> <div class="shop-items"> <!-- Produit 1 --> <div class="shop-item" id="product-1"> <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/3506e966-94ff-790f-7e7c-42ae4c6b0b68.jpg" alt="Produit A" class="product-image"> <h4>TANK</h4> <p>Goût: 🍓 </p> <span class="price">Prix : €45.00</span> <p class="delivery-info">Livraison <span class="included-box">incluse</span></p> <button class="buy-button" onclick="addToCart('TANK Fraise 🍓', 45)">Ajouter au panier</button> </div> <!-- Produit 2 --> <div class="shop-item" id="product-2"> <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/f3f5b58a-0386-18c4-b99f-9874a1631cb1.jpg" alt="Produit B" class="product-image"> <h4>TANK</h4> <p>Goût: 🍍 </p> <span class="price">Prix : €45.00</span> <p class="delivery-info">Livraison <span class="included-box">incluse</span></p> <button class="buy-button" onclick="addToCart('TANK Ananas 🍍', 45)">Ajouter au panier</button> </div> <!-- Produit 3 --> <div class="shop-item" id="product-3"> <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/ca2ffb50-9a83-d784-6a80-0594c5a31366.jpg" alt="Produit C" class="product-image"> <h4>TANK</h4> <p>Goût: 🫐 </p> <span class="price">Prix : €45.00</span> <p class="delivery-info">Livraison <span class="included-box">incluse</span></p> <button class="buy-button" onclick="addToCart('TANK Myrtille 🫐', 45)">Ajouter au panier</button> </div> </div> <div class="shop-items"> <!-- Produit 1 --> <div class="shop-item"> <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/060177f9-9b70-2508-e41e-6aa0cc7b3be3.jpeg" alt="Produit A" class="product-image"> <h4>WATERMELON GUM</h4> <p>Goût: 🍈 🎈</p> <span class="price">Prix : €15.00</span> <p class="delivery-info">Livraison incluse</p> <button class="buy-button" onclick="addToCart('WATERMELON Bubble GUM 🍈 🍉', 15)">Ajouter au panier</button> </div> <!-- Produit 2 --> <div class="shop-item"> <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/29e779a8-b161-e04d-2dcd-434e8f866080.jpeg" alt="Produit B" class="product-image"> <h4>BLUE SOUR RAS..</h4> <p>Goût: 🍇 🍒</p> <span class="price">Prix : €15.00</span> <p class="delivery-info">Livraison incluse</p> <button class="buy-button" onclick="addToCart('BLUE SOUR RAS 🍇 🍒', 15)">Ajouter au panier</button> </div> <!-- Produit 3 --> <div class="shop-item"> <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/a633d67a-f049-ec3f-3773-bfbd238db0a1.jpeg" alt="Produit C" class="product-image"> <h4>MANGO PEACH Watermelon</h4> <p>Goût: 🍑</p> <span class="price">Prix : €15.00</span> <p class="delivery-info">Livraison incluse</p> <button class="buy-button" onclick="addToCart('MANGO PEACH 🍑', 15)">Ajouter au panier</button> </div> </div> </div> <!-- Panier et formulaire d'adresse --> <div class="cart" id="cart" style="display: none;"> <h3>Mon Panier</h3> <div id="cart-items"></div> <div class="total" id="total">Total : €0.00</div> <button class="remove-button" onclick="clearCart()">Vider le Panier</button> <button class="remove-button" onclick="openOrderForm()">Finaliser la Commande</button> </div> <!-- Formulaire de finalisation commande --> <div class="order-form" id="order-form" style="display: none;"> <h3>Finalisation de la commande</h3> <form id="orderForm" action="https://formspree.io/f/{your-form-id}" method="POST"> <input type="text" name="firstName" placeholder="Prénom" required> <input type="text" name="lastName" placeholder="Nom" required> <input type="tel" name="phone" placeholder="Numéro de téléphone" required> <p>Veuillez entrer votre adresse pour calculer les frais de livraison.</p> <!-- Description ajoutée --> <input type="text" name="address" id="userAddress" placeholder="Adresse ou code postal" required> <input type="hidden" name="products" id="orderProducts"> <input type="hidden" name="totalPrice" id="orderTotalPrice"> <div id="shippingMessage"></div> <button type="button" onclick="calculateShipping()">Calculer la livraison</button> <!-- Ajouter reCAPTCHA Enterprise avant le bouton de soumission --> <div id="recaptcha-container"></div> <button type="submit" onclick="onClick(event)">Envoyer la Commande</button> <button type="button" onclick="closeOrderForm()">Annuler</button> </form> </div> <!-- Lightbox --> <div id="lightbox" style="display:none;"> <div id="lightbox-content"> <img id="lightbox-img" src="" alt=""> <button onclick="closeLightbox()">Fermer</button> </div> </div> <!-- Modale de confirmation --> <div id="confirmation-modal" class="modal"> <div class="modal-content"> <span id="close-modal" class="close">&times;</span> <p id="modal-message"></p> </div> </div> <!-- Bannière de consentement aux cookies --> <div id="cookie-banner" style="position: fixed; bottom: 10px; left: 10px; right: 10px; background: rgba(0, 0, 0, 0.9); color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; border-radius: 5px; z-index: 1000; display: none;"> <span> Ce site utilise des cookies pour améliorer votre expérience. En continuant à naviguer, vous acceptez notre utilisation des cookies. <a href="/policy" style="color: #FFD700; text-decoration: underline;">En savoir plus</a>. </span> <div> <button id="accept-cookies" style="background: #4CAF50; color: white; border: none; padding: 10px 15px; border-radius: 5px; margin-right: 10px; cursor: pointer;">Accepter</button> <button id="decline-cookies" style="background: #f44336; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;">Refuser</button> </div> </div> <!-- Bannière pour les avis des clients --> <div id="message-banner" class="message-banner hidden"> <p>Donnez-nous votre avis ou signalez des produits manquants :</p> <form action="https://formspree.io/f/{your-form-id}" method="POST"> <input type="text" name="name" placeholder="Votre nom" required> <input type="email" name="email" placeholder="Votre email" required> <textarea name="message" placeholder="Votre message ou suggestion" rows="4" required></textarea> <button type="submit">Envoyer</button> <button type="button" onclick="hideBanner()">Fermer</button> </form> </div> <!-- Icône flottante pour rouvrir la bannière --> <div id="feedback-button" class="feedback-button" onclick="showBanner()"> 💬 </div> <script> // Fonction pour masquer la bannière function hideBanner() { const banner = document.getElementById("message-banner"); banner.classList.add("hidden"); // Ajoute la classe hidden pour masquer la bannière } // Fonction pour afficher la bannière function showBanner() { const banner = document.getElementById("message-banner"); banner.classList.remove("hidden"); // Supprime la classe hidden pour afficher la bannière } // Affiche la bannière automatiquement après 2 secondes window.onload = function() { const banner = document.getElementById("message-banner"); setTimeout(() => { banner.classList.remove("hidden"); // Affiche la bannière }, 2000); }; </script> <script> // Fonction pour afficher ou masquer le panier function toggleCart() { const cart = document.getElementById("cart"); // Si le panier est actuellement caché, on l'affiche, sinon on le cache if (cart.style.display === "none") { cart.style.display = "block"; } else { cart.style.display = "none"; } } // Fonction pour vider le panier (par exemple, supprimer tous les éléments du panier) function clearCart() { const cartItems = document.getElementById("cart-items"); cartItems.innerHTML = ""; // Vide tous les éléments du panier const total = document.getElementById("total"); total.innerHTML = "Total : €0.00"; // Réinitialise le total } // Fonction pour finaliser la commande (par exemple, rediriger vers un formulaire) function openOrderForm() { // Ici, tu pourrais ouvrir un formulaire de commande ou rediriger vers une autre page alert("Finalisation de la commande..."); } </script> <script> function toggleShopSection() { const shopSection = document.querySelector('.shop-section'); shopSection.style.display = shopSection.style.display === 'none' ? 'block' : 'none'; const icon = document.querySelector('.shop-icon i'); icon.className = shopSection.style.display === 'block' ? 'fas fa-chevron-up' : 'fas fa-shopping-cart'; } window.addEventListener("load", function() { const urlParams = new URLSearchParams(window.location.search); const productId = urlParams.get('product'); // Récupère l'ID du produit depuis l'URL if (productId) { // Masque tous les produits const allProducts = document.querySelectorAll('.shop-item'); allProducts.forEach(function(product) { product.style.display = 'none'; // Cache tous les produits }); // Affiche le produit correspondant et ouvre la lightbox const productElement = document.getElementById('product-' + productId); if (productElement) { productElement.style.display = 'block'; // Affiche le produit spécifié openLightbox(productElement.querySelector('.product-image').src); } } }); function toggleLightbox(imgSrc = '') { const lightbox = document.getElementById('lightbox'); const lightboxImg = document.getElementById('lightbox-img'); const allProducts = document.querySelectorAll('.shop-item'); if (lightbox.style.display === 'none' || lightbox.style.display === '') { // Ouvre la lightbox lightbox.style.display = 'flex'; lightboxImg.src = imgSrc; } else { // Ferme la lightbox lightbox.style.display = 'none'; lightboxImg.src = ''; // Affiche tous les produits allProducts.forEach(function (product) { product.style.display = 'block'; }); } } </script> <script> document.querySelectorAll('.shop-item img').forEach(img => { img.addEventListener('click', function () { // Créer une div pour la lightbox const fullscreenDiv = document.createElement('div'); fullscreenDiv.classList.add('fullscreen-img'); fullscreenDiv.innerHTML = `<img src="${this.src}" alt="Image agrandie">`; document.body.appendChild(fullscreenDiv); // Fermer la lightbox au clic sur l'image ou en dehors fullscreenDiv.addEventListener('click', function () { document.body.removeChild(fullscreenDiv); }); }); }); </script> <script> // Fonction pour afficher ou masquer les paramètres function toggleSettings() { const settingsPopup = document.getElementById('settings-popup'); settingsPopup.style.display = settingsPopup.style.display === 'none' ? 'block' : 'none'; } // Fonction pour activer ou désactiver la localisation function toggleLocation() { const locationStatus = document.getElementById('location-status'); if (locationStatus.textContent === "Localisation désactivée") { locationStatus.textContent = "Localisation activée"; // Ajoute ici la logique pour activer la géolocalisation } else { locationStatus.textContent = "Localisation désactivée"; // Ajoute ici la logique pour désactiver la géolocalisation } } // Fonction pour fermer la fenêtre des paramètres function closeSettings() { const settingsPopup = document.getElementById('settings-popup'); settingsPopup.style.display = 'none'; } // Fonction pour afficher le bouton panier 🛒 function showCartButton() { const cartButton = document.getElementById("toggle-cart-button"); cartButton.style.display = "block"; // Afficher le bouton } // Ajouter un événement sur chaque bouton "Ajouter au panier" document.querySelectorAll('.buy-button').forEach(button => { button.addEventListener('click', showCartButton); }); // Fonction pour afficher ou masquer le panier function toggleCart() { const cart = document.getElementById("cart"); // Le panier if (cart.style.display === "none" || cart.style.display === "") { cart.style.display = "block"; // Affiche le panier } else { cart.style.display = "none"; // Cache le panier } } let cart = []; let totalPrice = 0; const shopLat = 43.296398; // latitude de Marseille const shopLon = 5.370000; // longitude de Marseille // Fonction pour basculer la visibilité de la section boutique et afficher/masquer la flèche function toggleShopSection() { const shopSection = document.querySelector('.shop-section'); const arrowIcon = document.getElementById('arrow-icon'); // Récupère l'icône de la flèche const shopIcon = document.getElementById('shop-icon'); // Récupère l'icône de la boutique if (shopSection.style.display === 'none') { shopSection.style.display = 'block'; // Affiche la boutique shopIcon.style.display = 'none'; // C
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- URL canonique (pratique pour éviter le contenu dupliqué) -->
+    <link rel="canonical" href="https://web-site13015.github.io/tsh_shop13/">
+   <!-- Charset et autres informations -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- Twitter Card (si vous souhaitez un rendu optimisé sur Twitter) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="TSH shop Profil Public Boutique">
+    <meta name="twitter:description" content="Découvrez le profil public de Nasdas et explorez sa boutique en ligne proposant des produits uniques et de qualité.">
+    <meta name="twitter:image" content="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/c5b0223d-f147-e0a5-7a10-613ef3d99567.jpg">
+   <!-- Social Media: Open Graph pour partager sur Facebook, Twitter, etc. -->
+    <meta property="og:title" content="TSH SHOP Profil Public Boutique">
+    <meta property="og:description" content="Découvrez et explorez la boutique en ligne offrant des produits uniques et des avantages spéciaux pour les noctambules.">
+    <meta property="og:image" content="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/83268e94-4952-4778-55c3-4d03c795192d.jpg">
+    <meta property="og:url" content="https://web-site13015.github.io/tsh_shop13/">
+    <meta property="og:type" content="website">
+
+  <link rel="icon" href="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/c5b0223d-f147-e0a5-7a10-613ef3d99567.jpg" type="image/png">
+  
+  <!-- Préconnecter les serveurs Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Lien pour importer la police Playfair Display -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Découvrez notre boutique en ligne proposant des produits uniques de haute qualité. Contactez-nous pour plus d'informations.">
+    <meta name="keywords" content="boutique, produits uniques, Marseille, Bonbonne, Livraison à domicile,  achats en ligne">
+    <title>The strongest holder shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/90a4d1138d.js" crossorigin="anonymous"></script>
+    <style>
+        /* Styles globaux */    
+    body {
+  font-family: "Playfair Display", serif;
+      background-image: url('https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/83268e94-4952-4778-55c3-4d03c795192d.jpg'); /* Chemin vers l'image de fond */
+ /* Empêche la répétition de l'image */
+  background-size: contain; /* Ajuste l'image pour qu'elle soit entièrement visible */
+  /* Centre l'image dans la fenêtre */
+  background-color: #ffffff; /* Couleur de fond si l'image ne remplit pas tout */
+  margin: 0;
+  padding: 5px;
+  color: #333; /* Optionnel, pour que le texte soit blanc sur un fond sombre */
+    }
+        /* Conteneur principal */
+        .container {         
+            max-width: 700px;
+            margin: auto;
+            background-image: url('https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/bdaf7f2b-dedf-4816-1f47-04bcf5078c30.jpg'); /* Ajout de l'image de fond */
+            background-size: cover; /* Pour couvrir toute la zone du conteneur */
+             /* Centrer l'image */
+            padding: 5px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #dfe3e8;
+            overflow: hidden; /* Pour éviter le débordement du contenu */
+        }
+
+        /* Titre avec animation de défilement */
+        .scrolling-title {
+            white-space: nowrap;
+            overflow: hidden;
+            box-sizing: border-box;
+            animation: scrolling 15s linear infinite;
+            font-size: 2.5em;
+            color: #0088cc;
+            text-align: center;
+            border-bottom: 1px solid #dfe3e8;
+            padding-bottom: 10px;
+        }
+
+        @keyframes scrolling {
+            0% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+.scrolling-title {
+    animation-play-state: running;
+}
+.scrolling-title:hover {
+    animation-play-state: paused;
+}
+        /* Profil */
+        .profile-card {
+            display: flex;
+            flex-direction: column; /* Adapté aux mobiles */
+            align-items: center; /* Centre le contenu */
+            padding: 20px;
+            border-bottom: 1px solid #dfe3e8;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px; /* Ajout d'espace en bas */
+        }
+
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 2px solid #0088cc;
+            margin-right: 15px;
+        }
+
+        .profile-info h1 {
+            font-size: 1.5em;
+            color: #333;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-info p {
+            color: #666;
+            margin: 5px 0;
+            font-size: 0.9em;
+        }
+
+        /* Badge vérifié Telegram */
+        .verified-badge {
+            color: #0088cc;
+            margin-left: 8px;
+            font-size: 1.2em;
+        }
+
+        /* Statut Boutique */
+        #status-text {
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        .status-circle {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+
+        .status-online {
+            background-color: green;
+        }
+
+        .status-offline {
+            background-color: red;
+        }
+
+        /* Icône de boutique */
+        .shop-icon {
+            text-align: center;
+            cursor: pointer;
+            margin-top: 20px; /* Ajout d'espace au-dessus */
+        }
+
+        .shop-icon i {
+            font-size: 2em;
+            color: #fff;
+            background: linear-gradient(135deg, #ff4757, #1e90ff); /* Dégradé rouge à bleu */
+            border-radius: 50%;
+            padding: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .shop-icon p {
+            margin-top: 5px;
+            font-size: 1em;
+            color: #333;
+        }
+
+        .shop-icon:hover i {
+            transform: scale(1.1);
+        }
+
+       /* Section boutique */
+.shop-section {
+    display: none;
+    margin-top: 20px;
+}
+
+.shop-items {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px; /* Ajoute un espacement horizontal entre les éléments côte à côte */
+}
+
+.shop-item {
+  margin: auto;
+    width: 60%;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 2px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    
+    margin-bottom: 5px; /* Espacement sous chaque article */
+}
+
+.shop-item:hover {
+    transform: scale(1.05);
+}
+
+.shop-item img {
+    width: 100%; /* Assure que l'image prend toute la largeur du parent */
+    height: 150px; /* Fixe une hauteur constante pour toutes les images */
+    object-fit: cover; /* Cela permet à l'image de couvrir la zone sans déformation */
+    border-radius: 8px;
+    margin-bottom: 10px;
+    cursor: pointer; /* Change le curseur au survol */
+}
+
+
+      /* Réduire l'espacement entre l'image et le titre du produit */
+.shop-item img {
+    margin-bottom: -25px; /* Réduit l'espacement sous l'image */
+}
+
+
+/* Réduire l'espacement entre le titre et la description du produit */
+.shop-item h4 {
+    margin-bottom: -10px; /* Réduit l'espacement sous le titre */
+}
+
+/* Réduire l'espacement entre la description et le prix */
+.shop-item p {
+    margin-bottom: -2px; /* Réduit l'espacement sous la description */
+}
+
+/* Garder l'espacement normal pour le prix */
+.shop-item .price {
+  margin-bottom: -50px; 
+    margin-top: 5px; /* Réduit l'espacement au-dessus du prix */
+}
+
+/* Lightbox pour l'image en plein écran */
+.fullscreen-img {
+    display: none; /* Masqué par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8); /* Fond sombre */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer; /* Clic pour fermer */
+}
+
+.fullscreen-img img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+/* Autres styles pour les descriptions et les boutons */
+.shop-item h3 {
+    margin-bottom: 5px;
+}
+
+.shop-item p {
+    color: #333;
+    margin: 5px 0; /* Ajuste les marges */
+}
+
+.shop-item .price {
+    color: #e74c3c;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.buy-button {
+    background-color: #0088cc;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.buy-button:hover {
+    background-color: #0056b3;
+}
+  
+         /* Styles du panier */
+         .cart {
+    display: none; /* Ou 'block' si tu veux qu'il soit visible par défaut */
+    background-color: #f0f8ff;
+    border: 1px solid #0088cc;
+    padding: 15px;
+    border-radius: 10px;
+    position: fixed; /* Position fixe */
+    top: 20px; /* Distance du haut de l'écran */
+    right: 20px; /* Distance de la droite de l'écran */
+    z-index: 1000; /* S'assure que le panier soit au-dessus des autres éléments */
+    max-width: 300px; /* Largeur maximale pour le panier */
+    max-height: 240px; /* Limite à environ 3 produits (ajustez selon la hauteur réelle des produits) */
+    overflow-y: auto; /* Permet de faire défiler le contenu si nécessaire */
+}
+        
+/* Style pour la mention "Livraison incluse" */
+.delivery-info {
+    color: green; /* Texte en vert pour "Livraison" */
+    font-size: 14px; /* Taille de police normale */
+    font-style: italic; /* Texte en italique */
+    margin-top: 5px; /* Espacement avec l'élément précédent */
+}
+
+/* Encadrement uniquement pour le mot "incluse" */
+.included-box {
+    color: white; /* Texte en blanc pour contraste */
+    background-color: green; /* Fond vert pour le mot "incluse" */
+    border: 2px solid green; /* Bordure verte autour du mot */
+    border-radius: 8px; /* Coins arrondis */
+    padding: 2px 6px; /* Espacement interne pour un look aéré */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Ombre subtile autour du mot */
+    display: inline-block; /* Applique l'encadrement uniquement au mot "incluse" */
+}
+
+
+
+        /* Autres styles du panier */
+        .cart h3 {
+            margin: 0;
+            color: #333;
+        }
+
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .cart-item span {
+            color: #666;
+        }
+
+        .remove-button {
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .remove-button:hover {
+            background-color: #c0392b;
+        }
+
+        .total {
+            font-weight: bold;
+            font-size: 1.1em;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        #email {
+            font-size: 1em; /* Taille de police */
+            color: #333; /* Couleur du texte */
+            margin-top: 10px; /* Espace au-dessus */
+        }
+
+        #email i {
+            margin-right: 5px; /* Espace entre l'icône et le texte */
+        }
+
+        /* Styles responsives */
+        @media (max-width: 768px) {
+            .shop-item {
+                width: calc(50% - 10px); /* Deux éléments par ligne pour les écrans plus petits */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .shop-item {
+                width: 100%; /* Un élément par ligne pour les petits écrans */
+            }
+
+            .scrolling-title {
+                font-size: 2em; /* Ajuste la taille du titre sur petits écrans */
+            }
+        }
+    
+    #toggle-cart-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #0088cc;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 18px;
+    }
+    
+    .order-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1001;
+    width: 90%;
+    max-width: 500px;
+}
+.order-form h3 {
+    margin-bottom: 20px;
+    color: #333;
+}
+.order-form input[type="text"],
+.order-form input[type="tel"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.order-form button {
+    background-color: #0088cc;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.order-form button:hover {
+    background-color: #0056b3;
+}
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#lightbox-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 90%; /* Limite la largeur du contenu */
+    max-height: 90%; /* Limite la hauteur du contenu */
+    overflow: hidden; /* Évite le débordement */
+}
+
+#lightbox-img {
+    max-width: 100%; /* Limite la largeur de l'image à celle du conteneur */
+    max-height: 80vh; /* Limite la hauteur de l'image pour laisser de la place au bouton */
+}
+
+button {
+    margin-top: 10px; /* Espace entre l'image et le bouton */
+}
+
+.product-image {
+    width: 100px;
+    cursor: pointer;
+}
+        
+    /* Style du modale */
+.modal {
+    display: none; /* Caché par défaut */
+    position: fixed;
+    z-index: 1; /* Au-dessus du contenu */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.modal-content {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+    
+/* Bouton des paramètres */
+.settings-btn {
+    background-color: transparent;
+    border: none;
+    color: #3498db;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+/* Style pour la fenêtre des paramètres */
+.settings-popup {
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    width: 250px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    border-radius: 8px;
+    display: none;
+}
+
+
+/* Style de la flèche */
+#arrow-icon {
+    transition: transform 0.3s ease;
+}
+    
+    
+    h3 {
+    text-align: center;  /* Centre le texte horizontalement */
+    margin: 0;           /* Enlève les marges par défaut */
+    padding: 20px 0;     /* Ajoute de l'espace autour du texte (optionnel) */
+}
+  
+      /* Bouton circulaire flottant */
+  #toggle-cart-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #ffcc00;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    font-size: 18px;
+}
+   
+  
+  /* Shop details */
+.shop-details {
+    margin-top: 10px; /* Espacement entre la section et le contenu précédent */
+    padding: 5px 10px; /* Espacement interne compact */
+    border: 2px solid rgba(0, 0, 0, 0.4); /* Bordure initiale fine et semi-transparente */
+    border-radius: 5px; /* Coins légèrement arrondis */
+    background: rgba(255, 255, 255, 0.6); /* Fond semi-transparent blanc */
+    backdrop-filter: blur(5px); /* Applique un effet de flou */
+    -webkit-backdrop-filter: blur(5px); /* Compatibilité pour Safari */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre subtile pour ajouter de la profondeur */
+    transition: border 0.3s ease-in-out; /* Transition douce pour la bordure */
+}
+
+/* Effet animé de la bordure */
+.shop-details:hover {
+    border: 2px solid #b858bf; /* Changer la couleur de la bordure au survol (ex : violet pour Instagram) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre un peu plus forte pour un effet de survol */
+}
+
+/* Shop details h5 */
+.shop-details h5 {
+    font-size: 15px; /* Taille réduite pour le titre */
+    color: #333; /* Couleur sombre pour le titre */
+    margin: 0; /* Supprime les marges autour du titre */
+}
+
+.shop-details p {
+    font-size: 14px; /* Taille compacte pour le texte */
+    color: #555; /* Couleur légèrement plus claire */
+    margin: 2px 0; /* Très peu d'espace entre les paragraphes */
+    line-height: 1.2; /* Espacement serré entre les lignes */
+}
+  
+  
+  /* Conteneur des icônes */
+.social-icons {
+    margin-top: 10px; /* Espacement au-dessus */
+    display: flex; /* Disposition en ligne */
+    gap: 15px; /* Espacement entre les icônes */
+    justify-content: flex-start; /* Alignement des icônes à gauche */
+}
+
+/* Styles communs pour chaque icône */
+.social-icons i {
+    font-size: 24px; /* Taille des icônes */
+    width: 50px; /* Largeur du cercle */
+    height: 50px; /* Hauteur du cercle */
+    line-height: 50px; /* Centrage vertical du texte */
+    text-align: center; /* Centrage horizontal du texte */
+    border-radius: 50%; /* Cercle parfait */
+    border: 3px solid transparent; /* Contour initial transparent */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation douce */
+    color: white; /* Couleur de l'icône par défaut */
+}
+
+/* Snapchat */
+.social-icons i.fa-snapchat {
+    background-color: #FFFC00; /* Fond jaune Snapchat */
+    border: 2px solid #FFC107; /* Contour jaune clair */
+    color: black; /* Icône noire Snapchat */
+}
+
+/* TikTok */
+.social-icons i.fa-tiktok {
+    background: linear-gradient(45deg, #25F4EE, #FE2C55); /* Dégradé TikTok */
+    border: 2px solid #FE2C55; /* Contour rose TikTok */
+    color: white; /* Icône blanche TikTok */
+}
+
+/* Instagram */
+.social-icons i.fa-instagram {
+    background: linear-gradient(45deg, #FEDA77, #DD2A7B, #8134AF); /* Dégradé Instagram */
+    border: 2px solid #DD2A7B; /* Contour rose Instagram */
+    color: white; /* Icône blanche Instagram */
+}
+
+/* Effets au survol */
+.social-icons i:hover {
+    transform: scale(1.1); /* Agrandir légèrement au survol */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre douce */
+}
+  
+  #cookie-banner {
+    animation: slide-up 0.5s ease-in-out;
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+  
+
+/* Bannière de message */
+.message-banner {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #ffffff; /* Fond blanc pour un contraste classique */
+    border: 1px solid #ddd; /* Bordure grise légère */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Ombre subtile pour la profondeur */
+    border-radius: 10px; /* Coins arrondis */
+    padding: 20px; /* Espacement intérieur confortable */
+    z-index: 1000;
+    display: block; /* Visible par défaut si pas masquée */
+    font-family: Arial, sans-serif; /* Police standard et propre */
+}
+
+.message-banner.hidden {
+    display: none; /* Masque la bannière */
+}
+
+.message-banner p {
+    font-size: 14px;
+    color: #333; /* Texte en gris foncé */
+    margin-bottom: 15px; /* Espacement sous le paragraphe */
+}
+
+.message-banner input,
+.message-banner textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px; /* Espacement entre les champs */
+    border: 1px solid #ccc; /* Bordure grise claire */
+    border-radius: 5px; /* Coins légèrement arrondis */
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.message-banner input:focus,
+.message-banner textarea:focus {
+    border-color: #4caf50; /* Bordure verte en focus */
+    outline: none; /* Supprime l'effet de focus par défaut */
+}
+
+.message-banner button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    font-family: inherit;
+    margin-bottom: 10px; /* Espacement entre les boutons */
+}
+
+/* Bouton "Envoyer" */
+.message-banner button[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+}
+
+.message-banner button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Bouton "Fermer" */
+.message-banner button[type="button"] {
+    background-color: #f44336;
+    color: white;
+}
+
+.message-banner button[type="button"]:hover {
+    background-color: #d32f2f;
+}
+
+/* Icône flottante pour rouvrir la bannière */
+.feedback-button {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Place l'icône à gauche */
+    width: 50px;
+    height: 50px;
+    background-color: #f4b400; /* Couleur jaune-orange */
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%; /* Forme circulaire */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+    transition: transform 0.2s ease-in-out;
+}
+
+.feedback-button:hover {
+    transform: scale(1.1); /* Effet d'agrandissement au survol */
+}
+  .message-banner p {
+    font-size: 14px;
+    color: #333; /* Texte en gris foncé */
+    margin-bottom: 15px; /* Espacement sous le paragraphe */
+    background-color: #e3f2fd; /* Fond bleu clair */
+    padding: 10px; /* Espacement interne pour le fond bleu */
+    border: 1px solid #90caf9; /* Bordure bleu clair */
+    border-radius: 5px; /* Coins légèrement arrondis */
+    text-align: center; /* Centrer le texte */
+}
+
+          .separator-section {
+    background: linear-gradient(135deg, #000000, #333333); /* Dégradé de noir à gris foncé */
+    color: #ff4081; /* Une couleur rose néon pour les titres */
+    text-align: center;
+    padding: 5px;
+    margin: 10px auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Ombre plus marquée pour un côté street */
+    border: 3px solid #ff4081; /* Bordure rose pour accentuer le côté néon */
+}
+
+.separator-section h2 {
+    font-size: 32px;
+    font-weight: 50;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ff4081; /* Rose néon pour un effet percutant */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ombre de texte pour plus de profondeur */
+}
+
+.separator-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff; /* Texte blanc pour une bonne lisibilité sur fond sombre */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Ombre de texte subtile pour renforcer le contraste */
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Titre et profil -->
+    <div class="scrolling-title">BIENVENUE 🏷 🛍</div>
+    <div class="profile-card">
+        <div class="profile-header">
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/c5b0223d-f147-e0a5-7a10-613ef3d99567.jpg" alt="Profil" class="profile-pic">
+            <div class="profile-info">
+                <h1>SHOP 🛒 <span class="verified-badge"><i class="fab fa-telegram"></i></span></h1>
+               <!-- Détails de la boutique -->
+                <div class="shop-details">
+                    <h5>Détails de la boutique</h5>
+                    <p>Préparation rapide et 🚚 livraison gratuite à partir de 35€ ! 🚀</p>
+                </div>
+                <p><i class="fas fa-map-marker-alt"></i> Localisation : Marseille, France </p>
+                <p><i class="fas fa-envelope"></i> Contact : Oldestlucious@gmail.com</p>
+                <!-- Ajout des icônes des réseaux sociaux -->
+<div class="social-icons">
+    <a href="https://www.snapchat.com/add/lucious-lion04?share_id=e-B-MlzJM7c&locale=fr-FR" target="_blank">
+        <i class="fa-brands fa-snapchat"></i>
+    </a>
+    <a href="https://www.tiktok.com/@tsh_shop13?_t=8s9mzOpzEow&_r=1" target="_blank">
+        <i class="fa-brands fa-tiktok" style="color: #911d44;"></i>
+    </a>
+    <a href="https://www.instagram.com/tsh_shop13/profilecard/?igsh=Zmg5N3didm90dHBi" target="_blank">
+        <i class="fa-brands fa-instagram" style="color: #b858bf;"></i>
+    </a>
+</div>
+<button class="settings-btn" onclick="toggleSettings()">⚙️ : paramètres</button>            
+              <button id="toggle-cart-button" onclick="toggleCart()" style="display: none;">🛒</button>
+              <!-- Mini carte avec une carte interactive à droite -->
+            </div>          
+        </div>
+        <div id="status-text">
+            <span class="status-circle status-online"></span> En ligne
+        </div>       
+      <!-- Icône de la boutique avec la flèche -->
+<div class="shop-icon" onclick="toggleShopSection()">   
+  
+    <i id="shop-icon" class="fas fa-store"></i> <!-- Icône de la boutique -->
+    <i id="arrow-icon" class="fas fa-chevron-down" style="display:none;"></i> <!-- Flèche cachée initialement -->
+    <p>Afficher la Boutique</p>
+</div>
+    </div>
+   <!-- Paramètres (Fenêtre popup) -->
+<div class="settings-popup" id="settings-popup" style="display:none;">
+    <h3>Paramètres</h3>
+    <button onclick="closeSettings()">❌ Fermer</button> <!-- Bouton pour fermer -->
+    <p>Activer la localisation :</p>
+    <button onclick="toggleLocation()">Activer la localisation</button>
+    <p id="location-status">Localisation désactivée</p>
+  <h1>Carte Waze</h1>
+    <div style="text-align: right;">
+      <iframe src="https://embed.waze.com/iframe?zoom=13&lat=48.85661&lon=2.35222&pin=1"
+            width="100%" height="220"></iframe>            </div>
+</div> 
+<div class="shop-section" style="display: none;">
+    <h3>Produits Disponibles</h3>
+      <div class="separator-section">
+    <h2>CREME DELUXE</h2>
+    </div>
+ 
+  <div class="shop-items">
+    <!-- Produit 1 -->
+    <div class="shop-item" id="product-1">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/c951c889-35c5-92a3-89d8-9efd59d3650c.png" alt="Produit A" class="product-image">
+        <h4>Cartouche </h4>
+        <p>Goût: Sans goût</p>
+        <span class="price">Prix : €7.00</span>
+        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
+        <button class="buy-button" onclick="addToCart('Cartouche Crème Sans goût', 7)">Ajouter au panier</button>
+    </div>
+    <!-- Produit 2 -->
+    <div class="shop-item" id="product-2">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/66daeb29-f307-827a-d332-23ffaeb22b8e.png" alt="Produit B" class="product-image">
+        <h4>FAST GAZ</h4>
+        <p>Goût: Sans goût</p>
+        <span class="price">Prix : €25.00</span>
+        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
+        <button class="buy-button" onclick="addToCart('FAST GAZ Sans goût', 25)">Ajouter au panier</button>
+    </div>
+    <!-- Produit 3 -->
+    <div class="shop-item" id="product-3">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/cb745b07-4c3f-dea2-0ef9-ea66338bba45.png" alt="Produit C" class="product-image">
+        <h4>DELUXE</h4>
+        <p>Goût: Sans goût</p>
+        <span class="price">Prix : €30.00</span>
+        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
+        <button class="buy-button" onclick="addToCart('CREME DELUXE Sans goût', 30)">Ajouter au panier</button>
+    </div>
+</div>
+  <div class="shop-items">
+    <!-- Produit 1 -->
+    <div class="shop-item" id="product-1">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/b446dc4d-66a2-2c85-6dd8-5757b46a85da.png" alt="Produit A" class="product-image">
+        <h4>FAST GAZ</h4>
+        <p>Goût: Sans goût</p>
+        <span class="price">Prix : €50.00</span>
+        <p class="delivery-info">Livraison <span class="included-box">incluse</span></p>
+        <button class="buy-button" onclick="addToCart('FAST GAZ Sans goût', 50)">Ajouter au panier</button>
+    </div>
+    <!-- Produit 2 -->
+    <div class="shop-item" id="product-2">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/296ad524-4f95-1bc7-650e-d5ec4e41f9b6.png" alt="Produit B" class="product-image">
+        <h4>DELUXE</h4>
+        <p>Goût: Sans goût</p>
+        <span class="price">Prix : €60.00</span>
+        <p class="delivery-info">Livraison <span class="included-box">incluse</span></p>
+        <button class="buy-button" onclick="addToCart('CREME DELUXE Sans goût', 60)">Ajouter au panier</button>
+    </div>
+    <!-- Produit 3 -->
+    <div class="shop-item" id="product-3">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/3636a0ba-987a-529d-ad51-5fdd478fd968.png" alt="Produit C" class="product-image">
+        <h4>TANK</h4>
+        <p>Goût: Sans goût</p>
+        <span class="price">Prix : €45.00</span>
+        <p class="delivery-info">Livraison <span class="included-box">incluse</span></p>
+        <button class="buy-button" onclick="addToCart('TANK Sans goût', 45)">Ajouter au panier</button>
+    </div>
+</div>
+    <div class="shop-items">
+        <!-- Produit 1 -->
+        <div class="shop-item" id="product-1">
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/3506e966-94ff-790f-7e7c-42ae4c6b0b68.jpg" alt="Produit A" class="product-image">
+            <h4>TANK</h4>
+            <p>Goût: 🍓 </p>
+            <span class="price">Prix : €45.00</span>
+         <p class="delivery-info">Livraison <span class="included-box">incluse</span></p> 
+            <button class="buy-button" onclick="addToCart('TANK Fraise 🍓', 45)">Ajouter au panier</button>
+        </div>
+        <!-- Produit 2 -->
+        <div class="shop-item" id="product-2">
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/f3f5b58a-0386-18c4-b99f-9874a1631cb1.jpg" alt="Produit B" class="product-image">
+            <h4>TANK</h4>
+            <p>Goût: 🍍 </p>
+            <span class="price">Prix : €45.00</span>
+       <p class="delivery-info">Livraison <span class="included-box">incluse</span></p> 
+            <button class="buy-button" onclick="addToCart('TANK Ananas 🍍', 45)">Ajouter au panier</button>
+        </div>
+        <!-- Produit 3 -->
+        <div class="shop-item" id="product-3">
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/ca2ffb50-9a83-d784-6a80-0594c5a31366.jpg" alt="Produit C" class="product-image">
+            <h4>TANK</h4>
+            <p>Goût: 🫐 </p>
+            <span class="price">Prix : €45.00</span>
+          <p class="delivery-info">Livraison <span class="included-box">incluse</span></p>
+            <button class="buy-button" onclick="addToCart('TANK Myrtille 🫐', 45)">Ajouter au panier</button>
+        </div>
+    </div>
+   <div class="shop-items">
+    <!-- Produit 1 -->
+    <div class="shop-item" id="product-1">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/0cdbf829-643f-74ed-5508-d5d68995d958.png" alt="Produit A" class="product-image">
+        <h4>Goût Creme </h4>
+        <p>Goût: ananas </p>
+        <span class="price">Prix : €8.00</span>
+        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
+        <button class="buy-button" onclick="addToCart('Goût Crème Pastèque', 8)">Ajouter au panier</button>
+    </div>
+    <!-- Produit 2 -->
+    <div class="shop-item" id="product-2">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/1919ecc3-90eb-9d34-fb6d-2f6a722179f2.png" alt="Produit B" class="product-image">
+        <h4>Goût Creme</h4>
+        <p>Goût: Fraise </p>
+        <span class="price">Prix : €8.00</span>
+        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
+        <button class="buy-button" onclick="addToCart('Goût Crème Sans goût', 8)">Ajouter au panier</button>
+    </div>
+    <!-- Produit 3 -->
+    <div class="shop-item" id="product-3">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/e0e54a61-65de-c335-0c5e-586cfb7e866a.png" alt="Produit C" class="product-image">
+        <h4>Goût Creme</h4>
+        <p>Goût: Pastèque</p>
+        <span class="price">Prix : €8.00</span>
+        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
+        <button class="buy-button" onclick="addToCart('Goût Crème Sans goût', 8)">Ajouter au panier</button>
+    </div>
+</div>
+   <div class="shop-items">
+    <!-- Ballon Rouge -->
+    <div class="shop-item" id="product-1">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/73f742c5-174c-a08d-49cd-6c9e16919ad1.png" alt="Ballon Rouge" class="product-image">
+        <h4>Ballon</h4>
+        <p>Couleur : Rouge</p>
+        <span class="price">Prix : €5.50</span>
+        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
+        <button class="buy-button" onclick="addToCart('Ballon Rouge', 5.50)">Ajouter au panier</button>
+    </div>
+    <!-- Ballon Bleu Ciel -->
+    <div class="shop-item" id="product-2">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/3ee66306-d800-6cfc-d53b-7c9269c8fd61.png" alt="Ballon Bleu Ciel" class="product-image">
+        <h4>Ballon</h4>
+        <p>Couleur : Bleu</p>
+        <span class="price">Prix : €5.50</span>
+        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
+        <button class="buy-button" onclick="addToCart('Ballon Bleu Ciel', 5.50)">Ajouter au panier</button>
+    </div>
+    <!-- Ballon Beige -->
+    <div class="shop-item" id="product-3">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/cba2e071-d038-ec95-9414-eaff2e6fdb58.png" alt="Ballon Beige" class="product-image">
+        <h4>Ballon</h4>
+        <p>Couleur : Beige</p>
+        <span class="price">Prix : €5.50</span>
+        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
+        <button class="buy-button" onclick="addToCart('Ballon Beige', 5.50)">Ajouter au panier</button>
+    </div>
+</div>
+  
+     <div class="shop-items">
+        <!-- Produit 1 -->
+        <div class="shop-item">
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/060177f9-9b70-2508-e41e-6aa0cc7b3be3.jpeg" alt="Produit A" class="product-image">
+            <h4>WATERMELON GUM</h4>
+            <p>Goût: 🍈 🎈</p>
+            <span class="price">Prix : €15.00</span>
+          <p class="delivery-info">Livraison incluse</p> 
+            <button class="buy-button" onclick="addToCart('WATERMELON Bubble GUM 🍈 🍉', 15)">Ajouter au panier</button>
+        </div>
+        <!-- Produit 2 -->
+        <div class="shop-item">
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/29e779a8-b161-e04d-2dcd-434e8f866080.jpeg" alt="Produit B" class="product-image">
+            <h4>BLUE SOUR RAS..</h4>
+            <p>Goût: 🍇 🍒</p>
+            <span class="price">Prix : €15.00</span>
+          <p class="delivery-info">Livraison incluse</p> 
+            <button class="buy-button" onclick="addToCart('BLUE SOUR RAS 🍇 🍒', 15)">Ajouter au panier</button>
+        </div>
+        <!-- Produit 3 -->
+        <div class="shop-item">
+            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/a633d67a-f049-ec3f-3773-bfbd238db0a1.jpeg" alt="Produit C" class="product-image">
+            <h4>MANGO PEACH Watermelon</h4>
+            <p>Goût: 🍑</p>
+            <span class="price">Prix : €15.00</span>
+          <p class="delivery-info">Livraison incluse</p> 
+            <button class="buy-button" onclick="addToCart('MANGO PEACH 🍑', 15)">Ajouter au panier</button>
+        </div>
+     </div>
+  <div class="separator-section">
+    <h2>OCB Slim</h2>
+    <p>Les OCB Slim sont des feuilles françaises de haute qualité, Disponibles en plusieurs variantes : Noir, Marron et Bleu.</p>
+      </div>
+    <div class="shop-items">
+    <!-- OCB Slim Noir -->
+    <div class="shop-item" id="product-1">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/5cba7ec9-05c2-852c-2b6a-a0e00027b7be.jpeg" alt="OCB Slim Noir" class="product-image">
+        <h4>OCB Slim</h4>
+        <p>Type : Noir</p>
+        <span class="price">Prix : €25.00</span>
+        <p class="delivery-info">Feuilles françaises</p>
+        <button class="buy-button" onclick="addToCart('OCB Slim Noir', 25.00)">Ajouter au panier</button>
+    </div>
+    <!-- OCB Marron -->
+    <div class="shop-item" id="product-2">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/631616e2-65b2-9be8-cf37-880bbd15c688.jpeg" alt="OCB Marron" class="product-image">
+        <h4>OCB Slim</h4>
+        <p>Type : Marron</p>
+        <span class="price">Prix : €25.00</span>
+        <p class="delivery-info">Feuilles françaises</p>
+        <button class="buy-button" onclick="addToCart('OCB Slim Marron', 25.00)">Ajouter au panier</button>
+    </div>
+    <!-- OCB Bleu -->
+    <div class="shop-item" id="product-3">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/3bb684cb-6f55-d133-2d27-d763093fd402.jpeg" alt="OCB Bleu" class="product-image">
+        <h4>OCB Slim</h4>
+        <p>Type : Bleu</p>
+        <span class="price">Prix : €25.00</span>
+        <p class="delivery-info">Feuilles françaises</p>
+        <button class="buy-button" onclick="addToCart('OCB Slim Bleu', 25.00)">Ajouter au panier</button>
+    </div>
+      </div>
+</div>
+<!-- Panier et formulaire d'adresse -->
+<div class="cart" id="cart" style="display: none;">
+    <h3>Mon Panier</h3>
+    <div id="cart-items"></div>
+    <div class="total" id="total">Total : €0.00</div>
+    <button class="remove-button" onclick="clearCart()">Vider le Panier</button>
+    <button class="remove-button" onclick="openOrderForm()">Finaliser la Commande</button>
+</div>
+<!-- Formulaire de finalisation commande -->
+<div class="order-form" id="order-form" style="display: none;">
+    <h3>Finalisation de la commande</h3>
+    <form id="orderForm" action="https://formspree.io/f/{your-form-id}" method="POST">
+        <input type="text" name="firstName" placeholder="Prénom" required>
+        <input type="text" name="lastName" placeholder="Nom" required>
+        <input type="tel" name="phone" placeholder="Numéro de téléphone" required>
+        <p>Veuillez entrer votre adresse pour calculer les frais de livraison.</p> <!-- Description ajoutée -->         
+        <input type="text" name="address" id="userAddress" placeholder="Adresse ou code postal" required>    
+        <input type="hidden" name="products" id="orderProducts">
+        <input type="hidden" name="totalPrice" id="orderTotalPrice">
+        <div id="shippingMessage"></div>
+        <button type="button" onclick="calculateShipping()">Calculer la livraison</button>
+        <!-- Ajouter reCAPTCHA Enterprise avant le bouton de soumission -->
+        <div id="recaptcha-container"></div>
+        <button type="submit" onclick="onClick(event)">Envoyer la Commande</button>
+        <button type="button" onclick="closeOrderForm()">Annuler</button>
+    </form>
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" style="display:none;">
+    <div id="lightbox-content">
+        <img id="lightbox-img" src="" alt="">
+        <button onclick="closeLightbox()">Fermer</button>
+    </div>
+</div>
+
+<!-- Modale de confirmation -->
+<div id="confirmation-modal" class="modal">
+    <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <p id="modal-message"></p>
+    </div>
+</div>
+<!-- Bannière de consentement aux cookies -->
+<div id="cookie-banner" style="position: fixed; bottom: 10px; left: 10px; right: 10px; background: rgba(0, 0, 0, 0.9); color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; border-radius: 5px; z-index: 1000; display: none;">
+    <span>
+        Ce site utilise des cookies pour améliorer votre expérience. En continuant à naviguer, vous acceptez notre utilisation des cookies. 
+        <a href="/policy" style="color: #FFD700; text-decoration: underline;">En savoir plus</a>.
+    </span>
+    <div>
+        <button id="accept-cookies" style="background: #4CAF50; color: white; border: none; padding: 10px 15px; border-radius: 5px; margin-right: 10px; cursor: pointer;">Accepter</button>
+        <button id="decline-cookies" style="background: #f44336; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;">Refuser</button>
+    </div>
+</div>
+
+<!-- Bannière pour les avis des clients -->
+<div id="message-banner" class="message-banner hidden">
+    <p>Donnez-nous votre avis ou signalez des produits manquants :</p>
+    <form action="https://formspree.io/f/{your-form-id}" method="POST">
+        <input type="text" name="name" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <textarea name="message" placeholder="Votre message ou suggestion" rows="4" required></textarea>
+        <button type="submit">Envoyer</button>
+        <button type="button" onclick="hideBanner()">Fermer</button>
+    </form>
+</div>
+
+<!-- Icône flottante pour rouvrir la bannière -->
+<div id="feedback-button" class="feedback-button" onclick="showBanner()">
+    💬
+</div>
+
+<script>
+    // Fonction pour masquer la bannière
+    function hideBanner() {
+        const banner = document.getElementById("message-banner");
+        banner.classList.add("hidden"); // Ajoute la classe hidden pour masquer la bannière
+    }
+
+    // Fonction pour afficher la bannière
+    function showBanner() {
+        const banner = document.getElementById("message-banner");
+        banner.classList.remove("hidden"); // Supprime la classe hidden pour afficher la bannière
+    }
+
+    // Affiche la bannière automatiquement après 2 secondes
+    window.onload = function() {
+        const banner = document.getElementById("message-banner");
+        setTimeout(() => {
+            banner.classList.remove("hidden"); // Affiche la bannière
+        }, 2000);
+    };
+</script>
+  <script>
+// Fonction pour afficher ou masquer le panier
+function toggleCart() {
+    const cart = document.getElementById("cart");
+    
+    // Si le panier est actuellement caché, on l'affiche, sinon on le cache
+    if (cart.style.display === "none") {
+        cart.style.display = "block";
+    } else {
+        cart.style.display = "none";
+    }
+}
+
+// Fonction pour vider le panier (par exemple, supprimer tous les éléments du panier)
+function clearCart() {
+    const cartItems = document.getElementById("cart-items");
+    cartItems.innerHTML = ""; // Vide tous les éléments du panier
+    const total = document.getElementById("total");
+    total.innerHTML = "Total : €0.00"; // Réinitialise le total
+}
+
+// Fonction pour finaliser la commande (par exemple, rediriger vers un formulaire)
+function openOrderForm() {
+    // Ici, tu pourrais ouvrir un formulaire de commande ou rediriger vers une autre page
+    alert("Finalisation de la commande...");
+}
+</script>
+<script>
+   function toggleShopSection() {
+    const shopSection = document.querySelector('.shop-section');
+    shopSection.style.display = shopSection.style.display === 'none' ? 'block' : 'none';
+
+    const icon = document.querySelector('.shop-icon i');
+    icon.className = shopSection.style.display === 'block' ? 'fas fa-chevron-up' : 'fas fa-shopping-cart';
+}
+    
+    
+    
+window.addEventListener("load", function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get('product');  // Récupère l'ID du produit depuis l'URL
+
+    if (productId) {
+        // Masque tous les produits
+        const allProducts = document.querySelectorAll('.shop-item');
+        allProducts.forEach(function(product) {
+            product.style.display = 'none';  // Cache tous les produits
+        });
+
+        // Affiche le produit correspondant et ouvre la lightbox
+        const productElement = document.getElementById('product-' + productId);
+        if (productElement) {
+            productElement.style.display = 'block';  // Affiche le produit spécifié
+            openLightbox(productElement.querySelector('.product-image').src);
+        }
+    }
+});
+
+function toggleLightbox(imgSrc = '') {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const allProducts = document.querySelectorAll('.shop-item');
+
+    if (lightbox.style.display === 'none' || lightbox.style.display === '') {
+        // Ouvre la lightbox
+        lightbox.style.display = 'flex';
+        lightboxImg.src = imgSrc;
+    } else {
+        // Ferme la lightbox
+        lightbox.style.display = 'none';
+        lightboxImg.src = '';
+
+        // Affiche tous les produits
+        allProducts.forEach(function (product) {
+            product.style.display = 'block';
+        });
+    }
+}
+</script>
+    <script>
+    
+    document.querySelectorAll('.shop-item img').forEach(img => {
+    img.addEventListener('click', function () {
+        // Créer une div pour la lightbox
+        const fullscreenDiv = document.createElement('div');
+        fullscreenDiv.classList.add('fullscreen-img');
+        fullscreenDiv.innerHTML = `<img src="${this.src}" alt="Image agrandie">`;
+        document.body.appendChild(fullscreenDiv);
+
+        // Fermer la lightbox au clic sur l'image ou en dehors
+        fullscreenDiv.addEventListener('click', function () {
+            document.body.removeChild(fullscreenDiv);
+        });
+    });
+});
+    
+    
+    </script>
+    
+    <script>
+    // Fonction pour afficher ou masquer les paramètres
+function toggleSettings() {
+    const settingsPopup = document.getElementById('settings-popup');
+    settingsPopup.style.display = settingsPopup.style.display === 'none' ? 'block' : 'none';
+}
+
+// Fonction pour activer ou désactiver la localisation
+function toggleLocation() {
+    const locationStatus = document.getElementById('location-status');
+    if (locationStatus.textContent === "Localisation désactivée") {
+        locationStatus.textContent = "Localisation activée";
+        // Ajoute ici la logique pour activer la géolocalisation
+    } else {
+        locationStatus.textContent = "Localisation désactivée";
+        // Ajoute ici la logique pour désactiver la géolocalisation
+    }
+}
+    
+    // Fonction pour fermer la fenêtre des paramètres
+function closeSettings() {
+    const settingsPopup = document.getElementById('settings-popup');
+    settingsPopup.style.display = 'none';
+}
+   
+    
+// Fonction pour afficher le bouton panier 🛒
+function showCartButton() {
+    const cartButton = document.getElementById("toggle-cart-button");
+    cartButton.style.display = "block"; // Afficher le bouton
+}
+
+// Ajouter un événement sur chaque bouton "Ajouter au panier"
+document.querySelectorAll('.buy-button').forEach(button => {
+    button.addEventListener('click', showCartButton);
+});
+
+// Fonction pour afficher ou masquer le panier
+function toggleCart() {
+    const cart = document.getElementById("cart"); // Le panier
+    if (cart.style.display === "none" || cart.style.display === "") {
+        cart.style.display = "block"; // Affiche le panier
+    } else {
+        cart.style.display = "none"; // Cache le panier
+    }
+}
+    
+       let cart = [];
+let totalPrice = 0;
+const shopLat = 43.296398; // latitude de Marseille
+const shopLon = 5.370000;  // longitude de Marseille
+
+// Fonction pour basculer la visibilité de la section boutique et afficher/masquer la flèche
+function toggleShopSection() {
+    const shopSection = document.querySelector('.shop-section');
+    const arrowIcon = document.getElementById('arrow-icon'); // Récupère l'icône de la flèche
+    const shopIcon = document.getElementById('shop-icon'); // Récupère l'icône de la boutique
+    
+    if (shopSection.style.display === 'none') {
+        shopSection.style.display = 'block'; // Affiche la boutique
+        shopIcon.style.display = 'none'; // Cache l'icône de la boutique
+        arrowIcon.style.display = 'inline'; // Affiche la flèche
+    } else {
+        shopSection.style.display = 'none'; // Cache la boutique
+        shopIcon.style.display = 'inline'; // Réaffiche l'icône de la boutique
+        arrowIcon.style.display = 'none'; // Cache la flèche
+    }
+}
+
+// Fonction pour ajouter un produit au panier
+function addToCart(productName, price) {
+    cart.push({ productName, price });
+    totalPrice += price;
+    updateCartDisplay();
+
+    // Affiche un message dans la modale
+    const modalMessage = document.getElementById('modal-message');
+    modalMessage.textContent = `${productName} a été ajouté au panier.`;
+
+    // Affiche un message de livraison estimée
+    document.getElementById('shippingMessage').innerHTML = "Livraison gratuite dès 35 € d'achat !";
+
+    // Ouvre la modale de confirmation
+    const modal = document.getElementById('confirmation-modal');
+    modal.style.display = 'flex';
+
+    // Ferme la modale lorsqu'on clique sur la croix
+    const closeModal = document.getElementById('close-modal');
+    closeModal.onclick = function () {
+        modal.style.display = 'none';
+    };
+
+    // Ferme la modale si l'utilisateur clique en dehors
+    window.onclick = function (event) {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    };
+}
+
+// Fonction pour mettre à jour l'affichage du panier
+function updateCartDisplay() {
+    const cartItems = document.getElementById('cart-items');
+    cartItems.innerHTML = '';
+    cart.forEach(item => {
+        const div = document.createElement('div');
+        div.classList.add('cart-item');
+        div.innerHTML = `${item.productName} <span>€${item.price.toFixed(2)}</span> <button onclick="removeFromCart('${item.productName}')">Supprimer</button>`;
+        cartItems.appendChild(div);
+    });
+    document.getElementById('total').innerHTML = `Total : €${totalPrice.toFixed(2)}`;
+    document.getElementById('cart').style.display = 'block';
+}
+
+// Fonction pour supprimer un produit du panier
+function removeFromCart(productName) {
+    const index = cart.findIndex(item => item.productName === productName);
+    if (index !== -1) {
+        totalPrice -= cart[index].price;
+        cart.splice(index, 1);
+        updateCartDisplay();
+    }
+}
+
+// Fonction pour vider le panier
+function clearCart() {
+    cart = [];
+    totalPrice = 0;
+    updateCartDisplay();
+    document.getElementById('cart').style.display = 'none';
+}
+
+// Fonction pour ouvrir le formulaire de commande
+function openOrderForm() {
+    document.getElementById('order-form').style.display = 'block';
+    document.getElementById('orderProducts').value = JSON.stringify(cart);
+    document.getElementById('orderTotalPrice').value = totalPrice.toFixed(2);
+}
+
+// Fonction pour fermer le formulaire de commande
+function closeOrderForm() {
+    document.getElementById('order-form').style.display = 'none';
+}
+
+// Fonction pour calculer le coût de la livraison en fonction de l'adresse de l'utilisateur
+function calculateShipping() {
+    const userAddress = document.getElementById('userAddress').value;
+    if (userAddress) {
+        // Utilisation de l'API Nominatim pour géocoder l'adresse
+        fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(userAddress)}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.length > 0) {
+                    const userLat = parseFloat(data[0].lat);
+                    const userLon = parseFloat(data[0].lon);
+                    const distance = calculateDistance(shopLat, shopLon, userLat, userLon);
+                    displayShippingCost(distance);
+                } else {
+                    document.getElementById('shippingMessage').innerHTML = "Adresse non trouvée. Veuillez vérifier et réessayer.";
+                }
+            })
+            .catch(error => {
+                console.error('Erreur lors de la géolocalisation:', error);
+                document.getElementById('shippingMessage').innerHTML = "Erreur lors du calcul de la distance. Veuillez réessayer.";
+            });
+    } else {
+        document.getElementById('shippingMessage').innerHTML = "Veuillez entrer une adresse valide.";
+    }
+}
+
+// Fonction pour calculer la distance entre la boutique et l'adresse de l'utilisateur
+function calculateDistance(lat1, lon1, lat2, lon2) {
+    const R = 6371; // Rayon de la Terre en kilomètres
+    const dLat = (lat2 - lat1) * Math.PI / 180; // Conversion des degrés en radians
+    const dLon = (lon2 - lon1) * Math.PI / 180; // Conversion des degrés en radians
+    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
+              Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    return R * c; // Retourne la distance en kilomètres
+}
+
+// Fonction pour afficher le coût de la livraison basé sur le total de la commande
+function displayShippingCost() {
+    let shippingCost = 5; // Frais de livraison par défaut
+
+    // Si le total de la commande est supérieur à 20 € mais inférieur à 40 €
+    if (totalPrice >= 20 && totalPrice < 40) {
+        shippingCost = 3;  // Frais de livraison réduits
+    }
+    // Si le total de la commande dépasse 40 €, la livraison devient gratuite
+    else if (totalPrice >= 40) {
+        shippingCost = 0; // Livraison gratuite
+    }
+
+    // Mise à jour de l'affichage des frais de livraison
+    document.getElementById('shippingMessage').innerHTML = `Coût de livraison : €${shippingCost}`;
+}
+    </script>
+   <script>
+  // Fonction pour faire défiler jusqu'à la section boutique
+function scrollToShopSection() {
+    const shopSection = document.querySelector('.shop-section'); // Section de la boutique
+    const arrowIcon = document.getElementById('arrow-icon'); // Icône de la flèche
+    const toggleText = document.querySelector('.shop-icon p'); // Texte à côté de l'icône
+
+    // Affiche la section boutique si elle est masquée
+    if (shopSection.style.display === 'none') {
+        shopSection.style.display = 'block';
+        arrowIcon.style.display = 'inline-block'; // Affiche la flèche
+        toggleText.textContent = 'Masquer la Boutique'; // Change le texte
+    }
+
+    // Fais défiler jusqu'à la section boutique
+    shopSection.scrollIntoView({ behavior: 'smooth' });
+}
+
+// Ajout d'un événement de clic pour l'icône et le texte
+document.querySelector('.shop-icon').addEventListener('click', scrollToShopSection);
+   </script>
+  <script>
+    // Vérifie si le cookie "cookies-accepted" existe
+    function getCookie(name) {
+        let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
+        return match ? match[2] : null;
+    }
+
+    // Définit un cookie avec une durée en jours
+    function setCookie(name, value, days) {
+        let date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
+    }
+
+    // Affiche la bannière si le consentement n'est pas encore donné
+    document.addEventListener('DOMContentLoaded', () => {
+        if (!getCookie('cookies-accepted')) {
+            document.getElementById('cookie-banner').style.display = 'flex';
+        }
+
+        // Accepter les cookies
+        document.getElementById('accept-cookies').addEventListener('click', () => {
+            setCookie('cookies-accepted', 'true', 365);
+            document.getElementById('cookie-banner').style.display = 'none';
+        });
+
+        // Refuser les cookies
+        document.getElementById('decline-cookies').addEventListener('click', () => {
+            setCookie('cookies-accepted', 'false', 365);
+            document.getElementById('cookie-banner').style.display = 'none';
+        });
+    });
+</script>
+    
+  <script>
+    if (getCookie('cookies-accepted') === 'true') {
+        const recaptchaScript = document.createElement('script');
+        recaptchaScript.src = "https://www.google.com/recaptcha/enterprise.js?render=6Lfx0ZgqAAAAACuBGXsYgBHKE36ltUCI4wPOclPw";
+        document.head.appendChild(recaptchaScript);
+    }
+</script>
+</body>
+  </html>
