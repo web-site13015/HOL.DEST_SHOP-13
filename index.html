@@ -781,6 +781,16 @@ button {
     text-align: center; /* Centrer le texte */
 }
 
+          .separator-image {
+    max-width: 100%; /* L'image ne dépasse pas la largeur du conteneur */
+    height: auto; /* Maintient les proportions de l'image */
+    border-radius: 15px; /* Coins arrondis */
+    margin: 0 auto; /* Centre l'image horizontalement */
+    display: block; /* Assure que l'image est bien un élément de bloc */
+    object-fit: cover; /* Gère le contenu de l'image si elle dépasse ses limites */
+          }
+
+        
           .separator-section {
     background: linear-gradient(135deg, #000000, #333333); /* Dégradé de noir à gris foncé */
     color: #ff4081; /* Une couleur rose néon pour les titres */
@@ -1019,37 +1029,40 @@ button {
         <button class="buy-button" onclick="addToCart('Ballon Beige', 5.50)">Ajouter au panier</button>
     </div>
 </div>
-  
+  <div class="separator-section">
+    <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/f0d5fef5-ecf2-6533-c2d5-48360135dacd.jpg" alt="Cigarette électronique" class="separator-image">
+    <h2>Cigarette électronique</h2>
+  </div>
      
-     <div class="shop-items">
+ <div class="shop-items">
     <!-- Produit 1 -->
     <div class="shop-item">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/30b1c84e-71ba-c664-7891-324d9d7e3896.jpg" alt="Produit A" class="product-image">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/060177f9-9b70-2508-e41e-6aa0cc7b3be3.jpeg" alt="Produit A" class="product-image">
         <h4>PUFF 15000 OK</h4>
         <p>Goût : 🍌🍓 (Banane fraise)</p>
         <span class="price">Prix : €15.00</span>
-        <p class="delivery-info">Livraison incluse</p> 
+        <p class="delivery-info">Livraison non incluse</p> 
         <button class="buy-button" onclick="addToCart('PUFF 15000 OK 🍌🍓', 15)">Ajouter au panier</button>
     </div>
     <!-- Produit 2 -->
     <div class="shop-item">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/b8ce77ef-c187-3e5b-51dc-ca766b23776a.jpg" alt="Produit B" class="product-image">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/29e779a8-b161-e04d-2dcd-434e8f866080.jpeg" alt="Produit B" class="product-image">
         <h4>PUFF 15000 OK</h4>
         <p>Goût : 🍑🥭 (Peach mangue)</p>
         <span class="price">Prix : €15.00</span>
-        <p class="delivery-info">Livraison incluse</p> 
+        <p class="delivery-info">Livraison non incluse</p> 
         <button class="buy-button" onclick="addToCart('PUFF 15000 OK 🍑🥭', 15)">Ajouter au panier</button>
     </div>
     <!-- Produit 3 -->
     <div class="shop-item">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/10e283a3-5c45-6cd3-097a-df35341b8325.jpg" alt="Produit C" class="product-image">
+        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/a633d67a-f049-ec3f-3773-bfbd238db0a1.jpeg" alt="Produit C" class="product-image">
         <h4>PUFF 15000 OK</h4>
         <p>Goût : 🍉🍓 (Pastèque fraise)</p>
         <span class="price">Prix : €15.00</span>
-        <p class="delivery-info">Livraison incluse</p> 
+        <p class="delivery-info">Livraison non incluse</p> 
         <button class="buy-button" onclick="addToCart('PUFF 15000 OK 🍉🍓', 15)">Ajouter au panier</button>
     </div>
-     </div>
+ </div>
   <div class="separator-section">
     <h2>OCB Slim</h2>
     <p>Les OCB Slim sont des feuilles françaises de haute qualité, Disponibles en plusieurs variantes : Noir, Marron et Bleu.</p>
