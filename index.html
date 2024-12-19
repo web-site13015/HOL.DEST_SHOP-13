@@ -207,7 +207,9 @@
 }
 
 .shop-item img {
-    width: 100%;
+    width: 100%; /* Assure que l'image prend toute la largeur du parent */
+    height: 150px; /* Fixe une hauteur constante pour toutes les images */
+    object-fit: cover; /* Cela permet à l'image de couvrir la zone sans déformation */
     border-radius: 8px;
     margin-bottom: 10px;
     cursor: pointer; /* Change le curseur au survol */
@@ -778,6 +780,35 @@ button {
     border-radius: 5px; /* Coins légèrement arrondis */
     text-align: center; /* Centrer le texte */
 }
+
+          .separator-section {
+    background: linear-gradient(135deg, #000000, #333333); /* Dégradé de noir à gris foncé */
+    color: #ff4081; /* Une couleur rose néon pour les titres */
+    text-align: center;
+    padding: 5px;
+    margin: 10px auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Ombre plus marquée pour un côté street */
+    border: 3px solid #ff4081; /* Bordure rose pour accentuer le côté néon */
+}
+
+.separator-section h2 {
+    font-size: 32px;
+    font-weight: 50;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ff4081; /* Rose néon pour un effet percutant */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ombre de texte pour plus de profondeur */
+}
+
+.separator-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: 'Arial', sans-serif;
+    color: #ffffff; /* Texte blanc pour une bonne lisibilité sur fond sombre */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Ombre de texte subtile pour renforcer le contraste */
+        }
     </style>
 </head>
 <body>
@@ -838,6 +869,10 @@ button {
 </div> 
 <div class="shop-section" style="display: none;">
     <h3>Produits Disponibles</h3>
+      <div class="separator-section">
+    <h2>OCB Slim</h2>
+    <p>Les OCB Slim sont des feuilles françaises de haute qualité, Disponibles en plusieurs variantes : Noir, Marron et Bleu.</p>
+      </div>
       <div class="shop-items">
     <!-- OCB Slim Noir -->
     <div class="shop-item" id="product-1">
@@ -900,8 +935,8 @@ button {
     <!-- Produit 1 -->
     <div class="shop-item" id="product-1">
         <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/0cdbf829-643f-74ed-5508-d5d68995d958.png" alt="Produit A" class="product-image">
-        <h4>Goût Crème </h4>
-        <p>Goût: Pastèque</p>
+        <h4>Goût Creme </h4>
+        <p>Goût: ananas </p>
         <span class="price">Prix : €8.00</span>
         <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
         <button class="buy-button" onclick="addToCart('Goût Crème Pastèque', 8)">Ajouter au panier</button>
@@ -909,8 +944,8 @@ button {
     <!-- Produit 2 -->
     <div class="shop-item" id="product-2">
         <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/1919ecc3-90eb-9d34-fb6d-2f6a722179f2.png" alt="Produit B" class="product-image">
-        <h4>Goût Crème</h4>
-        <p>Goût: Sans goût</p>
+        <h4>Goût Creme</h4>
+        <p>Goût: Fraise </p>
         <span class="price">Prix : €8.00</span>
         <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
         <button class="buy-button" onclick="addToCart('Goût Crème Sans goût', 8)">Ajouter au panier</button>
@@ -918,8 +953,8 @@ button {
     <!-- Produit 3 -->
     <div class="shop-item" id="product-3">
         <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/e0e54a61-65de-c335-0c5e-586cfb7e866a.png" alt="Produit C" class="product-image">
-        <h4>Goût Crème</h4>
-        <p>Goût: Sans goût</p>
+        <h4>Goût Creme</h4>
+        <p>Goût: Pastèque</p>
         <span class="price">Prix : €8.00</span>
         <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
         <button class="buy-button" onclick="addToCart('Goût Crème Sans goût', 8)">Ajouter au panier</button>
