@@ -1418,6 +1418,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="feedback-button" class="feedback-button" onclick="showBanner()">
     💬
 </div>
+
+<!-- Bannière de réduction -->
+<div id="discount-banner" style="display: none; background-color: #4caf50; color: white; padding: 10px; text-align: center; position: fixed; top: 0; width: 100%; z-index: 1000;">
+    🎉 Félicitations ! Vous avez récupéré votre réduction de 10% !
+</div>
+
 <!-- Pop-up initial -->
 <div id="discount-popup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:white; border:1px solid #ccc; padding:20px; z-index:1000;">
     <h3>🎉 Réduction spéciale pour vous ! 🎉</h3>
@@ -1441,134 +1447,116 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
         <!-- Message explicatif -->
         <p style="font-size: 12px; color: gray;">
-            * Vous devez remplir toutes les cases et effectuer une commande pour valider la réduction.
+            * Vous devez remplir toutes les cases pour valider la réduction.
         </p>
+
         <!-- Boutons -->
         <button type="submit" disabled id="submit-button">Valider</button>
         <button type="button" onclick="closePopup('discount-form-popup')">Fermer</button>
     </form>
 </div>
-    <script>
-document.addEventListener("DOMContentLoaded", () => {
-    // Vérifie si une réduction a déjà été validée
-    if (localStorage.getItem("reductionValidee") === "true") {
-        console.log("L'utilisateur a déjà validé une réduction.");
-    } else {
-        setTimeout(() => {
-            document.getElementById("discount-popup").style.display = "block";
-        }, 30000); // Affiche le pop-up après 5 secondes
-    }
-});
 
-// Affiche le formulaire de réduction
-function showDiscountForm() {
-    document.getElementById("discount-popup").style.display = "none";
-    document.getElementById("discount-form-popup").style.display = "block";
-    generateCases(6); // Génère 6 cases rouges ❌
-}
+<!-- Bouton pour voir la réduction -->
+<button id="view-discount-button" style="display:none;" onclick="showDiscount()">Voir votre réduction</button>
 
-// Génère les cases rouges ❌ par défaut
-function generateCases(count) {
-    const container = document.getElementById("case-container");
-    container.innerHTML = ""; // Vide les cases existantes
-    for (let i = 0; i < count; i++) {
-        const caseElement = document.createElement("div");
-        caseElement.id = `case-${i}`;
-        caseElement.dataset.state = "red"; // État initial (rouge)
-        caseElement.style.width = "30px";
-        caseElement.style.height = "30px";
-        caseElement.style.border = "2px solid #ff4d4d";
-        caseElement.style.borderRadius = "5px";
-        caseElement.style.display = "flex";
-        caseElement.style.justifyContent = "center";
-        caseElement.style.alignItems = "center";
-        caseElement.style.cursor = "pointer";
-        caseElement.style.fontSize = "18px";
-        caseElement.style.backgroundColor = "#ff4d4d"; // Fond rouge
-        caseElement.textContent = "❌"; // Croix rouge
-
-        // Ajoute un événement au clic
-        caseElement.addEventListener("click", () => toggleCaseState(caseElement));
-        container.appendChild(caseElement);
-    }
-}
-
-// Change l'état des cases
-function toggleCaseState(caseElement) {
-    const currentState = caseElement.dataset.state;
-
-    if (currentState === "red") {
-        // Passe à vert avec une coche ✅
-        caseElement.dataset.state = "green";
-        caseElement.style.backgroundColor = "#4caf50";
-        caseElement.style.borderColor = "#4caf50";
-        caseElement.textContent = "✅";
-    } else {
-        // Passe à rouge avec une croix ❌
-        caseElement.dataset.state = "red";
-        caseElement.style.backgroundColor = "#ff4d4d";
-        caseElement.style.borderColor = "#ff4d4d";
-        caseElement.textContent = "❌";
-    }
-
-    updateSubmitButton();
-}
-
-// Active le bouton Valider uniquement si toutes les cases sont vertes et l'email est saisi
-function updateSubmitButton() {
-    const cases = document.querySelectorAll("#case-container div");
-    const allGreen = Array.from(cases).every((caseElement) => caseElement.dataset.state === "green");
-    const email = document.getElementById("user-email").value.trim();
-    const submitButton = document.getElementById("submit-button");
-
-    submitButton.disabled = !(allGreen && email); // Active seulement si toutes les conditions sont remplies
-}
-
-// Valide la réduction et envoie les données via Formspree.io
-function claimDiscount(event) {
-    event.preventDefault();
-
-    const email = document.getElementById("user-email").value.trim();
-    const cases = document.querySelectorAll("#case-container div");
-    const filledStates = Array.from(cases).map((caseElement) => caseElement.dataset.state);
-
-    // Vérifie si toutes les cases sont vertes et l'email est bien renseigné
-    if (!email || filledStates.includes("red")) {
-        alert("Veuillez remplir toutes les cases correctement avant de valider !");
-        return;
-    }
-
-    // Sauvegarde que la réduction est validée
-    localStorage.setItem("reductionValidee", "true");
-
-    // Envoie les données via Formspree.io
-    const formData = new FormData();
-    formData.append("email", email);
-    formData.append("cases", filledStates);
-
-    fetch("https://formspree.io/f/your-form-id", {
-        method: "POST",
-        body: formData,
-        headers: { Accept: "application/json" }
-    })
-        .then((response) => {
-            if (response.ok) {
-                alert("Votre réduction a été validée !");
-            } else {
-                alert("Erreur lors de l'envoi. Veuillez réessayer.");
-            }
-        })
-        .catch(() => alert("Une erreur s'est produite."));
-
-    // Cache le formulaire après validation
-    document.getElementById("discount-form-popup").style.display = "none";
-}
-
-// Ferme le pop-up
-function closePopup(popupId) {
-    document.getElementById(popupId).style.display = "none";
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        // Affiche la pop-up initiale après 5 secondes si aucune réduction n'a été validée
+        if (!localStorage.getItem("reductionValidee")) {
+            setTimeout(() => {
+                document.getElementById("discount-popup").style.display = "block";
+            }, 5000);
         }
-    </script>
+    });
+
+    // Affiche le formulaire pour valider la réduction
+    function showDiscountForm() {
+        document.getElementById("discount-popup").style.display = "none";
+        document.getElementById("discount-form-popup").style.display = "block";
+        generateCases(6); // Génère 6 cases rouges ❌
+    }
+
+    // Génère les cases rouges ❌ par défaut
+    function generateCases(count) {
+        const container = document.getElementById("case-container");
+        container.innerHTML = ""; // Vide les cases existantes
+        for (let i = 0; i < count; i++) {
+            const caseElement = document.createElement("div");
+            caseElement.id = `case-${i}`;
+            caseElement.dataset.state = "red"; // État initial (rouge)
+            caseElement.style.width = "30px";
+            caseElement.style.height = "30px";
+            caseElement.style.border = "2px solid #ff4d4d";
+            caseElement.style.borderRadius = "5px";
+            caseElement.style.display = "flex";
+            caseElement.style.justifyContent = "center";
+            caseElement.style.alignItems = "center";
+            caseElement.style.cursor = "pointer";
+            caseElement.style.fontSize = "18px";
+            caseElement.style.backgroundColor = "#ff4d4d"; // Fond rouge
+            caseElement.textContent = "❌"; // Croix rouge
+
+            // Ajoute un événement au clic
+            caseElement.addEventListener("click", () => toggleCaseState(caseElement));
+            container.appendChild(caseElement);
+        }
+    }
+
+    // Change l'état des cases
+    function toggleCaseState(caseElement) {
+        if (caseElement.dataset.state === "red") {
+            caseElement.dataset.state = "green";
+            caseElement.style.backgroundColor = "#4caf50";
+            caseElement.style.borderColor = "#4caf50";
+            caseElement.textContent = "✅";
+        }
+        updateSubmitButton();
+    }
+
+    // Active le bouton Valider uniquement si toutes les cases sont vertes et l'email est saisi
+    function updateSubmitButton() {
+        const cases = document.querySelectorAll("#case-container div");
+        const allGreen = Array.from(cases).every((caseElement) => caseElement.dataset.state === "green");
+        const email = document.getElementById("user-email").value.trim();
+        const submitButton = document.getElementById("submit-button");
+
+        submitButton.disabled = !(allGreen && email); // Active seulement si toutes les conditions sont remplies
+    }
+
+    // Valide la réduction
+    function claimDiscount(event) {
+        event.preventDefault();
+
+        // Sauvegarde que la réduction est validée
+        localStorage.setItem("reductionValidee", "true");
+
+        // Désactive toutes les cases
+        const cases = document.querySelectorAll("#case-container div");
+        cases.forEach((caseElement) => {
+            caseElement.style.pointerEvents = "none"; // Désactive les clics
+        });
+
+        // Affiche un message de validation
+        document.getElementById("discount-form-popup").style.display = "none";
+        document.getElementById("discount-banner").style.display = "block";
+        document.getElementById("view-discount-button").style.display = "block";
+
+        // Cache la bannière après 5 secondes
+        setTimeout(() => {
+            document.getElementById("discount-banner").style.display = "none";
+        }, 5000);
+    }
+
+    // Affiche l'état de la réduction
+    function showDiscount() {
+        alert("🎉 Vous avez une réduction de 10% !");
+    }
+
+    // Ferme un pop-up spécifique
+    function closePopup(popupId) {
+        document.getElementById(popupId).style.display = "none";
+    }
+</script>
 <script>
     // Fonction pour masquer la bannière
     function hideBanner() {
