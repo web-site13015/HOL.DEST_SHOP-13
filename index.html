@@ -1418,6 +1418,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="feedback-button" class="feedback-button" onclick="showBanner()">
     💬
 </div>
+  
   <!-- Bannière de réduction -->
 <div id="discount-banner" style="display: none; background-color: #4caf50; color: white; padding: 10px; text-align: center; position: fixed; top: 0; width: 100%; z-index: 1000;">
     🎉 Félicitations ! Vous avez récupéré votre réduction de 10% !
@@ -1464,7 +1465,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         if (!localStorage.getItem("reductionValidee")) {
             setTimeout(() => {
                 document.getElementById("discount-popup").style.display = "block";
-            }, 15000);
+            }, 5000);
         }
     });
 
@@ -1574,7 +1575,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     function closePopup(popupId) {
         document.getElementById(popupId).style.display = "none";
     }
-</script>
+</script>          
+            
 <script>
     // Fonction pour masquer la bannière
     function hideBanner() {
