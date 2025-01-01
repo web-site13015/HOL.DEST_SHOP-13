@@ -1418,8 +1418,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="feedback-button" class="feedback-button" onclick="showBanner()">
     💬
 </div>
-
-<!-- Bannière de réduction -->
+  <!-- Bannière de réduction -->
 <div id="discount-banner" style="display: none; background-color: #4caf50; color: white; padding: 10px; text-align: center; position: fixed; top: 0; width: 100%; z-index: 1000;">
     🎉 Félicitations ! Vous avez récupéré votre réduction de 10% !
 </div>
@@ -1510,6 +1509,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             caseElement.style.borderColor = "#4caf50";
             caseElement.textContent = "✅";
         }
+        checkIfAllCasesAreGreen();
+    }
+
+    // Vérifie si toutes les cases sauf la dernière sont vertes
+    function checkIfAllCasesAreGreen() {
+        const cases = document.querySelectorAll("#case-container div");
+        const allGreenExceptLast = Array.from(cases)
+            .slice(1) // Ignore la première case
+            .every((caseElement) => caseElement.dataset.state === "green");
+
+        if (allGreenExceptLast) {
+            const firstCase = document.getElementById("case-0");
+            firstCase.dataset.state = "green";
+            firstCase.style.backgroundColor = "#4caf50";
+            firstCase.style.borderColor = "#4caf50";
+            firstCase.textContent = "✅";
+            firstCase.style.pointerEvents = "none"; // Désactive les clics sur cette case
+        }
+
         updateSubmitButton();
     }
 
