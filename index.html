@@ -137,26 +137,33 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         }
 
         /* Statut Boutique */
-        #status-text {
-            font-size: 0.9em;
-            font-weight: bold;
-        }
+#status-text {
+    font-size: 1em; /* taille de texte */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* pour espacer le cercle et le texte */
+}
 
-        .status-circle {
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            margin-right: 5px;
-        }
+.status-circle {
+    display: inline-block;
+    width: 20px; /* taille du cercle */
+    height: 20px; /* taille du cercle */
+    border-radius: 50%;
+}
 
-        .status-online {
-            background-color: green;
-        }
+.status-online {
+    background-color: green; /* cercle vert pour ouvert */
+}
 
-        .status-offline {
-            background-color: red;
-        }
+.status-offline {
+    background-color: red; /* cercle rouge pour fermé */
+}
+
+#status-message {
+    font-size: 1.1em; /* taille du message */
+}
 
         /* Icône de boutique */
         .shop-icon {
@@ -867,8 +874,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>          
         </div>
         <div id="status-text">
-            <span class="status-circle status-online"></span> Fermé pour l'instant ❌. Réouverture le 15 janvier 2025 🛍️.
-        </div>       
+    <span class="status-circle" id="status-circle"></span>
+    <span id="status-message">Fermé pour l'instant ❌. Réouverture le 15 janvier 2025 🛍️.</span>
+        </div>
       <!-- Icône de la boutique avec la flèche -->
 <div class="shop-icon" onclick="toggleShopSection()">   
   
@@ -1460,6 +1468,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Bouton pour voir la réduction -->
 <button id="view-discount-button" style="display:none;" onclick="showDiscount()">Voir votre réduction</button>
 
+<script>
+window.onload = function() {
+    const currentDate = new Date();
+    const currentHour = currentDate.getHours(); // Récupère l'heure actuelle
+    const statusCircle = document.getElementById("status-circle");
+    const statusMessage = document.getElementById("status-message");
+
+    // L'heure d'ouverture est à 14h et la fermeture est à 3h du matin
+    const openingHour = 14; // 14h (2 PM)
+    const closingHour = 3;  // 3h du matin
+
+    if ((currentHour >= openingHour && currentHour < 24) || (currentHour < closingHour)) {
+        // Si l'heure est entre 14h et 3h, la boutique est ouverte
+        statusCircle.classList.remove("status-offline");
+        statusCircle.classList.add("status-online");
+        statusMessage.textContent = "Ouvert 🟢 ! Bienvenue !";
+    } else {
+        // Sinon, la boutique est fermée
+        statusCircle.classList.remove("status-online");
+        statusCircle.classList.add("status-offline");
+        statusMessage.textContent = "Fermé pour l'instant ❌. Réouverture le 15 janvier 2025 🛍️.";
+    }
+};
+</script>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
         // Affiche la pop-up initiale après 5 secondes si aucune réduction n'a été validée
