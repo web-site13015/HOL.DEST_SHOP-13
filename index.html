@@ -1765,7 +1765,10 @@ function showCartButton() {
 document.querySelectorAll('.buy-button').forEach(button => {
     button.addEventListener('click', showCartButton);
 });
-
+// Fonction pour fermer le panier lorsqu'on clique dessus
+document.getElementById('cart').addEventListener('click', function() {
+    this.style.display = 'none';
+});
 // Fonction pour afficher ou masquer le panier
 function toggleCart() {
     const cart = document.getElementById("cart"); // Le panier
