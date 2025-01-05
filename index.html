@@ -862,75 +862,212 @@ button {
 }
 
         .waiting-status {
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    background: linear-gradient(to bottom, #ffe6e6, #ffd9b3); /* Dégradé doux */
-    border: 2px solid #ff0000; /* Bordure rouge */
-    border-radius: 12px;
-    padding: 15px;
-    max-width: 350px; /* Taille modérée de l'encadrement */
-    margin: 30px auto;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Ombre légère */
-}
-
-.waiting-status h1 {
-    font-size: 18px;
-    color: #d9534f; /* Rouge vif */
-    margin-bottom: 10px;
-}
-
-.queue-visual {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 8px; /* Espacement modéré entre les personnes */
-    margin: 15px 0;
-}
-
-.person {
-    font-size: 24px;
-    animation: bounce 1.5s infinite;
-}
-
-.dots {
-    font-size: 24px;
-    color: #888;
-}
-
-.queue-visual .person:nth-child(odd) {
-    animation-delay: 0.3s;
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
+        text-align: center;
+        background: linear-gradient(to bottom, #ffe6e6, #ffd9b3);
+        border: 2px solid #ff0000;
+        border-radius: 12px;
+        padding: 15px;
+        max-width: 350px;
+        margin: 30px auto;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
-    50% {
-        transform: translateY(-10px);
+
+    .waiting-status h1 {
+        font-size: 18px;
+        color: #d9534f;
+        margin-bottom: 10px;
     }
-}
 
-.waiting-status p {
-    font-size: 14px;
-    color: #333;
-    margin-top: 10px;
-    line-height: 1.4;
-}
+    .queue-visual {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin: 15px 0;
+    }
 
-.reservation-button {
-    background-color: #ff6600; /* Orange vif pour attirer l'attention */
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 15px;
-    transition: background-color 0.3s;
-}
+    .person {
+        font-size: 24px;
+        animation: bounce 1.5s infinite;
+    }
 
-.reservation-button:hover {
-    background-color: #e65c00; /* Légère variation au survol */
+    .dots {
+        font-size: 24px;
+        color: #888;
+    }
+
+    .queue-visual .person:nth-child(odd) {
+        animation-delay: 0.3s;
+    }
+
+    @keyframes bounce {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .reservation-button {
+      background-color: #ff6600;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .reservation-button:hover {
+      background-color: #e65c00;
+    }
+
+  
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background-color: #ed9600;
+      padding: 25px;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 700px;
+      max-height: 85%;
+      overflow-y: auto;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      text-align: center;
+    }
+
+    .product-gallery, .event-gallery {
+      margin: 20px 0;
+    }
+
+    .gallery-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .gallery-item {
+      width: 150px;
+      text-align: center;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .price {
+      font-weight: bold;
+      color: #ff6600;
+    }
+
+    .select-people {
+      margin-top: 10px;
+    }
+
+    .summary {
+      margin-top: 15px;
+      font-size: 16px;
+      color: #333;
+      text-align: left;
+    }
+
+    .confirm-button {
+      background-color: #28a745;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 15px;
+    }
+
+    .confirm-button:hover {
+      background-color: #218838;
+    }
+
+    #order-summary {
+      margin-top: 30px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .validate-order-button {
+      background-color: #007bff;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 20px;
+    }
+
+    .validate-order-button:hover {
+      background-color: #0056b3;
+    }
+
+    #confirmation-message {
+      display: none;
+      font-size: 18px;
+      color: #28a745;
+      margin-top: 20px;
+    }
+
+    #order-confirmation {
+      display: none;
+      text-align: center;
+      padding: 20px;
+      background-color: #f8f9fa;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px;
+    }
+
+    #order-confirmation h2 {
+      color: #28a745;
+    }
+
+    #order-confirmation p {
+      color: #333;
+      font-size: 18px;
+    }
+
+    /* Nouveau style pour le bouton OK */
+    .ok-button {
+      background-color: #28a745;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .ok-button:hover {
+      background-color: #218838;
         }
 
         /* Style pour les liens */
@@ -1027,9 +1164,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <p>Ouverture: <span id="open-date-display"></span></p>
     <p>Fermeture: <span id="close-date-display"></span></p>
 </div>
-<div class="waiting-status">
+<!-- Section d'attente -->
+  <div class="waiting-status">
     <h1>Commandes pour les fêtes en attente 🎉</h1>
     <div class="queue-visual">
+      <div class="person">👤</div>
+      <div class="person">👤</div>
+      <div class="person">👤</div>
+      <div class="person">👤</div>
+      <div class="person">👤</div>
+      <div class="dots">...</div>
+    </div>
+    <p>Actuellement <span id="queue-count">25</span> commandes en attente pour les fêtes !</p>
+    <button class="reservation-button" onclick="openModal()">Réservez votre fête</button>
+  </div>
+
+<!-- Section de la modale avec les exemples d'événements et les produits -->
+<div id="reservation-modal" class="modal">
+  <div class="modal-content">
+    <!-- Section des commandes en attente -->
+    <h1>Commandes pour les fêtes en attente 🎉</h1>
+    <div class="queue-visual">
+        <!-- Représentation visuelle de la file d'attente avec des icônes de personnes -->
         <div class="person">👤</div>
         <div class="person">👤</div>
         <div class="person">👤</div>
@@ -1037,9 +1193,91 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="person">👤</div>
         <div class="dots">...</div>
     </div>
-    <p>Actuellement <span id="queue-count">25</span> commandes en attente pour les fêtes !</p>
-    <button class="reservation-button">Réservez dès maintenant</button>
+    <p>Actuellement <span id="queue-count-modal">25</span> commandes en attente pour les fêtes !</p>
+    <p>Les gens planifient des événements comme des anniversaires, des soirées ou des fêtes surprises. Réservez dès maintenant pour personnaliser votre fête !</p>
+
+    <!-- Exemples d'événements organisés -->
+    <h2>Exemples d'événements organisés</h2>
+    <div class="event-gallery gallery-section">
+      <div class="gallery-item">
+        <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/193758e7-269e-4fea-37ba-e5d1be8698e1.jpeg" alt="Fête entre collègues">
+        <p>Exemple de fête entre collègues.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/a81f5976-0b78-7c0e-08da-862bb8290c56.jpeg" alt="Fête d'entreprise">
+        <p>Fête d'entreprise mémorable.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/91a631ce-3253-8cef-7f94-5871983b5e9e.jpeg" alt="Anniversaire">
+        <p>Anniversaire au travail.</p>
+      </div>
+    </div>
+
+    <!-- Nos produits pour vos fêtes -->
+    <h2>Nos produits pour vos fêtes 🎉</h2>
+    <div class="product-gallery gallery-section">
+      <!-- Samoussas -->
+      <div class="gallery-item">
+        <img src="samoussa.jpg" alt="Samoussas">
+        <p>Samoussas savoureux pour débuter votre soirée !</p>
+        <p class="price">Prix : 25€ / 40 pièces (5 personnes)</p>
+        <div class="select-people">
+          <label for="samoussa-people">Choisir le nombre de personnes :</label>
+          <select id="samoussa-people" onchange="updateSummary('samoussa')">
+            <option value="5">5 personnes</option>
+            <option value="8">8 personnes</option>
+            <option value="10">10 personnes</option>
+          </select>
+          <button id="samoussa-confirm-btn" onclick="confirmChoice('samoussa')" style="display:none;" class="confirm-button">Valider mon choix</button>
+        </div>
+        <div id="samoussa-summary" class="summary"></div>
+      </div>
+
+      <!-- Nems -->
+      <div class="gallery-item">
+        <img src="nems.jpg" alt="Nems">
+        <p>Les nems croustillants pour un apéritif parfait.</p>
+        <p class="price">Prix : 18€ / 10 pièces (5 personnes)</p>
+        <div class="select-people">
+          <label for="nems-people">Choisir le nombre de personnes :</label>
+          <select id="nems-people" onchange="updateSummary('nems')">
+            <option value="5">5 personnes</option>
+            <option value="8">8 personnes</option>
+            <option value="10">10 personnes</option>
+          </select>
+          <button id="nems-confirm-btn" onclick="confirmChoice('nems')" style="display:none;" class="confirm-button">Valider mon choix</button>
+        </div>
+        <div id="nems-summary" class="summary"></div>
+      </div>
+
+      <!-- Brochettes -->
+      <div class="gallery-item">
+        <img src="brochettes.jpg" alt="Brochettes">
+        <p>Des brochettes délicieuses pour tous les goûts.</p>
+        <p class="price">Prix : 25€ / 8 pièces (5 personnes)</p>
+        <div class="select-people">
+          <label for="brochettes-people">Choisir le nombre de personnes :</label>
+          <select id="brochettes-people" onchange="updateSummary('brochettes')">
+            <option value="5">5 personnes</option>
+            <option value="8">8 personnes</option>
+            <option value="10">10 personnes</option>
+          </select>
+          <button id="brochettes-confirm-btn" onclick="confirmChoice('brochettes')" style="display:none;" class="confirm-button">Valider mon choix</button>
+        </div>
+        <div id="brochettes-summary" class="summary"></div>
+      </div>
+    </div>
+
+    <div id="order-summary"></div>
+
+    <button class="validate-order-button" onclick="validateOrder()">Valider ma commande</button>
+    
+    <div id="confirmation-message"></div>
+    
+    <button id="close-modal-button" class="ok-button" onclick="closeModal()">OK</button>
+  </div>
 </div>
+
         
       <!-- Icône de la boutique avec la flèche -->
 <div class="shop-icon" onclick="toggleShopSection()">   
@@ -1632,20 +1870,112 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- Bouton pour voir la réduction -->
 <button id="view-discount-button" style="display:none;" onclick="showDiscount()">Voir votre réduction</button>
 <script>
-// Simuler une file d'attente avec animation de compte dynamique
-let count = 25; // Nombre initial de personnes
-const queueCount = document.getElementById("queue-count");
+    // Fonction de mise à jour du résumé
+    function updateSummary(product) {
+      const people = document.getElementById(`${product}-people`).value;
+      let price = 0;
+      let quantity = 0;
+      let productDescription = "";
 
-function simulateQueue() {
-    count += Math.floor(Math.random() * 3) - 1; // +/- 1 personne aléatoire
-    count = Math.max(0, count); // Évite un nombre négatif
-    queueCount.textContent = count;
-}
+      if (product === 'samoussa') {
+        quantity = 40;
+        price = 25;
+        productDescription = "Samoussas savoureux pour débuter votre soirée, 40 pièces pour 5 personnes.";
+      } else if (product === 'nems') {
+        quantity = 10;
+        price = 18;
+        productDescription = "Les nems croustillants, parfaits pour un apéritif, 10 pièces pour 5 personnes.";
+      } else if (product === 'brochettes') {
+        quantity = 8;
+        price = 25;
+        productDescription = "Des brochettes délicieuses pour tous les goûts, 8 pièces pour 5 personnes.";
+      }
 
-// Actualise toutes les 2 secondes pour simuler une vraie activité
-setInterval(simulateQueue, 2000);
+      const multiplier = people / 5;
+      const totalPieces = Math.ceil(quantity * multiplier);
+      const totalPrice = (price * multiplier).toFixed(2);
 
-</script>
+      document.getElementById(`${product}-summary`).innerHTML = `
+        <p>${productDescription}</p>
+        <p>Nombre de personnes : ${people}</p>
+        <p>Quantité : ${totalPieces} pièces</p>
+        <p>Prix total : ${totalPrice}€</p>
+      `;
+
+      // Afficher le bouton "Valider mon choix"
+      document.getElementById(`${product}-confirm-btn`).style.display = 'inline-block';
+    }
+
+    // Confirmer le choix et afficher le résumé
+    function confirmChoice(product) {
+      const people = document.getElementById(`${product}-people`).value;
+      let price = 0;
+      let quantity = 0;
+      let productName = "";
+      let productDescription = "";
+
+      if (product === 'samoussa') {
+        quantity = 40;
+        price = 25;
+        productName = "Samoussas";
+        productDescription = "Samoussas savoureux pour débuter votre soirée.";
+      } else if (product === 'nems') {
+        quantity = 10;
+        price = 18;
+        productName = "Nems";
+        productDescription = "Les nems croustillants pour un apéritif parfait.";
+      } else if (product === 'brochettes') {
+        quantity = 8;
+        price = 25;
+        productName = "Brochettes";
+        productDescription = "Des brochettes délicieuses pour tous les goûts.";
+      }
+
+      const multiplier = people / 5;
+      const totalPieces = Math.ceil(quantity * multiplier);
+      const totalPrice = (price * multiplier).toFixed(2);
+
+      // Résumé du produit choisi
+      document.getElementById(`${product}-summary`).innerHTML += `
+        <p>Nombre de personnes : ${people}</p>
+        <p>Quantité : ${totalPieces} pièces</p>
+        <p>Prix total : ${totalPrice}€</p>
+      `;
+
+      // Afficher le bouton "Valider ma commande"
+      document.getElementById("order-summary").innerHTML = `
+        <h3>Résumé de votre commande :</h3>
+        <p>${productName}: ${totalPieces} pièces pour ${people} personnes, total : ${totalPrice}€</p>
+      `;
+      document.getElementById("order-summary").style.display = 'block';
+      document.querySelector(".validate-order-button").style.display = 'inline-block';
+    }
+
+    // Valider la commande et afficher la confirmation
+    function validateOrder() {
+      document.getElementById("confirmation-message").innerHTML = `
+        <p>Votre commande a bien été prise en compte. Vous allez recevoir un récapitulatif de votre commande sous peu.</p>
+      `;
+      document.getElementById("confirmation-message").style.display = 'block';
+      document.getElementById("order-confirmation").style.display = 'block';
+      document.getElementById("reservation-modal").style.display = 'none';
+    }
+
+    // Rediriger vers Formspree (ou autre service)
+    function redirectToFormspree() {
+      window.location.href = "https://formspree.io/f/xannldgo";
+    }
+
+    // Ouvrir la modale de réservation
+    function openModal() {
+      document.getElementById("reservation-modal").style.display = 'flex';
+    }
+
+    // Fermer la modale
+    function closeModal() {
+      document.getElementById("reservation-modal").style.display = 'none';
+    }
+            </script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const statusMessage = document.getElementById("status-message");
