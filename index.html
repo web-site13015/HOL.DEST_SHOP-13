@@ -973,9 +973,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>          
         </div>
         <div id="status-text">
-    <span class="status-circle" id="status-circle"></span>
-    <span id="status-message">Fermé pour l'instant ❌. Réouverture le 15 janvier 2025 🛍️.</span>
-        </div>
+    <span id="status-message">En ligne</span>
+</div>
+<div id="closing-warning" style="color: red; font-size: 0.8em; display: none;">
+    La boutique va fermer dans <span id="countdown">5</span> minutes !
+</div>
+<div id="holiday-message" style="color: orange; font-size: 0.8em; display: none;">
+    Note : Aujourd'hui est un jour férié, mais nous sommes ouverts !
+</div>
+<div id="reopen-message" style="color: blue; font-size: 0.8em; display: none;">
+    La boutique est fermée. Réouverture à <span id="reopen-time"></span>.
+</div>
+
+<!-- Zone pour afficher les dates dynamiques -->
+<div id="current-dates">
+    <p>Dates d'ouverture et de fermeture (15 janvier) :</p>
+    <p>Ouverture: <span id="open-date-display"></span></p>
+    <p>Fermeture: <span id="close-date-display"></span></p>
+</div>
 <div class="waiting-status">
     <h1>Commandes pour les fêtes en attente 🎉</h1>
     <div class="queue-visual">
@@ -1596,28 +1611,103 @@ setInterval(simulateQueue, 2000);
 
 </script>
 <script>
-window.onload = function() {
-    const currentDate = new Date();
-    const currentHour = currentDate.getHours(); // Récupère l'heure actuelle
-    const statusCircle = document.getElementById("status-circle");
+document.addEventListener("DOMContentLoaded", function () {
     const statusMessage = document.getElementById("status-message");
+    const closingWarning = document.getElementById("closing-warning");
+    const countdown = document.getElementById("countdown");
+    const holidayMessage = document.getElementById("holiday-message");
+    const reopenMessage = document.getElementById("reopen-message");
+    const reopenTime = document.getElementById("reopen-time");
+    const openDateDisplay = document.getElementById("open-date-display");
+    const closeDateDisplay = document.getElementById("close-date-display");
 
-    // L'heure d'ouverture est à 14h et la fermeture est à 3h du matin
-    const openingHour = 14; // 14h (2 PM)
-    const closingHour = 3;  // 3h du matin
+    // Définir les horaires normaux d'ouverture et de fermeture
+    let openingHour = 14; // Heure d'ouverture normale (14h)
+    let openingMinute = 0; // Minute d'ouverture normale (00)
+    let closingHour = 3; // Heure de fermeture normale (3h du matin)
+    let closingMinute = 0; // Minute de fermeture normale (00)
 
-    if ((currentHour >= openingHour && currentHour < 24) || (currentHour < closingHour)) {
-        // Si l'heure est entre 14h et 3h, la boutique est ouverte
-        statusCircle.classList.remove("status-offline");
-        statusCircle.classList.add("status-online");
-        statusMessage.textContent = "Ouvert 🟢 ! Bienvenue !";
-    } else {
-        // Sinon, la boutique est fermée
-        statusCircle.classList.remove("status-online");
-        statusCircle.classList.add("status-offline");
-        statusMessage.textContent = "Fermé pour l'instant ❌. Réouverture le 15 janvier 2025 🛍️.";
+    // Définir une date précise d'ouverture
+    const specialOpeningDate = new Date('2025-01-15T00:00:00'); // La boutique ouvre le 15 janvier 2025
+
+    // Liste des jours fériés (au format MM-DD)
+    const holidays = ["01-01", "07-14", "12-25"]; // Liste des jours fériés (ex : 1er janvier, 14 juillet, 25 décembre)
+
+    // Fonction pour vérifier si aujourd'hui est un jour férié
+    function isHoliday() {
+        const today = new Date();
+        const formattedDate = today.toISOString().slice(5, 10); // Format MM-DD
+        return holidays.includes(formattedDate);
     }
-};
+
+    // Fonction pour vérifier si la boutique est ouverte ou fermée
+    function updateStoreStatus() {
+        const now = new Date();
+
+        // Gestion de la date spéciale d'ouverture
+        if (now < specialOpeningDate) {
+            // La boutique est fermée avant la date spéciale
+            statusMessage.textContent = `❌ Fermé pour l'instant. Réouverture le ${specialOpeningDate.toLocaleDateString()} 🛍️.`;
+            reopenMessage.style.display = "block";
+            reopenTime.textContent = `${specialOpeningDate.toLocaleDateString()} à 00:00`;
+            closingWarning.style.display = "none";
+            holidayMessage.style.display = "none";
+            return;
+        }
+
+        // Gestion des horaires normaux après la date spéciale
+        const todayOpeningTime = new Date(now);
+        todayOpeningTime.setHours(openingHour, openingMinute, 0, 0);
+
+        const todayClosingTime = new Date(now);
+        if (closingHour < openingHour) {
+            // Si fermeture après minuit, ajouter un jour
+            todayClosingTime.setDate(todayClosingTime.getDate() + 1);
+        }
+        todayClosingTime.setHours(closingHour, closingMinute, 0, 0);
+
+        // Afficher le message du jour férié
+        if (isHoliday()) {
+            holidayMessage.style.display = "block";
+        } else {
+            holidayMessage.style.display = "none";
+        }
+
+        // Vérifier si la boutique est ouverte ou fermée
+        if (now >= todayOpeningTime && now <= todayClosingTime) {
+            // La boutique est ouverte
+            statusMessage.textContent = isHoliday()
+                ? "🟢 Ouvert (jour férié) ! Bienvenue."
+                : "🟢 Ouvert ! Bienvenue.";
+            reopenMessage.style.display = "none";
+
+            // Gestion de l'avertissement de fermeture imminente
+            const minutesLeft = Math.floor((todayClosingTime - now) / 60000); // Temps restant en minutes
+            if (minutesLeft <= 5) {
+                closingWarning.style.display = "block";
+                countdown.textContent = minutesLeft;
+            } else {
+                closingWarning.style.display = "none";
+            }
+        } else {
+            // La boutique est fermée
+            statusMessage.textContent = "❌ Fermé pour l'instant.";
+            reopenMessage.style.display = "block";
+            reopenTime.textContent = `${openingHour}h${openingMinute.toString().padStart(2, '0')}`;
+            closingWarning.style.display = "none";
+        }
+    }
+
+    // Afficher les dates dans la section dédiée
+    openDateDisplay.textContent = `${openingHour}h${openingMinute.toString().padStart(2, '0')}`;
+    closeDateDisplay.textContent = `${closingHour}h${closingMinute.toString().padStart(2, '0')}`;
+
+    // Mise à jour du statut au chargement de la page
+    updateStoreStatus();
+
+    // Optionnel : Mettre à jour toutes les minutes
+    setInterval(updateStoreStatus, 60000);
+});
 </script>
 <script>
     document.addEventListener("DOMContentLoaded", () => {
