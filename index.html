@@ -950,6 +950,24 @@ a:hover {
 i.fa-map-marker-alt { color: #28a745; } /* Localisation (vert) */
 i.fa-truck { color: #007bff; } /* Livraison (bleu) */
 i.fa-envelope { color: #dc3545; } /* Contact (rouge) */
+
+/* Style pour les descriptions horizontales */
+.descriptions {
+    white-space: nowrap; /* Evite que les éléments se cassent à la ligne */
+    overflow: hidden; /* Cache le contenu qui dépasse */
+}
+
+.description {
+    display: inline-block; /* Affiche chaque élément en ligne */
+    margin-right: 20px; /* Ajoute un espace entre les descriptions */
+    font-size: 1rem; /* Taille de texte personnalisée */
+    vertical-align: middle; /* Aligne verticalement le texte et les icônes */
+}
+
+/* Optionnel : Ajuster l'alignement vertical si nécessaire */
+i {
+    vertical-align: middle; /* Assure que les icônes sont bien alignées avec le texte */
+    }
     </style>
 </head>
 <body>
