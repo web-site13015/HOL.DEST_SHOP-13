@@ -833,6 +833,33 @@ button {
     color: #ffffff; /* Texte blanc pour une bonne lisibilité sur fond sombre */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Ombre de texte subtile pour renforcer le contraste */
         }
+
+        .success-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f8f9fa;
+    color: #28a745;
+    padding: 20px;
+    border: 2px solid #28a745;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    z-index: 1000;
+}
+.success-message button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+.success-message button:hover {
+    background-color: #218838;
+}
     </style>
 </head>
 <body>
@@ -1939,6 +1966,35 @@ function calculateDistance(lat1, lon1, lat2, lon2) {
         document.getElementById('orderTotalPrice').value = totalPrice.toFixed(2);
         displayShippingCost(); // Appelle cette fonction pour calculer les frais avant d'ouvrir le formulaire
     }
+
+
+          document.getElementById("orderForm").addEventListener("submit", function (event) {
+    // Empêche temporairement la soumission par défaut
+    event.preventDefault();
+
+    const form = this;
+
+    // Masque immédiatement le formulaire et le texte "Finalisation de la commande"
+    document.getElementById("order-form").style.display = "none"; // Masque le formulaire
+
+    // Affiche le message de confirmation
+    const messageContainer = document.createElement("div");
+    messageContainer.className = "success-message";
+    messageContainer.innerHTML =
+        "Merci pour votre commande ! Elle a bien été prise en compte. Nous la livrerons sous 15 minutes.<br><br>";
+
+    // Ajoute un bouton "OK" pour confirmer
+    const okButton = document.createElement("button");
+    okButton.innerText = "OK";
+    okButton.style.marginTop = "10px";
+    okButton.addEventListener("click", function () {
+        messageContainer.remove(); // Supprime le message
+        form.submit(); // Soumet réellement le formulaire à Formspree.io
+    });
+
+    messageContainer.appendChild(okButton);
+    document.body.appendChild(messageContainer);
+});
   </script>
    <script>
   // Fonction pour faire défiler jusqu'à la section boutique
