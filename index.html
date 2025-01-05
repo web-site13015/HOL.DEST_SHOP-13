@@ -860,6 +860,78 @@ button {
 .success-message button:hover {
     background-color: #218838;
 }
+
+        .waiting-status {
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom, #ffe6e6, #ffd9b3); /* Dégradé doux */
+    border: 2px solid #ff0000; /* Bordure rouge */
+    border-radius: 12px;
+    padding: 15px;
+    max-width: 350px; /* Taille modérée de l'encadrement */
+    margin: 30px auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+.waiting-status h1 {
+    font-size: 18px;
+    color: #d9534f; /* Rouge vif */
+    margin-bottom: 10px;
+}
+
+.queue-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px; /* Espacement modéré entre les personnes */
+    margin: 15px 0;
+}
+
+.person {
+    font-size: 24px;
+    animation: bounce 1.5s infinite;
+}
+
+.dots {
+    font-size: 24px;
+    color: #888;
+}
+
+.queue-visual .person:nth-child(odd) {
+    animation-delay: 0.3s;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.waiting-status p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+    line-height: 1.4;
+}
+
+.reservation-button {
+    background-color: #ff6600; /* Orange vif pour attirer l'attention */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.reservation-button:hover {
+    background-color: #e65c00; /* Légère variation au survol */
+        }
     </style>
 </head>
 <body>
@@ -904,6 +976,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <span class="status-circle" id="status-circle"></span>
     <span id="status-message">Fermé pour l'instant ❌. Réouverture le 15 janvier 2025 🛍️.</span>
         </div>
+<div class="waiting-status">
+    <h1>Commandes pour les fêtes en attente 🎉</h1>
+    <div class="queue-visual">
+        <div class="person">👤</div>
+        <div class="person">👤</div>
+        <div class="person">👤</div>
+        <div class="person">👤</div>
+        <div class="person">👤</div>
+        <div class="dots">...</div>
+    </div>
+    <p>Actuellement <span id="queue-count">25</span> commandes en attente pour les fêtes !</p>
+    <button class="reservation-button">Réservez dès maintenant</button>
+</div>
+        
       <!-- Icône de la boutique avec la flèche -->
 <div class="shop-icon" onclick="toggleShopSection()">   
   
@@ -1494,7 +1580,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Bouton pour voir la réduction -->
 <button id="view-discount-button" style="display:none;" onclick="showDiscount()">Voir votre réduction</button>
+<script>
+// Simuler une file d'attente avec animation de compte dynamique
+let count = 25; // Nombre initial de personnes
+const queueCount = document.getElementById("queue-count");
 
+function simulateQueue() {
+    count += Math.floor(Math.random() * 3) - 1; // +/- 1 personne aléatoire
+    count = Math.max(0, count); // Évite un nombre négatif
+    queueCount.textContent = count;
+}
+
+// Actualise toutes les 2 secondes pour simuler une vraie activité
+setInterval(simulateQueue, 2000);
+
+</script>
 <script>
 window.onload = function() {
     const currentDate = new Date();
