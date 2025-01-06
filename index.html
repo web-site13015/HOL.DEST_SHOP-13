@@ -1278,15 +1278,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
 
-    <div id="order-summary"></div>
+      <div id="order-summary"></div>
 
-    <button class="validate-order-button" onclick="validateOrder()">Valider ma commande</button>
-    
-    <div id="confirmation-message"></div>
-    
-    <button id="close-modal-button" class="ok-button" onclick="closeModal()">OK</button>
+      <button class="validate-order-button" onclick="validateOrder()">Valider ma commande</button>
+      
+      <div id="confirmation-message"></div>
+      
+      <!-- Supprimer le bouton fermé, remplacer par le bouton OK -->
+      <button id="close-modal-button" class="ok-button" onclick="closeModal()">OK</button>
+    </div>
   </div>
-          </div>
+
+  <!-- Fenêtre de confirmation -->
+  <div id="order-confirmation">
+    <h2>Commande traitée avec succès !</h2>
+    <p>Merci pour votre commande ! Vous serez contacté dans la première heure pour confirmer les détails de votre commande. Si vous avez des questions, n'hésitez pas à nous contacter.</p>
+    <button class="ok-button" onclick="redirectToFormspree()">Confirmer et envoyer la commande</button>
+  </div>
         
       <!-- Icône de la boutique avec la flèche -->
 <div class="shop-icon" onclick="toggleShopSection()">   
