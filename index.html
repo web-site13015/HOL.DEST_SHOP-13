@@ -1259,6 +1259,101 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <label for="brochettes-people">Choisir le nombre de personnes :</label>
           <select id="brochettes-people" onchange="updateSummary('brochettes')">
             <option value="5">5 personnes</option>
+  <!-- Section d'attente -->
+  <div class="waiting-status">
+    <h1>Commandes pour les fêtes en attente 🎉</h1>
+    <div class="queue-visual">
+      <div class="person">👤</div>
+      <div class="person">👤</div>
+      <div class="person">👤</div>
+      <div class="person">👤</div>
+      <div class="person">👤</div>
+      <div class="dots">...</div>
+    </div>
+    <p>Actuellement <span id="queue-count">25</span> commandes en attente pour les fêtes !</p>
+    <button class="reservation-button" onclick="openModal()">Réservez votre fête</button>
+  </div>
+
+<!-- Section de la modale avec les exemples d'événements et les produits -->
+<div id="reservation-modal" class="modal">
+  <div class="modal-content">
+    <!-- Section des commandes en attente -->
+    <h1>Commandes pour les fêtes en attente 🎉</h1>
+    <div class="queue-visual">
+        <!-- Représentation visuelle de la file d'attente avec des icônes de personnes -->
+        <div class="person">👤</div>
+        <div class="person">👤</div>
+        <div class="person">👤</div>
+        <div class="person">👤</div>
+        <div class="person">👤</div>
+        <div class="dots">...</div>
+    </div>
+    <p>Actuellement <span id="queue-count-modal">25</span> commandes en attente pour les fêtes !</p>
+    <p>Les gens planifient des événements comme des anniversaires, des soirées ou des fêtes surprises. Réservez dès maintenant pour personnaliser votre fête !</p>
+
+    <!-- Exemples d'événements organisés -->
+    <h2>Exemples d'événements organisés</h2>
+    <div class="event-gallery gallery-section">
+      <div class="gallery-item">
+        <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/193758e7-269e-4fea-37ba-e5d1be8698e1.jpeg" alt="Fête entre collègues">
+        <p>Exemple de fête entre collègues.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/a81f5976-0b78-7c0e-08da-862bb8290c56.jpeg" alt="Fête d'entreprise">
+        <p>Fête d'entreprise mémorable.</p>
+      </div>
+      <div class="gallery-item">
+        <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/91a631ce-3253-8cef-7f94-5871983b5e9e.jpeg" alt="Anniversaire">
+        <p>Anniversaire au travail.</p>
+      </div>
+    </div>
+
+    <!-- Nos produits pour vos fêtes -->
+    <h2>Nos produits pour vos fêtes 🎉</h2>
+    <div class="product-gallery gallery-section">
+      <!-- Samoussas -->
+      <div class="gallery-item">
+        <img src="samoussa.jpg" alt="Samoussas">
+        <p>Samoussas savoureux pour débuter votre soirée !</p>
+        <p class="price">Prix : 25€ / 40 pièces (5 personnes)</p>
+        <div class="select-people">
+          <label for="samoussa-people">Choisir le nombre de personnes :</label>
+          <select id="samoussa-people" onchange="updateSummary('samoussa')">
+            <option value="5">5 personnes</option>
+            <option value="8">8 personnes</option>
+            <option value="10">10 personnes</option>
+          </select>
+          <button id="samoussa-confirm-btn" onclick="confirmChoice('samoussa')" style="display:none;" class="confirm-button">Valider mon choix</button>
+        </div>
+        <div id="samoussa-summary" class="summary"></div>
+      </div>
+
+      <!-- Nems -->
+      <div class="gallery-item">
+        <img src="nems.jpg" alt="Nems">
+        <p>Les nems croustillants pour un apéritif parfait.</p>
+        <p class="price">Prix : 18€ / 10 pièces (5 personnes)</p>
+        <div class="select-people">
+          <label for="nems-people">Choisir le nombre de personnes :</label>
+          <select id="nems-people" onchange="updateSummary('nems')">
+            <option value="5">5 personnes</option>
+            <option value="8">8 personnes</option>
+            <option value="10">10 personnes</option>
+          </select>
+          <button id="nems-confirm-btn" onclick="confirmChoice('nems')" style="display:none;" class="confirm-button">Valider mon choix</button>
+        </div>
+        <div id="nems-summary" class="summary"></div>
+      </div>
+
+      <!-- Brochettes -->
+      <div class="gallery-item">
+        <img src="brochettes.jpg" alt="Brochettes">
+        <p>Des brochettes délicieuses pour tous les goûts.</p>
+        <p class="price">Prix : 25€ / 8 pièces (5 personnes)</p>
+        <div class="select-people">
+          <label for="brochettes-people">Choisir le nombre de personnes :</label>
+          <select id="brochettes-people" onchange="updateSummary('brochettes')">
+            <option value="5">5 personnes</option>
             <option value="8">8 personnes</option>
             <option value="10">10 personnes</option>
           </select>
@@ -1869,7 +1964,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Bouton pour voir la réduction -->
 <button id="view-discount-button" style="display:none;" onclick="showDiscount()">Voir votre réduction</button>
-<script>
+
+    <script>
     // Fonction de mise à jour du résumé
     function updateSummary(product) {
       const people = document.getElementById(`${product}-people`).value;
@@ -1975,9 +2071,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     function closeModal() {
       document.getElementById("reservation-modal").style.display = 'none';
     }
-            </script>
+    </script>        
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+          document.addEventListener("DOMContentLoaded", function () {
     const statusMessage = document.getElementById("status-message");
     const closingWarning = document.getElementById("closing-warning");
     const countdown = document.getElementById("countdown");
