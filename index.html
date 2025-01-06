@@ -1878,7 +1878,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Bouton pour voir la réduction -->
 <button id="view-discount-button" style="display:none;" onclick="showDiscount()">Voir votre réduction</button>
+<script>
+// Simuler une file d'attente avec animation de compte dynamique
+let count = 25; // Nombre initial de personnes
+const queueCount = document.getElementById("queue-count");
 
+function simulateQueue() {
+    count += Math.floor(Math.random() * 3) - 1; // +/- 1 personne aléatoire
+    count = Math.max(0, count); // Évite un nombre négatif
+    queueCount.textContent = count;
+}
+
+// Actualise toutes les 2 secondes pour simuler une vraie activité
+setInterval(simulateQueue, 2000);
+
+</script>
           <script>
     // Fonction de mise à jour du résumé
     function updateSummary(product) {
