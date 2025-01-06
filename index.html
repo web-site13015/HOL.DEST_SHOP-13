@@ -1238,9 +1238,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <option value="8">8 personnes</option>
             <option value="10">10 personnes</option>
           </select>
-          <button id="samoussa-confirm-btn" onclick="confirmChoice('samoussa')" style="display:none;" class="confirm-button">Valider mon choix</button>
-        </div>
-        <div id="samoussa-summary" class="summary"></div>
+             <div id="samoussa-summary" class="summary"></div>
+    
+          </div>
+         <button id="samoussa-confirm-btn" onclick="confirmChoice('samoussa')" style="display:none;" class="confirm-button">Valider mon choix</button>
+        
       </div>
 
       <!-- Nems -->
@@ -1255,9 +1257,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <option value="8">8 personnes</option>
             <option value="10">10 personnes</option>
           </select>
-          <button id="nems-confirm-btn" onclick="confirmChoice('nems')" style="display:none;" class="confirm-button">Valider mon choix</button>
-        </div>
-        <div id="nems-summary" class="summary"></div>
+            <div id="nems-summary" class="summary"></div>
+          </div>
+        <button id="nems-confirm-btn" onclick="confirmChoice('nems')" style="display:none;" class="confirm-button">Valider mon choix</button>
+        
       </div>
 
       <!-- Brochettes -->
@@ -1272,23 +1275,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <option value="8">8 personnes</option>
             <option value="10">10 personnes</option>
           </select>
-          <button id="brochettes-confirm-btn" onclick="confirmChoice('brochettes')" style="display:none;" class="confirm-button">Valider mon choix</button>
-        </div>
-        <div id="brochettes-summary" class="summary"></div>
+            <div id="brochettes-summary" class="summary"></div>
+          </div>
+          <button id="brochettes-confirm-btn" onclick="confirmChoice('brochettes')" style="display:none;" class="confirm-button">Valider mon choix</button>      
       </div>
     </div>
-
       <div id="order-summary"></div>
-
-      <button class="validate-order-button" onclick="validateOrder()">Valider ma commande</button>
-      
-      <div id="confirmation-message"></div>
-      
+      <button class="validate-order-button" onclick="validateOrder()">Valider ma commande</button>     
+      <div id="confirmation-message"></div>    
       <!-- Supprimer le bouton fermé, remplacer par le bouton OK -->
       <button id="close-modal-button" class="ok-button" onclick="closeModal()">OK</button>
     </div>
   </div>
-
   <!-- Fenêtre de confirmation -->
   <div id="order-confirmation">
     <h2>Commande traitée avec succès !</h2>
