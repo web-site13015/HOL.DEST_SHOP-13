@@ -1847,30 +1847,12 @@ Affichez la carte Waze 🗺️</button>
 </div>
 <!-- Bannière de consentement aux cookies -->
 <div id="cookie-banner" style="position: fixed; bottom: 10px; left: 10px; right: 10px; background: rgba(0, 0, 0, 0.9); color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; border-radius: 5px; z-index: 1000; display: none;">
-    <span>
-        Ce site utilise des cookies pour améliorer votre expérience. En continuant à naviguer, vous acceptez notre utilisation des cookies. 
-        <a href="/policy" style="color: #FFD700; text-decoration: underline;">En savoir plus</a>.
-    </span>
+    
     <div>
         <button id="accept-cookies" style="background: #4CAF50; color: white; border: none; padding: 10px 15px; border-radius: 5px; margin-right: 10px; cursor: pointer;">Accepter</button>
         <button id="decline-cookies" style="background: #f44336; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;">Refuser</button>
     </div>
 </div>
-
-<!-- Bannière pour les avis des clients -->
-<div id="message-banner" class="message-banner hidden">
-    <p>Donnez-nous votre avis ou signalez des produits manquants :</p>
-    <form action="https://formspree.io/f/xlddonpj" method="POST">
-        <input type="text" name="name" placeholder="Votre nom" required>
-        <input type="email" name="email" placeholder="Votre email" required>
-        <textarea name="message" placeholder="Votre message ou suggestion" rows="4" required></textarea>
-        <button type="submit">Envoyer</button>
-        <button type="button" onclick="hideBanner()">Fermer</button>
-    </form>
-</div>
-
-
-  
   <!-- Bannière de réduction -->
 <div id="discount-banner" style="display: none; background-color: #4caf50; color: white; padding: 10px; text-align: center; position: fixed; top: 0; width: 100%; z-index: 1000;">
     🎉 Félicitations ! Vous avez récupéré votre réduction de 10% !
@@ -2702,13 +2684,7 @@ document.querySelector('.shop-icon').addEventListener('click', scrollToShopSecti
     });
 </script>
     
-  <script>
-    if (getCookie('cookies-accepted') === 'true') {
-        const recaptchaScript = document.createElement('script');
-        recaptchaScript.src = "https://www.google.com/recaptcha/enterprise.js?render=6Lfx0ZgqAAAAACuBGXsYgBHKE36ltUCI4wPOclPw";
-        document.head.appendChild(recaptchaScript);
-    }
-</script>
+  
              <script>
     const quartiers = [
       "Belle-de-Mai", "Saint-Antoine", "Marseille 1er", "Marseille 2ème",
