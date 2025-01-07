@@ -2844,7 +2844,7 @@ document.querySelector('.shop-icon').addEventListener('click', scrollToShopSecti
         document.head.appendChild(recaptchaScript);
     }
 </script>
-      <script>
+             <script>
     const quartiers = [
       "Belle-de-Mai", "Saint-Antoine", "Marseille 1er", "Marseille 2ème",
       "Marseille 3ème", "Marseille 4ème", "Marseille 5ème",
@@ -2861,12 +2861,12 @@ document.querySelector('.shop-icon').addEventListener('click', scrollToShopSecti
 
     const couleurs = ["#007BFF", "#28A745", "#FFC107", "#DC3545", "#6F42C1", "#17A2B8"];
 
-    let notificationsEnabled = true;
+    let notificationsEnabled = false; // Notifications sont désactivées au départ
     const container = document.getElementById("notification-container");
 
     // Fonction pour générer une notification
     function showNotification() {
-      if (!notificationsEnabled) return;
+      if (!notificationsEnabled) return; // Si notifications sont désactivées, on ne montre pas de notification
 
       const produit = produits[Math.floor(Math.random() * produits.length)];
       const quartier = quartiers[Math.floor(Math.random() * quartiers.length)];
@@ -2887,18 +2887,18 @@ document.querySelector('.shop-icon').addEventListener('click', scrollToShopSecti
       }, 5000);
     }
 
-    // Affichage initial des notifications
+    // Affichage initial des notifications (elles ne s'affichent pas car notifications sont désactivées)
     setTimeout(() => showNotification(), 9000); // Première notification après 3 secondes
     setTimeout(() => showNotification(), 12000); // Deuxième notification après 8 secondes
 
-    // Notifications régulières toutes les 7 secondes
+    // Notifications régulières toutes les 7 secondes (elles ne s'affichent pas tant que désactivées)
     setInterval(() => showNotification(), 16000);
 
-    // Bouton d'activation/désactivation
+    // Bouton d'activation/désactivation des notifications
     document.getElementById("toggle-notifications").addEventListener("click", () => {
-      notificationsEnabled = !notificationsEnabled;
-      document.getElementById("toggle-notifications").textContent = notificationsEnabled ? "🔔" : "🔕";
+      notificationsEnabled = !notificationsEnabled; // Inverser l'état de notifications
+      document.getElementById("toggle-notifications").textContent = notificationsEnabled ? "🔔" : "🔕"; // Modifier l'icône du bouton
     });
-      </script>
+             </script>
 </body>
   </html>
