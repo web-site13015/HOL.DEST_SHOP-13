@@ -760,116 +760,8 @@ button {
         transform: translateY(0);
     }
 }
-  
 
-/* Bannière de message */
-.message-banner {
-    
-    bottom: 20px;
-    right: 20px;
-    width: 300px;
-    background-color: #ffffff; /* Fond blanc pour un contraste classique */
-    border: 1px solid #ddd; /* Bordure grise légère */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Ombre subtile pour la profondeur */
-    border-radius: 10px; /* Coins arrondis */
-    padding: 20px; /* Espacement intérieur confortable */
-    z-index: 1000;
-    display: block; /* Visible par défaut si pas masquée */
-    font-family: Arial, sans-serif; /* Police standard et propre */
-}
-
-.message-banner.hidden {
-    display: none; /* Masque la bannière */
-}
-
-.message-banner p {
-    font-size: 14px;
-    color: #333; /* Texte en gris foncé */
-    margin-bottom: 15px; /* Espacement sous le paragraphe */
-}
-
-.message-banner input,
-.message-banner textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px; /* Espacement entre les champs */
-    border: 1px solid #ccc; /* Bordure grise claire */
-    border-radius: 5px; /* Coins légèrement arrondis */
-    font-size: 14px;
-    font-family: inherit;
-}
-
-.message-banner input:focus,
-.message-banner textarea:focus {
-    border-color: #4caf50; /* Bordure verte en focus */
-    outline: none; /* Supprime l'effet de focus par défaut */
-}
-
-.message-banner button {
-    width: 100%;
-    padding: 10px;
-    font-size: 14px;
-    border: none;
-    border-radius: 5px; /* Coins arrondis */
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    font-family: inherit;
-    margin-bottom: 10px; /* Espacement entre les boutons */
-}
-
-/* Bouton "Envoyer" */
-.message-banner button[type="submit"] {
-    background-color: #4caf50;
-    color: white;
-}
-
-.message-banner button[type="submit"]:hover {
-    background-color: #45a049;
-}
-
-/* Bouton "Fermer" */
-.message-banner button[type="button"] {
-    background-color: #f44336;
-    color: white;
-}
-
-.message-banner button[type="button"]:hover {
-    background-color: #d32f2f;
-}
-
-/* Icône flottante pour rouvrir la bannière */
-.feedback-button {
-    position: fixed;
-    bottom: 20px;
-    left: 20px; /* Place l'icône à gauche */
-    width: 50px;
-    height: 50px;
-    background-color: #f4b400; /* Couleur jaune-orange */
-    color: white;
-    font-size: 24px;
-    text-align: center;
-    line-height: 50px;
-    border-radius: 50%; /* Forme circulaire */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    z-index: 1000;
-    transition: transform 0.2s ease-in-out;
-}
-
-.feedback-button:hover {
-    transform: scale(1.1); /* Effet d'agrandissement au survol */
-}
-  .message-banner p {
-    font-size: 14px;
-    color: #333; /* Texte en gris foncé */
-    margin-bottom: 15px; /* Espacement sous le paragraphe */
-    background-color: #e3f2fd; /* Fond bleu clair */
-    padding: 10px; /* Espacement interne pour le fond bleu */
-    border: 1px solid #90caf9; /* Bordure bleu clair */
-    border-radius: 5px; /* Coins légèrement arrondis */
-    text-align: center; /* Centrer le texte */
-}
-
+        
           .separator-image {
     max-width: 100%; /* L'image ne dépasse pas la largeur du conteneur */
     height: auto; /* Maintient les proportions de l'image */
@@ -1281,13 +1173,7 @@ Affichez la carte Waze 🗺️</button>
 
   <!-- Bouton pour activer/désactiver les notifications -->
   <button id="toggle-notifications">🔕</button>
-  <div id="description">Activer/Désactiver les notifications</div>
-
-<!-- Icône flottante pour rouvrir la bannière -->
-<div id="feedback-button" class="feedback-button" onclick="showBanner()">
-    💬
-</div>
-          
+  <div id="description">Activer/Désactiver les notifications</div>      
               <button id="toggle-cart-button" onclick="toggleCart()" style="display: none;">🛒</button>
               <!-- Mini carte avec une carte interactive à droite -->
             </div>          
@@ -2879,25 +2765,6 @@ document.querySelector('.shop-icon').addEventListener('click', scrollToShopSecti
       document.getElementById("toggle-notifications").textContent = notificationsEnabled ? "🔔" : "🔕"; // Modifier l'icône du bouton
     });
              </script>
-    <script>
-    // Fonction pour masquer la bannière
-    function hideBanner() {
-        const banner = document.getElementById("message-banner");
-        banner.classList.add("hidden"); // Ajoute la classe hidden pour masquer la bannière
-    }
-
-    // Fonction pour afficher la bannière
-    function showBanner() {
-        const banner = document.getElementById("message-banner");
-        banner.classList.remove("hidden"); // Supprime la classe hidden pour afficher la bannière
-    }
-
-    // Affiche la bannière automatiquement après 2 secondes
-    window.onload = function() {
-        const banner = document.getElementById("message-banner");
-        setTimeout(() => {
-            
-    };
-    </script>
+    
 </body>
   </html>
