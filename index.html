@@ -2650,7 +2650,8 @@ function scrollToShopSection() {
 // Ajout d'un événement de clic pour l'icône et le texte
 document.querySelector('.shop-icon').addEventListener('click', scrollToShopSection);
    </script>
-  <script>
+  
+    <script>
     // Vérifie si le cookie "cookies-accepted" existe
     function getCookie(name) {
         let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
@@ -2682,9 +2683,14 @@ document.querySelector('.shop-icon').addEventListener('click', scrollToShopSecti
             document.getElementById('cookie-banner').style.display = 'none';
         });
     });
-</script>
-    
-  
+    </script>
+  <script>
+    if (getCookie('cookies-accepted') === 'true') {
+        const recaptchaScript = document.createElement('script');
+        recaptchaScript.src = "https://www.google.com/recaptcha/enterprise.js?render=6Lfx0ZgqAAAAACuBGXsYgBHKE36ltUCI4wPOclPw";
+        document.head.appendChild(recaptchaScript);
+    }
+  </script>
              <script>
     const quartiers = [
       "Belle-de-Mai", "Saint-Antoine", "Marseille 1er", "Marseille 2ème",
