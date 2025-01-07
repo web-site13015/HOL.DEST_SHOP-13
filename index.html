@@ -39,6 +39,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/90a4d1138d.js" crossorigin="anonymous"></script>
     <style>
+          /* Style global pour le bouton */
+.settings-btn {
+    background-color: #28a745; /* Couleur verte, souvent associée à la navigation */
+    border: none;
+    color: white; /* Texte en blanc */
+    padding: 12px 25px; /* Espacement interne */
+    font-size: 16px; /* Taille de la police */
+    text-align: center;
+    display: inline-flex; /* Flexbox pour centrer le texte et l'emoji */
+    align-items: center;
+    border-radius: 30px; /* Coins arrondis */
+    cursor: pointer;
+    transition: all 0.3s ease; /* Transition fluide pour les effets */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police moderne */
+    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3); /* Ombre légère */
+    margin: 10px 0; /* Espacement autour du bouton */
+}
+
+/* Effet au survol du bouton */
+.settings-btn:hover {
+    background-color: #218838; /* Couleur plus foncée au survol */
+    transform: translateY(-2px); /* Légère remontée pour l'effet de survol */
+    box-shadow: 0 6px 12px rgba(40, 167, 69, 0.4); /* Ombre plus marquée */
+}
+
+/* Style pour l'emoji dans le bouton */
+.settings-btn span {
+    margin-left: 10px; /* Espacement entre le texte et l'emoji */
+    font-size: 20px; /* Taille de l'emoji */
+    transition: transform 0.3s ease;
+}
+
+/* Effet sur l'emoji au survol */
+.settings-btn:hover span {
+    transform: scale(1.1); /* L'emoji devient légèrement plus grand au survol */
+}
         /* Styles globaux */    
     body {
   font-family: "Playfair Display", serif;
@@ -1181,7 +1217,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <i class="fa-brands fa-instagram" style="color: #b858bf;"></i>
     </a>
 </div>
-<button class="settings-btn" onclick="toggleSettings()">⚙️: Paramètres Affichez la carte Waze <span>🗺️</span></button>            
+                <button class="settings-btn" onclick="toggleSettings()">⚙️: Paramètres
+Affichez la carte Waze 🗺️</button>            
+          
               <button id="toggle-cart-button" onclick="toggleCart()" style="display: none;">🛒</button>
               <!-- Mini carte avec une carte interactive à droite -->
             </div>          
