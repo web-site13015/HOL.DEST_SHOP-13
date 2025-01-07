@@ -1006,7 +1006,7 @@ button {
 
   
     .modal {
-      position: fixed;
+      
       top: 0;
       left: 0;
       width: 100%;
@@ -1283,7 +1283,10 @@ Affichez la carte Waze 🗺️</button>
   <button id="toggle-notifications">🔕</button>
   <div id="description">Activer/Désactiver les notifications</div>
 
-
+<!-- Icône flottante pour rouvrir la bannière -->
+<div id="feedback-button" class="feedback-button" onclick="showBanner()">
+    💬
+</div>
           
               <button id="toggle-cart-button" onclick="toggleCart()" style="display: none;">🛒</button>
               <!-- Mini carte avec une carte interactive à droite -->
@@ -1980,10 +1983,7 @@ Affichez la carte Waze 🗺️</button>
     </form>
 </div>
 
-<!-- Icône flottante pour rouvrir la bannière -->
-<div id="feedback-button" class="feedback-button" onclick="showBanner()">
-    💬
-</div>
+
   
   <!-- Bannière de réduction -->
 <div id="discount-banner" style="display: none; background-color: #4caf50; color: white; padding: 10px; text-align: center; position: fixed; top: 0; width: 100%; z-index: 1000;">
@@ -2422,27 +2422,7 @@ setInterval(simulateQueue, 2000);
     }
 </script>          
             
-<script>
-    // Fonction pour masquer la bannière
-    function hideBanner() {
-        const banner = document.getElementById("message-banner");
-        banner.classList.add("hidden"); // Ajoute la classe hidden pour masquer la bannière
-    }
 
-    // Fonction pour afficher la bannière
-    function showBanner() {
-        const banner = document.getElementById("message-banner");
-        banner.classList.remove("hidden"); // Supprime la classe hidden pour afficher la bannière
-    }
-
-    // Affiche la bannière automatiquement après 2 secondes
-    window.onload = function() {
-        const banner = document.getElementById("message-banner");
-        setTimeout(() => {
-            banner.classList.remove("hidden"); // Affiche la bannière
-        }, 300000);
-    };
-</script>
   <script>
 // Fonction pour afficher ou masquer le panier
 function toggleCart() {
