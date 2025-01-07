@@ -764,7 +764,7 @@ button {
 
 /* Bannière de message */
 .message-banner {
-    position: fixed;
+    
     bottom: 20px;
     right: 20px;
     width: 300px;
@@ -1006,7 +1006,7 @@ button {
 
   
     .modal {
-      
+      position: fixed;
       top: 0;
       left: 0;
       width: 100%;
@@ -2879,5 +2879,25 @@ document.querySelector('.shop-icon').addEventListener('click', scrollToShopSecti
       document.getElementById("toggle-notifications").textContent = notificationsEnabled ? "🔔" : "🔕"; // Modifier l'icône du bouton
     });
              </script>
+    <script>
+    // Fonction pour masquer la bannière
+    function hideBanner() {
+        const banner = document.getElementById("message-banner");
+        banner.classList.add("hidden"); // Ajoute la classe hidden pour masquer la bannière
+    }
+
+    // Fonction pour afficher la bannière
+    function showBanner() {
+        const banner = document.getElementById("message-banner");
+        banner.classList.remove("hidden"); // Supprime la classe hidden pour afficher la bannière
+    }
+
+    // Affiche la bannière automatiquement après 2 secondes
+    window.onload = function() {
+        const banner = document.getElementById("message-banner");
+        setTimeout(() => {
+            
+    };
+    </script>
 </body>
   </html>
