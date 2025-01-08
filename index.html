@@ -1240,7 +1240,15 @@ Affichez la carte Waze 🗺️</button>
 
   <!-- Bouton pour activer/désactiver les notifications -->
   <button id="toggle-notifications">🔕</button>
-  <div id="description">Activer/Désactiver les notifications</div>      
+  <div id="description">Activer/Désactiver les notifications</div>   
+              
+<div id="discount-circle" onclick="showDiscountDetails()">0%</div>
+  <div id="status-popup">
+    <p>Réduction actuelle : <span id="current-discount">0%</span></p>
+    <p>Montant de la réduction en € : <span id="discount-amount">0€</span></p>
+    <button onclick="closeStatusPopup()">Fermer</button>
+  </div>
+              
               <button id="toggle-cart-button" onclick="toggleCart()" style="display: none;">🛒</button>
               <!-- Mini carte avec une carte interactive à droite -->
             </div>          
@@ -1926,14 +1934,6 @@ Affichez la carte Waze 🗺️</button>
       <button type="submit">Recevoir Réduction</button>
     </form>
     <button onclick="resetDiscount()">Réinitialiser</button>
-  </div>
-
-  <div id="discount-circle" onclick="showDiscountDetails()">0%</div>
-
-  <div id="status-popup">
-    <p>Réduction actuelle : <span id="current-discount">0%</span></p>
-    <p>Montant de la réduction en € : <span id="discount-amount">0€</span></p>
-    <button onclick="closeStatusPopup()">Fermer</button>
   </div>
 
      <blockquote class="snapchat-embed" 
