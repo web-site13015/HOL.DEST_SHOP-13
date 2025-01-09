@@ -1997,13 +1997,7 @@ Affichez la carte Waze 🗺️</button>
 <script async src="https://www.snapchat.com/embed.js"></script>
 
 <script>
-// Gestion des événements pour les boutons "Ajouter au panier"
-document.querySelectorAll('.buy-button').forEach(button => {
-    button.addEventListener('click', function () {
-        const productName = this.dataset.productName; // Nom du produit
-        const price = parseFloat(this.dataset.price); // Prix du produit
-        const quantity = parseInt(document.querySelector('#quantity-input').value); // Quantité
-        const options = []; // Options sélectionnées
+
 
         // Ajoute les options sélectionnées
         if (document.querySelector('#size-select')) {
