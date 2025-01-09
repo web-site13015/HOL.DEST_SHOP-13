@@ -1713,6 +1713,73 @@ Affichez la carte Waze 🗺️</button>
         </select>
         <button class="buy-button" onclick="addToCart('Canette Fuze Tea 330ml', 1.50, parseInt(document.getElementById('quantity-6').value))">Ajouter au panier 🛒</button>
     </div>
+
+
+<div class="shop-items">
+    <!-- Canette Coca-Cola -->
+    <div class="shop-item" id="product-4">
+        <img src="https://via.placeholder.com/150?text=Coca-Cola" alt="Canette Coca-Cola" class="product-image">
+        <h4>Canette Coca-Cola 🍷</h4>
+        <p>Type : 330 ml 🌟</p>
+        <span class="price">Prix : €1.50 💶</span>
+        <p class="delivery-info">Livraison non incluse 🚚</p>
+
+        <!-- Quantité sélectionnable -->
+        <label for="quantity-4">Quantité :</label>
+        <select id="quantity-4">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+
+        <button class="buy-button" onclick="addToCart('Canette Coca-Cola 330ml', 1.50, document.getElementById('quantity-4').value)">Ajouter au panier 🛒</button>
+    </div>
+
+
+  
+    <!-- Canette Oasis Framboise -->
+    <div class="shop-item" id="product-5">
+        <img src="https://via.placeholder.com/150?text=Oasis+Framboise" alt="Canette Oasis Framboise" class="product-image">
+        <h4>Canette Oasis Framboise 🍓</h4>
+        <p>Type : 330 ml 🍇</p>
+        <span class="price">Prix : €1.50 💶</span>
+        <p class="delivery-info">Livraison non incluse 🚚</p>
+
+        <!-- Quantité sélectionnable -->
+        <label for="quantity-5">Quantité :</label>
+        <select id="quantity-5">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+
+        <button class="buy-button" onclick="addToCart('Canette Oasis Framboise 330ml', 1.50, document.getElementById('quantity-5').value)">Ajouter au panier 🛒</button>
+    </div>
+
+    <!-- Canette Fuse Tea -->
+    <div class="shop-item" id="product-6">
+        <img src="https://via.placeholder.com/150?text=Fuse+Tea" alt="Canette Fuse Tea" class="product-image">
+        <h4>Canette Fuse Tea 🍹</h4>
+        <p>Type : 330 ml 🍃</p>
+        <span class="price">Prix : €1.50 💶</span>
+        <p class="delivery-info">Livraison non incluse 🚚</p>
+
+        <!-- Quantité sélectionnable -->
+        <label for="quantity-6">Quantité :</label>
+        <select id="quantity-6">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+
+        <button class="buy-button" onclick="addToCart('Canette Fuse Tea 330ml', 1.50, document.getElementById('quantity-6').value)">Ajouter au panier 🛒</button>
+    </div>
+
+
+  
     </div>
       <div class="separator-section">
     <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/a23acf5f-2dc7-1f58-2328-377c70da278b.jpeg" alt="Gourmandises à croquer" class="separator-image">
@@ -1994,6 +2061,31 @@ Affichez la carte Waze 🗺️</button>
 <script async src="https://www.snapchat.com/embed.js"></script>
 
 <script>
+// Gestion des événements pour les boutons "Ajouter au panier"
+document.querySelectorAll('.buy-button').forEach(button => {
+    button.addEventListener('click', function () {
+        const productName = this.dataset.productName; // Nom du produit
+        const price = parseFloat(this.dataset.price); // Prix du produit
+        const quantity = parseInt(document.querySelector('#quantity-input').value); // Quantité
+        const options = []; // Options sélectionnées
+
+        // Ajoute les options sélectionnées
+        if (document.querySelector('#size-select')) {
+            options.push(document.querySelector('#size-select').value);
+        }
+        if (document.querySelector('#color-select')) {
+            options.push(document.querySelector('#color-select').value);
+        }
+
+        // Appelle la fonction pour ajouter au panier
+        addToCart(productName, price, quantity, options);
+    });
+});
+
+
+
+
+  
 // Simuler une file d'attente avec animation de compte dynamique
 let count = 25; // Nombre initial de personnes
 const queueCount = document.getElementById("queue-count");
