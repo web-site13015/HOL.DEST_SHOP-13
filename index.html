@@ -1998,24 +1998,6 @@ Affichez la carte Waze 🗺️</button>
 
 <script>
 
-
-        // Ajoute les options sélectionnées
-        if (document.querySelector('#size-select')) {
-            options.push(document.querySelector('#size-select').value);
-        }
-        if (document.querySelector('#color-select')) {
-            options.push(document.querySelector('#color-select').value);
-        }
-
-        // Appelle la fonction pour ajouter au panier
-        addToCart(productName, price, quantity, options);
-    });
-});
-
-
-
-
-  
 // Simuler une file d'attente avec animation de compte dynamique
 let count = 25; // Nombre initial de personnes
 const queueCount = document.getElementById("queue-count");
