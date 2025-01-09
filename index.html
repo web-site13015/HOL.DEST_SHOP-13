@@ -1273,7 +1273,14 @@ Affichez la carte Waze 🗺️</button>
     <p>Fermeture: <span id="close-date-display"></span></p>
 </div>
 
+  <!-- Icône de la boutique avec la flèche -->
+<div class="shop-icon" onclick="toggleShopSection()">   
   
+    <i id="shop-icon" class="fas fa-store"></i> <!-- Icône de la boutique -->
+    <i id="arrow-icon" class="fas fa-chevron-down" style="display:none;"></i> <!-- Flèche cachée initialement -->
+    <p>Afficher la Boutique</p>
+</div>
+    </div>
 <!-- Section d'attente -->
   <div class="waiting-status">
     <h1>🎉📆 Commandes en avance :
@@ -1398,14 +1405,6 @@ Affichez la carte Waze 🗺️</button>
     <button class="ok-button" onclick="redirectToFormspree()">Confirmer et envoyer la commande</button>
   </div>
         
-      <!-- Icône de la boutique avec la flèche -->
-<div class="shop-icon" onclick="toggleShopSection()">   
-  
-    <i id="shop-icon" class="fas fa-store"></i> <!-- Icône de la boutique -->
-    <i id="arrow-icon" class="fas fa-chevron-down" style="display:none;"></i> <!-- Flèche cachée initialement -->
-    <p>Afficher la Boutique</p>
-</div>
-    </div>
    <!-- Paramètres (Fenêtre popup) -->
 <div class="settings-popup" id="settings-popup" style="display:none;">
     <h3>Paramètres</h3>
@@ -2275,7 +2274,7 @@ setInterval(simulateQueue, 2000);
       setTimeout(() => {
         banner.style.display = "none";
         if (discount < maxDiscount) {
-          setTimeout(showPopup, 3000); // Réaffiche après 3 secondes
+          setTimeout(showPopup, 300000); // Réaffiche après 3 secondes
         } else {
           showSuccessPopup();
         }
