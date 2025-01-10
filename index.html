@@ -41,71 +41,6 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/90a4d1138d.js" crossorigin="anonymous"></script>
     <style>
-#discount-banner {
-      display: none;
-      background-color: #4caf50;
-      color: white;
-      padding: 10px;
-      text-align: center;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000;
-    }
-    .popup {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: white;
-      padding: 20px;
-      border: 1px solid #ccc;
-      display: none;
-    }
-    #case-container {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-    .case {
-      width: 40px;
-      height: 40px;
-      border: 2px solid #ff4d4d;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-    }
-    #discount-circle {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      background-color: #ff4d4d;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-      color: white;
-      font-weight: bold;
-    }
-    button:disabled {
-      background-color: #ccc;
-    }
-    #status-popup {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: rgba(0, 0, 0, 0.7);
-      color: white;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-    }
-
-      
           /* Style global pour le bouton */
 .settings-btn {
     background-color: #28a745; /* Couleur verte, souvent associée à la navigation */
@@ -1220,7 +1155,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <p><i class="fas fa-envelope"></i> Contact : <a href="mailto:tsh.shop13@gmail.com">tsh.shop13@gmail.com</a></p>
                 <!-- Ajout des icônes des réseaux sociaux -->
 <div class="social-icons">
-    <a href="https://www.snapchat.com/add/tsh-shop13?share_id=0fql3h9rrIY&locale=fr-FR" target="_blank">
+    <a href="https://www.snapchat.com/add/lucious-lion04?share_id=e-B-MlzJM7c&locale=fr-FR" target="_blank">
         <i class="fa-brands fa-snapchat"></i>
     </a>
     <a href="https://www.tiktok.com/@tsh_shop13?_t=8s9mzOpzEow&_r=1" target="_blank">
@@ -1240,15 +1175,7 @@ Affichez la carte Waze 🗺️</button>
 
   <!-- Bouton pour activer/désactiver les notifications -->
   <button id="toggle-notifications">🔕</button>
-  <div id="description">Activer/Désactiver les notifications</div>   
-              
-<div id="discount-circle" onclick="showDiscountDetails()">0%</div>
-  <div id="status-popup">
-    <p>Réduction actuelle : <span id="current-discount">0%</span></p>
-    <p>Montant de la réduction en € : <span id="discount-amount">0€</span></p>
-    <button onclick="closeStatusPopup()">Fermer</button>
-  </div>
-              
+  <div id="description">Activer/Désactiver les notifications</div>      
               <button id="toggle-cart-button" onclick="toggleCart()" style="display: none;">🛒</button>
               <!-- Mini carte avec une carte interactive à droite -->
             </div>          
@@ -1273,14 +1200,7 @@ Affichez la carte Waze 🗺️</button>
     <p>Fermeture: <span id="close-date-display"></span></p>
 </div>
 
-  <!-- Icône de la boutique avec la flèche -->
-<div class="shop-icon" onclick="toggleShopSection()">   
   
-    <i id="shop-icon" class="fas fa-store"></i> <!-- Icône de la boutique -->
-    <i id="arrow-icon" class="fas fa-chevron-down" style="display:none;"></i> <!-- Flèche cachée initialement -->
-    <p>Afficher la Boutique</p>
-</div>
-    </div>
 <!-- Section d'attente -->
   <div class="waiting-status">
     <h1>🎉📆 Commandes en avance :
@@ -1405,6 +1325,14 @@ Affichez la carte Waze 🗺️</button>
     <button class="ok-button" onclick="redirectToFormspree()">Confirmer et envoyer la commande</button>
   </div>
         
+      <!-- Icône de la boutique avec la flèche -->
+<div class="shop-icon" onclick="toggleShopSection()">   
+  
+    <i id="shop-icon" class="fas fa-store"></i> <!-- Icône de la boutique -->
+    <i id="arrow-icon" class="fas fa-chevron-down" style="display:none;"></i> <!-- Flèche cachée initialement -->
+    <p>Afficher la Boutique</p>
+</div>
+    </div>
    <!-- Paramètres (Fenêtre popup) -->
 <div class="settings-popup" id="settings-popup" style="display:none;">
     <h3>Paramètres</h3>
@@ -1713,10 +1641,7 @@ Affichez la carte Waze 🗺️</button>
         </select>
         <button class="buy-button" onclick="addToCart('Canette Fuze Tea 330ml', 1.50, parseInt(document.getElementById('quantity-6').value))">Ajouter au panier 🛒</button>
     </div>
-
-</div>
-
-
+    </div>
       <div class="separator-section">
     <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/a23acf5f-2dc7-1f58-2328-377c70da278b.jpeg" alt="Gourmandises à croquer" class="separator-image">
     <h2>Gourmandises à Croquer</h2>
@@ -1915,28 +1840,60 @@ Affichez la carte Waze 🗺️</button>
     </div>
 </div>
 
-   <div id="discount-banner">🎉 Félicitations ! Vous avez récupéré une réduction de 10% !</div>
+<!-- Modale de confirmation -->
+<div id="confirmation-modal" class="modal">
+    <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <p id="modal-message"></p>
+    </div>
+</div>
+<!-- Bannière de consentement aux cookies -->
+<div id="cookie-banner" style="position: fixed; bottom: 10px; left: 10px; right: 10px; background: rgba(0, 0, 0, 0.9); color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; border-radius: 5px; z-index: 1000; display: none;">
+    
+    <div>
+        <button id="accept-cookies" style="background: #4CAF50; color: white; border: none; padding: 10px 15px; border-radius: 5px; margin-right: 10px; cursor: pointer;">Accepter</button>
+        <button id="decline-cookies" style="background: #f44336; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;">Refuser</button>
+    </div>
+</div>
+  <!-- Bannière de réduction -->
+<div id="discount-banner" style="display: none; background-color: #4caf50; color: white; padding: 10px; text-align: center; position: fixed; top: 0; width: 100%; z-index: 1000;">
+    🎉 Félicitations ! Vous avez récupéré votre réduction de 10% !
+</div>
 
-  <div id="discount-popup" class="popup">
-    <h3>🎉 Réduction Spéciale !</h3>
-    <p>Remplissez les cases pour obtenir votre réduction.</p>
-    <div id="case-container"></div>
-    <button id="validate-button" onclick="claimDiscount()" disabled>Valider</button>
-    <button onclick="closePopup()">Fermer</button>
-  </div>
+<!-- Pop-up initial -->
+<div id="discount-popup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:white; border:1px solid #ccc; padding:20px; z-index:1000;">
+    <h3>🎉 Réduction spéciale pour vous ! 🎉</h3>
+    <button onclick="showDiscountForm()">Obtenir la réduction</button>
+    <button onclick="closePopup('discount-popup')">Fermer</button>
+</div>
 
-  <div id="success-popup" class="popup">
-    <h3>🎉 Félicitations ! Vous avez atteint votre réduction maximale de 100% !</h3>
-    <p>Vous allez recevoir cette réduction avec votre commande.</p>
-    <!-- Formulaire pour envoyer les données via Formspree -->
-    <form id="order-form" action="https://formspree.io/f/xovvpowl" method="POST">
-      <label for="user-email">Votre e-mail :</label>
-      <input type="email" id="user-email" name="email" required>
-      <input type="hidden" id="discount-value" name="discount" value="100%"> <!-- Champ caché pour la réduction -->
-      <button type="submit">Recevoir Réduction</button>
+<!-- Pop-up formulaire -->
+<div id="discount-form-popup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:white; border:1px solid #ccc; padding:20px; z-index:1000;">
+    <h3>🎉 Validez votre réduction ! 🎉</h3>
+    <form id="discount-form" onsubmit="claimDiscount(event)">
+        <!-- Conteneur pour les cases -->
+        <div id="case-container" style="display: flex; gap: 10px; margin-bottom: 20px;">
+            <!-- Les cases seront générées ici -->
+        </div>
+
+        <!-- Adresse email -->
+        <label for="user-email">Votre email :</label>
+        <input type="email" id="user-email" name="email" required style="margin-bottom: 10px;" oninput="updateSubmitButton()">
+        <br>
+
+        <!-- Message explicatif -->
+        <p style="font-size: 12px; color: gray;">
+            * Vous devez remplir toutes les cases pour valider la réduction.
+        </p>
+
+        <!-- Boutons -->
+        <button type="submit" disabled id="submit-button">Valider</button>
+        <button type="button" onclick="closePopup('discount-form-popup')">Fermer</button>
     </form>
-    <button onclick="resetDiscount()">Réinitialiser</button>
-  </div>
+</div>
+
+<!-- Bouton pour voir la réduction -->
+<button id="view-discount-button" style="display:none;" onclick="showDiscount()">Voir votre réduction</button>
 
      <blockquote class="snapchat-embed" 
     data-snapchat-embed-width="390" 
@@ -1997,7 +1954,6 @@ Affichez la carte Waze 🗺️</button>
 <script async src="https://www.snapchat.com/embed.js"></script>
 
 <script>
-
 // Simuler une file d'attente avec animation de compte dynamique
 let count = 25; // Nombre initial de personnes
 const queueCount = document.getElementById("queue-count");
@@ -2133,7 +2089,7 @@ setInterval(simulateQueue, 2000);
     // Définir les horaires normaux d'ouverture et de fermeture
     let openingHour = 14; // Heure d'ouverture normale (14h)
     let openingMinute = 0; // Minute d'ouverture normale (00)
-    let closingHour = 5; // Heure de fermeture normale (5h du matin)
+    let closingHour = 3; // Heure de fermeture normale (3h du matin)
     let closingMinute = 0; // Minute de fermeture normale (00)
 
     // Définir une date précise d'ouverture
@@ -2219,108 +2175,122 @@ setInterval(simulateQueue, 2000);
 });
 </script>
 <script>
-    let discount = 2;
-    const maxDiscount = 25; // Réduction maximale en %
-    const discountPerStep = 2; // Réduction par étape (en %)
-
-    // Affiche le pop-up de réduction
-    function showPopup() {
-      document.getElementById("discount-popup").style.display = "block";
-      generateCases(5); // 5 cases à remplir
-    }
-
-    // Ferme un pop-up
-    function closePopup() {
-      document.getElementById("discount-popup").style.display = "none";
-    }
-
-    // Génère des cases à cocher
-    function generateCases(count) {
-      const container = document.getElementById("case-container");
-      container.innerHTML = ""; // Réinitialiser
-      for (let i = 0; i < count; i++) {
-        const caseDiv = document.createElement("div");
-        caseDiv.className = "case";
-        caseDiv.dataset.checked = "false";
-        caseDiv.textContent = "❌";
-        caseDiv.onclick = () => toggleCase(caseDiv);
-        container.appendChild(caseDiv);
-      }
-    }
-
-    // Basculer une case
-    function toggleCase(caseDiv) {
-      if (caseDiv.dataset.checked === "false") {
-        caseDiv.dataset.checked = "true";
-        caseDiv.textContent = "✅";
-        caseDiv.style.backgroundColor = "#4caf50";
-      }
-      checkAllCases();
-    }
-
-    // Vérifie si toutes les cases sont cochées
-    function checkAllCases() {
-      const cases = document.querySelectorAll(".case");
-      const allChecked = Array.from(cases).every(c => c.dataset.checked === "true");
-      document.getElementById("validate-button").disabled = !allChecked;
-    }
-
-    // Valider la réduction
-    function claimDiscount() {
-      discount += discountPerStep;
-      if (discount > maxDiscount) discount = maxDiscount; // Limiter à 100%
-      closePopup();
-
-      // Affiche une bannière
-      const banner = document.getElementById("discount-banner");
-      banner.textContent = `🎉 Félicitations ! Vous avez récupéré une réduction de ${discount}% !`;
-      banner.style.display = "block";
-      setTimeout(() => {
-        banner.style.display = "none";
-        if (discount < maxDiscount) {
-          setTimeout(showPopup, 300000); // Réaffiche après 3 secondes
-        } else {
-          showSuccessPopup();
+    document.addEventListener("DOMContentLoaded", () => {
+        // Affiche la pop-up initiale après 5 secondes si aucune réduction n'a été validée
+        if (!localStorage.getItem("reductionValidee")) {
+            setTimeout(() => {
+                document.getElementById("discount-popup").style.display = "block";
+            }, 5000);
         }
-      }, 12000);
+    });
 
-      // Affiche le cercle avec la réduction
-      const discountCircle = document.getElementById("discount-circle");
-      discountCircle.style.display = "flex"; // Affiche le cercle
-      discountCircle.textContent = `${discount}%`;
+    // Affiche le formulaire pour valider la réduction
+    function showDiscountForm() {
+        document.getElementById("discount-popup").style.display = "none";
+        document.getElementById("discount-form-popup").style.display = "block";
+        generateCases(6); // Génère 6 cases rouges ❌
     }
 
-    // Affiche le pop-up de succès
-    function showSuccessPopup() {
-      document.getElementById("success-popup").style.display = "block";
-      document.getElementById("order-form").style.display = "block"; // Affiche le formulaire
-      // Mettre à jour la valeur du champ caché pour le formulaire
-      document.getElementById("discount-value").value = `${discount}%`;
+    // Génère les cases rouges ❌ par défaut
+    function generateCases(count) {
+        const container = document.getElementById("case-container");
+        container.innerHTML = ""; // Vide les cases existantes
+        for (let i = 0; i < count; i++) {
+            const caseElement = document.createElement("div");
+            caseElement.id = `case-${i}`;
+            caseElement.dataset.state = "red"; // État initial (rouge)
+            caseElement.style.width = "30px";
+            caseElement.style.height = "30px";
+            caseElement.style.border = "2px solid #ff4d4d";
+            caseElement.style.borderRadius = "5px";
+            caseElement.style.display = "flex";
+            caseElement.style.justifyContent = "center";
+            caseElement.style.alignItems = "center";
+            caseElement.style.cursor = "pointer";
+            caseElement.style.fontSize = "18px";
+            caseElement.style.backgroundColor = "#ff4d4d"; // Fond rouge
+            caseElement.textContent = "❌"; // Croix rouge
+
+            // Ajoute un événement au clic
+            caseElement.addEventListener("click", () => toggleCaseState(caseElement));
+            container.appendChild(caseElement);
+        }
     }
 
-    // Affiche les détails de la réduction
-    function showDiscountDetails() {
-      document.getElementById("current-discount").textContent = `${discount}%`;
-      document.getElementById("discount-amount").textContent = `${(discount / 100) * maxDiscount}€`;
-      document.getElementById("status-popup").style.display = "block";
+    // Change l'état des cases
+    function toggleCaseState(caseElement) {
+        if (caseElement.dataset.state === "red") {
+            caseElement.dataset.state = "green";
+            caseElement.style.backgroundColor = "#4caf50";
+            caseElement.style.borderColor = "#4caf50";
+            caseElement.textContent = "✅";
+        }
+        checkIfAllCasesAreGreen();
     }
 
-    // Ferme la fenêtre de détails
-    function closeStatusPopup() {
-      document.getElementById("status-popup").style.display = "none";
+    // Vérifie si toutes les cases sauf la dernière sont vertes
+    function checkIfAllCasesAreGreen() {
+        const cases = document.querySelectorAll("#case-container div");
+        const allGreenExceptLast = Array.from(cases)
+            .slice(1) // Ignore la première case
+            .every((caseElement) => caseElement.dataset.state === "green");
+
+        if (allGreenExceptLast) {
+            const firstCase = document.getElementById("case-0");
+            firstCase.dataset.state = "green";
+            firstCase.style.backgroundColor = "#4caf50";
+            firstCase.style.borderColor = "#4caf50";
+            firstCase.textContent = "✅";
+            firstCase.style.pointerEvents = "none"; // Désactive les clics sur cette case
+        }
+
+        updateSubmitButton();
     }
 
-    // Réinitialiser les réductions
-    function resetDiscount() {
-      discount = 0;
-      document.getElementById("success-popup").style.display = "none";
-      document.getElementById("discount-circle").style.display = "none"; // Cacher le cercle
-      showPopup(); // Recommence un nouveau cycle
+    // Active le bouton Valider uniquement si toutes les cases sont vertes et l'email est saisi
+    function updateSubmitButton() {
+        const cases = document.querySelectorAll("#case-container div");
+        const allGreen = Array.from(cases).every((caseElement) => caseElement.dataset.state === "green");
+        const email = document.getElementById("user-email").value.trim();
+        const submitButton = document.getElementById("submit-button");
+
+        submitButton.disabled = !(allGreen && email); // Active seulement si toutes les conditions sont remplies
     }
 
-    // Lancement initial
-    showPopup();
-      </script>
+    // Valide la réduction
+    function claimDiscount(event) {
+        event.preventDefault();
+
+        // Sauvegarde que la réduction est validée
+        localStorage.setItem("reductionValidee", "true");
+
+        // Désactive toutes les cases
+        const cases = document.querySelectorAll("#case-container div");
+        cases.forEach((caseElement) => {
+            caseElement.style.pointerEvents = "none"; // Désactive les clics
+        });
+
+        // Affiche un message de validation
+        document.getElementById("discount-form-popup").style.display = "none";
+        document.getElementById("discount-banner").style.display = "block";
+        document.getElementById("view-discount-button").style.display = "block";
+
+        // Cache la bannière après 5 secondes
+        setTimeout(() => {
+            document.getElementById("discount-banner").style.display = "none";
+        }, 5000);
+    }
+
+    // Affiche l'état de la réduction
+    function showDiscount() {
+        alert("🎉 Vous avez une réduction de 10% !");
+    }
+
+    // Ferme un pop-up spécifique
+    function closePopup(popupId) {
+        document.getElementById(popupId).style.display = "none";
+    }
+</script>          
             
 
   <script>
@@ -2493,7 +2463,6 @@ function toggleShopSection() {
     }
 }
 
-
 // Fonction pour ajouter un produit au panier
 function addToCart(productName, price, quantity = 1) {
     // Calculer le prix total pour le produit avec la quantité
@@ -2531,9 +2500,9 @@ function addToCart(productName, price, quantity = 1) {
             modal.style.display = 'none';
         }
     };
-        }
+}
 
-      // Fonction pour mettre à jour l'affichage du panier
+// Fonction pour mettre à jour l'affichage du panier
 function updateCartDisplay() {
     const cartItems = document.getElementById("cart-items");
     cartItems.innerHTML = ""; // Vider l'affichage précédent
@@ -2558,21 +2527,16 @@ function updateCartDisplay() {
 
     // S'assurer que le panier est affiché
     document.getElementById("cart").style.display = "block";
-                                               }
-        function removeFromCart(productName) {
-    const index = cart.findIndex((item) => item.productName === productName);
-
+}
+// Fonction pour supprimer un produit du panier
+function removeFromCart(productName) {
+    const index = cart.findIndex(item => item.productName === productName);
     if (index !== -1) {
-        // Déduire le prix total de cet article du total général
-        totalPrice -= cart[index].totalProductPrice;
-
-        // Retirer l'article du tableau `cart`
+        totalPrice -= cart[index].price;
         cart.splice(index, 1);
-
-        // Mettre à jour l'affichage du panier
         updateCartDisplay();
     }
-        }
+}
 
 // Fonction pour vider le panier
 function clearCart() {
