@@ -2513,7 +2513,7 @@ function addToCart(productName, basePrice, quantity = 1) {
 
     // Afficher un message de confirmation dans la modale
     const modalMessage = document.getElementById('modal-message');
-    modalMessage.textContent = `${productName} (${quantity} unité(s)) ajouté au panier pour €${totalProductPrice.toFixed(2)}.`;
+    modalMessage.textContent = `${productName} ajouté au panier. ${quantity} unité(s) pour un total de €${totalProductPrice.toFixed(2)}.`;  // Correction ici
 
     // Afficher et gérer la modale
     const modal = document.getElementById('confirmation-modal');
@@ -2529,7 +2529,7 @@ function addToCart(productName, basePrice, quantity = 1) {
             modal.style.display = 'none';
         }
     };
-      }
+}
 
       function updateCartDisplay() {
     const cartItems = document.getElementById("cart-items");
