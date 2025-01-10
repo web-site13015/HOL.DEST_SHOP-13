@@ -1199,7 +1199,14 @@ Affichez la carte Waze 🗺️</button>
     <p>Ouverture: <span id="open-date-display"></span></p>
     <p>Fermeture: <span id="close-date-display"></span></p>
 </div>
-
+      <!-- Icône de la boutique avec la flèche -->
+<div class="shop-icon" onclick="toggleShopSection()">   
+  
+    <i id="shop-icon" class="fas fa-store"></i> <!-- Icône de la boutique -->
+    <i id="arrow-icon" class="fas fa-chevron-down" style="display:none;"></i> <!-- Flèche cachée initialement -->
+    <p>Afficher la Boutique</p>
+</div>
+    </div>
   
 <!-- Section d'attente -->
   <div class="waiting-status">
@@ -1325,14 +1332,7 @@ Affichez la carte Waze 🗺️</button>
     <button class="ok-button" onclick="redirectToFormspree()">Confirmer et envoyer la commande</button>
   </div>
         
-      <!-- Icône de la boutique avec la flèche -->
-<div class="shop-icon" onclick="toggleShopSection()">   
-  
-    <i id="shop-icon" class="fas fa-store"></i> <!-- Icône de la boutique -->
-    <i id="arrow-icon" class="fas fa-chevron-down" style="display:none;"></i> <!-- Flèche cachée initialement -->
-    <p>Afficher la Boutique</p>
-</div>
-    </div>
+
    <!-- Paramètres (Fenêtre popup) -->
 <div class="settings-popup" id="settings-popup" style="display:none;">
     <h3>Paramètres</h3>
