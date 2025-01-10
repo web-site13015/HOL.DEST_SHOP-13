@@ -2494,32 +2494,34 @@ function toggleShopSection() {
 }
 
 
-function addToCart(productName, basePrice, quantity = 1) {
-    // Calculer le prix total pour le produit avec la quantité sélectionnée
-    const totalProductPrice = basePrice * quantity;
+// Fonction pour ajouter un produit au panier
+function addToCart(productName, price, quantity = 1) {
+    // Calculer le prix total pour le produit avec la quantité
+    const totalProductPrice = price * quantity;
 
-    // Ajouter ce produit au panier (avec ses options)
+    // Ajouter ce produit au panier
     cart.push({
         productName: productName,
         quantity: quantity,
-        totalProductPrice: totalProductPrice,
+        price: price, // Prix unitaire
+        totalProductPrice: totalProductPrice, // Prix total pour cet article
     });
 
-    // Mettre à jour le total général
+    // Ajouter au total général
     totalPrice += totalProductPrice;
 
     // Mettre à jour l'affichage du panier
     updateCartDisplay();
 
-    // Afficher un message de confirmation dans la modale
+    // Affiche un message de notification
     const modalMessage = document.getElementById('modal-message');
-    modalMessage.textContent = `${productName} ajouté au panier. ${quantity} unité(s) pour un total de €${totalProductPrice.toFixed(2)}.`;  // Correction ici
+    modalMessage.textContent = `${quantity} unité(s) de ${productName} ajoutée(s) au panier pour un total de €${totalProductPrice.toFixed(2)}.`;
 
-    // Afficher et gérer la modale
+    // Ouvrir la modale
     const modal = document.getElementById('confirmation-modal');
     modal.style.display = 'flex';
 
-    // Gérer la fermeture de la modale
+    // Gestion de la fermeture de la modale
     const closeModal = document.getElementById('close-modal');
     closeModal.onclick = function () {
         modal.style.display = 'none';
@@ -2529,35 +2531,34 @@ function addToCart(productName, basePrice, quantity = 1) {
             modal.style.display = 'none';
         }
     };
-}
+        }
 
-      function updateCartDisplay() {
+      // Fonction pour mettre à jour l'affichage du panier
+function updateCartDisplay() {
     const cartItems = document.getElementById("cart-items");
-    cartItems.innerHTML = ""; // Vider l'affichage actuel
+    cartItems.innerHTML = ""; // Vider l'affichage précédent
 
-    // Pour chaque élément dans le panier, afficher ses détails
+    // Parcourir les produits du panier pour les afficher
     cart.forEach((item) => {
         const div = document.createElement("div");
         div.classList.add("cart-item");
 
-        // Affichage uniquement du nom du produit et de la quantité
         div.innerHTML = `
             <strong>${item.productName}</strong> 
             - ${item.quantity} unité(s) 
-            <span>Total : €${item.totalProductPrice.toFixed(2)}</span>
+            <span>Prix total : €${item.totalProductPrice.toFixed(2)}</span>
             <button onclick="removeFromCart('${item.productName}')">Supprimer</button>
         `;
 
         cartItems.appendChild(div);
     });
 
-    // Mettre à jour le total général
+    // Mettre à jour le total général en bas
     document.getElementById("total").innerHTML = `Total : €${totalPrice.toFixed(2)}`;
 
-    // Assurez-vous que le panier est visible
+    // S'assurer que le panier est affiché
     document.getElementById("cart").style.display = "block";
-      }
-
+                                               }
         function removeFromCart(productName) {
     const index = cart.findIndex((item) => item.productName === productName);
 
