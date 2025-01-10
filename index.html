@@ -2493,6 +2493,7 @@ function toggleShopSection() {
     }
 }
 
+
 function addToCart(productName, basePrice, quantity = 1) {
     // Calculer le prix total pour le produit avec la quantité sélectionnée
     const totalProductPrice = basePrice * quantity;
@@ -2501,7 +2502,6 @@ function addToCart(productName, basePrice, quantity = 1) {
     cart.push({
         productName: productName,
         quantity: quantity,
-        basePrice: basePrice,
         totalProductPrice: totalProductPrice,
     });
 
@@ -2529,10 +2529,9 @@ function addToCart(productName, basePrice, quantity = 1) {
             modal.style.display = 'none';
         }
     };
-}
+      }
 
-// Fonction pour mettre à jour l'affichage du panier
-function updateCartDisplay() {
+      function updateCartDisplay() {
     const cartItems = document.getElementById("cart-items");
     cartItems.innerHTML = ""; // Vider l'affichage actuel
 
@@ -2541,9 +2540,10 @@ function updateCartDisplay() {
         const div = document.createElement("div");
         div.classList.add("cart-item");
 
+        // Affichage uniquement du nom du produit et de la quantité
         div.innerHTML = `
             <strong>${item.productName}</strong> 
-            - ${item.quantity} unité(s) à €${item.basePrice.toFixed(2)} 
+            - ${item.quantity} unité(s) 
             <span>Total : €${item.totalProductPrice.toFixed(2)}</span>
             <button onclick="removeFromCart('${item.productName}')">Supprimer</button>
         `;
@@ -2556,9 +2556,9 @@ function updateCartDisplay() {
 
     // Assurez-vous que le panier est visible
     document.getElementById("cart").style.display = "block";
-}
+      }
 
-function removeFromCart(productName) {
+        function removeFromCart(productName) {
     const index = cart.findIndex((item) => item.productName === productName);
 
     if (index !== -1) {
