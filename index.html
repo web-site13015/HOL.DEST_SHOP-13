@@ -2493,30 +2493,37 @@ function toggleShopSection() {
     }
 }
 
-// Fonction pour ajouter un produit au panier
-function addToCart(productName, price) {
-    cart.push({ productName, price });
-    totalPrice += price;
+function addToCart(productName, basePrice, quantity = 1) {
+    // Calculer le prix total pour le produit avec la quantité sélectionnée
+    const totalProductPrice = basePrice * quantity;
+
+    // Ajouter ce produit au panier (avec ses options)
+    cart.push({
+        productName: productName,
+        quantity: quantity,
+        basePrice: basePrice,
+        totalProductPrice: totalProductPrice,
+    });
+
+    // Mettre à jour le total général
+    totalPrice += totalProductPrice;
+
+    // Mettre à jour l'affichage du panier
     updateCartDisplay();
 
-    // Affiche un message dans la modale
+    // Afficher un message de confirmation dans la modale
     const modalMessage = document.getElementById('modal-message');
-    modalMessage.textContent = `${productName} a été ajouté au panier.`;
+    modalMessage.textContent = `${productName} (${quantity} unité(s)) ajouté au panier pour €${totalProductPrice.toFixed(2)}.`;
 
-    // Affiche un message de livraison estimée
-    document.getElementById('shippingMessage').innerHTML = "Livraison gratuite dès 35 € d'achat !";
-
-    // Ouvre la modale de confirmation
+    // Afficher et gérer la modale
     const modal = document.getElementById('confirmation-modal');
     modal.style.display = 'flex';
 
-    // Ferme la modale lorsqu'on clique sur la croix
+    // Gérer la fermeture de la modale
     const closeModal = document.getElementById('close-modal');
     closeModal.onclick = function () {
         modal.style.display = 'none';
     };
-
-    // Ferme la modale si l'utilisateur clique en dehors
     window.onclick = function (event) {
         if (event.target === modal) {
             modal.style.display = 'none';
@@ -2526,27 +2533,45 @@ function addToCart(productName, price) {
 
 // Fonction pour mettre à jour l'affichage du panier
 function updateCartDisplay() {
-    const cartItems = document.getElementById('cart-items');
-    cartItems.innerHTML = '';
-    cart.forEach(item => {
-        const div = document.createElement('div');
-        div.classList.add('cart-item');
-        div.innerHTML = `${item.productName} <span>€${item.price.toFixed(2)}</span> <button onclick="removeFromCart('${item.productName}')">Supprimer</button>`;
+    const cartItems = document.getElementById("cart-items");
+    cartItems.innerHTML = ""; // Vider l'affichage actuel
+
+    // Pour chaque élément dans le panier, afficher ses détails
+    cart.forEach((item) => {
+        const div = document.createElement("div");
+        div.classList.add("cart-item");
+
+        div.innerHTML = `
+            <strong>${item.productName}</strong> 
+            - ${item.quantity} unité(s) à €${item.basePrice.toFixed(2)} 
+            <span>Total : €${item.totalProductPrice.toFixed(2)}</span>
+            <button onclick="removeFromCart('${item.productName}')">Supprimer</button>
+        `;
+
         cartItems.appendChild(div);
     });
-    document.getElementById('total').innerHTML = `Total : €${totalPrice.toFixed(2)}`;
-    document.getElementById('cart').style.display = 'block';
+
+    // Mettre à jour le total général
+    document.getElementById("total").innerHTML = `Total : €${totalPrice.toFixed(2)}`;
+
+    // Assurez-vous que le panier est visible
+    document.getElementById("cart").style.display = "block";
 }
 
-// Fonction pour supprimer un produit du panier
 function removeFromCart(productName) {
-    const index = cart.findIndex(item => item.productName === productName);
+    const index = cart.findIndex((item) => item.productName === productName);
+
     if (index !== -1) {
-        totalPrice -= cart[index].price;
+        // Déduire le prix total de cet article du total général
+        totalPrice -= cart[index].totalProductPrice;
+
+        // Retirer l'article du tableau `cart`
         cart.splice(index, 1);
+
+        // Mettre à jour l'affichage du panier
         updateCartDisplay();
     }
-}
+        }
 
 // Fonction pour vider le panier
 function clearCart() {
