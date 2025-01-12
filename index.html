@@ -1217,13 +1217,11 @@ Affichez la carte Waze 🗺️</button>
     <p>Fermeture: <span id="close-date-display"></span></p>
 </div>
       <!-- Icône de la boutique avec la flèche -->
-<div class="shop-icon" onclick="toggleShopSection()">   
-  
+      <div class="shop-icon" id="shop-button" onclick="trackShopClick(); toggleShopSection()">   
     <i id="shop-icon" class="fas fa-store"></i> <!-- Icône de la boutique -->
     <i id="arrow-icon" class="fas fa-chevron-down" style="display:none;"></i> <!-- Flèche cachée initialement -->
     <p>Afficher la Boutique</p>
-</div>
-    </div>
+      </div>
   
 <!-- Section d'attente -->
   <div class="waiting-status">
@@ -1969,7 +1967,17 @@ Affichez la carte Waze 🗺️</button>
     </div>
 </blockquote>
 <script async src="https://www.snapchat.com/embed.js"></script>
-
+<script>
+<script>
+  function trackShopClick() {
+    snaptr('track', 'BUTTON_CLICK', {
+      'button_name': 'shop_button', // Identifie le bouton
+      'page_url': window.location.href // Capture l'URL de la page
+    });
+    console.log('Snapchat Pixel: Événement BUTTON_CLICK envoyé.');
+  }
+</script>
+</script>
 <script>
 // Simuler une file d'attente avec animation de compte dynamique
 let count = 25; // Nombre initial de personnes
