@@ -220,20 +220,77 @@ snaptr('track', 'PAGE_VIEW');
     font-size: 1.1em; /* taille du message */
 }
 
- .boutique {
-    font-family: 'Arial', sans-serif;
-    font-size: 18px;
+ .container {
+    position: relative;
+    text-align: center;
+}
+
+.boutique {
+    display: inline-block;
+    font-size: 20px;
     color: #ffffff;
     background-color: #3498db;
-    padding: 10px 20px;
+    padding: 12px 24px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
+    margin-bottom: 50px; /* Espacement supplémentaire pour éloigner la main */
+}
 
-  .boutique:hover {
+.boutique:hover {
     background-color: #2980b9;
+}
+
+.hand {
+    position: absolute;
+    top: 45%; /* Moins collé, plus haut */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: moveHand 3s ease-in-out infinite;
+    font-size: 50px;
+    pointer-events: none;
+}
+
+@keyframes moveHand {
+    0% {
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+        top: 55%;
+        left: 55%;
+        transform: translate(-50%, -50%) rotate(10deg);
+    }
+    100% {
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+}
+
+.hand .emoji {
+    display: inline-block;
+    animation: shake 1.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-5deg);
+    }
+    50% {
+        transform: rotate(5deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
       }
 
 
@@ -1238,7 +1295,12 @@ Affichez la carte Waze 🗺️</button>
       <div class="shop-icon" id="shop-button" onclick="trackShopClick(); toggleShopSection()">   
     <i id="shop-icon" class="fas fa-store"></i> <!-- Icône de la boutique -->
     <i id="arrow-icon" class="fas fa-chevron-down" style="display:none;"></i> <!-- Flèche cachée initialement -->
-      <p class="boutique">Afficher la Boutique</p>
+      <div class="container">
+    <p class="boutique">Afficher la Boutique</p>
+    <div class="hand">
+        <span class="emoji">👉</span>
+    </div>
+      </div>
       </div>
   
 <!-- Section d'attente -->
