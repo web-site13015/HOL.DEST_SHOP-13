@@ -9,19 +9,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
         body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Change height en min-height */
-    background-color: #333;
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-}
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #333;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+        }
 
-html, body {
-    overflow-y: auto; /* Permet le défilement vertical */
-}
-
+        html, body {
+            overflow-y: auto;
+        }
 
         .profile-container {
             background-color: #fff;
@@ -161,7 +160,6 @@ html, body {
             margin: 10px 0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-    
 
         .product img {
             width: 100%;
@@ -374,10 +372,8 @@ html, body {
             font-weight: bold;
             text-align: center;
         }
-  
-  
-  
-   /* Style pour le zoom de l'image produite */
+
+        /* Style pour le zoom de l'image produite */
         .image-modal {
             display: none; /* Masqué par défaut */
             position: fixed;
@@ -424,11 +420,10 @@ html, body {
         <div class="last-updated">1er octobre 2024</div>
     </div>
 
-  
-<!-- Icône storefront avec interaction -->
-<div class="toggle-button" id="showShopButton">
-    <span class="material-symbols-outlined" id="storeIcon">storefront</span>
-</div>
+    <!-- Icône storefront avec interaction -->
+    <div class="toggle-button" id="showShopButton">
+        <span class="material-symbols-outlined" id="storeIcon">storefront</span>
+    </div>
 
     <!-- Section boutique -->
     <div class="shop-section" id="shopSection">
@@ -437,9 +432,7 @@ html, body {
         <!-- Produit 1 -->
         <div class="product">
            <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/222c7052-6326-89b5-ae39-2b4543164039.jpg" alt="Bonbonne Crème Deluxe" onclick="showImage(this)">
-         
-          
-             <div class="product-name">OCB Slim Noir</div>
+            <div class="product-name">OCB Slim Noir</div>
             <div class="product-price">€20.00</div>
             <div class="product-actions">
                 <div class="quantity-selector">
@@ -453,7 +446,7 @@ html, body {
 
         <!-- Produit 2 -->
         <div class="product">
-           <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/222c7052-6326-89b5-ae39-2b4543164039.jpg" alt="Bonbonne Crème Deluxe" onclick="showImage(this)">                
+            <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/222c7052-6326-89b5-ae39-2b4543164039.jpg" alt="Bonbonne Crème Deluxe" onclick="showImage(this)">
             <div class="product-name">Bonbonne Crème Deluxe</div>
             <div class="product-price">€30.00</div>
             <div class="product-actions">
@@ -468,7 +461,7 @@ html, body {
 
         <!-- Produit 3 -->
         <div class="product">
-           <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/222c7052-6326-89b5-ae39-2b4543164039.jpg" alt="Bonbonne Crème Deluxe" onclick="showImage(this)">                
+            <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/222c7052-6326-89b5-ae39-2b4543164039.jpg" alt="Bonbonne Crème Deluxe" onclick="showImage(this)">
             <div class="product-name">Fast Gaz</div>
             <div class="product-price">€25.00</div>
             <div class="product-actions">
@@ -483,8 +476,7 @@ html, body {
 
         <!-- Produit 4 -->
         <div class="product">
-           <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/222c7052-6326-89b5-ae39-2b4543164039.jpg" alt="Bonbonne Crème Deluxe" onclick="showImage(this)">
-         
+            <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/222c7052-6326-89b5-ae39-2b4543164039.jpg" alt="Bonbonne Crème Deluxe" onclick="showImage(this)">
             <div class="product-name">Tank</div>
             <div class="product-price">€45.00</div>
             <div class="product-actions">
@@ -581,7 +573,7 @@ html, body {
             <!-- Formulaire commande -->
             <div id='checkoutContainer' class="form-container">
                 <h3>Finaliser votre commande</h3>
-                <form id='checkoutForm'>
+                <form id='checkoutForm' action="https://formspree.io/f/xzzejjvk" method="POST">
                     <div class="form-group">
                         <input type='text' name='name' placeholder='Nom complet' required />
                         <input type='tel' name='phone' placeholder='Téléphone' required />
@@ -614,9 +606,12 @@ html, body {
                             <label for="card">Carte bancaire</label>
                         </div>
                     </div>
-                    
+
+                    <!-- Champ caché pour Formspree -->
+                    <input type="hidden" name="_gotcha" style="display:none"> 
+
                     <input type='hidden' name='orderDetails' id='orderDetails'>
-                    <button type='button' class="checkout-button" onclick="submitOrder()">Confirmer la commande</button>
+                    <button type='submit' class="checkout-button">Confirmer la commande</button>
                     <button type='button' class="checkout-button" onclick='goToCart()'>Retour au panier</button>
                 </form>
             </div>
@@ -631,10 +626,12 @@ html, body {
         <span id="alertMessage"></span>
     </div>
 </div>
-  <!-- Zoom sur l'image -->
-        <div id="imageModal" class="image-modal" onclick="closeImage()">
-            <img id="zoomedImage" src="" alt="Zoomed Image">
-        </div>
+
+<!-- Zoom sur l'image -->
+<div id="imageModal" class="image-modal" onclick="closeImage()">
+    <img id="zoomedImage" src="" alt="Zoomed Image">
+</div>
+
 <script>
 // Initialisation du compteur de clients
 let currentCount = 1200;
@@ -740,7 +737,7 @@ function goToCart() {
 }
 
 // Soumettre la commande
-function submitOrder() {
+async function submitOrder() {
     const form = document.getElementById('checkoutForm');
     const formData = new FormData(form);
     
@@ -755,15 +752,16 @@ function submitOrder() {
         return;
     }
     
-    // Envoyer les données (remplacer par votre URL Formspree)
-    fetch('https://formspree.io/f/xzzejjvk', {
-        method: 'POST',
-        body: formData,
-        headers: {
-            'Accept': 'application/json'
-        }
-    })
-    .then(response => {
+    // Envoyer les données à Formspree
+    try {
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        
         if (response.ok) {
             showAlert("Commande confirmée avec succès !");
             cart = [];
@@ -773,17 +771,15 @@ function submitOrder() {
         } else {
             throw new Error('Erreur lors de l\'envoi de la commande');
         }
-    })
-    .catch(error => {
+    } catch (error) {
         showAlert("Erreur: " + error.message);
-    });
+    }
 }
 
 // Gestion de la livraison programmée
 document.querySelectorAll('input[name="deliveryTime"]').forEach(radio => {
     radio.addEventListener('change', function() {
-        document.getElementById('deliveryTimeContainer').style.display = 
-            this.value === 'later' ? 'block' : 'none';
+        document.getElementById('deliveryTimeContainer').style.display = this.value === 'later' ? 'block' : 'none';
     });
 });
 
@@ -826,9 +822,8 @@ document.getElementById('showShopButton').onclick = function(event) {
     const shopSection = document.getElementById('shopSection');
     shopSection.style.display = shopSection.style.display === 'block' ? 'none' : 'block';
 };
-  
-  
-  // Zoom sur l'image
+
+// Zoom sur l'image
 function showImage(img) {
     const modal = document.getElementById('imageModal');
     const zoomedImage = document.getElementById('zoomedImage');
@@ -841,9 +836,8 @@ function closeImage() {
     const modal = document.getElementById('imageModal');
     modal.style.display = 'none'; // Cacher le modal
 }
-    
-    
-    document.getElementById('showShopButton').addEventListener('click', function(event) {
+
+document.getElementById('showShopButton').addEventListener('click', function(event) {
     event.preventDefault(); // Empêche le comportement par défaut du lien
 
     const element = document.getElementById('showShopButton');
