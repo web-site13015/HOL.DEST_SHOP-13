@@ -4,29 +4,17 @@
     <link rel="icon" href="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/d12d81c5-4994-1d15-d5dc-dbb4d433828f.jpg" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boutique en Ligne H.D.S - Produits Variés à Prix Imbattables</title>
-    
-    <!-- Meta Description -->
-    <meta name="description" content="Bienvenue dans la boutique H.D.S, votre grossiste en ligne pour tous vos besoins. Découvrez une large gamme de produits tels que Crème Deluxe pour la peau, OCB, briquets, boissons énergisantes, et bien plus. Profitez des meilleures offres !">
-    
-    <!-- Mots-clés pour le SEO -->
-    <meta name="keywords" content="boutique, H.D.S, crème Deluxe, OCB, briquets, chargeurs, boissons énergisantes, accessoires, sneakers, écouteurs Bluetooth">
-    
-    <!-- Auteur de la page -->
-    <meta name="author" content="H.D.S Boutique">
-
+    <title>Profil Public Boutique</title>
     <!-- Liens pour les polices et Font Awesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/90a4d1138d.js" crossorigin="anonymous"></script>
-
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
         /* Police Bungee Spice */
         @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
-        
         body {
             display: flex;
             justify-content: center;
@@ -36,11 +24,9 @@
             font-family: 'Roboto', sans-serif;
             margin: 0;
         }
-
         html, body {
             overflow-y: auto;
         }
-
         .profile-container {
             background-color: #fff;
             border-radius: 20px;
@@ -50,7 +36,6 @@
             text-align: center;
             position: relative;
         }
-
         .profile-image {
             width: 100px;
             height: 100px;
@@ -60,7 +45,6 @@
             object-fit: cover;
             cursor: pointer;
         }
-
         .star {
             width: 25px;
             height: 25px;
@@ -75,7 +59,6 @@
             align-items: center;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
         }
-
         .star::before {
             content: '';
             position: absolute;
@@ -87,25 +70,21 @@
                 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
             );
         }
-
         .username {
             font-size: 24px;
             font-weight: bold;
             color: #333;
             margin: 10px 0;
         }
-
         .status {
             font-size: 16px;
             color: #777;
             margin-bottom: 15px;
             cursor: pointer;
         }
-
         .bungee-spice {
             font-family: "Bungee Spice", cursive;
         }
-
         .toggle-button {
             cursor: pointer;
             display: flex;
@@ -117,15 +96,12 @@
             margin-bottom: 10px;
             transition: background-color 0.3s;
         }
-
         .toggle-button:hover {
             background-color: #ffdb00;
         }
-
         .toggle-button span {
             margin-left: 8px;
         }
-
         .content-section {
             display: none;
             border-top: 1px solid #ddd;
@@ -133,13 +109,11 @@
             padding-top: 10px;
             text-align: left;
         }
-
         .content-title {
             font-weight: bold;
             color: #6200ea;
             margin-bottom: 5px;
         }
-
         #storeIcon {
             font-size: 90px;
             background: linear-gradient(to bottom, #FF6347 50%, #1E90FF 50%);
@@ -148,12 +122,10 @@
             cursor: pointer;
             transition: transform 0.3s, filter 0.3s;
         }
-
         #storeIcon:hover {
             transform: scale(1.2);
             filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
         }
-
         .follow-button {
             display: inline-block;
             background-color: #ffeb3b;
@@ -166,16 +138,13 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
-
         .follow-button:hover {
             background-color: #ffe600;
         }
-
         .shop-section {
             display: none;
             margin-top: 48px;
         }
-
         .product {
             background: #f1f1f1;
             border-radius: 10px;
@@ -183,7 +152,6 @@
             margin: 10px 0;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-
         .product img {
             width: 100%;
             height: auto;
@@ -191,25 +159,21 @@
             object-fit: contain;
             border-radius: 5px;
         }
-
         .product-price {
             color: #4CAF50;
             font-weight: bold;
             margin: 5px 0;
         }
-
         .product-actions {
             display: flex;
             align-items: center;
             margin-top: 10px;
         }
-
         .quantity-selector {
             display: flex;
             align-items: center;
             margin-right: 10px;
         }
-
         .quantity-selector button {
             width: 25px;
             height: 25px;
@@ -218,13 +182,11 @@
             border-radius: 5px;
             cursor: pointer;
         }
-
         .quantity-selector input {
             width: 40px;
             text-align: center;
             margin: 0 5px;
         }
-
         .buy-button {
             background-color: #4CAF50;
             color: white;
@@ -234,11 +196,9 @@
             cursor: pointer;
             flex-grow: 1;
         }
-
         .buy-button:hover {
             background-color: #45a049;
         }
-
         .checkout-button {
             background-color: orange;
             color: white;
@@ -251,11 +211,9 @@
             border: none;
             transition: background-color 0.3s;
         }
-
         .checkout-button:hover {
             background-color: #e59400;
         }
-
         .form-container {
             display: none;
             background-color: #f9f9f9;
@@ -263,7 +221,6 @@
             padding: 20px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
-
         .form-container input,
         .form-container textarea,
         .form-container select {
@@ -273,33 +230,27 @@
             border-radius: 5px;
             margin: 8px 0;
         }
-
         .form-group {
             margin-bottom: 15px;
         }
-
         .form-group h4 {
             margin-bottom: 10px;
             color: #333;
         }
-
         .payment-method {
             display: flex;
             align-items: center;
             margin: 8px 0;
         }
-
         .delivery-option {
             display: flex;
             align-items: center;
             margin: 8px 0;
         }
-
         #deliveryTimeContainer {
             margin-top: 10px;
             display: none;
         }
-
         #cartModal {
             display: none;
             position: fixed;
@@ -314,7 +265,6 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
             z-index: 1000;
         }
-
         #openCartButton {
             position: fixed;
             bottom: 20px;
@@ -330,7 +280,6 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
             font-size: 24px;
         }
-
         #cartCount {
             position: absolute;
             top: -5px;
@@ -345,7 +294,6 @@
             align-items: center;
             justify-content: center;
         }
-
         .cart-item {
             display: flex;
             justify-content: space-between;
@@ -353,7 +301,6 @@
             padding: 8px 0;
             border-bottom: 1px solid #eee;
         }
-
         .cart-item button {
             background-color: #ff4444;
             color: white;
@@ -362,14 +309,12 @@
             padding: 3px 8px;
             cursor: pointer;
         }
-
         .cart-total {
             font-weight: bold;
             margin-top: 10px;
             text-align: right;
             font-size: 18px;
         }
-
         #alertModal {
             display: none;
             position: fixed;
@@ -385,7 +330,6 @@
             max-width: 80%;
             text-align: center;
         }
-
         .client-count {
             background-color: #4CAF50;
             color: white;
@@ -395,7 +339,6 @@
             font-weight: bold;
             text-align: center;
         }
-
         /* Style pour le zoom de l'image produite */
         .image-modal {
             display: none; /* Masqué par défaut */
@@ -409,7 +352,6 @@
             align-items: center;
             z-index: 1001;
         }
-
         .image-modal img {
             max-width: 90%;
             max-height: 90%;
@@ -421,22 +363,18 @@
     font-weight: 400;
     font-style: normal;
 }
-
     </style>
 </head>
 <body>
-
 <div class="profile-container">
     <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/89a59702-cad3-dfb7-580d-22fb843f8d3f.jpeg" alt="Photo de Profil" class="profile-image" id="profileImage">
     <div class="star"></div> 
     <div class="username">🗿H.D.S🇯🇲 SHOP  🛒 🛍</div>
     <div class="status bungee-spice" id="statusText">Bienvenue dans ma boutique !</div>
-
     <div class="toggle-button" id="toggleDetails">
         <span>Détails de la Boutique</span>
         <span class="material-symbols-outlined">expand_more</span>
     </div>
-
     <div class="content-section" id="profileDetails">
         <div class="content-title">Détails de la Boutique</div>
         <div class="details">Nom de la boutique : Holdest Boutique</div>
@@ -444,22 +382,18 @@
          <div class="details">Évaluations : ★★★★★ (4.8)</div>       
         <div class="details client-count" id="clientCount">Clients : 1 200+ satisfaits</div>
     </div>
-
     <div class="content-section">
         <div class="content-title">Dernière mise à jour</div>
         <div class="last-updated">1er octobre 2024</div>
     </div>
-
     <!-- Icône storefront avec interaction -->
     <div class="toggle-button" id="showShopButton">
         <span class="material-symbols-outlined" id="storeIcon">storefront</span>
     </div>
-
     <!-- Section boutique -->
     <div class="shop-section" id="shopSection">
         <div class="content-title">Produits Disponibles</div>
-
-        <!-- Produit 1 - Crème Deluxe Cobra -->
+      <!-- Produit 1 - Crème Deluxe Cobra -->
         <div class="product">
     <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/bc49a018-064b-af44-b264-1f821d3f40e0.jpg" alt="Crème Deluxe Cobra" onclick="showImage(this)">
     <div class="product-name bungee-spice">Crème Deluxe Cobra</div>
@@ -686,112 +620,132 @@
     </div>
     <p>Description : Profitez de votre musique sans fil avec ces écouteurs Bluetooth.</p>
 </div>
-
-        <!-- Modal du Panier et Formulaire -->
+  <!-- Modal du Panier et Formulaire -->
         <div id='cartModal'>
             <h3>Mon Panier</h3>
             <div id='cartItems'></div>
             <div id='cartTotal' class="cart-total">Total : 0€</div>
             <button class='checkout-button' onclick='checkout()'>Passer à la caisse</button>
-
             <!-- Formulaire commande -->
             <div id='checkoutContainer' class="form-container">
                 <h3>Finaliser votre commande</h3>
-                <form id='checkoutForm' action="https://formspree.io/f/xzzejjvk" method="POST">
-                    <div class="form-group">
-                        <input type='text' name='name' placeholder='Nom complet' required />
-                        <input type='tel' name='phone' placeholder='Téléphone' required />
-                        <textarea name='address' placeholder='Adresse de livraison' required></textarea>
-                    </div>
-                    
-                    <div class="form-group">
-                        <h4>Options de livraison</h4>
-                        <div class="delivery-option">
-                            <input type="radio" id="deliveryNow" name="deliveryTime" value="now" checked required>
-                            <label for="deliveryNow">Livraison rapide (dans l'heure)</label>
-                        </div>
-                        <div class="delivery-option">
-                            <input type="radio" id="deliveryLater" name="deliveryTime" value="later">
-                            <label for="deliveryLater">Livraison programmée</label>
-                        </div>
-                        <div id="deliveryTimeContainer">
-                            <input type="datetime-local" name="deliveryDateTime">
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <h4>Méthode de paiement</h4>
-                        <div class="payment-method">
-                            <input type="radio" id="cash" name="paymentMethod" value="cash" checked required>
-                            <label for="cash">Espèces</label>
-                        </div>
-                        <div class="payment-method">
-                            <input type="radio" id="card" name="paymentMethod" value="card">
-                            <label for="card">Carte bancaire</label>
-                        </div>
-                    </div>
-
-                    <input type='hidden' name='orderDetails' id='orderDetails'>
-                    <input type="hidden" name="_gotcha" style="display:none"> <!-- Champ caché pour la protection contre le spam -->
-                    <button type='submit' class="checkout-button">Confirmer la commande</button>
-                    <button type='button' class="checkout-button" onclick='goToCart()'>Retour au panier</button>
-                </form>
+               <form id='checkoutForm' action="https://formspree.io/f/xzzejjvk" method="POST">
+    <div class="form-group">
+        <input type='text' name='name' placeholder='Nom complet' required />
+        <input type='tel' name='phone' placeholder='Téléphone' required />
+        <textarea name='address' placeholder='Adresse de livraison' required></textarea>
+    </div>
+    <div class="form-group">
+        <h4>Options de livraison</h4>
+        <div class="delivery-option">
+            <input type="radio" id="deliveryNow" name="deliveryTime" value="now" checked required>
+            <label for="deliveryNow">Livraison rapide (dans l'heure)</label>
+        </div>
+        <div class="delivery-option">
+            <input type="radio" id="deliveryLater" name="deliveryTime" value="later">
+            <label for="deliveryLater">Livraison programmée</label>
+        </div>
+        <div id="deliveryTimeContainer">
+            <input type="datetime-local" name="deliveryDateTime">
+        </div>
+    </div>
+    <div class="form-group">
+        <h4>Méthode de paiement</h4>
+        <div class="payment-method">
+            <input type="radio" id="cash" value="cash" checked required>
+            <label for="cash">Espèces</label>
+        </div>
+        <div class="payment-method">
+            <input type="radio" id="card" name="paymentMethod" value="card">
+            <label for="card">Carte bancaire</label>
+        </div>
+    </div>
+    <input type='hidden' name='orderDetails' id='orderDetails'>
+    <input type="hidden" name="_gotcha" style="display:none">
+    <!-- Champ caché pour le code de confirmation -->
+    <input type="hidden" id="confirmationCodeInput" name="confirmationCode">
+    <button type='submit' class="checkout-button">Confirmer la commande</button>
+    <button type='button' class="checkout-button" onclick='goToCart()'>Retour au panier</button>
+</form>
             </div>
         </div>
-
         <!-- Bouton flottant pour ouvrir le panier -->
         <button id='openCartButton'>🛒<span id="cartCount">0</span></button>
     </div>
-
     <!-- Modal d'alerte -->
     <div id="alertModal" class="modal">
         <span id="alertMessage"></span>
     </div>
 </div>
-
 <!-- Zoom sur l'image -->
 <div id="imageModal" class="image-modal" onclick="closeImage()">
     <img id="zoomedImage" src="" alt="Zoomed Image">
 </div>
+<!-- Modal de confirmation -->
+<div id="confirmationModal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); text-align: center; z-index: 1001;">
+    <h2>Code de Confirmation</h2>
+    <p>Voici votre code :</p>
+    <div id="confirmationCode" style="font-weight: bold; font-size: 24px; color: red; border: 2px solid black; padding: 10px; display: inline-block; border-radius: 5px;"></div>
+    <p>Veuillez montrer ce code au livreur.</p>
+    <button id="closeModalButton" style="margin-top: 20px; padding: 10px 20px; border: none; background-color: #4CAF50; color: white; border-radius: 5px; cursor: pointer;">Fermer</button>
+</div>
+<div id="modalOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 999;"></div>
 
-<script>
+      <script>
+// Fonction pour générer un code de confirmation
+function generateConfirmationCode() {
+    return Math.floor(Math.random() * 100).toString().padStart(2, '0');
+}
+// Gérer la soumission du formulaire
+document.getElementById('checkoutForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Générer un code de confirmation
+    const confirmationCode = generateConfirmationCode();
+    // Ajouter le code au champ caché
+    document.getElementById('confirmationCodeInput').value = confirmationCode;
+    // Afficher le modal avec le code de confirmation
+    const confirmationModal = document.getElementById('confirmationModal');
+    const modalOverlay = document.getElementById('modalOverlay');
+    document.getElementById('confirmationCode').textContent = confirmationCode;
+    confirmationModal.style.display = 'block';
+    modalOverlay.style.display = 'block';
+    // Fermer le modal lorsque l'utilisateur clique sur "Fermer"
+    document.getElementById('closeModalButton').addEventListener('click', function() {
+        confirmationModal.style.display = 'none';
+        modalOverlay.style.display = 'none';
+        // Soumettre le formulaire après fermeture du modal
+        document.getElementById('checkoutForm').submit();
+    });
+});
 // Initialisation du compteur de clients
 let currentCount = 1200;
 const incrementValue = Math.floor(Math.random() * 10) + 1;
 const clientCountElement = document.getElementById('clientCount');
-
 function updateClientCount() {
     currentCount += incrementValue;
     clientCountElement.innerText = `Clients : ${currentCount.toLocaleString()} satisfaits`;
 }
-
 setInterval(updateClientCount, 5000);
-
 // Gestion des quantités
 function incrementQuantity(button) {
     const input = button.parentElement.querySelector('.quantity-input');
     input.value = parseInt(input.value) + 1;
 }
-
 function decrementQuantity(button) {
     const input = button.parentElement.querySelector('.quantity-input');
     if (input.value > 1) {
         input.value = parseInt(input.value) - 1;
     }
 }
-
 // Initialisation du panier
 let cart = [];
-
 // Ajouter un produit au panier avec quantité
 function addToCartWithQuantity(productName, price, button) {
     const productElement = button.closest('.product');
     const quantity = parseInt(productElement.querySelector('.quantity-input').value);
     const totalPrice = quantity * parseFloat(price);
-    
     // Vérifier si le produit est déjà dans le panier
     const existingItemIndex = cart.findIndex(item => item.name === productName);
-    
     if (existingItemIndex >= 0) {
         // Mettre à jour la quantité si le produit existe déjà
         cart[existingItemIndex].quantity += quantity;
@@ -805,17 +759,14 @@ function addToCartWithQuantity(productName, price, button) {
             total: totalPrice
         });
     }
-    
     updateCart();
     showAlert(`${quantity} ${productName} ajouté(s) au panier`);
 }
-
 // Mettre à jour l'affichage du panier
 function updateCart() {
     const cartItems = document.getElementById('cartItems');
     cartItems.innerHTML = '';
     let grandTotal = 0;
-
     cart.forEach((item, index) => {
         const itemElement = document.createElement('div');
         itemElement.className = 'cart-item';
@@ -827,53 +778,44 @@ function updateCart() {
         cartItems.appendChild(itemElement);
         grandTotal += item.total;
     });
-
     document.getElementById('cartTotal').innerText = `Total : ${grandTotal.toFixed(2)}€`;
     document.getElementById('cartCount').innerText = cart.reduce((sum, item) => sum + item.quantity, 0);
     document.getElementById('orderDetails').value = JSON.stringify(cart);
 }
-
 // Supprimer un produit du panier
 function removeFromCart(index) {
     cart.splice(index, 1);
     updateCart();
 }
-
 // Passer à la caisse
 function checkout() {
     if (cart.length === 0) {
         showAlert("Votre panier est vide");
         return;
     }
-    
     document.getElementById('checkoutContainer').style.display = 'block';
     document.getElementById('cartItems').style.display = 'none';
     document.querySelector('#cartModal h3').textContent = 'Finaliser la commande';
 }
-
 // Retourner au panier
 function goToCart() {
     document.getElementById('checkoutContainer').style.display = 'none';
     document.getElementById('cartItems').style.display = 'block';
     document.querySelector('#cartModal h3').textContent = 'Mon Panier';
 }
-
 // Soumettre la commande
 async function submitOrder() {
     const form = document.getElementById('checkoutForm');
     const formData = new FormData(form);
-    
     // Validation des données
     if (!formData.get('name') || !formData.get('phone') || !formData.get('address')) {
         showAlert("Veuillez remplir tous les champs obligatoires");
         return;
     }
-    
     if (formData.get('deliveryTime') === 'later' && !formData.get('deliveryDateTime')) {
         showAlert("Veuillez sélectionner une date de livraison");
         return;
     }
-    
     // Envoyer les données à Formspree
     try {
         const response = await fetch(form.action, {
@@ -883,7 +825,6 @@ async function submitOrder() {
                 'Accept': 'application/json'
             }
         });
-
         if (response.ok) {
             showAlert("Commande confirmée avec succès !");
             cart = [];
@@ -897,7 +838,6 @@ async function submitOrder() {
         showAlert("Erreur: " + error.message);
     }
 }
-
 // Gestion de la livraison programmée
 document.querySelectorAll('input[name="deliveryTime"]').forEach(radio => {
     radio.addEventListener('change', function() {
@@ -911,12 +851,10 @@ function showAlert(message) {
     const alertMessage = document.getElementById('alertMessage');
     alertMessage.textContent = message;
     alertModal.style.display = 'block';
-    
     setTimeout(() => {
         alertModal.style.display = 'none';
     }, 3000);
 }
-
 // Ouvrir et fermer le modal du panier
 document.getElementById('openCartButton').onclick = function() {
     document.getElementById('cartModal').style.display = 'block';
@@ -924,52 +862,53 @@ document.getElementById('openCartButton').onclick = function() {
     document.getElementById('cartItems').style.display = 'block';
     document.querySelector('#cartModal h3').textContent = 'Mon Panier';
 };
-
 window.onclick = function(event) {
     const cartModal = document.getElementById('cartModal');
     if (event.target === cartModal) {
         cartModal.style.display = 'none';
     }
 };
-
 // Afficher/masquer les détails du profil
 document.getElementById('toggleDetails').onclick = function() {
     const profileDetails = document.getElementById('profileDetails');
     profileDetails.style.display = profileDetails.style.display === 'block' ? 'none' : 'block';
 };
-
 // Afficher/masquer la boutique
 document.getElementById('showShopButton').onclick = function(event) {
     event.preventDefault();
     const shopSection = document.getElementById('shopSection');
     shopSection.style.display = shopSection.style.display === 'block' ? 'none' : 'block';
 };
-
 // Zoom sur l'image
 function showImage(img) {
     const modal = document.getElementById('imageModal');
     const zoomedImage = document.getElementById('zoomedImage');
-    zoomedImage.src = img.src; // Mettre l'image dans le modal
-    modal.style.display = 'flex'; // Montrer le modal
+    zoomedImage.src = img.src;
+    modal.style.display = 'flex';
 }
-
 // Fermer le zoom
 function closeImage() {
     const modal = document.getElementById('imageModal');
-    modal.style.display = 'none'; // Cacher le modal
+    modal.style.display = 'none';
 }
-
 document.getElementById('showShopButton').addEventListener('click', function(event) {
-    event.preventDefault(); // Empêche le comportement par défaut du lien
-
+    event.preventDefault();
     const element = document.getElementById('showShopButton');
     element.scrollIntoView({
-        behavior: 'smooth', // Pour un défilement en douceur
-        block: 'start'       // Aligne le haut de l'élément avec le haut de la zone visible
+        behavior: 'smooth',
+        block: 'start'
     });
 });
-
 </script>
-
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
