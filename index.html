@@ -5,9 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Public Boutique</title>
+
+    <!-- Liens pour les polices et Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/90a4d1138d.js" crossorigin="anonymous"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    
     <style>
+        /* Police Bungee Spice */
+        @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+        
         body {
             display: flex;
             justify-content: center;
@@ -81,6 +92,10 @@
             color: #777;
             margin-bottom: 15px;
             cursor: pointer;
+        }
+
+        .bungee-spice {
+            font-family: "Bungee Spice", cursive;
         }
 
         .toggle-button {
@@ -392,6 +407,13 @@
             max-height: 90%;
             border-radius: 10px;
         }
+    
+    .bungee-spice {
+    font-family: "Bungee Spice", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
     </style>
 </head>
 <body>
@@ -400,7 +422,7 @@
     <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/89a59702-cad3-dfb7-580d-22fb843f8d3f.jpeg" alt="Photo de Profil" class="profile-image" id="profileImage">
     <div class="star"></div> 
     <div class="username">🗿H.D.S🇯🇲 SHOP  🛒 🛍</div>
-    <div class="status" id="statusText">Bienvenue dans ma boutique !</div>
+    <div class="status bungee-spice" id="statusText">Bienvenue dans ma boutique !</div>
 
     <div class="toggle-button" id="toggleDetails">
         <span>Détails de la Boutique</span>
@@ -413,7 +435,7 @@
         <div class="details">Produits : 50 articles en stock</div>
          <div class="details">Évaluations : ★★★★★ (4.8)</div>       
         <div class="details client-count" id="clientCount">Clients : 1 200+ satisfaits</div>
-         </div>
+    </div>
 
     <div class="content-section">
         <div class="content-title">Dernière mise à jour</div>
@@ -429,139 +451,134 @@
     <div class="shop-section" id="shopSection">
         <div class="content-title">Produits Disponibles</div>
 
-        <!-- Produit 1 -->
+        <!-- Produit 1 - Crème Deluxe Cobra -->
         <div class="product">
-           <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/222c7052-6326-89b5-ae39-2b4543164039.jpg" alt="Bonbonne Crème Deluxe" onclick="showImage(this)">
-            <div class="product-name">OCB Slim Noir</div>
-            <div class="product-price">€20.00</div>
-            <div class="product-actions">
-                <div class="quantity-selector">
-                    <button onclick="decrementQuantity(this)">-</button>
-                    <input type="number" value="1" min="1" class="quantity-input">
-                    <button onclick="incrementQuantity(this)">+</button>
-                </div>
-                <button class="buy-button" onclick="addToCartWithQuantity('OCB Slim Noir', '20', this)">Acheter</button>
-            </div>
+    <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/bc49a018-064b-af44-b264-1f821d3f40e0.jpg" alt="Crème Deluxe Cobra" onclick="showImage(this)">
+    <div class="product-name bungee-spice">Crème Deluxe Cobra</div>
+    <div class="product-price">€25.00</div>
+    <div class="product-actions">
+        <div class="quantity-selector">
+            <button onclick="decrementQuantity(this)">-</button>
+            <input type="number" value="1" min="1" class="quantity-input">
+            <button onclick="incrementQuantity(this)">+</button>
         </div>
+        <button class="buy-button" onclick="addToCartWithQuantity('Crème Deluxe Cobra', '25', this)">Acheter</button>
+    </div>
+    <p>Description : Une crème de luxe pour une peau parfaite.</p>
+</div>
 
-        <!-- Produit 2 -->
-        <div class="product">
-            <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/222c7052-6326-89b5-ae39-2b4543164039.jpg" alt="Bonbonne Crème Deluxe" onclick="showImage(this)">
-            <div class="product-name">Bonbonne Crème Deluxe</div>
-            <div class="product-price">€30.00</div>
-            <div class="product-actions">
-                <div class="quantity-selector">
-                    <button onclick="decrementQuantity(this)">-</button>
-                    <input type="number" value="1" min="1" class="quantity-input">
-                    <button onclick="incrementQuantity(this)">+</button>
-                </div>
-                <button class="buy-button" onclick="addToCartWithQuantity('Bonbonne Crème Deluxe', '30', this)">Acheter</button>
-            </div>
+
+     <!-- Produit 2 - Fast Gaz -->
+<div class="product">
+    <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/d6ff08ad-78f0-2424-b67f-1a9f23db736c.jpeg" alt="Fast Gaz" onclick="showImage(this)">
+    <div class="product-name bungee-spice">Fast Gaz</div>
+    <div class="product-price">€20.00</div>
+    <div class="product-actions">
+        <div class="quantity-selector">
+            <button onclick="decrementQuantity(this)">-</button>
+            <input type="number" value="1" min="1" class="quantity-input">
+            <button onclick="incrementQuantity(this)">+</button>
         </div>
+        <button class="buy-button" onclick="addToCartWithQuantity('Fast Gaz', '20', this)">Acheter</button>
+    </div>
+    <p>Description : Gaz rapide pour vos besoins quotidiens.</p>
+</div>
 
-        <!-- Produit 3 -->
-        <div class="product">
-            <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/222c7052-6326-89b5-ae39-2b4543164039.jpg" alt="Bonbonne Crème Deluxe" onclick="showImage(this)">
-            <div class="product-name">Fast Gaz</div>
-            <div class="product-price">€25.00</div>
-            <div class="product-actions">
-                <div class="quantity-selector">
-                    <button onclick="decrementQuantity(this)">-</button>
-                    <input type="number" value="1" min="1" class="quantity-input">
-                    <button onclick="incrementQuantity(this)">+</button>
-                </div>
-                <button class="buy-button" onclick="addToCartWithQuantity('Fast Gaz', '25', this)">Acheter</button>
-            </div>
+<!-- Produit 3 - Canette de Coca -->
+<div class="product">
+    <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/6a1f1093-3c42-4461-4910-e78105e654f3.jpeg" alt="Canette de Coca" onclick="showImage(this)">
+    <div class="product-name bungee-spice">Canette de Coca</div>
+    <div class="product-price">€2.00</div>
+    <div class="product-actions">
+        <div class="quantity-selector">
+            <button onclick="decrementQuantity(this)">-</button>
+            <input type="number" value="1" min="1" class="quantity-input">
+            <button onclick="incrementQuantity(this)">+</button>
         </div>
+        <button class="buy-button" onclick="addToCartWithQuantity('Canette de Coca', '2', this)">Acheter</button>
+    </div>
+    <p>Description : Rafraîchissement classique dans une canette pratique.</p>
+</div>
 
-        <!-- Produit 4 -->
-        <div class="product">
-            <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/222c7052-6326-89b5-ae39-2b4543164039.jpg" alt="Bonbonne Crème Deluxe" onclick="showImage(this)">
-            <div class="product-name">Tank</div>
-            <div class="product-price">€45.00</div>
-            <div class="product-actions">
-                <div class="quantity-selector">
-                    <button onclick="decrementQuantity(this)">-</button>
-                    <input type="number" value="1" min="1" class="quantity-input">
-                    <button onclick="incrementQuantity(this)">+</button>
-                </div>
-                <button class="buy-button" onclick="addToCartWithQuantity('Tank', '45', this)">Acheter</button>
-            </div>
+<!-- Produit 4 - Canette d'Oasis Tropical -->
+<div class="product">
+    <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/a83ccfd9-060f-db68-18d5-b796f3f5004f.jpeg" alt="Canette d'Oasis Tropical" onclick="showImage(this)">
+    <div class="product-name bungee-spice">Canette d'Oasis Tropical</div>
+    <div class="product-price">€2.00</div>
+    <div class="product-actions">
+        <div class="quantity-selector">
+            <button onclick="decrementQuantity(this)">-</button>
+            <input type="number" value="1" min="1" class="quantity-input">
+            <button onclick="incrementQuantity(this)">+</button>
         </div>
+        <button class="buy-button" onclick="addToCartWithQuantity('Canette d\'Oasis Tropical', '2', this)">Acheter</button>
+    </div>
+    <p>Description : Une boisson fruitée et rafraîchissante pour les chaudes journées.</p>
+</div>
 
-        <h3>Puffs</h3>
-
-        <!-- Produit 5 -->
-        <div class="product">
-            <div class="product-name">Puff goût fraise 🍓 9000</div>
-            <div class="product-price">€15.00</div>
-            <div class="product-actions">
-                <div class="quantity-selector">
-                    <button onclick="decrementQuantity(this)">-</button>
-                    <input type="number" value="1" min="1" class="quantity-input">
-                    <button onclick="incrementQuantity(this)">+</button>
-                </div>
-                <button class="buy-button" onclick="addToCartWithQuantity('Puff goût fraise 9000', '15', this)">Acheter</button>
-            </div>
+<!-- Produit 5 - Alcool Vodka -->
+<div class="product">
+    <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/f8d0504d-2c8a-189b-08f5-3b0f48964823.jpeg" alt="Alcool Vodka" onclick="showImage(this)">
+    <div class="product-name bungee-spice">Alcool Vodka (70 cl)</div>
+    <div class="product-price">€15.00</div>
+    <div class="product-actions">
+        <div class="quantity-selector">
+            <button onclick="decrementQuantity(this)">-</button>
+            <input type="number" value="1" min="1" class="quantity-input">
+            <button onclick="incrementQuantity(this)">+</button>
         </div>
+        <button class="buy-button" onclick="addToCartWithQuantity('Alcool Vodka', '15', this)">Acheter</button>
+    </div>
+    <p>Description : Vodka de qualité supérieure pour vos soirées.</p>
+</div>
 
-        <!-- Produit 6 -->
-        <div class="product">
-            <div class="product-name">Puff goût myrtille 15000</div>
-            <div class="product-price">€18.00</div>
-            <div class="product-actions">
-                <div class="quantity-selector">
-                    <button onclick="decrementQuantity(this)">-</button>
-                    <input type="number" value="1" min="1" class="quantity-input">
-                    <button onclick="incrementQuantity(this)">+</button>
-                </div>
-                <button class="buy-button" onclick="addToCartWithQuantity('Puff goût myrtille 15000', '18', this)">Acheter</button>
-            </div>
+<!-- Produit 6 - Chargeur Rapide Allume Cigarette -->
+<div class="product">
+    <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/1dda42ab-34ae-13a0-11ce-f5dcf16750a4.jpeg" alt="Chargeur Rapide Allumé Cigarette" onclick="showImage(this)">
+    <div class="product-name bungee-spice">Chargeur Rapide Allume Cigarette</div>
+    <div class="product-price">€12.00</div>
+    <div class="product-actions">
+        <div class="quantity-selector">
+            <button onclick="decrementQuantity(this)">-</button>
+            <input type="number" value="1" min="1" class="quantity-input">
+            <button onclick="incrementQuantity(this)">+</button>
         </div>
+        <button class="buy-button" onclick="addToCartWithQuantity('Chargeur Rapide Allume Cigarette', '12', this)">Acheter</button>
+    </div>
+    <p>Description : Chargeur rapide pour vos appareils, idéal pour les déplacements.</p>
+</div>
 
-        <!-- Produit 7 -->
-        <div class="product">
-            <div class="product-name">Snouss Pablo Escobar</div>
-            <div class="product-price">€10.00</div>
-            <div class="product-actions">
-                <div class="quantity-selector">
-                    <button onclick="decrementQuantity(this)">-</button>
-                    <input type="number" value="1" min="1" class="quantity-input">
-                    <button onclick="incrementQuantity(this)">+</button>
-                </div>
-                <button class="buy-button" onclick="addToCartWithQuantity('Snouss Pablo Escobar', '10', this)">Acheter</button>
-            </div>
+<!-- Produit 7 - Nike TN -->
+<div class="product">
+    <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/2c645765-5df4-27c4-c8d5-798f09b5da45.jpeg" alt="Nike TN" onclick="showImage(this)">
+    <div class="product-name bungee-spice">Nike TN</div>
+    <div class="product-price">€80.00</div>
+    <div class="product-actions">
+        <div class="quantity-selector">
+            <button onclick="decrementQuantity(this)">-</button>
+            <input type="number" value="1" min="1" class="quantity-input">
+            <button onclick="incrementQuantity(this)">+</button>
         </div>
+        <button class="buy-button" onclick="addToCartWithQuantity('Nike TN', '80', this)">Acheter</button>
+    </div>
+    <p>Description : Sneakers Nike TN, confort et style au quotidien.</p>
+</div>
 
-        <h3>Boissons</h3>
-
-        <!-- Produit 8 -->
-        <div class="product">
-            <div class="product-name">Coco</div>
-            <div class="product-price">€2.00</div>
-            <div class="product-actions">
-                <div class="quantity-selector">
-                    <button onclick="decrementQuantity(this)">-</button>
-                    <input type="number" value="1" min="1" class="quantity-input">
-                    <button onclick="incrementQuantity(this)">+</button>
-                </div>
-                <button class="buy-button" onclick="addToCartWithQuantity('Coco', '2', this)">Acheter</button>
-            </div>
+<!-- Produit 8 - Casque Écouteurs Sans Fil Bluetooth -->
+<div class="product">
+    <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/e0285ed8-8ed9-f98a-34dc-f69c58a2478f.jpeg" alt="Casque Écouteurs Sans Fil Bluetooth" onclick="showImage(this)">
+    <div class="product-name bungee-spice">Casque Écouteurs Sans Fil Bluetooth</div>
+    <div class="product-price">€30.00</div>
+    <div class="product-actions">
+        <div class="quantity-selector">
+            <button onclick="decrementQuantity(this)">-</button>
+            <input type="number" value="1" min="1" class="quantity-input">
+            <button onclick="incrementQuantity(this)">+</button>
         </div>
-
-        <!-- Produit 9 -->
-        <div class="product">
-            <div class="product-name">Fanta</div>
-            <div class="product-price">€2.00</div>
-            <div class="product-actions">
-                <div class="quantity-selector">
-                    <button onclick="decrementQuantity(this)">-</button>
-                    <input type="number" value="1" min="1" class="quantity-input">
-                    <button onclick="incrementQuantity(this)">+</button>
-                </div>
-                <button class="buy-button" onclick="addToCartWithQuantity('Fanta', '2', this)">Acheter</button>
-            </div>
-        </div>
+        <button class="buy-button" onclick="addToCartWithQuantity('Casque Écouteurs Sans Fil Bluetooth', '30', this)">Acheter</button>
+    </div>
+    <p>Description : Profitez de votre musique sans fil avec ces écouteurs Bluetooth.</p>
+</div>
 
         <!-- Modal du Panier et Formulaire -->
         <div id='cartModal'>
@@ -607,10 +624,8 @@
                         </div>
                     </div>
 
-                    <!-- Champ caché pour Formspree -->
-                    <input type="hidden" name="_gotcha" style="display:none"> 
-
                     <input type='hidden' name='orderDetails' id='orderDetails'>
+                    <input type="hidden" name="_gotcha" style="display:none"> <!-- Champ caché pour la protection contre le spam -->
                     <button type='submit' class="checkout-button">Confirmer la commande</button>
                     <button type='button' class="checkout-button" onclick='goToCart()'>Retour au panier</button>
                 </form>
@@ -761,7 +776,7 @@ async function submitOrder() {
                 'Accept': 'application/json'
             }
         });
-        
+
         if (response.ok) {
             showAlert("Commande confirmée avec succès !");
             cart = [];
