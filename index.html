@@ -1,2971 +1,859 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<!-- Snap Pixel Code -->
-<script type='text/javascript'>
-(function(e,t,n){if(e.snaptr)return;var a=e.snaptr=function()
-{a.handleRequest?a.handleRequest.apply(a,arguments):a.queue.push(arguments)};
-a.queue=[];var s='script';r=t.createElement(s);r.async=!0;
-r.src=n;var u=t.getElementsByTagName(s)[0];
-u.parentNode.insertBefore(r,u);})(window,document,
-'https://sc-static.net/scevent.min.js');
-
-snaptr('init', '7a43b018-1c82-4155-9886-876ed4eb102b', {});
-
-snaptr('track', 'PAGE_VIEW');
-
-</script>
-<!-- End Snap Pixel Code -->
-
-  
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-KXVM16T20X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-KXVM16T20X');
-</script>
-    <!-- URL canonique (pratique pour éviter le contenu dupliqué) -->
-    <link rel="canonical" href="https://web-site13015.github.io/tsh_shop13/">
-   <!-- Charset et autres informations -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <!-- Twitter Card (si vous souhaitez un rendu optimisé sur Twitter) -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="TSH shop Profil Public Boutique">
-    <meta name="twitter:description" content="Découvrez le profil public de the holder et explorez sa boutique en ligne proposant des produits uniques et de qualité.">
-    <meta name="twitter:image" content="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/c5b0223d-f147-e0a5-7a10-613ef3d99567.jpg">
-   <!-- Social Media: Open Graph pour partager sur Facebook, Twitter, etc. -->
-    <meta property="og:title" content="TSH SHOP Profil Public Boutique">
-    <meta property="og:description" content="Découvrez et explorez la boutique en ligne offrant des produits uniques et des avantages spéciaux pour les noctambules.">
-    <meta property="og:image" content="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/83268e94-4952-4778-55c3-4d03c795192d.jpg">
-    <meta property="og:url" content="https://web-site13015.github.io/tsh_shop13/">
-    <meta property="og:type" content="website">
-
-  <link rel="icon" href="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/c5b0223d-f147-e0a5-7a10-613ef3d99567.jpg" type="image/png">
-  
-  <!-- Préconnecter les serveurs Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Lien pour importer la police Playfair Display -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-      <meta charset="UTF-8">
+    <link rel="icon" href="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/d12d81c5-4994-1d15-d5dc-dbb4d433828f.jpg" type="image/png">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Découvrez notre boutique en ligne proposant des produits uniques de haute qualité. Contactez-nous pour plus d'informations.">
-    <meta name="keywords" content="boutique, produits uniques, Marseille, Bonbonne, Livraison à domicile,  achats en ligne">
-    <title>🇯🇲 The strongest 🗿 holder shop 🛍</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/90a4d1138d.js" crossorigin="anonymous"></script>
+    <title>Profil Public Boutique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <style>
-          /* Style global pour le bouton */
-.settings-btn {
-    background-color: #28a745; /* Couleur verte, souvent associée à la navigation */
-    border: none;
-    color: white; /* Texte en blanc */
-    padding: 12px 25px; /* Espacement interne */
-    font-size: 16px; /* Taille de la police */
-    text-align: center;
-    display: inline-flex; /* Flexbox pour centrer le texte et l'emoji */
+        body {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    border-radius: 30px; /* Coins arrondis */
-    cursor: pointer;
-    transition: all 0.3s ease; /* Transition fluide pour les effets */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police moderne */
-    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3); /* Ombre légère */
-    margin: 10px 0; /* Espacement autour du bouton */
+    min-height: 100vh; /* Change height en min-height */
+    background-color: #333;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
 }
 
-/* Effet au survol du bouton */
-.settings-btn:hover {
-    background-color: #218838; /* Couleur plus foncée au survol */
-    transform: translateY(-2px); /* Légère remontée pour l'effet de survol */
-    box-shadow: 0 6px 12px rgba(40, 167, 69, 0.4); /* Ombre plus marquée */
+html, body {
+    overflow-y: auto; /* Permet le défilement vertical */
 }
 
-/* Style pour l'emoji dans le bouton */
-.settings-btn span {
-    margin-left: 10px; /* Espacement entre le texte et l'emoji */
-    font-size: 20px; /* Taille de l'emoji */
-    transition: transform 0.3s ease;
-}
 
-/* Effet sur l'emoji au survol */
-.settings-btn:hover span {
-    transform: scale(1.1); /* L'emoji devient légèrement plus grand au survol */
-}
-        /* Styles globaux */    
-    body {
-  font-family: "Playfair Display", serif;
-      background-image: url('https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/83268e94-4952-4778-55c3-4d03c795192d.jpg'); /* Chemin vers l'image de fond */
- /* Empêche la répétition de l'image */
-  background-size: contain; /* Ajuste l'image pour qu'elle soit entièrement visible */
-  /* Centre l'image dans la fenêtre */
-  background-color: #ffffff; /* Couleur de fond si l'image ne remplit pas tout */
-  margin: 0;
-  padding: 5px;
-  color: #333; /* Optionnel, pour que le texte soit blanc sur un fond sombre */
-    }
-        /* Conteneur principal */
-        .container {         
-            max-width: 700px;
-            margin: auto;
-            background-image: url('https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/bdaf7f2b-dedf-4816-1f47-04bcf5078c30.jpg'); /* Ajout de l'image de fond */
-            background-size: cover; /* Pour couvrir toute la zone du conteneur */
-             /* Centrer l'image */
-            padding: 5px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border: 1px solid #dfe3e8;
-            overflow: hidden; /* Pour éviter le débordement du contenu */
-        }
-
-        /* Titre avec animation de défilement */
-        .scrolling-title {
-            white-space: nowrap;
-            overflow: hidden;
-            box-sizing: border-box;
-            animation: scrolling 15s linear infinite;
-            font-size: 2.5em;
-            color: #0088cc;
-            text-align: center;
-            border-bottom: 1px solid #dfe3e8;
-            padding-bottom: 10px;
-        }
-
-        @keyframes scrolling {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-.scrolling-title {
-    animation-play-state: running;
-}
-.scrolling-title:hover {
-    animation-play-state: paused;
-}
-        /* Profil */
-        .profile-card {
-            display: flex;
-            flex-direction: column; /* Adapté aux mobiles */
-            align-items: center; /* Centre le contenu */
+        .profile-container {
+            background-color: #fff;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: 350px;
             padding: 20px;
-            border-bottom: 1px solid #dfe3e8;
-        }
-
-        .profile-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 10px; /* Ajout d'espace en bas */
-        }
-
-        .profile-pic {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            border: 2px solid #0088cc;
-            margin-right: 15px;
-        }
-
-        .profile-info h1 {
-            font-size: 1.5em;
-            color: #333;
-            margin: 0;
-            display: flex;
-            align-items: center;
-        }
-
-        .profile-info p {
-            color: #666;
-            margin: 5px 0;
-            font-size: 0.9em;
-        }
-
-        /* Badge vérifié Telegram */
-        .verified-badge {
-            color: #0088cc;
-            margin-left: 8px;
-            font-size: 1.2em;
-        }
-
-        /* Statut Boutique */
-#status-text {
-    font-size: 1em; /* taille de texte */
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px; /* pour espacer le cercle et le texte */
-}
-
-.status-circle {
-    display: inline-block;
-    width: 20px; /* taille du cercle */
-    height: 20px; /* taille du cercle */
-    border-radius: 50%;
-}
-
-.status-online {
-    background-color: green; /* cercle vert pour ouvert */
-}
-
-.status-offline {
-    background-color: red; /* cercle rouge pour fermé */
-}
-
-#status-message {
-    font-size: 1.1em; /* taille du message */
-}
-
- .container {
-    position: relative;
-    text-align: center;
-}
-
-.boutique {
-    display: inline-block;
-    font-size: 20px;
-    color: #ffffff;
-    background-color: #3498db;
-    padding: 12px 24px;
-    text-align: center;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin-bottom: 50px; /* Espacement supplémentaire pour éloigner la main */
-}
-
-.boutique:hover {
-    background-color: #2980b9;
-}
-
-.hand {
-    position: absolute;
-    top: 45%; /* Moins collé, plus haut */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    animation: moveHand 3s ease-in-out infinite;
-    font-size: 50px;
-    pointer-events: none;
-}
-
-@keyframes moveHand {
-    0% {
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    50% {
-        top: 55%;
-        left: 55%;
-        transform: translate(-50%, -50%) rotate(10deg);
-    }
-    100% {
-        top: 45%;
-        left: 50%;
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-}
-
-.hand .emoji {
-    display: inline-block;
-    animation: shake 1.5s ease-in-out infinite;
-}
-
-@keyframes shake {
-    0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(-5deg);
-    }
-    50% {
-        transform: rotate(5deg);
-    }
-    75% {
-        transform: rotate(-5deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-      }
-
-
-      
-        /* Icône de boutique */
-        .shop-icon {
             text-align: center;
-            cursor: pointer;
-            margin-top: 20px; /* Ajout d'espace au-dessus */
+            position: relative;
         }
 
-        .shop-icon i {
-            font-size: 2em;
-            color: #fff;
-            background: linear-gradient(135deg, #ff4757, #1e90ff); /* Dégradé rouge à bleu */
+        .profile-image {
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
+            border: 3px solid #ffeb3b;
+            margin: 10px auto;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .star {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            top: 101px;
+            left: 60%;
+            transform: translate(-50%, 0);
+            background-color: #ffeb3b;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .star::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #000;
+            clip-path: polygon(
+                50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 
+                50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
+            );
+        }
+
+        .username {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .status {
+            font-size: 16px;
+            color: #777;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+
+        .toggle-button {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #ffeb3b;
             padding: 10px;
-            transition: transform 0.3s ease;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
         }
 
-        .shop-icon p {
-            margin-top: 5px;
-            font-size: 1em;
-            color: #333;
+        .toggle-button:hover {
+            background-color: #ffdb00;
         }
 
-        .shop-icon:hover i {
-            transform: scale(1.1);
+        .toggle-button span {
+            margin-left: 8px;
         }
 
-       /* Section boutique */
-.shop-section {
-    display: none;
-    margin-top: 20px;
-  width: 110%;
-}
+        .content-section {
+            display: none;
+            border-top: 1px solid #ddd;
+            margin-top: 15px;
+            padding-top: 10px;
+            text-align: left;
+        }
 
-.shop-items {
-    display: flex;
-    justify-content: space-between;
-    gap: 5px; /* Ajoute un espacement horizontal entre les éléments côte à côte */
-}
+        .content-title {
+            font-weight: bold;
+            color: #6200ea;
+            margin-bottom: 5px;
+        }
 
-.shop-item {
-  margin: auto;
-    width: 60%;
-    text-align: center;
-    background-color: #f9f9f9;
-    padding: 2px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+        #storeIcon {
+            font-size: 90px;
+            background: linear-gradient(to bottom, #FF6347 50%, #1E90FF 50%);
+            -webkit-background-clip: text;
+            color: transparent;
+            cursor: pointer;
+            transition: transform 0.3s, filter 0.3s;
+        }
+
+        #storeIcon:hover {
+            transform: scale(1.2);
+            filter: drop-shadow(2px 4px 6px rgba(0, 0, 0, 0.3));
+        }
+
+        .follow-button {
+            display: inline-block;
+            background-color: #ffeb3b;
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .follow-button:hover {
+            background-color: #ffe600;
+        }
+
+        .shop-section {
+            display: none;
+            margin-top: 48px;
+        }
+
+        .product {
+            background: #f1f1f1;
+            border-radius: 10px;
+            padding: 15px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
     
-    margin-bottom: 5px; /* Espacement sous chaque article */
-}
 
-.shop-item:hover {
-    transform: scale(1.05);
-}
+        .product img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: contain;
+            border-radius: 5px;
+        }
 
-.shop-item img {
-    width: 100%; /* Assure que l'image prend toute la largeur du parent */
-    height: 100px; /* Fixe une hauteur constante pour toutes les images */
-    object-fit: cover; /* Cela permet à l'image de couvrir la zone sans déformation */
-    border-radius: 8px;
-    margin-bottom: 10px;
-    cursor: pointer; /* Change le curseur au survol */
-}
+        .product-price {
+            color: #4CAF50;
+            font-weight: bold;
+            margin: 5px 0;
+        }
 
+        .product-actions {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
 
-      /* Réduire l'espacement entre l'image et le titre du produit */
-.shop-item img {
-    margin-bottom: -25px; /* Réduit l'espacement sous l'image */
-}
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            margin-right: 10px;
+        }
 
+        .quantity-selector button {
+            width: 25px;
+            height: 25px;
+            background-color: #ffeb3b;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-/* Réduire l'espacement entre le titre et la description du produit */
-.shop-item h4 {
-    margin-bottom: -10px; /* Réduit l'espacement sous le titre */
-}
+        .quantity-selector input {
+            width: 40px;
+            text-align: center;
+            margin: 0 5px;
+        }
 
-/* Réduire l'espacement entre la description et le prix */
-.shop-item p {
-    margin-bottom: -2px; /* Réduit l'espacement sous la description */
-}
+        .buy-button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 8px 15px;
+            cursor: pointer;
+            flex-grow: 1;
+        }
 
-/* Garder l'espacement normal pour le prix */
-.shop-item .price {
-  margin-bottom: -50px; 
-    margin-top: 5px; /* Réduit l'espacement au-dessus du prix */
-}
+        .buy-button:hover {
+            background-color: #45a049;
+        }
 
-/* Lightbox pour l'image en plein écran */
-.fullscreen-img {
-    display: none; /* Masqué par défaut */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8); /* Fond sombre */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    cursor: pointer; /* Clic pour fermer */
-}
+        .checkout-button {
+            background-color: orange;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            margin-top: 15px;
+            width: 100%;
+            border: none;
+            transition: background-color 0.3s;
+        }
 
-.fullscreen-img img {
-    max-width: 90%;
-    max-height: 90%;
-    object-fit: contain;
-    border-radius: 8px;
-}
+        .checkout-button:hover {
+            background-color: #e59400;
+        }
 
-/* Autres styles pour les descriptions et les boutons */
-.shop-item h3 {
-    margin-bottom: 5px;
-}
+        .form-container {
+            display: none;
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
 
-.shop-item p {
-    color: #333;
-    margin: 5px 0; /* Ajuste les marges */
-}
+        .form-container input,
+        .form-container textarea,
+        .form-container select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 8px 0;
+        }
 
-.shop-item .price {
-    color: #e74c3c;
-    font-weight: bold;
-    margin: 5px 0;
-}
+        .form-group {
+            margin-bottom: 15px;
+        }
 
-.buy-button {
-    background-color: #0088cc;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 0.9em;
-    transition: background-color 0.3s;
-    margin-top: 10px;
-}
-
-.buy-button:hover {
-    background-color: #0056b3;
-}
-  
-         /* Styles du panier */
-         .cart {
-    display: none; /* Ou 'block' si tu veux qu'il soit visible par défaut */
-    background-color: #f0f8ff;
-    border: 1px solid #0088cc;
-    padding: 15px;
-    border-radius: 10px;
-    position: fixed; /* Position fixe */
-    top: 20px; /* Distance du haut de l'écran */
-    right: 20px; /* Distance de la droite de l'écran */
-    z-index: 1000; /* S'assure que le panier soit au-dessus des autres éléments */
-    max-width: 300px; /* Largeur maximale pour le panier */
-    max-height: 240px; /* Limite à environ 3 produits (ajustez selon la hauteur réelle des produits) */
-    overflow-y: auto; /* Permet de faire défiler le contenu si nécessaire */
-}
-        
-/* Style pour la mention "Livraison incluse" */
-.delivery-info {
-    color: green; /* Texte en vert pour "Livraison" */
-    font-size: 14px; /* Taille de police normale */
-    font-style: italic; /* Texte en italique */
-    margin-top: 5px; /* Espacement avec l'élément précédent */
-}
-
-/* Encadrement uniquement pour le mot "incluse" */
-.included-box {
-    color: white; /* Texte en blanc pour contraste */
-    background-color: green; /* Fond vert pour le mot "incluse" */
-    border: 2px solid green; /* Bordure verte autour du mot */
-    border-radius: 8px; /* Coins arrondis */
-    padding: 2px 6px; /* Espacement interne pour un look aéré */
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Ombre subtile autour du mot */
-    display: inline-block; /* Applique l'encadrement uniquement au mot "incluse" */
-}
-
-
-
-        /* Autres styles du panier */
-        .cart h3 {
-            margin: 0;
+        .form-group h4 {
+            margin-bottom: 10px;
             color: #333;
+        }
+
+        .payment-method {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+        }
+
+        .delivery-option {
+            display: flex;
+            align-items: center;
+            margin: 8px 0;
+        }
+
+        #deliveryTimeContainer {
+            margin-top: 10px;
+            display: none;
+        }
+
+        #cartModal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            width: 320px;
+            max-width: 90%;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        #openCartButton {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ffeb3b;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            font-size: 24px;
+        }
+
+        #cartCount {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .cart-item {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 10px;
+            align-items: center;
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
         }
 
-        .cart-item span {
-            color: #666;
-        }
-
-        .remove-button {
-            background-color: #ff4757;
+        .cart-item button {
+            background-color: #ff4444;
             color: white;
             border: none;
-            padding: 5px 10px;
-            border-radius: 5px;
+            border-radius: 3px;
+            padding: 3px 8px;
             cursor: pointer;
         }
 
-        .remove-button:hover {
-            background-color: #c0392b;
-        }
-
-        .total {
+        .cart-total {
             font-weight: bold;
-            font-size: 1.1em;
-            color: #333;
             margin-top: 10px;
+            text-align: right;
+            font-size: 18px;
         }
 
-        #email {
-            font-size: 1em; /* Taille de police */
-            color: #333; /* Couleur du texte */
-            margin-top: 10px; /* Espace au-dessus */
+        #alertModal {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 1001;
+            max-width: 80%;
+            text-align: center;
         }
 
-        #email i {
-            margin-right: 5px; /* Espace entre l'icône et le texte */
+        .client-count {
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px;
+            border-radius: 8px;
+            margin: 10px 0;
+            font-weight: bold;
+            text-align: center;
         }
-
-        /* Styles responsives */
-        @media (max-width: 768px) {
-            .shop-item {
-                width: calc(50% - 10px); /* Deux éléments par ligne pour les écrans plus petits */
-            }
-        }
-
-        @media (max-width: 480px) {
-            .shop-item {
-                width: 100%; /* Un élément par ligne pour les petits écrans */
-            }
-
-            .scrolling-title {
-                font-size: 2em; /* Ajuste la taille du titre sur petits écrans */
-            }
-        }
-    
-    #toggle-cart-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    background-color: #0088cc;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    padding: 15px;
-    width: 60px;
-    height: 60px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    font-size: 18px;
-    }
-    
-    .order-form {
-    display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    z-index: 1001;
-    width: 90%;
-    max-width: 500px;
-}
-.order-form h3 {
-    margin-bottom: 20px;
-    color: #333;
-}
-.order-form input[type="text"],
-.order-form input[type="tel"] {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-.order-form button {
-    background-color: #0088cc;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-.order-form button:hover {
-    background-color: #0056b3;
-}
-#lightbox {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
-#lightbox-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    max-width: 90%; /* Limite la largeur du contenu */
-    max-height: 90%; /* Limite la hauteur du contenu */
-    overflow: hidden; /* Évite le débordement */
-}
-
-#lightbox-img {
-    max-width: 100%; /* Limite la largeur de l'image à celle du conteneur */
-    max-height: 80vh; /* Limite la hauteur de l'image pour laisser de la place au bouton */
-}
-
-button {
-    margin-top: 10px; /* Espace entre l'image et le bouton */
-}
-
-.product-image {
-    width: 100px;
-    cursor: pointer;
-}
-        
-    /* Style du modale */
-.modal {
-    display: none; /* Caché par défaut */
-    position: fixed;
-    z-index: 1; /* Au-dessus du contenu */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-}
-
-.modal-content {
-    background-color: #333;
-    padding: 20px;
-    border-radius: 8px;
-    width: 300px;
-    text-align: center;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: #fff;
-    text-decoration: none;
-    cursor: pointer;
-}
-    
-/* Bouton des paramètres */
-.settings-btn {
-    background-color: transparent;
-    border: none;
-    color: #3498db;
-    cursor: pointer;
-    font-size: 16px;
-    margin-left: 10px;
-}
-
-        /* Style global pour le bouton */
-.settings-btn {
-    background-color: #28a745; /* Couleur verte, souvent associée à la navigation */
-    border: none;
-    color: white; /* Texte en blanc */
-    padding: 12px 25px; /* Espacement interne */
-    font-size: 16px; /* Taille de la police */
-    text-align: center;
-    display: inline-flex; /* Flexbox pour centrer le texte et l'emoji */
-    align-items: center;
-    border-radius: 30px; /* Coins arrondis */
-    cursor: pointer;
-    transition: all 0.3s ease; /* Transition fluide pour les effets */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police moderne */
-    box-shadow: 0 4px 8px rgba(40, 167, 69, 0.3); /* Ombre légère */
-    margin: 10px 0; /* Espacement autour du bouton */
-}
-
-/* Effet au survol du bouton */
-.settings-btn:hover {
-    background-color: #218838; /* Couleur plus foncée au survol */
-    transform: translateY(-2px); /* Légère remontée pour l'effet de survol */
-    box-shadow: 0 6px 12px rgba(40, 167, 69, 0.4); /* Ombre plus marquée */
-}
-
-/* Style pour l'emoji dans le bouton */
-.settings-btn span {
-    margin-left: 10px; /* Espacement entre le texte et l'emoji */
-    font-size: 20px; /* Taille de l'emoji */
-    transition: transform 0.3s ease;
-}
-
-/* Effet sur l'emoji au survol */
-.settings-btn:hover span {
-    transform: scale(1.1); /* L'emoji devient légèrement plus grand au survol */
-}
-
-
-    
-/* Style pour la fenêtre des paramètres */
-.settings-popup {
-    position: absolute;
-    top: 20%;
-    right: 10%;
-    width: 250px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    border-radius: 8px;
-    display: none;
-}
-
-
-/* Style de la flèche */
-#arrow-icon {
-    transition: transform 0.3s ease;
-}
-    
-    
-    h3 {
-    text-align: center;  /* Centre le texte horizontalement */
-    margin: 0;           /* Enlève les marges par défaut */
-    padding: 20px 0;     /* Ajoute de l'espace autour du texte (optionnel) */
-}
-  
-      /* Bouton circulaire flottant */
-  #toggle-cart-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
-    background-color: #ffcc00;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    padding: 15px;
-    width: 60px;
-    height: 60px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    font-size: 18px;
-}
-   
-  
-  /* Shop details */
-.shop-details {
-    margin-top: 10px; /* Espacement entre la section et le contenu précédent */
-    padding: 5px 10px; /* Espacement interne compact */
-    border: 2px solid rgba(0, 0, 0, 0.4); /* Bordure initiale fine et semi-transparente */
-    border-radius: 5px; /* Coins légèrement arrondis */
-    background: rgba(255, 255, 255, 0.6); /* Fond semi-transparent blanc */
-    backdrop-filter: blur(5px); /* Applique un effet de flou */
-    -webkit-backdrop-filter: blur(5px); /* Compatibilité pour Safari */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Ombre subtile pour ajouter de la profondeur */
-    transition: border 0.3s ease-in-out; /* Transition douce pour la bordure */
-}
-
-/* Effet animé de la bordure */
-.shop-details:hover {
-    border: 2px solid #b858bf; /* Changer la couleur de la bordure au survol (ex : violet pour Instagram) */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre un peu plus forte pour un effet de survol */
-}
-
-/* Shop details h5 */
-.shop-details h5 {
-    font-size: 15px; /* Taille réduite pour le titre */
-    color: #333; /* Couleur sombre pour le titre */
-    margin: 0; /* Supprime les marges autour du titre */
-}
-
-.shop-details p {
-    font-size: 14px; /* Taille compacte pour le texte */
-    color: #555; /* Couleur légèrement plus claire */
-    margin: 2px 0; /* Très peu d'espace entre les paragraphes */
-    line-height: 1.2; /* Espacement serré entre les lignes */
-}
   
   
-  /* Conteneur des icônes */
-.social-icons {
-    margin-top: 10px; /* Espacement au-dessus */
-    display: flex; /* Disposition en ligne */
-    gap: 15px; /* Espacement entre les icônes */
-    justify-content: flex-start; /* Alignement des icônes à gauche */
-}
-
-/* Styles communs pour chaque icône */
-.social-icons i {
-    font-size: 24px; /* Taille des icônes */
-    width: 50px; /* Largeur du cercle */
-    height: 50px; /* Hauteur du cercle */
-    line-height: 50px; /* Centrage vertical du texte */
-    text-align: center; /* Centrage horizontal du texte */
-    border-radius: 50%; /* Cercle parfait */
-    border: 3px solid transparent; /* Contour initial transparent */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation douce */
-    color: white; /* Couleur de l'icône par défaut */
-}
-
-/* Snapchat */
-.social-icons i.fa-snapchat {
-    background-color: #FFFC00; /* Fond jaune Snapchat */
-    border: 2px solid #FFC107; /* Contour jaune clair */
-    color: black; /* Icône noire Snapchat */
-}
-
-/* TikTok */
-.social-icons i.fa-tiktok {
-    background: linear-gradient(45deg, #25F4EE, #FE2C55); /* Dégradé TikTok */
-    border: 2px solid #FE2C55; /* Contour rose TikTok */
-    color: white; /* Icône blanche TikTok */
-}
-
-/* Instagram */
-.social-icons i.fa-instagram {
-    background: linear-gradient(45deg, #FEDA77, #DD2A7B, #8134AF); /* Dégradé Instagram */
-    border: 2px solid #DD2A7B; /* Contour rose Instagram */
-    color: white; /* Icône blanche Instagram */
-}
-
-/* Effets au survol */
-.social-icons i:hover {
-    transform: scale(1.1); /* Agrandir légèrement au survol */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre douce */
-}
   
-  #cookie-banner {
-    animation: slide-up 0.5s ease-in-out;
-}
-
-@keyframes slide-up {
-    from {
-        transform: translateY(100%);
-    }
-    to {
-        transform: translateY(0);
-    }
-}
-
-        
-          .separator-image {
-    max-width: 100%; /* L'image ne dépasse pas la largeur du conteneur */
-    height: auto; /* Maintient les proportions de l'image */
-    border-radius: 15px; /* Coins arrondis */
-    margin: 0 auto; /* Centre l'image horizontalement */
-    display: block; /* Assure que l'image est bien un élément de bloc */
-    object-fit: cover; /* Gère le contenu de l'image si elle dépasse ses limites */
-          }
-
-        
-          .separator-section {
-    background: linear-gradient(135deg, #000000, #333333); /* Dégradé de noir à gris foncé */
-    color: #ff4081; /* Une couleur rose néon pour les titres */
-    text-align: center;
-    padding: 5px;
-    margin: 10px auto;
-    border-radius: 15px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Ombre plus marquée pour un côté street */
-    border: 3px solid #ff4081; /* Bordure rose pour accentuer le côté néon */
-}
-
-.separator-section h2 {
-    font-size: 32px;
-    font-weight: 50;
-    margin-bottom: 15px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #ff4081; /* Rose néon pour un effet percutant */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Ombre de texte pour plus de profondeur */
-}
-
-.separator-section p {
-    font-size: 18px;
-    line-height: 1.6;
-    font-family: 'Arial', sans-serif;
-    color: #ffffff; /* Texte blanc pour une bonne lisibilité sur fond sombre */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Ombre de texte subtile pour renforcer le contraste */
+   /* Style pour le zoom de l'image produite */
+        .image-modal {
+            display: none; /* Masqué par défaut */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1001;
         }
 
-        .success-message {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #f8f9fa;
-    color: #28a745;
-    padding: 20px;
-    border: 2px solid #28a745;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    z-index: 1000;
-}
-.success-message button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 1em;
-}
-.success-message button:hover {
-    background-color: #218838;
-}
-
-     
-        .waiting-status {
-        text-align: center;
-        background: linear-gradient(to bottom, #ffe6e6, #ffd9b3);
-        border: 2px solid #ff0000;
-        border-radius: 12px;
-        padding: 5px;
-        max-width: 320px;
-        margin: 30px auto;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    }
-
-    .waiting-status h1 {
-        font-size: 14px;
-        color: #d9534f;
-        margin-bottom: 5px;
-    }
-
-    .queue-visual {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        margin: 15px 0;
-    }
-
-    .person {
-        font-size: 24px;
-        animation: bounce 1.5s infinite;
-    }
-
-    .dots {
-        font-size: 35px;
-        color: #888;
-    }
-#queue-count {
-    font-size: 28px;
-    font-weight: bold;
-    color: #ffcc00;
-}
-    .queue-visual .person:nth-child(odd) {
-        animation-delay: 0.3s;
-    }
-
-    @keyframes bounce {
-        0%, 100% {
-            transform: translateY(0);
+        .image-modal img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
         }
-        50% {
-            transform: translateY(-10px);
-        }
-    }
-
-    .reservation-button {
-      background-color: #ff6600;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .reservation-button:hover {
-      background-color: #e65c00;
-    }
-
-  
-    .modal {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-
-    .modal-content {
-      background-color: #DFC57B;
-      padding: 25px;
-      border-radius: 10px;
-      width: 90%;
-      max-width: 700px;
-      max-height: 85%;
-      overflow-y: auto;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-      text-align: center;
-    }
-
-    .product-gallery, .event-gallery {
-      margin: 20px 0;
-    }
-
-    .gallery-section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 15px;
-    }
-
-    .gallery-item {
-      width: 150px;
-      text-align: center;
-    }
-
-    .gallery-item img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .price {
-      font-weight: bold;
-      color: #ff6600;
-    }
-
-    .select-people {
-      margin-top: 10px;
-    }
-
-    .summary {
-      margin-top: 15px;
-      font-size: 16px;
-      color: #333;
-      text-align: left;
-    }
-
-    .confirm-button {
-      background-color: #28a745;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      margin-top: 15px;
-    }
-
-    .confirm-button:hover {
-      background-color: #218838;
-    }
-
-    #order-summary {
-      margin-top: 30px;
-      font-size: 18px;
-      font-weight: bold;
-      color: #333;
-    }
-
-    .validate-order-button {
-      background-color: #007bff;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      margin-top: 20px;
-    }
-
-    .validate-order-button:hover {
-      background-color: #0056b3;
-    }
-
-    #confirmation-message {
-      display: none;
-      font-size: 18px;
-      color: #28a745;
-      margin-top: 20px;
-    }
-
-    #order-confirmation {
-      display: none;
-      text-align: center;
-      padding: 20px;
-      background-color: #f8f9fa;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      margin: 20px;
-    }
-
-    #order-confirmation h2 {
-      color: #28a745;
-    }
-
-    #order-confirmation p {
-      color: #333;
-      font-size: 18px;
-    }
-
-    /* Nouveau style pour le bouton OK */
-    .ok-button {
-      background-color: #28a745;
-      color: white;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 6px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
-
-    .ok-button:hover {
-      background-color: #218838;
-        }
-      
-        
-        /* Style pour les liens */
-a {  
-    color: #007bff; /* Bleu classique pour les liens */  
-    text-decoration: none; /* Supprime le soulignement par défaut */  
-    font-weight: bold; /* Texte légèrement plus visible */  
-}  
-
-/* Style pour le survol des liens */
-a:hover {  
-    color: #0056b3; /* Bleu foncé au survol */  
-    text-decoration: underline; /* Ajoute un soulignement au survol */  
-}
-
-/* Couleurs spécifiques pour les icônes */
-i.fa-map-marker-alt { color: #28a745; } /* Localisation (vert) */
-i.fa-truck { color: #007bff; } /* Livraison (bleu) */
-i.fa-envelope { color: #dc3545; } /* Contact (rouge) */
-
-/* Style pour les descriptions horizontales */
-.descriptions {
-    white-space: nowrap; /* Evite que les éléments se cassent à la ligne */
-    overflow: hidden; /* Cache le contenu qui dépasse */
-}
-
-.description {
-    display: inline-block; /* Affiche chaque élément en ligne */
-    margin-right: 20px; /* Ajoute un espace entre les descriptions */
-    font-size: 1rem; /* Taille de texte personnalisée */
-    vertical-align: middle; /* Aligne verticalement le texte et les icônes */
-}
-
-         #notification-container {
-      position: fixed;
-      bottom: 10px;
-      right: 10px;
-      width: 300px;
-      z-index: 1000;
-    }
-
-    .notification {
-      color: white;
-      padding: 15px;
-      margin-bottom: 15px;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      animation: fadeInOut 7s ease-in-out forwards;
-    }
-
-    @keyframes fadeInOut {
-      0% { opacity: 0; transform: translateY(20px); }
-      10% { opacity: 1; transform: translateY(0); }
-      90% { opacity: 1; }
-      100% { opacity: 0; transform: translateY(20px); }
-    }
-
-    #toggle-notifications {
-      
-      top: 10px;
-      right: 10px;
-      background-color: #007BFF;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      font-size: 24px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-
-    #toggle-notifications:hover {
-      background-color: #0056b3;
-    }
-
-    #description {
-      
-      top: 70px;
-      right: 10px;
-      font-size: 12px;
-      color: #555;
-      text-align: center;
-    }
     </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=G-KXVM16T20X"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<div class="container">
-    <!-- Titre et profil -->
-    <div class="scrolling-title"> T.S.H SHOP-13 🏷 🛍 </div>
-    <div class="profile-card">
-        <div class="profile-header">
-            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/c5b0223d-f147-e0a5-7a10-613ef3d99567.jpg" alt="Profil" class="profile-pic">
-            <div class="profile-info">
-                <h1>BIENVENUE ! 🛒 <span class="verified-badge"><i class="fab fa-telegram"></i></span></h1>
-               <!-- Détails de la boutique -->
-                <div class="shop-details">
-                    <h5>Détails de la boutique</h5>
-                    <p>🌙✨Votre épicerie de nuit au service de vos soirées!🍹🥪Boissons fraîches,snacks🍫🥤et essentiels🛒livrés RAPIDEMENT!🚀Livraison GRATUITE dès 35€💶💨OUVERT TOUTE LA NUIT🌌🕒🚀</p>
-                </div>
-                <p><i class="fas fa-map-marker-alt"></i> Localisation : <a href="https://www.snapchat.com/place/snapshop/fc718d1e-c72b-11ec-a6a4-3b69f32c2187?share_id=CtWjaNxYemQ&locale=fr-FR" target="_blank">Marseille, France</a></p>
-<p><i class="fas fa-truck"></i> Livraison : <a href="https://www.example.com" target="_blank"> sur Marseille.</a></p>
-<p><i class="fas fa-envelope"></i> Contact : <a href="mailto:tsh.shop13@gmail.com">tsh.shop13@gmail.com</a></p>
-                <!-- Ajout des icônes des réseaux sociaux -->
-<div class="social-icons">
-    <a href="https://www.snapchat.com/add/tsh-shop13?share_id=u-NZvptXwjk&locale=fr-FR" target="_blank">
-        <i class="fa-brands fa-snapchat"></i>
-    </a>
-    <a href="https://www.tiktok.com/@tsh_shop13?_t=8s9mzOpzEow&_r=1" target="_blank">
-        <i class="fa-brands fa-tiktok" style="color: #911d44;"></i>
-    </a>
-    <a href="https://www.instagram.com/tsh_shop13/profilecard/?igsh=Zmg5N3didm90dHBi" target="_blank">
-        <i class="fa-brands fa-instagram" style="color: #b858bf;"></i>
-    </a>
-</div>
-                <button class="settings-btn" onclick="toggleSettings()">⚙️: Paramètres
-Affichez la carte Waze 🗺️</button>         
-                  <!-- Conteneur pour les notifications -->
-  <div id="notification-container"></div>
 
-   <!-- Conteneur pour les notifications -->
-  <div id="notification-container"></div>
+<div class="profile-container">
+    <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/89a59702-cad3-dfb7-580d-22fb843f8d3f.jpeg" alt="Photo de Profil" class="profile-image" id="profileImage">
+    <div class="star"></div> 
+    <div class="username">🗿H.D.S🇯🇲 SHOP  🛒 🛍</div>
+    <div class="status" id="statusText">Bienvenue dans ma boutique !</div>
 
-  <!-- Bouton pour activer/désactiver les notifications -->
-  <button id="toggle-notifications">🔕</button>
-  <div id="description">Activer/Désactiver les notifications</div>      
-              <button id="toggle-cart-button" onclick="toggleCart()" style="display: none;">🛒</button>
-              <!-- Mini carte avec une carte interactive à droite -->
-            </div>          
-        </div>
-        <div id="status-text">
-    <span id="status-message">En ligne</span>
-</div>
-<div id="closing-warning" style="color: red; font-size: 0.8em; display: none;">
-    La boutique va fermer dans <span id="countdown">5</span> minutes !
-</div>
-<div id="holiday-message" style="color: orange; font-size: 0.8em; display: none;">
-    Note : Aujourd'hui est un jour férié, mais nous sommes ouverts !
-</div>
-<div id="reopen-message" style="color: blue; font-size: 0.8em; display: none;">
-    La boutique est fermée. Réouverture à <span id="reopen-time"></span>.
-</div>
-
-<!-- Zone pour afficher les dates dynamiques -->
-<div id="current-dates">
-    <p>Dates d'ouverture 15 janvier :</p>
-    <p>Ouverture: <span id="open-date-display"></span></p>
-    <p>Fermeture: <span id="close-date-display"></span></p>
-</div>
-      <!-- Icône de la boutique avec la flèche -->
-      <div class="shop-icon" id="shop-button" onclick="trackShopClick(); toggleShopSection()">   
-    <i id="shop-icon" class="fas fa-store"></i> <!-- Icône de la boutique -->
-    <i id="arrow-icon" class="fas fa-chevron-down" style="display:none;"></i> <!-- Flèche cachée initialement -->
-      <div class="container">
-    <p class="boutique">Afficher la Boutique</p>
-    <div class="hand">
-        <span class="emoji">👉</span>
+    <div class="toggle-button" id="toggleDetails">
+        <span>Détails de la Boutique</span>
+        <span class="material-symbols-outlined">expand_more</span>
     </div>
-      </div>
-      </div>
+
+    <div class="content-section" id="profileDetails">
+        <div class="content-title">Détails de la Boutique</div>
+        <div class="details">Nom de la boutique : Holdest Boutique</div>
+        <div class="details">Produits : 50 articles en stock</div>
+         <div class="details">Évaluations : ★★★★★ (4.8)</div>       
+        <div class="details client-count" id="clientCount">Clients : 1 200+ satisfaits</div>
+         </div>
+
+    <div class="content-section">
+        <div class="content-title">Dernière mise à jour</div>
+        <div class="last-updated">1er octobre 2024</div>
+    </div>
+
   
-<!-- Section d'attente -->
-  <div class="waiting-status">
-    <h1>🎉📆 Commandes en avance :
-15/01: Boissons & snacks pour soirée privée 🥂
-20/01: Essentiels pour anniversaire 🎂
-25/01: Apéros nocturnes 🍹✨
-👉 Passez votre commande dès maintenant pour </br>garantir votre livraison !🚚💨</h1>
-    <div class="queue-visual">
-      <div class="person">👤</div>
-      <div class="person">👤</div>
-      <div class="person">👤</div>
-      <div class="person">👤</div>
-      <div class="person">👤</div>
-      <div class="dots">...</div>
-    </div>
-    <p>Actuellement <span id="queue-count">25</span> commandes en attente pour les fêtes !</p>
-    <button class="reservation-button" onclick="openModal()">Réservez votre fête</button>
-  </div>
-
-<!-- Section de la modale avec les exemples d'événements et les produits -->
-<div id="reservation-modal" class="modal">
-  <div class="modal-content">
-    <!-- Section des commandes en attente -->
-    <h1>Commandes pour les fêtes en attente 🎉</h1>
-    <div class="queue-visual">
-        <!-- Représentation visuelle de la file d'attente avec des icônes de personnes -->
-        <div class="person">👤</div>
-        <div class="person">👤</div>
-        <div class="person">👤</div>
-        <div class="person">👤</div>
-        <div class="person">👤</div>
-        <div class="dots">...</div>
-    </div>
-    <p>Actuellement <span id="queue-count-modal">25</span> commandes en attente pour les fêtes !</p>
-    <p>Les gens planifient des événements comme des anniversaires, des soirées ou des fêtes surprises. Réservez dès maintenant pour personnaliser votre fête !</p>
-
-    <!-- Exemples d'événements organisés -->
-    <h2>Exemples d'événements organisés</h2>
-    <div class="event-gallery gallery-section">
-      <div class="gallery-item">
-        <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/193758e7-269e-4fea-37ba-e5d1be8698e1.jpeg" alt="Fête entre collègues">
-        <p>Exemple de fête entre collègues.</p>
-      </div>
-      <div class="gallery-item">
-        <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/a81f5976-0b78-7c0e-08da-862bb8290c56.jpeg" alt="Fête d'entreprise">
-        <p>Fête d'entreprise mémorable.</p>
-      </div>
-      <div class="gallery-item">
-        <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/91a631ce-3253-8cef-7f94-5871983b5e9e.jpeg" alt="Anniversaire">
-        <p>Anniversaire au travail.</p>
-      </div>
-    </div>
-
-    <!-- Nos produits pour vos fêtes -->
-    <h2>Nos produits pour vos fêtes 🎉</h2>
-    <div class="product-gallery gallery-section">
-      <!-- Samoussas -->
-      <div class="gallery-item">
-        <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/49c4af8e-fe06-3611-4494-9ee51dc36e2f.jpeg" alt="Samoussas">
-        <p>Samoussas savoureux pour débuter votre soirée.</p>
-        <p class="price">Prix : 25€ / 40 pièces (5 personnes)</p>
-        <div class="select-people">
-          <label for="samoussa-people">Choisir le nombre de personnes :</label>
-          <select id="samoussa-people" onchange="updateSummary('samoussa')">
-            <option value="5">5 personnes</option>
-            <option value="8">8 personnes</option>
-            <option value="10">10 personnes</option>
-          </select>
-             <div id="samoussa-summary" class="summary"></div>
-    
-          </div>
-         <button id="samoussa-confirm-btn" onclick="confirmChoice('samoussa')" style="display:none;" class="confirm-button">Valider mon choix</button>
-        
-      </div>
-
-      <!-- Nems -->
-      <div class="gallery-item">
-        <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/7a300b6e-c3b2-c9db-8b83-6b8fd8696450.jpeg" alt="Nems">
-        <p>Les nems croustillants pour un apéritif parfait.</p>
-        <p class="price">Prix : 18€ / 10 pièces (5 personnes)</p>
-        <div class="select-people">
-          <label for="nems-people">Choisir le nombre de personnes :</label>
-          <select id="nems-people" onchange="updateSummary('nems')">
-            <option value="5">5 personnes</option>
-            <option value="8">8 personnes</option>
-            <option value="10">10 personnes</option>
-          </select>
-            <div id="nems-summary" class="summary"></div>
-          </div>
-        <button id="nems-confirm-btn" onclick="confirmChoice('nems')" style="display:none;" class="confirm-button">Valider mon choix</button>
-        
-      </div>
-
-      <!-- Brochettes -->
-      <div class="gallery-item">
-        <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/06779346-c92b-10ac-4e37-64ce1d912ddb.jpeg" alt="Brochettes">
-        <p>Des brochettes délicieuses pour tous les goûts.</p>
-        <p class="price">Prix : 25€ / 8 pièces (5 personnes)</p>
-        <div class="select-people">
-          <label for="brochettes-people">Choisir le nombre de personnes :</label>
-          <select id="brochettes-people" onchange="updateSummary('brochettes')">
-            <option value="5">5 personnes</option>
-            <option value="8">8 personnes</option>
-            <option value="10">10 personnes</option>
-          </select>
-            <div id="brochettes-summary" class="summary"></div>
-          </div>
-          <button id="brochettes-confirm-btn" onclick="confirmChoice('brochettes')" style="display:none;" class="confirm-button">Valider mon choix</button>      
-      </div>
-    </div>
-      <div id="order-summary"></div>
-      <button class="validate-order-button" onclick="validateOrder()">Valider ma commande</button>     
-      <div id="confirmation-message"></div>    
-      <!-- Supprimer le bouton fermé, remplacer par le bouton OK -->
-      <button id="close-modal-button" class="ok-button" onclick="closeModal()">OK</button>
-    </div>
-  </div>
-  <!-- Fenêtre de confirmation -->
-  <div id="order-confirmation">
-    <h2>Commande traitée avec succès !</h2>
-    <p>Merci pour votre commande ! Vous serez contacté dans la première heure pour confirmer les détails de votre commande. Si vous avez des questions, n'hésitez pas à nous contacter.</p>
-    <button class="ok-button" onclick="redirectToFormspree()">Confirmer et envoyer la commande</button>
-  </div>
-        
-
-   <!-- Paramètres (Fenêtre popup) -->
-<div class="settings-popup" id="settings-popup" style="display:none;">
-    <h3>Paramètres</h3>
-    <button onclick="closeSettings()">❌ Fermer</button> <!-- Bouton pour fermer -->
-    <p>Activer la localisation :</p>
-    <button onclick="toggleLocation()">Activer la localisation</button>
-    <p id="location-status">Localisation désactivée</p>
-  <h1>Carte Waze</h1>
-    <div style="text-align: right;">
-      <iframe src="https://embed.waze.com/iframe?zoom=13&lat=48.85661&lon=2.35222&pin=1"
-            width="100%" height="220"></iframe>            </div>
-</div> 
-<div class="shop-section" style="display: none;">
-    <h3>Produits Disponibles</h3>
-      <div class="separator-section">
-    <h2>CREME DELUXE</h2>
-    </div>
- 
-  <div class="shop-items">
-    <!-- Produit 1 -->
-    <div class="shop-item" id="product-1">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/c951c889-35c5-92a3-89d8-9efd59d3650c.png" alt="Produit A" class="product-image">
-        <h4>Cartouche </h4>
-        
-        <span class="price">Prix : €7.00</span>
-        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
-        <button class="buy-button" onclick="addToCart('Cartouche Crème Sans goût', 7)">Ajouter au panier</button>
-    </div>
-    <!-- Produit 2 -->
-    <div class="shop-item" id="product-2">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/66daeb29-f307-827a-d332-23ffaeb22b8e.png" alt="Produit B" class="product-image">
-        <h4>FAST GAZ</h4>
-        
-        <span class="price">Prix : €25.00</span>
-        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
-        <button class="buy-button" onclick="addToCart('FAST GAZ Sans goût', 25)">Ajouter au panier</button>
-    </div>
-    <!-- Produit 3 -->
-    <div class="shop-item" id="product-3">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/cb745b07-4c3f-dea2-0ef9-ea66338bba45.png" alt="Produit C" class="product-image">
-        <h4>DELUXE</h4>
-       
-        <span class="price">Prix : €30.00</span>
-        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
-        <button class="buy-button" onclick="addToCart('CREME DELUXE Sans goût', 30)">Ajouter au panier</button>
-    </div>
+<!-- Icône storefront avec interaction -->
+<div class="toggle-button" id="showShopButton">
+    <span class="material-symbols-outlined" id="storeIcon">storefront</span>
 </div>
-  <div class="shop-items">
-    <!-- Produit 1 -->
-    <div class="shop-item" id="product-1">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/b446dc4d-66a2-2c85-6dd8-5757b46a85da.png" alt="Produit A" class="product-image">
-        <h4>FAST GAZ</h4>
-        
-        <span class="price">Prix : €50.00</span>
-        <p class="delivery-info">Livraison <span class="included-box">incluse</span></p>
-        <button class="buy-button" onclick="addToCart('FAST GAZ Sans goût', 50)">Ajouter au panier</button>
-    </div>
-    <!-- Produit 2 -->
-    <div class="shop-item" id="product-2">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/296ad524-4f95-1bc7-650e-d5ec4e41f9b6.png" alt="Produit B" class="product-image">
-        <h4>DELUXE</h4>
-        
-        <span class="price">Prix : €60.00</span>
-        <p class="delivery-info">Livraison <span class="included-box">incluse</span></p>
-        <button class="buy-button" onclick="addToCart('CREME DELUXE Sans goût', 60)">Ajouter au panier</button>
-    </div>
-    <!-- Produit 3 -->
-    <div class="shop-item" id="product-3">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/3636a0ba-987a-529d-ad51-5fdd478fd968.png" alt="Produit C" class="product-image">
-        <h4>TANK</h4>
-        
-        <span class="price">Prix : €45.00</span>
-        <p class="delivery-info">Livraison <span class="included-box">incluse</span></p>
-        <button class="buy-button" onclick="addToCart('TANK Sans goût', 45)">Ajouter au panier</button>
-    </div>
-</div>
-    <div class="shop-items">
+
+    <!-- Section boutique -->
+    <div class="shop-section" id="shopSection">
+        <div class="content-title">Produits Disponibles</div>
+
         <!-- Produit 1 -->
-        <div class="shop-item" id="product-1">
-            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/3506e966-94ff-790f-7e7c-42ae4c6b0b68.jpg" alt="Produit A" class="product-image">
-            <h4>TANK</h4>
-            <p>Goût: 🍓 </p>
-            <span class="price">Prix : €50.00</span>
-         <p class="delivery-info">Livraison <span class="included-box">incluse</span></p> 
-            <button class="buy-button" onclick="addToCart('TANK Fraise 🍓', 50)">Ajouter au panier</button>
-        </div>
-        <!-- Produit 2 -->
-        <div class="shop-item" id="product-2">
-            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/f3f5b58a-0386-18c4-b99f-9874a1631cb1.jpg" alt="Produit B" class="product-image">
-            <h4>TANK</h4>
-            <p>Goût: 🍍 </p>
-            <span class="price">Prix : €50.00</span>
-       <p class="delivery-info">Livraison <span class="included-box">incluse</span></p> 
-            <button class="buy-button" onclick="addToCart('TANK Ananas 🍍', 50)">Ajouter au panier</button>
-        </div>
-        <!-- Produit 3 -->
-        <div class="shop-item" id="product-3">
-            <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/ca2ffb50-9a83-d784-6a80-0594c5a31366.jpg" alt="Produit C" class="product-image">
-            <h4>TANK</h4>
-            <p>Goût: 🫐 </p>
-            <span class="price">Prix : €50.00</span>
-          <p class="delivery-info">Livraison <span class="included-box">incluse</span></p>
-            <button class="buy-button" onclick="addToCart('TANK Myrtille 🫐', 50)">Ajouter au panier</button>
-        </div>
-    </div>
-   <div class="shop-items">
-    <!-- Produit 1 -->
-    <div class="shop-item" id="product-1">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/0cdbf829-643f-74ed-5508-d5d68995d958.png" alt="Produit A" class="product-image">
-        <h4>Goût Creme </h4>
-        <p>Goût:Ananas🍍</p>
-        <span class="price">Prix : €8.00</span>
-        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
-        <button class="buy-button" onclick="addToCart('Goût Crème Pastèque', 8)">Ajouter au panier</button>
-    </div>
-    <!-- Produit 2 -->
-    <div class="shop-item" id="product-2">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/1919ecc3-90eb-9d34-fb6d-2f6a722179f2.png" alt="Produit B" class="product-image">
-        <h4>Goût Creme</h4>
-        <p>Goût:Fraise🍓</p>
-        <span class="price">Prix : €8.00</span>
-        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
-        <button class="buy-button" onclick="addToCart('Goût Crème Sans goût', 8)">Ajouter au panier</button>
-    </div>
-    <!-- Produit 3 -->
-    <div class="shop-item" id="product-3">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/e0e54a61-65de-c335-0c5e-586cfb7e866a.png" alt="Produit C" class="product-image">
-        <h4>Goût Creme</h4>
-        <p>Goût:Pastèque</p>
-        <span class="price">Prix : €8.00</span>
-        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
-        <button class="buy-button" onclick="addToCart('Goût Crème Sans goût', 8)">Ajouter au panier</button>
-    </div>
-</div>
-   <div class="shop-items">
-    <!-- Ballon Rouge -->
-    <div class="shop-item" id="product-1">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/73f742c5-174c-a08d-49cd-6c9e16919ad1.png" alt="Ballon Rouge" class="product-image">
-        <h4>Ballon</h4>
-        <p>Couleur:Rouge</p>
-        <span class="price">Prix : €5.50</span>
-        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
-        <button class="buy-button" onclick="addToCart('Ballon Rouge', 5.50)">Ajouter au panier</button>
-    </div>
-    <!-- Ballon Bleu Ciel -->
-    <div class="shop-item" id="product-2">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/3ee66306-d800-6cfc-d53b-7c9269c8fd61.png" alt="Ballon Bleu Ciel" class="product-image">
-        <h4>Ballon</h4>
-        <p>Couleur:Bleu</p>
-        <span class="price">Prix : €5.50</span>
-        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
-        <button class="buy-button" onclick="addToCart('Ballon Bleu Ciel', 5.50)">Ajouter au panier</button>
-    </div>
-    <!-- Ballon Beige -->
-    <div class="shop-item" id="product-3">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/cba2e071-d038-ec95-9414-eaff2e6fdb58.png" alt="Ballon Beige" class="product-image">
-        <h4>Ballon</h4>
-        <p>Couleur:Beige</p>
-        <span class="price">Prix : €5.50</span>
-        <p class="delivery-info">Livraison <span class="not-included-box">non incluse</span></p>
-        <button class="buy-button" onclick="addToCart('Ballon Beige', 5.50)">Ajouter au panier</button>
-    </div>
-</div>
-  <div class="separator-section">
-    <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/f0d5fef5-ecf2-6533-c2d5-48360135dacd.jpg" alt="Cigarette électronique" class="separator-image">
-    <h2>Cigarette électronique</h2>
-  </div>
-     
- <div class="shop-items">
-    <!-- Produit 1 -->
-    <div class="shop-item">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/30b1c84e-71ba-c664-7891-324d9d7e3896.jpg" alt="Produit A" class="product-image">
-        <h4>PUFF 15000</h4>
-        <p>Goût:🍌🍓Banane fraise</p>
-        <span class="price">Prix : €15.00</span>
-        <p class="delivery-info">Livraison non incluse</p> 
-        <button class="buy-button" onclick="addToCart('PUFF 15000 Banane🍌🍓', 15)">Ajouter au panier</button>
-    </div>
-    <!-- Produit 2 -->
-    <div class="shop-item">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/b8ce77ef-c187-3e5b-51dc-ca766b23776a.jpg" alt="Produit B" class="product-image">
-        <h4>PUFF 15000</h4>
-        <p>Goût:🍑🥭Peach mangue)</p>
-        <span class="price">Prix : €15.00</span>
-        <p class="delivery-info">Livraison non incluse</p> 
-        <button class="buy-button" onclick="addToCart('PUFF 15000 🍑🥭', 15)">Ajouter au panier</button>
-    </div>
-    <!-- Produit 3 -->
-    <div class="shop-item">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/10e283a3-5c45-6cd3-097a-df35341b8325.jpg" alt="Produit C" class="product-image">
-        <h4>PUFF 15000</h4>
-        <p>Goût:🍉🍓Pastèque fraise</p>
-        <span class="price">Prix : €15.00</span>
-        <p class="delivery-info">Livraison non incluse</p> 
-        <button class="buy-button" onclick="addToCart('PUFF 15000 🍉🍓', 15)">Ajouter au panier</button>
-    </div>
- </div>
-    <div class="separator-section">
-    <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/76d56187-329c-fcab-ac00-68df14ed2c1a.jpeg" alt="Cigarette électronique" class="separator-image">
-  
-     <h2>Nos Boissons Énergétiques et Canettes</h2>
-    </div>
-<div class="shop-items">
-    <!-- Produit 1 -->
-    <div class="shop-item">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/7f131539-c5ab-8dd5-fedd-fea0213e3610.jpeg" alt="Produit Red Bull Pastèque" class="product-image">
-        <h4>RED BULL</h4>
-        <p> Pastèque</p>
-        <span class="price">Prix : €3.00</span>
-        <p class="delivery-info">Livraison non incluse</p> 
-        <button class="buy-button" onclick="addToCart('RED BULL Édition Pastèque', 3)">Ajouter au panier</button>
-    </div>
-    <!-- Produit 2 -->
-    <div class="shop-item">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/0c632a5f-04b7-f7c0-a949-b868fa374786.jpeg" alt="Produit Red Bull Coco" class="product-image">
-        <h4>RED BULL</h4>
-        <p>Édition : Coco</p>
-        <span class="price">Prix : €3.00</span>
-        <p class="delivery-info">Livraison non incluse</p> 
-        <button class="buy-button" onclick="addToCart('RED BULL Édition Coco', 3)">Ajouter au panier</button>
-    </div>
-    <!-- Produit 3 -->
-    <div class="shop-item">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/a5deccab-a2d1-d082-ccd3-a4b27fa0d73a.jpeg" alt="Produit Red Bull Blue" class="product-image">
-        <h4>RED BULL</h4>
-        <p>Édition : Blue</p>
-        <span class="price">Prix : €3.00</span>
-        <p class="delivery-info">Livraison non incluse</p> 
-        <button class="buy-button" onclick="addToCart('RED BULL Édition Blue', 3)">Ajouter au panier</button>
-    </div>
-</div>
-<div class="shop-items">
-    <!-- Produit 1 -->
-    <div class="shop-item">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/eb64f6fa-7918-0c1c-4eb9-e66c771daf2d.jpeg" alt="Produit Red Bull Pastèque" class="product-image">
-        <h4>MONSTER</h4>
-        <p>MONARCHE</p>
-        <span class="price">Prix : €3.50</span>
-        <p class="delivery-info">Livraison non incluse</p>
-        <button class="buy-button" onclick="addToCart('MONARCHE Juice', 3.50)">Ajouter au panier</button>
-    </div>
-    <!-- Produit 2 -->
-    <div class="shop-item">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/9a41eac9-9ead-4f1e-b359-f08dd1ec0c0e.jpeg" alt="Produit Red Bull Coco" class="product-image">
-        <h4>MONSTER</h4>
-        <p>MIXXD Punch</p>
-        <span class="price">Prix : €3.50</span>
-        <p class="delivery-info">Livraison non incluse</p>
-        <button class="buy-button" onclick="addToCart('MIXXD Punch', 3.50)">Ajouter au panier</button>
-    </div>
-    <!-- Produit 3 -->
-    <div class="shop-item">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/89b3c1b7-bc2f-b442-69c0-3dffcc30ec28.jpeg" alt="Produit Red Bull Blue" class="product-image">
-        <h4>MONSTER</h4>
-        <p>KHAOS Juice</p>
-        <span class="price">Prix : €3.50</span>
-        <p class="delivery-info">Livraison non incluse</p>
-        <button class="buy-button" onclick="addToCart('MONSTER KHAOS punch', 3.50)">Ajouter au panier</button>
-    </div>
-</div>
-<div class="shop-items">
-    <!-- Canette Coca-Cola -->
-    <div class="shop-item" id="product-4">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/bbc62a1e-558e-9288-aa63-4fcfcd4902fa.jpeg" alt="Canette Coca-Cola" class="product-image">
-        <h4>Canette Coca-Cola 🍷</h4>
-        
-        <span class="price">Prix : €1.50 💶</span>
-        <p class="delivery-info">Livraison non incluse 🚚</p>
-        <label for="quantity-4">Quantité :</label>
-        <select id="quantity-4">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-        </select>
-        <button class="buy-button" onclick="addToCart('Canette Coca-Cola 330ml', 1.50, parseInt(document.getElementById('quantity-4').value))">Ajouter au panier 🛒</button>
-    </div>
-    <!-- Canette Oasis Framboise -->
-    <div class="shop-item" id="product-5">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/393b7fc1-6d81-65c6-f48b-f1e3e998a36a.jpeg" alt="Canette Oasis Framboise" class="product-image">
-        <h4>Oasis Framboise🍒</h4>     
-        <span class="price">Prix : €1.50 💶</span>
-        <p class="delivery-info">Livraison non incluse 🚚</p>
-        <label for="quantity-5">Quantité :</label>
-        <select id="quantity-5">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-        </select>
-        <button class="buy-button" onclick="addToCart('Canette Oasis Framboise 330ml', 1.50, parseInt(document.getElementById('quantity-5').value))">Ajouter au panier 🛒</button>
-    </div>
-    <!-- Canette Fuse Tea -->
-    <div class="shop-item" id="product-6">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/513b58c1-50d6-a7ac-21e8-7468bdf43426.jpeg" alt="Canette Fuse Tea" class="product-image">
-        <h4>Canette Fuze Tea🍃🍹</h4>
-        
-        <span class="price">Prix : €1.50 💶</span>
-        <p class="delivery-info">Livraison non incluse 🚚</p>
-        <label for="quantity-6">Quantité :</label>
-        <select id="quantity-6">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-        </select>
-        <button class="buy-button" onclick="addToCart('Canette Fuze Tea 330ml', 1.50, parseInt(document.getElementById('quantity-6').value))">Ajouter au panier 🛒</button>
-    </div>
-    </div>
-<div class="shop-items">
-    <!-- Fanta Orange -->
-    <div class="shop-item" id="product-4">
-        <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/8a912222-9bf3-31c6-adef-b196f79186ec.jpeg" alt="Fanta Orange" class="product-image">
-        <h4>Fanta Orange 🍊</h4>
-        
-        <span class="price">Prix : €1.50 💶</span>
-        <p class="delivery-info">Livraison non incluse 🚚</p>
-        <label for="quantity-4">Quantité :</label>
-        <select id="quantity-4">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-        </select>
-        <button class="buy-button" onclick="addToCart('Fanta Orange 330ml', 1.50, parseInt(document.getElementById('quantity-4').value))">Ajouter au panier 🛒</button>
-    </div>
-    <!-- Lipton Ice Tea -->
-    <div class="shop-item" id="product-5">
-        <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/2c91b67c-f8bb-9df7-dd45-12ea22c023af.jpeg" alt="Lipton Ice Tea" class="product-image">
-        <h4>Lipton Ice Tea 🍃</h4>
-        
-        <span class="price">Prix : €1.50 💶</span>
-        <p class="delivery-info">Livraison non incluse 🚚</p>
-        <label for="quantity-5">Quantité :</label>
-        <select id="quantity-5">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-        </select>
-        <button class="buy-button" onclick="addToCart('Lipton Ice Tea 330ml', 1.50, parseInt(document.getElementById('quantity-5').value))">Ajouter au panier 🛒</button>
-    </div>
-    <!-- Fanta Lemon -->
-    <div class="shop-item" id="product-6">
-        <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/06e96ddd-e401-be6d-4ab5-31c75efad7eb.jpeg" alt="Fanta Lemon" class="product-image">
-        <h4>Fanta Lemon 🍋</h4>
-        
-        <span class="price">Prix : €1.50 💶</span>
-        <p class="delivery-info">Livraison non incluse 🚚</p>
-        <label for="quantity-6">Quantité :</label>
-        <select id="quantity-6">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-        </select>
-        <button class="buy-button" onclick="addToCart('Fanta Lemon 330ml', 1.50, parseInt(document.getElementById('quantity-6').value))">Ajouter au panier 🛒</button>
-    </div>
-</div>
-  <div class="shop-items">
-    <!-- Schweppes -->
-    <div class="shop-item" id="product-4">
-        <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/6dcbe949-cd34-8b06-ad9a-499e0ad1a20b.jpeg" alt="Schweppes" class="product-image">
-        <h4>Schweppes agrumes 🍋</h4>
-        
-        <span class="price">Prix : €1.50 💶</span>
-        <p class="delivery-info">Livraison non incluse 🚚</p>
-        <label for="quantity-4">Quantité :</label>
-        <select id="quantity-4">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-        </select>
-        <button class="buy-button" onclick="addToCart('Schweppes agrumes, 1.50, parseInt(document.getElementById('quantity-4').value))">Ajouter au panier 🛒</button>
-    </div>
-    <!-- Pepsi -->
-    <div class="shop-item" id="product-5">
-        <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/50d23530-69a5-7cea-d9ef-1dfdf7fd2c00.jpeg" alt="Pepsi" class="product-image">
-        <h4>Pepsi: Canette🥤</h4>     
-        <span class="price">Prix : €1.50 💶</span>
-        <p class="delivery-info">Livraison non incluse 🚚</p>
-        <label for="quantity-5">Quantité :</label>
-        <select id="quantity-5">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-        </select>
-        <button class="buy-button" onclick="addToCart('Pepsi 330ml', 1.50, parseInt(document.getElementById('quantity-5').value))">Ajouter au panier 🛒</button>
-    </div>
-    <!-- Lipton Pastèque Menthe -->
-    <div class="shop-item" id="product-6">
-        <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/45d0a4d1-bfe8-7ca3-186b-bf2897fb54d3.jpg" alt="Lipton Pastèque Menthe" class="product-image">
-        <h4>Lipton Pastèque 🍉🍃</h4>
-        
-        <span class="price">Prix : €1.50 💶</span>
-        <p class="delivery-info">Livraison non incluse 🚚</p>
-        <label for="quantity-6">Quantité :</label>
-        <select id="quantity-6">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-        </select>
-        <button class="buy-button" onclick="addToCart('Lipton Pastèque 330ml', 1.50, parseInt(document.getElementById('quantity-6').value))">Ajouter au panier 🛒</button>
-    </div>
-  </div>
-  <div class="shop-items">
-    <!-- Coca Cherry -->
-    <div class="shop-item" id="product-7">
-        <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/89162ee1-fec7-dc5e-3ba6-463ae26f12ad.jpeg" alt="Coca Cherry" class="product-image">
-        <h4>Coca Cherry</h4>
-        
-        <span class="price">Prix : €1.50 💶</span>
-        <p class="delivery-info">Livraison non incluse 🚚</p>
-        <label for="quantity-7">Quantité :</label>
-        <select id="quantity-7">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-        </select>
-        <button class="buy-button" onclick="addToCart('Coca Cherry 330ml', 1.50, parseInt(document.getElementById('quantity-7').value))">Ajouter au panier 🛒</button>
-    </div>
-    <!-- Minute Maid -->
-    <div class="shop-item" id="product-8">
-        <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/adfc03a5-0651-780a-e035-2ab44f736a46.jpeg" alt="Minute Maid" class="product-image">
-        <h4>Minute Maid</h4>
-        
-        <span class="price">Prix : €1.50 💶</span>
-        <p class="delivery-info">Livraison non incluse 🚚</p>
-        <label for="quantity-8">Quantité :</label>
-        <select id="quantity-8">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-        </select>
-        <button class="buy-button" onclick="addToCart('Minute Maid 330ml', 1.50, parseInt(document.getElementById('quantity-8').value))">Ajouter au panier 🛒</button>
-    </div>
-    <!-- Eau Cristalline -->
-    <div class="shop-item" id="product-9">
-        <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/d522fbdc-d2e8-4186-8c31-57a26c8ccbaa.jpeg" alt="Eau Cristalline" class="product-image">
-        <h4>Eau Cristalline</h4>
-        
-        <span class="price">Prix : €1.00 💶</span>
-        <p class="delivery-info">Livraison non incluse 🚚</p>
-        <label for="quantity-9">Quantité :</label>
-        <select id="quantity-9">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-        </select>
-        <button class="buy-button" onclick="addToCart('Eau Cristalline 500ml', 1.00, parseInt(document.getElementById('quantity-9').value))">Ajouter au panier 🛒</button>
-    </div>
-  </div>
-      <div class="separator-section">
-    <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/a23acf5f-2dc7-1f58-2328-377c70da278b.jpeg" alt="Gourmandises à croquer" class="separator-image">
-    <h2>Gourmandises à Croquer</h2>
-</div>
-    <div class="shop-items">
-    <!-- Lays Nature -->
-    <div class="shop-item">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/514fd884-88f8-82e5-ef9e-db6d87f1eade.jpeg" alt="Lays Nature" class="product-image">
-        <h4>Lays 🔥</h4>
-        <p>Barbecue 🍖</p>
-        <span class="price">Prix : €4.50 💶</span>
-        <p class="delivery-info">Livraison non incluse 🚚</p>
-        <button class="buy-button" onclick="addToCart('Lays Barbecue', 4.50)">Ajouter au panier 🛒</button>
-    </div>
-    <!-- Lays Barbecue -->
-    <div class="shop-item">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/41be0e8e-d614-bb1f-28ae-0822066e86b2.jpeg" alt="Lays Barbecue" class="product-image">
-        <h4>Lays 🌾</h4>
-        <p>Classique 🥔</p>
-        <span class="price">Prix : €4.00 💶</span>
-        <p class="delivery-info">Livraison non incluse 🚚</p>
-        <button class="buy-button" onclick="addToCart('Lays Classique', 4.00)">Ajouter au panier 🛒</button>
-    </div>
-    <!-- Lays Paprika -->
-    <div class="shop-item">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/7f5c649f-e007-96ab-d055-2d0e61958a88.jpeg" alt="Lays Paprika" class="product-image">
-        <h4>Lays  🧅</h4>
-        <p>Crèam oignon</p>
-        <span class="price">Prix : €4.50 💶</span>
-        <p class="delivery-info">Livraison non incluse 🚚</p>
-        <button class="buy-button" onclick="addToCart('Lays Cream oignon', 4.50)">Ajouter au panier 🛒</button>
-    </div>
-</div>
-<div class="shop-items">
-    <!-- Lays Fromage -->
-    <div class="shop-item">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/5309d508-cac6-5147-7c2d-410001693ea7.jpeg" alt="Lays Fromage" class="product-image">
-        <h4>Lays 🔥</h4>
-        <p>Barbecue 🍖</p>
-        <span class="price">Prix : €4.00 💶</span>
-        <p class="delivery-info">Livraison non incluse 🚚</p>
-        <button class="buy-button" onclick="addToCart('Lays Nature, 4.00)">Ajouter au panier 🛒</button>
-    </div>
-    <!-- Lays Crème et Oignons -->
-    <div class="shop-item">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/7ac24737-a104-f8b3-b41d-dcc205694f62.jpeg" alt="Lays Crème et Oignons" class="product-image">
-        <h4>Lays  🧄</h4>
-        <p>Paysanne 🥔</p>
-        <span class="price">Prix : €4.50 💶</span>
-        <p class="delivery-info">Livraison non incluse 🚚</p>
-        <button class="buy-button" onclick="addToCart('Lays Crème et Oignons', 4.50)">Ajouter au panier 🛒</button>
-    </div>
-    <!-- Lays Poulet Rôti -->
-    <div class="shop-item">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/c7f746b1-dacb-eec1-bad6-1f8f4957e8ac.jpeg" alt="Lays Poulet Rôti" class="product-image">
-        <h4>Lays 🍗</h4>
-        <p>Poulet Rôti 🍖</p>
-        <span class="price">Prix : €4.00 💶</span>
-        <p class="delivery-info">Livraison non incluse 🚚</p>
-        <button class="buy-button" onclick="addToCart('Lays Poulet Rôti', 4.00)">Ajouter au panier 🛒</button>
-    </div>
-</div>
-<div class="shop-items">
-    <!-- Produit 1 -->  
-    <div class="shop-item">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/2a68e522-3d4c-d763-1fa7-02a0fb36ed65.jpg" alt="Produit Biscuit" class="product-image">
-        <h4>Biscuit Croquant🍫</h4>
-        
-        <span class="price">Prix : €4.50</span>
-        <p class="delivery-info">Livraison rapide disponible</p> 
-        <button class="buy-button" onclick="addToCart('Biscuit Croquant Choco 🍫✨', 4.50)">Ajouter au panier</button>
-    </div>
-    <!-- Produit 2 -->
-    <div class="shop-item">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/2e31c985-dc5d-24e0-4ee3-2e5ade82a711.jpeg" alt="Produit Gaufrette" class="product-image">
-        <h4>Gaufrette Caramel🍯🍪</h4>
-        
-        <span class="price">Prix : €5.50</span>
-        <p class="delivery-info">Livraison rapide disponible</p> 
-        <button class="buy-button" onclick="addToCart('Gaufrette Caramel Délice 🍯🍪', 5.50)">Ajouter au panier</button>
-    </div>
-    <!-- Produit 3 -->
-    <div class="shop-item">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/cc53b0cc-f2f8-c02e-b1f4-a42fd013655e.jpeg" alt="Produit Kinder Bueno" class="product-image">
-        <h4>Barre Kinder Bueno🌰🍫</h4>
-        
-        <span class="price">Prix : €9.00</span>
-        <p class="delivery-info">Livraison rapide disponible</p> 
-        <button class="buy-button" onclick="addToCart('Barre Kinder Bueno 🌰🍫', 9.00)">Ajouter au panier</button>
-    </div>
+        <div class="product">
+           <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/222c7052-6326-89b5-ae39-2b4543164039.jpg" alt="Bonbonne Crème Deluxe" onclick="showImage(this)">
+         
+          
+             <div class="product-name">OCB Slim Noir</div>
+            <div class="product-price">€20.00</div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button onclick="decrementQuantity(this)">-</button>
+                    <input type="number" value="1" min="1" class="quantity-input">
+                    <button onclick="incrementQuantity(this)">+</button>
+                </div>
+                <button class="buy-button" onclick="addToCartWithQuantity('OCB Slim Noir', '20', this)">Acheter</button>
             </div>
-
-    <div class="separator-section">
-    <h2>Chargeurs Rapides et Connectés</h2>
-</div>
-<div class="shop-items">
-    <!-- Produit 1 -->
-    <div class="shop-item">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/bbde0707-a652-f7a0-cd85-8150a7687014.jpeg" alt="Chargeur Rapide Samsung" class="product-image">
-        <h4>Chargeur Rapide</h4>
-        <p>Compatibilité : 🌐 (Samsung, Android)</p>
-        <p>Détails : 25W.</p>
-        <span class="price">Prix : €19.99</span>
-        <p class="delivery-info">Livraison non incluse</p> 
-        <button class="buy-button" onclick="addToCart('Chargeur Rapide Samsung 25W', 19.99)">Ajouter au panier</button>
-    </div>
-    <!-- Produit 2 -->
-    <div class="shop-item">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/768d727b-868e-ca1d-063b-056b5cecf3c4.jpeg" alt="Chargeur Universel Connecté" class="product-image">
-        <h4>Chargeur Universel </h4>
-        <p>Compatibilité : 🔌 (Samsung, Android) </p>
-        <p>Détails : 30W.</p>
-        <span class="price">Prix : €24.99</span>
-        <p class="delivery-info">Livraison non incluse</p> 
-        <button class="buy-button" onclick="addToCart('Chargeur Universel Connecté 30W', 24.99)">Ajouter au panier</button>
-    </div>
-    <!-- Produit 3 -->
-    <div class="shop-item">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/b571a3c5-a06b-9cb3-5336-8dddb8e079b2.jpeg" alt="Chargeur sans fil" class="product-image">
-        <h4>Chargeur sans fil</h4>
-        <p>Compatibilité : 📱 (iPhone, Android)</p>
-        <p>Détails : 15W.</p>
-        <span class="price">Prix : €29.99</span>
-        <p class="delivery-info">Livraison non incluse</p> 
-        <button class="buy-button" onclick="addToCart('Chargeur sans fil 15W', 29.99)">Ajouter au panier</button>
-    </div>
-</div>  
-  <div class="separator-section">
-    <h2>OCB Slim</h2>
-    <p>Les OCB Slim sont des feuilles françaises de haute qualité, Disponibles en plusieurs variantes : Noir, Marron et Bleu.</p>
-      </div>
-    <div class="shop-items">
-    <!-- OCB Slim Noir -->
-    <div class="shop-item" id="product-1">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/5cba7ec9-05c2-852c-2b6a-a0e00027b7be.jpeg" alt="OCB Slim Noir" class="product-image">
-        <h4>OCB Slim</h4>
-        <p>Type : Noir</p>
-        <span class="price">Prix : €25.00</span>
-        <p class="delivery-info">Feuilles françaises</p>
-        <button class="buy-button" onclick="addToCart('OCB Slim Noir', 25.00)">Ajouter au panier</button>
-    </div>
-    <!-- OCB Marron -->
-    <div class="shop-item" id="product-2">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/631616e2-65b2-9be8-cf37-880bbd15c688.jpeg" alt="OCB Marron" class="product-image">
-        <h4>OCB Slim</h4>
-        <p>Type : Marron</p>
-        <span class="price">Prix : €25.00</span>
-        <p class="delivery-info">Feuilles françaises</p>
-        <button class="buy-button" onclick="addToCart('OCB Slim Marron', 25.00)">Ajouter au panier</button>
-    </div>
-    <!-- OCB Bleu -->
-    <div class="shop-item" id="product-3">
-        <img src="https://mcusercontent.com/40a9f1a77d46874eba2309d88/images/3bb684cb-6f55-d133-2d27-d763093fd402.jpeg" alt="OCB Bleu" class="product-image">
-        <h4>OCB Slim</h4>
-        <p>Type : Bleu</p>
-        <span class="price">Prix : €25.00</span>
-        <p class="delivery-info">Feuilles françaises</p>
-        <button class="buy-button" onclick="addToCart('OCB Slim Bleu', 25.00)">Ajouter au panier</button>
-    </div>
-      </div>
-</div>
-<!-- Panier et formulaire d'adresse -->
-<div class="cart" id="cart" style="display: none;">
-    <h3>Mon Panier</h3>
-    <div id="cart-items"></div>
-    <div class="total" id="total">Total : €0.00</div>
-    <button class="remove-button" onclick="clearCart()">Vider le Panier</button>
-    <button class="remove-button" onclick="openOrderForm()">Finaliser la Commande</button>
-</div>
-<!-- Formulaire de finalisation commande -->
-<div class="order-form" id="order-form" style="display: none;">
-    <h3>Finalisation de la commande</h3>
-    <form id="orderForm" action="https://formspree.io/f/mnnnovbe" method="POST">
-        <input type="text" name="firstName" placeholder="Prénom" required>
-        <input type="text" name="lastName" placeholder="Nom" required>
-        <input type="tel" name="phone" placeholder="Numéro de téléphone" required>
-        <p>Veuillez entrer votre adresse pour calculer les frais de livraison.</p>       
-        <input type="text" name="address" id="userAddress" placeholder="Adresse ou code postal" required>    
-
-        <!-- Champs cachés pour envoyer les données -->
-        <input type="hidden" name="products" id="orderProducts">
-        <input type="hidden" name="totalPrice" id="orderTotalPrice">
-        <input type="hidden" name="shippingCost" id="shippingCost"> <!-- Ajout -->
-
-        <div id="shippingMessage"></div>
-        <button type="button" onclick="calculateShipping()">Calculer la livraison</button>
-        <button type="submit">Envoyer la Commande</button>
-        <button type="button" onclick="closeOrderForm()">Annuler</button>
-    </form>
-</div>
-<!-- Lightbox -->
-<div id="lightbox" style="display:none;">
-    <div id="lightbox-content">
-        <img id="lightbox-img" src="" alt="">
-        <button onclick="closeLightbox()">Fermer</button>
-    </div>
-</div>
-
-<!-- Modale de confirmation -->
-<div id="confirmation-modal" class="modal">
-    <div class="modal-content">
-        <span id="close-modal" class="close">&times;</span>
-        <p id="modal-message"></p>
-    </div>
-</div>
-<!-- Bannière de consentement aux cookies -->
-<div id="cookie-banner" style="position: fixed; bottom: 10px; left: 10px; right: 10px; background: rgba(0, 0, 0, 0.9); color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; border-radius: 5px; z-index: 1000; display: none;">
-    
-    <div>
-        <button id="accept-cookies" style="background: #4CAF50; color: white; border: none; padding: 10px 15px; border-radius: 5px; margin-right: 10px; cursor: pointer;">Accepter</button>
-        <button id="decline-cookies" style="background: #f44336; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;">Refuser</button>
-    </div>
-</div>
-  <!-- Bannière de réduction -->
-<div id="discount-banner" style="display: none; background-color: #4caf50; color: white; padding: 10px; text-align: center; position: fixed; top: 0; width: 100%; z-index: 1000;">
-    🎉 Félicitations ! Vous avez récupéré votre réduction de 10% !
-</div>
-
-<!-- Pop-up initial -->
-<div id="discount-popup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:white; border:1px solid #ccc; padding:20px; z-index:1000;">
-    <h3>🎉 Réduction spéciale pour vous ! 🎉</h3>
-    <button onclick="showDiscountForm()">Obtenir la réduction</button>
-    <button onclick="closePopup('discount-popup')">Fermer</button>
-</div>
-
-<!-- Pop-up formulaire -->
-<div id="discount-form-popup" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background:white; border:1px solid #ccc; padding:20px; z-index:1000;">
-    <h3>🎉 Validez votre réduction ! 🎉</h3>
-    <form id="discount-form" onsubmit="claimDiscount(event)">
-        <!-- Conteneur pour les cases -->
-        <div id="case-container" style="display: flex; gap: 10px; margin-bottom: 20px;">
-            <!-- Les cases seront générées ici -->
         </div>
 
-        <!-- Adresse email -->
-        <label for="user-email">Votre email :</label>
-        <input type="email" id="user-email" name="email" required style="margin-bottom: 10px;" oninput="updateSubmitButton()">
-        <br>
+        <!-- Produit 2 -->
+        <div class="product">
+           <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/222c7052-6326-89b5-ae39-2b4543164039.jpg" alt="Bonbonne Crème Deluxe" onclick="showImage(this)">                
+            <div class="product-name">Bonbonne Crème Deluxe</div>
+            <div class="product-price">€30.00</div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button onclick="decrementQuantity(this)">-</button>
+                    <input type="number" value="1" min="1" class="quantity-input">
+                    <button onclick="incrementQuantity(this)">+</button>
+                </div>
+                <button class="buy-button" onclick="addToCartWithQuantity('Bonbonne Crème Deluxe', '30', this)">Acheter</button>
+            </div>
+        </div>
 
-        <!-- Message explicatif -->
-        <p style="font-size: 12px; color: gray;">
-            * Vous devez remplir toutes les cases pour valider la réduction.
-        </p>
+        <!-- Produit 3 -->
+        <div class="product">
+           <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/222c7052-6326-89b5-ae39-2b4543164039.jpg" alt="Bonbonne Crème Deluxe" onclick="showImage(this)">                
+            <div class="product-name">Fast Gaz</div>
+            <div class="product-price">€25.00</div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button onclick="decrementQuantity(this)">-</button>
+                    <input type="number" value="1" min="1" class="quantity-input">
+                    <button onclick="incrementQuantity(this)">+</button>
+                </div>
+                <button class="buy-button" onclick="addToCartWithQuantity('Fast Gaz', '25', this)">Acheter</button>
+            </div>
+        </div>
 
-        <!-- Boutons -->
-        <button type="submit" disabled id="submit-button">Valider</button>
-        <button type="button" onclick="closePopup('discount-form-popup')">Fermer</button>
-    </form>
+        <!-- Produit 4 -->
+        <div class="product">
+           <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/222c7052-6326-89b5-ae39-2b4543164039.jpg" alt="Bonbonne Crème Deluxe" onclick="showImage(this)">
+         
+            <div class="product-name">Tank</div>
+            <div class="product-price">€45.00</div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button onclick="decrementQuantity(this)">-</button>
+                    <input type="number" value="1" min="1" class="quantity-input">
+                    <button onclick="incrementQuantity(this)">+</button>
+                </div>
+                <button class="buy-button" onclick="addToCartWithQuantity('Tank', '45', this)">Acheter</button>
+            </div>
+        </div>
+
+        <h3>Puffs</h3>
+
+        <!-- Produit 5 -->
+        <div class="product">
+            <div class="product-name">Puff goût fraise 🍓 9000</div>
+            <div class="product-price">€15.00</div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button onclick="decrementQuantity(this)">-</button>
+                    <input type="number" value="1" min="1" class="quantity-input">
+                    <button onclick="incrementQuantity(this)">+</button>
+                </div>
+                <button class="buy-button" onclick="addToCartWithQuantity('Puff goût fraise 9000', '15', this)">Acheter</button>
+            </div>
+        </div>
+
+        <!-- Produit 6 -->
+        <div class="product">
+            <div class="product-name">Puff goût myrtille 15000</div>
+            <div class="product-price">€18.00</div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button onclick="decrementQuantity(this)">-</button>
+                    <input type="number" value="1" min="1" class="quantity-input">
+                    <button onclick="incrementQuantity(this)">+</button>
+                </div>
+                <button class="buy-button" onclick="addToCartWithQuantity('Puff goût myrtille 15000', '18', this)">Acheter</button>
+            </div>
+        </div>
+
+        <!-- Produit 7 -->
+        <div class="product">
+            <div class="product-name">Snouss Pablo Escobar</div>
+            <div class="product-price">€10.00</div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button onclick="decrementQuantity(this)">-</button>
+                    <input type="number" value="1" min="1" class="quantity-input">
+                    <button onclick="incrementQuantity(this)">+</button>
+                </div>
+                <button class="buy-button" onclick="addToCartWithQuantity('Snouss Pablo Escobar', '10', this)">Acheter</button>
+            </div>
+        </div>
+
+        <h3>Boissons</h3>
+
+        <!-- Produit 8 -->
+        <div class="product">
+            <div class="product-name">Coco</div>
+            <div class="product-price">€2.00</div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button onclick="decrementQuantity(this)">-</button>
+                    <input type="number" value="1" min="1" class="quantity-input">
+                    <button onclick="incrementQuantity(this)">+</button>
+                </div>
+                <button class="buy-button" onclick="addToCartWithQuantity('Coco', '2', this)">Acheter</button>
+            </div>
+        </div>
+
+        <!-- Produit 9 -->
+        <div class="product">
+            <div class="product-name">Fanta</div>
+            <div class="product-price">€2.00</div>
+            <div class="product-actions">
+                <div class="quantity-selector">
+                    <button onclick="decrementQuantity(this)">-</button>
+                    <input type="number" value="1" min="1" class="quantity-input">
+                    <button onclick="incrementQuantity(this)">+</button>
+                </div>
+                <button class="buy-button" onclick="addToCartWithQuantity('Fanta', '2', this)">Acheter</button>
+            </div>
+        </div>
+
+        <!-- Modal du Panier et Formulaire -->
+        <div id='cartModal'>
+            <h3>Mon Panier</h3>
+            <div id='cartItems'></div>
+            <div id='cartTotal' class="cart-total">Total : 0€</div>
+            <button class='checkout-button' onclick='checkout()'>Passer à la caisse</button>
+
+            <!-- Formulaire commande -->
+            <div id='checkoutContainer' class="form-container">
+                <h3>Finaliser votre commande</h3>
+                <form id='checkoutForm'>
+                    <div class="form-group">
+                        <input type='text' name='name' placeholder='Nom complet' required />
+                        <input type='tel' name='phone' placeholder='Téléphone' required />
+                        <textarea name='address' placeholder='Adresse de livraison' required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <h4>Options de livraison</h4>
+                        <div class="delivery-option">
+                            <input type="radio" id="deliveryNow" name="deliveryTime" value="now" checked required>
+                            <label for="deliveryNow">Livraison rapide (dans l'heure)</label>
+                        </div>
+                        <div class="delivery-option">
+                            <input type="radio" id="deliveryLater" name="deliveryTime" value="later">
+                            <label for="deliveryLater">Livraison programmée</label>
+                        </div>
+                        <div id="deliveryTimeContainer">
+                            <input type="datetime-local" name="deliveryDateTime">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <h4>Méthode de paiement</h4>
+                        <div class="payment-method">
+                            <input type="radio" id="cash" name="paymentMethod" value="cash" checked required>
+                            <label for="cash">Espèces</label>
+                        </div>
+                        <div class="payment-method">
+                            <input type="radio" id="card" name="paymentMethod" value="card">
+                            <label for="card">Carte bancaire</label>
+                        </div>
+                    </div>
+                    
+                    <input type='hidden' name='orderDetails' id='orderDetails'>
+                    <button type='button' class="checkout-button" onclick="submitOrder()">Confirmer la commande</button>
+                    <button type='button' class="checkout-button" onclick='goToCart()'>Retour au panier</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Bouton flottant pour ouvrir le panier -->
+        <button id='openCartButton'>🛒<span id="cartCount">0</span></button>
+    </div>
+
+    <!-- Modal d'alerte -->
+    <div id="alertModal" class="modal">
+        <span id="alertMessage"></span>
+    </div>
 </div>
-
-<!-- Bouton pour voir la réduction -->
-<button id="view-discount-button" style="display:none;" onclick="showDiscount()">Voir votre réduction</button>
-
-    <script>
-  function trackShopClick() {
-    snaptr('track', 'BUTTON_CLICK', {
-      'button_name': 'shop_button', // Identifie le bouton
-      'page_url': window.location.href // Capture l'URL de la page
-    });
-    console.log('Snapchat Pixel: Événement BUTTON_CLICK envoyé.');
-  }
-</script>
-
+  <!-- Zoom sur l'image -->
+        <div id="imageModal" class="image-modal" onclick="closeImage()">
+            <img id="zoomedImage" src="" alt="Zoomed Image">
+        </div>
 <script>
-// Simuler une file d'attente avec animation de compte dynamique
-let count = 25; // Nombre initial de personnes
-const queueCount = document.getElementById("queue-count");
+// Initialisation du compteur de clients
+let currentCount = 1200;
+const incrementValue = Math.floor(Math.random() * 10) + 1;
+const clientCountElement = document.getElementById('clientCount');
 
-function simulateQueue() {
-    count += Math.floor(Math.random() * 3) - 1; // +/- 1 personne aléatoire
-    count = Math.max(0, count); // Évite un nombre négatif
-    queueCount.textContent = count;
+function updateClientCount() {
+    currentCount += incrementValue;
+    clientCountElement.innerText = `Clients : ${currentCount.toLocaleString()} satisfaits`;
 }
 
-// Actualise toutes les 2 secondes pour simuler une vraie activité
-setInterval(simulateQueue, 2000);
+setInterval(updateClientCount, 5000);
 
-</script>
-          <script>
-    // Fonction de mise à jour du résumé
-    function updateSummary(product) {
-      const people = document.getElementById(`${product}-people`).value;
-      let price = 0;
-      let quantity = 0;
-      let productDescription = "";
+// Gestion des quantités
+function incrementQuantity(button) {
+    const input = button.parentElement.querySelector('.quantity-input');
+    input.value = parseInt(input.value) + 1;
+}
 
-      if (product === 'samoussa') {
-        quantity = 40;
-        price = 25;
-        productDescription = "Samoussas savoureux pour débuter votre soirée, 40 pièces pour 5 personnes.";
-      } else if (product === 'nems') {
-        quantity = 10;
-        price = 18;
-        productDescription = "Les nems croustillants, parfaits pour un apéritif, 10 pièces pour 5 personnes.";
-      } else if (product === 'brochettes') {
-        quantity = 8;
-        price = 25;
-        productDescription = "Des brochettes délicieuses pour tous les goûts, 8 pièces pour 5 personnes.";
-      }
-
-      const multiplier = people / 5;
-      const totalPieces = Math.ceil(quantity * multiplier);
-      const totalPrice = (price * multiplier).toFixed(2);
-
-      document.getElementById(`${product}-summary`).innerHTML = `
-        <p>${productDescription}</p>
-        <p>Nombre de personnes : ${people}</p>
-        <p>Quantité : ${totalPieces} pièces</p>
-        <p>Prix total : ${totalPrice}€</p>
-      `;
-
-      // Afficher le bouton "Valider mon choix"
-      document.getElementById(`${product}-confirm-btn`).style.display = 'inline-block';
+function decrementQuantity(button) {
+    const input = button.parentElement.querySelector('.quantity-input');
+    if (input.value > 1) {
+        input.value = parseInt(input.value) - 1;
     }
+}
 
-    // Confirmer le choix et afficher le résumé
-    function confirmChoice(product) {
-      const people = document.getElementById(`${product}-people`).value;
-      let price = 0;
-      let quantity = 0;
-      let productName = "";
-      let productDescription = "";
+// Initialisation du panier
+let cart = [];
 
-      if (product === 'samoussa') {
-        quantity = 40;
-        price = 25;
-        productName = "Samoussas";
-        productDescription = "Samoussas savoureux pour débuter votre soirée.";
-      } else if (product === 'nems') {
-        quantity = 10;
-        price = 18;
-        productName = "Nems";
-        productDescription = "Les nems croustillants pour un apéritif parfait.";
-      } else if (product === 'brochettes') {
-        quantity = 8;
-        price = 25;
-        productName = "Brochettes";
-        productDescription = "Des brochettes délicieuses pour tous les goûts.";
-      }
-
-      const multiplier = people / 5;
-      const totalPieces = Math.ceil(quantity * multiplier);
-      const totalPrice = (price * multiplier).toFixed(2);
-
-      // Résumé du produit choisi
-      document.getElementById(`${product}-summary`).innerHTML += `
-        <p>Nombre de personnes : ${people}</p>
-        <p>Quantité : ${totalPieces} pièces</p>
-        <p>Prix total : ${totalPrice}€</p>
-      `;
-
-      // Afficher le bouton "Valider ma commande"
-      document.getElementById("order-summary").innerHTML = `
-        <h3>Résumé de votre commande :</h3>
-        <p>${productName}: ${totalPieces} pièces pour ${people} personnes, total : ${totalPrice}€</p>
-      `;
-      document.getElementById("order-summary").style.display = 'block';
-      document.querySelector(".validate-order-button").style.display = 'inline-block';
-    }
-
-    // Valider la commande et afficher la confirmation
-    function validateOrder() {
-      document.getElementById("confirmation-message").innerHTML = `
-        <p>Votre commande a bien été prise en compte. Vous allez recevoir un récapitulatif de votre commande sous peu.</p>
-      `;
-      document.getElementById("confirmation-message").style.display = 'block';
-      document.getElementById("order-confirmation").style.display = 'block';
-      document.getElementById("reservation-modal").style.display = 'none';
-    }
-
-    // Rediriger vers Formspree (ou autre service)
-    function redirectToFormspree() {
-      window.location.href = "https://formspree.io/f/xannldgo";
-    }
-
-    // Ouvrir la modale de réservation
-    function openModal() {
-      document.getElementById("reservation-modal").style.display = 'flex';
-    }
-
-    // Fermer la modale
-    function closeModal() {
-      document.getElementById("reservation-modal").style.display = 'none';
-    }
-          </script>
-<script>
-          document.addEventListener("DOMContentLoaded", function () {
-    const statusMessage = document.getElementById("status-message");
-    const closingWarning = document.getElementById("closing-warning");
-    const countdown = document.getElementById("countdown");
-    const holidayMessage = document.getElementById("holiday-message");
-    const reopenMessage = document.getElementById("reopen-message");
-    const reopenTime = document.getElementById("reopen-time");
-    const openDateDisplay = document.getElementById("open-date-display");
-    const closeDateDisplay = document.getElementById("close-date-display");
-
-    // Définir les horaires normaux d'ouverture et de fermeture
-    let openingHour = 14; // Heure d'ouverture normale (14h)
-    let openingMinute = 0; // Minute d'ouverture normale (00)
-    let closingHour = 5; // Heure de fermeture normale (5h du matin)
-    let closingMinute = 30; // Minute de fermeture normale (30)
-
-    // Définir une date précise d'ouverture
-    const specialOpeningDate = new Date('2025-01-15T00:00:00'); // La boutique ouvre le 15 janvier 2025
-
-    // Liste des jours fériés (au format MM-DD)
-    const holidays = ["01-01", "07-14", "12-25"]; // Liste des jours fériés (ex : 1er janvier, 14 juillet, 25 décembre)
-
-    // Fonction pour vérifier si aujourd'hui est un jour férié
-    function isHoliday() {
-        const today = new Date();
-        const formattedDate = today.toISOString().slice(5, 10); // Format MM-DD
-        return holidays.includes(formattedDate);
-    }
-
-    // Fonction pour vérifier si la boutique est ouverte ou fermée
-    function updateStoreStatus() {
-        const now = new Date();
-
-        // Gestion de la date spéciale d'ouverture
-        if (now < specialOpeningDate) {
-            // La boutique est fermée avant la date spéciale
-            statusMessage.textContent = `❌ Fermé pour l'instant. Réouverture le ${specialOpeningDate.toLocaleDateString()} 🛍️.`;
-            reopenMessage.style.display = "block";
-            reopenTime.textContent = `${specialOpeningDate.toLocaleDateString()} à 00:00`;
-            closingWarning.style.display = "none";
-            holidayMessage.style.display = "none";
-            return;
-        }
-
-        // Gestion des horaires normaux après la date spéciale
-        const todayOpeningTime = new Date(now);
-        todayOpeningTime.setHours(openingHour, openingMinute, 0, 0);
-
-        const todayClosingTime = new Date(now);
-        if (closingHour < openingHour) {
-            // Si fermeture après minuit, ajouter un jour
-            todayClosingTime.setDate(todayClosingTime.getDate() + 1);
-        }
-        todayClosingTime.setHours(closingHour, closingMinute, 0, 0);
-
-        // Afficher le message du jour férié
-        if (isHoliday()) {
-            holidayMessage.style.display = "block";
-        } else {
-            holidayMessage.style.display = "none";
-        }
-
-        // Vérifier si la boutique est ouverte ou fermée
-        if (now >= todayOpeningTime && now <= todayClosingTime) {
-            // La boutique est ouverte
-            statusMessage.textContent = isHoliday()
-                ? "🟢 Ouvert (jour férié) ! Bienvenue."
-                : "🟢 Ouvert ! Bienvenue.";
-            reopenMessage.style.display = "none";
-
-            // Gestion de l'avertissement de fermeture imminente
-            const minutesLeft = Math.floor((todayClosingTime - now) / 60000); // Temps restant en minutes
-            if (minutesLeft <= 5) {
-                closingWarning.style.display = "block";
-                countdown.textContent = minutesLeft;
-            } else {
-                closingWarning.style.display = "none";
-            }
-        } else {
-            // La boutique est fermée
-            statusMessage.textContent = "❌ Fermé pour l'instant.";
-            reopenMessage.style.display = "block";
-            reopenTime.textContent = `${openingHour}h${openingMinute.toString().padStart(2, '0')}`;
-            closingWarning.style.display = "none";
-        }
-    }
-
-    // Afficher les dates dans la section dédiée
-    openDateDisplay.textContent = `${openingHour}h${openingMinute.toString().padStart(2, '0')}`;
-    closeDateDisplay.textContent = `${closingHour}h${closingMinute.toString().padStart(2, '0')}`;
-
-    // Mise à jour du statut au chargement de la page
-    updateStoreStatus();
-
-    // Optionnel : Mettre à jour toutes les minutes
-    setInterval(updateStoreStatus, 60000);
-});
-</script>
-<script>
-    document.addEventListener("DOMContentLoaded", () => {
-        // Affiche la pop-up initiale après 5 secondes si aucune réduction n'a été validée
-        if (!localStorage.getItem("reductionValidee")) {
-            setTimeout(() => {
-                document.getElementById("discount-popup").style.display = "block";
-            }, 5000);
-        }
-    });
-
-    // Affiche le formulaire pour valider la réduction
-    function showDiscountForm() {
-        document.getElementById("discount-popup").style.display = "none";
-        document.getElementById("discount-form-popup").style.display = "block";
-        generateCases(6); // Génère 6 cases rouges ❌
-    }
-
-    // Génère les cases rouges ❌ par défaut
-    function generateCases(count) {
-        const container = document.getElementById("case-container");
-        container.innerHTML = ""; // Vide les cases existantes
-        for (let i = 0; i < count; i++) {
-            const caseElement = document.createElement("div");
-            caseElement.id = `case-${i}`;
-            caseElement.dataset.state = "red"; // État initial (rouge)
-            caseElement.style.width = "30px";
-            caseElement.style.height = "30px";
-            caseElement.style.border = "2px solid #ff4d4d";
-            caseElement.style.borderRadius = "5px";
-            caseElement.style.display = "flex";
-            caseElement.style.justifyContent = "center";
-            caseElement.style.alignItems = "center";
-            caseElement.style.cursor = "pointer";
-            caseElement.style.fontSize = "18px";
-            caseElement.style.backgroundColor = "#ff4d4d"; // Fond rouge
-            caseElement.textContent = "❌"; // Croix rouge
-
-            // Ajoute un événement au clic
-            caseElement.addEventListener("click", () => toggleCaseState(caseElement));
-            container.appendChild(caseElement);
-        }
-    }
-
-    // Change l'état des cases
-    function toggleCaseState(caseElement) {
-        if (caseElement.dataset.state === "red") {
-            caseElement.dataset.state = "green";
-            caseElement.style.backgroundColor = "#4caf50";
-            caseElement.style.borderColor = "#4caf50";
-            caseElement.textContent = "✅";
-        }
-        checkIfAllCasesAreGreen();
-    }
-
-    // Vérifie si toutes les cases sauf la dernière sont vertes
-    function checkIfAllCasesAreGreen() {
-        const cases = document.querySelectorAll("#case-container div");
-        const allGreenExceptLast = Array.from(cases)
-            .slice(1) // Ignore la première case
-            .every((caseElement) => caseElement.dataset.state === "green");
-
-        if (allGreenExceptLast) {
-            const firstCase = document.getElementById("case-0");
-            firstCase.dataset.state = "green";
-            firstCase.style.backgroundColor = "#4caf50";
-            firstCase.style.borderColor = "#4caf50";
-            firstCase.textContent = "✅";
-            firstCase.style.pointerEvents = "none"; // Désactive les clics sur cette case
-        }
-
-        updateSubmitButton();
-    }
-
-    // Active le bouton Valider uniquement si toutes les cases sont vertes et l'email est saisi
-    function updateSubmitButton() {
-        const cases = document.querySelectorAll("#case-container div");
-        const allGreen = Array.from(cases).every((caseElement) => caseElement.dataset.state === "green");
-        const email = document.getElementById("user-email").value.trim();
-        const submitButton = document.getElementById("submit-button");
-
-        submitButton.disabled = !(allGreen && email); // Active seulement si toutes les conditions sont remplies
-    }
-
-    // Valide la réduction
-    function claimDiscount(event) {
-        event.preventDefault();
-
-        // Sauvegarde que la réduction est validée
-        localStorage.setItem("reductionValidee", "true");
-
-        // Désactive toutes les cases
-        const cases = document.querySelectorAll("#case-container div");
-        cases.forEach((caseElement) => {
-            caseElement.style.pointerEvents = "none"; // Désactive les clics
-        });
-
-        // Affiche un message de validation
-        document.getElementById("discount-form-popup").style.display = "none";
-        document.getElementById("discount-banner").style.display = "block";
-        document.getElementById("view-discount-button").style.display = "block";
-
-        // Cache la bannière après 5 secondes
-        setTimeout(() => {
-            document.getElementById("discount-banner").style.display = "none";
-        }, 5000);
-    }
-
-    // Affiche l'état de la réduction
-    function showDiscount() {
-        alert("🎉 Vous avez une réduction de 10% !");
-    }
-
-    // Ferme un pop-up spécifique
-    function closePopup(popupId) {
-        document.getElementById(popupId).style.display = "none";
-    }
-</script>          
-            
-
-  <script>
-// Fonction pour afficher ou masquer le panier
-function toggleCart() {
-    const cart = document.getElementById("cart");
+// Ajouter un produit au panier avec quantité
+function addToCartWithQuantity(productName, price, button) {
+    const productElement = button.closest('.product');
+    const quantity = parseInt(productElement.querySelector('.quantity-input').value);
+    const totalPrice = quantity * parseFloat(price);
     
-    // Si le panier est actuellement caché, on l'affiche, sinon on le cache
-    if (cart.style.display === "none") {
-        cart.style.display = "block";
+    // Vérifier si le produit est déjà dans le panier
+    const existingItemIndex = cart.findIndex(item => item.name === productName);
+    
+    if (existingItemIndex >= 0) {
+        // Mettre à jour la quantité si le produit existe déjà
+        cart[existingItemIndex].quantity += quantity;
+        cart[existingItemIndex].total += totalPrice;
     } else {
-        cart.style.display = "none";
-    }
-}
-
-// Fonction pour vider le panier (par exemple, supprimer tous les éléments du panier)
-function clearCart() {
-    const cartItems = document.getElementById("cart-items");
-    cartItems.innerHTML = ""; // Vide tous les éléments du panier
-    const total = document.getElementById("total");
-    total.innerHTML = "Total : €0.00"; // Réinitialise le total
-}
-
-// Fonction pour finaliser la commande (par exemple, rediriger vers un formulaire)
-function openOrderForm() {
-    // Ici, tu pourrais ouvrir un formulaire de commande ou rediriger vers une autre page
-    alert("Finalisation de la commande...");
-}
-</script>
-<script>
-   function toggleShopSection() {
-    const shopSection = document.querySelector('.shop-section');
-    shopSection.style.display = shopSection.style.display === 'none' ? 'block' : 'none';
-
-    const icon = document.querySelector('.shop-icon i');
-    icon.className = shopSection.style.display === 'block' ? 'fas fa-chevron-up' : 'fas fa-shopping-cart';
-}
-    
-    
-    
-window.addEventListener("load", function() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const productId = urlParams.get('product');  // Récupère l'ID du produit depuis l'URL
-
-    if (productId) {
-        // Masque tous les produits
-        const allProducts = document.querySelectorAll('.shop-item');
-        allProducts.forEach(function(product) {
-            product.style.display = 'none';  // Cache tous les produits
-        });
-
-        // Affiche le produit correspondant et ouvre la lightbox
-        const productElement = document.getElementById('product-' + productId);
-        if (productElement) {
-            productElement.style.display = 'block';  // Affiche le produit spécifié
-            openLightbox(productElement.querySelector('.product-image').src);
-        }
-    }
-});
-
-function toggleLightbox(imgSrc = '') {
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    const allProducts = document.querySelectorAll('.shop-item');
-
-    if (lightbox.style.display === 'none' || lightbox.style.display === '') {
-        // Ouvre la lightbox
-        lightbox.style.display = 'flex';
-        lightboxImg.src = imgSrc;
-    } else {
-        // Ferme la lightbox
-        lightbox.style.display = 'none';
-        lightboxImg.src = '';
-
-        // Affiche tous les produits
-        allProducts.forEach(function (product) {
-            product.style.display = 'block';
+        // Ajouter un nouvel item
+        cart.push({
+            name: productName,
+            price: price,
+            quantity: quantity,
+            total: totalPrice
         });
     }
-}
-</script>
-    <script>
     
-    document.querySelectorAll('.shop-item img').forEach(img => {
-    img.addEventListener('click', function () {
-        // Créer une div pour la lightbox
-        const fullscreenDiv = document.createElement('div');
-        fullscreenDiv.classList.add('fullscreen-img');
-        fullscreenDiv.innerHTML = `<img src="${this.src}" alt="Image agrandie">`;
-        document.body.appendChild(fullscreenDiv);
-
-        // Fermer la lightbox au clic sur l'image ou en dehors
-        fullscreenDiv.addEventListener('click', function () {
-            document.body.removeChild(fullscreenDiv);
-        });
-    });
-});
-    
-    
-    </script>
-      <script>
-    // Fonction pour afficher ou masquer les paramètres
-function toggleSettings() {
-    const settingsPopup = document.getElementById('settings-popup');
-    settingsPopup.style.display = settingsPopup.style.display === 'none' ? 'block' : 'none';
+    updateCart();
+    showAlert(`${quantity} ${productName} ajouté(s) au panier`);
 }
 
-// Fonction pour activer ou désactiver la localisation
-function toggleLocation() {
-    const locationStatus = document.getElementById('location-status');
-    if (locationStatus.textContent === "Localisation désactivée") {
-        locationStatus.textContent = "Localisation activée";
-        // Ajoute ici la logique pour activer la géolocalisation
-    } else {
-        locationStatus.textContent = "Localisation désactivée";
-        // Ajoute ici la logique pour désactiver la géolocalisation
-    }
-}
-    
-    // Fonction pour fermer la fenêtre des paramètres
-function closeSettings() {
-    const settingsPopup = document.getElementById('settings-popup');
-    settingsPopup.style.display = 'none';
-}
-   
-    
-// Fonction pour afficher le bouton panier 🛒
-function showCartButton() {
-    const cartButton = document.getElementById("toggle-cart-button");
-    cartButton.style.display = "block"; // Afficher le bouton
-}
+// Mettre à jour l'affichage du panier
+function updateCart() {
+    const cartItems = document.getElementById('cartItems');
+    cartItems.innerHTML = '';
+    let grandTotal = 0;
 
-// Ajouter un événement sur chaque bouton "Ajouter au panier"
-document.querySelectorAll('.buy-button').forEach(button => {
-    button.addEventListener('click', showCartButton);
-});
-// Fonction pour fermer le panier lorsqu'on clique dessus
-document.getElementById('cart').addEventListener('click', function() {
-    this.style.display = 'none';
-});
-// Fonction pour afficher ou masquer le panier
-function toggleCart() {
-    const cart = document.getElementById("cart"); // Le panier
-    if (cart.style.display === "none" || cart.style.display === "") {
-        cart.style.display = "block"; // Affiche le panier
-    } else {
-        cart.style.display = "none"; // Cache le panier
-    }
-}
-    
-       let cart = [];
-let totalPrice = 0;
-const shopLat = 43.296398; // latitude de Marseille
-const shopLon = 5.370000;  // longitude de Marseille
-
-// Fonction pour basculer la visibilité de la section boutique et afficher/masquer la flèche
-function toggleShopSection() {
-    const shopSection = document.querySelector('.shop-section');
-    const arrowIcon = document.getElementById('arrow-icon'); // Récupère l'icône de la flèche
-    const shopIcon = document.getElementById('shop-icon'); // Récupère l'icône de la boutique
-    
-    if (shopSection.style.display === 'none') {
-        shopSection.style.display = 'block'; // Affiche la boutique
-        shopIcon.style.display = 'none'; // Cache l'icône de la boutique
-        arrowIcon.style.display = 'inline'; // Affiche la flèche
-    } else {
-        shopSection.style.display = 'none'; // Cache la boutique
-        shopIcon.style.display = 'inline'; // Réaffiche l'icône de la boutique
-        arrowIcon.style.display = 'none'; // Cache la flèche
-    }
-}
-
-// Fonction pour ajouter un produit au panier
-function addToCart(productName, price, quantity = 1) {
-    // Calculer le prix total pour le produit avec la quantité
-    const totalProductPrice = price * quantity;
-
-    // Ajouter ce produit au panier
-    cart.push({
-        productName: productName,
-        quantity: quantity,
-        price: price, // Prix unitaire
-        totalProductPrice: totalProductPrice, // Prix total pour cet article
-    });
-
-    // Ajouter au total général
-    totalPrice += totalProductPrice;
-
-    // Mettre à jour l'affichage du panier
-    updateCartDisplay();
-
-    // Affiche un message de notification
-    const modalMessage = document.getElementById('modal-message');
-    modalMessage.textContent = `${quantity} unité(s) de ${productName} ajoutée(s) au panier pour un total de €${totalProductPrice.toFixed(2)}.`;
-
-    // Ouvrir la modale
-    const modal = document.getElementById('confirmation-modal');
-    modal.style.display = 'flex';
-
-    // Gestion de la fermeture de la modale
-    const closeModal = document.getElementById('close-modal');
-    closeModal.onclick = function () {
-        modal.style.display = 'none';
-    };
-    window.onclick = function (event) {
-        if (event.target === modal) {
-            modal.style.display = 'none';
-        }
-    };
-}
-
-// Fonction pour mettre à jour l'affichage du panier
-function updateCartDisplay() {
-    const cartItems = document.getElementById("cart-items");
-    cartItems.innerHTML = ""; // Vider l'affichage précédent
-
-    // Parcourir les produits du panier pour les afficher
-    cart.forEach((item) => {
-        const div = document.createElement("div");
-        div.classList.add("cart-item");
-
-        div.innerHTML = `
-            <strong>${item.productName}</strong> 
-            - ${item.quantity} unité(s) 
-            <span>Prix total : €${item.totalProductPrice.toFixed(2)}</span>
-            <button onclick="removeFromCart('${item.productName}')">Supprimer</button>
+    cart.forEach((item, index) => {
+        const itemElement = document.createElement('div');
+        itemElement.className = 'cart-item';
+        itemElement.innerHTML = `
+            <span>${item.quantity}x ${item.name}</span>
+            <span>${item.total.toFixed(2)}€</span>
+            <button onclick='removeFromCart(${index})'>✕</button>
         `;
-
-        cartItems.appendChild(div);
+        cartItems.appendChild(itemElement);
+        grandTotal += item.total;
     });
 
-    // Mettre à jour le total général en bas
-    document.getElementById("total").innerHTML = `Total : €${totalPrice.toFixed(2)}`;
-
-    // S'assurer que le panier est affiché
-    document.getElementById("cart").style.display = "block";
+    document.getElementById('cartTotal').innerText = `Total : ${grandTotal.toFixed(2)}€`;
+    document.getElementById('cartCount').innerText = cart.reduce((sum, item) => sum + item.quantity, 0);
+    document.getElementById('orderDetails').value = JSON.stringify(cart);
 }
-// Fonction pour supprimer un produit du panier
-function removeFromCart(productName) {
-    const index = cart.findIndex(item => item.productName === productName);
-    if (index !== -1) {
-        totalPrice -= cart[index].price;
-        cart.splice(index, 1);
-        updateCartDisplay();
+
+// Supprimer un produit du panier
+function removeFromCart(index) {
+    cart.splice(index, 1);
+    updateCart();
+}
+
+// Passer à la caisse
+function checkout() {
+    if (cart.length === 0) {
+        showAlert("Votre panier est vide");
+        return;
     }
-}
-
-// Fonction pour vider le panier
-function clearCart() {
-    cart = [];
-    totalPrice = 0;
-    updateCartDisplay();
-    document.getElementById('cart').style.display = 'none';
-}
-
-// Fonction pour ouvrir le formulaire de commande
-function openOrderForm() {
-    document.getElementById('order-form').style.display = 'block';
-    document.getElementById('orderProducts').value = JSON.stringify(cart);
-    document.getElementById('orderTotalPrice').value = totalPrice.toFixed(2);
-}
-
-// Fonction pour fermer le formulaire de commande
-function closeOrderForm() {
-    document.getElementById('order-form').style.display = 'none';
-}
-
-// Fonction pour calculer le coût de la livraison en fonction de l'adresse de l'utilisateur
-function calculateShipping() {
-    const userAddress = document.getElementById('userAddress').value;
-    if (userAddress) {
-        // Utilisation de l'API Nominatim pour géocoder l'adresse
-        fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(userAddress)}`)
-            .then(response => response.json())
-            .then(data => {
-                if (data.length > 0) {
-                    const userLat = parseFloat(data[0].lat);
-                    const userLon = parseFloat(data[0].lon);
-                    const distance = calculateDistance(shopLat, shopLon, userLat, userLon);
-                    displayShippingCost(distance);
-                } else {
-                    document.getElementById('shippingMessage').innerHTML = "Adresse non trouvée. Veuillez vérifier et réessayer.";
-                }
-            })
-            .catch(error => {
-                console.error('Erreur lors de la géolocalisation:', error);
-                document.getElementById('shippingMessage').innerHTML = "Erreur lors du calcul de la distance. Veuillez réessayer.";
-            });
-    } else {
-        document.getElementById('shippingMessage').innerHTML = "Veuillez entrer une adresse valide.";
-    }
-}
-
-// Fonction pour calculer la distance entre la boutique et l'adresse de l'utilisateur
-function calculateDistance(lat1, lon1, lat2, lon2) {
-    const R = 6371; // Rayon de la Terre en kilomètres
-    const dLat = (lat2 - lat1) * Math.PI / 180; // Conversion des degrés en radians
-    const dLon = (lon2 - lon1) * Math.PI / 180; // Conversion des degrés en radians
-    const a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-              Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) *
-              Math.sin(dLon / 2) * Math.sin(dLon / 2);
-    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    return R * c; // Retourne la distance en kilomètres
-}
     
-    // Fonction pour afficher le coût de la livraison basé sur le total de la commande
-    function displayShippingCost() {
-        let shippingCost = 5; // Frais de livraison par défaut
+    document.getElementById('checkoutContainer').style.display = 'block';
+    document.getElementById('cartItems').style.display = 'none';
+    document.querySelector('#cartModal h3').textContent = 'Finaliser la commande';
+}
 
-        // Si le total de la commande est supérieur à 20 € mais inférieur à 40 €
-        if (totalPrice >= 20 && totalPrice < 40) {
-            shippingCost = 3;  // Frais de livraison réduits
-        }
-        // Si le total de la commande dépasse 40 €, la livraison devient gratuite
-        else if (totalPrice >= 40) {
-            shippingCost = 0; // Livraison gratuite
-        }
+// Retourner au panier
+function goToCart() {
+    document.getElementById('checkoutContainer').style.display = 'none';
+    document.getElementById('cartItems').style.display = 'block';
+    document.querySelector('#cartModal h3').textContent = 'Mon Panier';
+}
 
-        // Mise à jour de l'affichage des frais de livraison
-        document.getElementById('shippingMessage').innerHTML = `Coût de livraison : €${shippingCost}`;
-        document.getElementById('shippingCost').value = shippingCost; // Ajoute les frais dans le champ caché
+// Soumettre la commande
+function submitOrder() {
+    const form = document.getElementById('checkoutForm');
+    const formData = new FormData(form);
+    
+    // Validation des données
+    if (!formData.get('name') || !formData.get('phone') || !formData.get('address')) {
+        showAlert("Veuillez remplir tous les champs obligatoires");
+        return;
     }
-
-    // Mise à jour de la fonction `openOrderForm` pour inclure les frais de livraison
-    function openOrderForm() {
-        document.getElementById('order-form').style.display = 'block';
-        document.getElementById('orderProducts').value = JSON.stringify(cart);
-        document.getElementById('orderTotalPrice').value = totalPrice.toFixed(2);
-        displayShippingCost(); // Appelle cette fonction pour calculer les frais avant d'ouvrir le formulaire
+    
+    if (formData.get('deliveryTime') === 'later' && !formData.get('deliveryDateTime')) {
+        showAlert("Veuillez sélectionner une date de livraison");
+        return;
     }
-
-
-          document.getElementById("orderForm").addEventListener("submit", function (event) {
-    // Empêche temporairement la soumission par défaut
-    event.preventDefault();
-
-    const form = this;
-
-    // Masque immédiatement le formulaire et le texte "Finalisation de la commande"
-    document.getElementById("order-form").style.display = "none"; // Masque le formulaire
-
-    // Affiche le message de confirmation
-    const messageContainer = document.createElement("div");
-    messageContainer.className = "success-message";
-    messageContainer.innerHTML =
-        "Merci pour votre commande ! Elle a bien été prise en compte. Nous la livrerons sous 15 minutes.<br><br>";
-
-    // Ajoute un bouton "OK" pour confirmer
-    const okButton = document.createElement("button");
-    okButton.innerText = "OK";
-    okButton.style.marginTop = "10px";
-    okButton.addEventListener("click", function () {
-        messageContainer.remove(); // Supprime le message
-        form.submit(); // Soumet réellement le formulaire à Formspree.io
+    
+    // Envoyer les données (remplacer par votre URL Formspree)
+    fetch('https://formspree.io/f/xzzejjvk', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            showAlert("Commande confirmée avec succès !");
+            cart = [];
+            updateCart();
+            document.getElementById('checkoutContainer').style.display = 'none';
+            document.getElementById('cartModal').style.display = 'none';
+        } else {
+            throw new Error('Erreur lors de l\'envoi de la commande');
+        }
+    })
+    .catch(error => {
+        showAlert("Erreur: " + error.message);
     });
+}
 
-    messageContainer.appendChild(okButton);
-    document.body.appendChild(messageContainer);
+// Gestion de la livraison programmée
+document.querySelectorAll('input[name="deliveryTime"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+        document.getElementById('deliveryTimeContainer').style.display = 
+            this.value === 'later' ? 'block' : 'none';
+    });
 });
-  </script>
-   <script>
-  // Fonction pour faire défiler jusqu'à la section boutique
-function scrollToShopSection() {
-    const shopSection = document.querySelector('.shop-section'); // Section de la boutique
-    const arrowIcon = document.getElementById('arrow-icon'); // Icône de la flèche
-    const toggleText = document.querySelector('.shop-icon p'); // Texte à côté de l'icône
 
-    // Affiche la section boutique si elle est masquée
-    if (shopSection.style.display === 'none') {
-        shopSection.style.display = 'block';
-        arrowIcon.style.display = 'inline-block'; // Affiche la flèche
-        toggleText.textContent = 'Masquer la Boutique'; // Change le texte
-    }
-
-    // Fais défiler jusqu'à la section boutique
-    shopSection.scrollIntoView({ behavior: 'smooth' });
+// Afficher une alerte
+function showAlert(message) {
+    const alertModal = document.getElementById('alertModal');
+    const alertMessage = document.getElementById('alertMessage');
+    alertMessage.textContent = message;
+    alertModal.style.display = 'block';
+    
+    setTimeout(() => {
+        alertModal.style.display = 'none';
+    }, 3000);
 }
 
-// Ajout d'un événement de clic pour l'icône et le texte
-document.querySelector('.shop-icon').addEventListener('click', scrollToShopSection);
-   </script>
+// Ouvrir et fermer le modal du panier
+document.getElementById('openCartButton').onclick = function() {
+    document.getElementById('cartModal').style.display = 'block';
+    document.getElementById('checkoutContainer').style.display = 'none';
+    document.getElementById('cartItems').style.display = 'block';
+    document.querySelector('#cartModal h3').textContent = 'Mon Panier';
+};
+
+window.onclick = function(event) {
+    const cartModal = document.getElementById('cartModal');
+    if (event.target === cartModal) {
+        cartModal.style.display = 'none';
+    }
+};
+
+// Afficher/masquer les détails du profil
+document.getElementById('toggleDetails').onclick = function() {
+    const profileDetails = document.getElementById('profileDetails');
+    profileDetails.style.display = profileDetails.style.display === 'block' ? 'none' : 'block';
+};
+
+// Afficher/masquer la boutique
+document.getElementById('showShopButton').onclick = function(event) {
+    event.preventDefault();
+    const shopSection = document.getElementById('shopSection');
+    shopSection.style.display = shopSection.style.display === 'block' ? 'none' : 'block';
+};
   
-    <script>
-    // Vérifie si le cookie "cookies-accepted" existe
-    function getCookie(name) {
-        let match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
-        return match ? match[2] : null;
-    }
+  
+  // Zoom sur l'image
+function showImage(img) {
+    const modal = document.getElementById('imageModal');
+    const zoomedImage = document.getElementById('zoomedImage');
+    zoomedImage.src = img.src; // Mettre l'image dans le modal
+    modal.style.display = 'flex'; // Montrer le modal
+}
 
-    // Définit un cookie avec une durée en jours
-    function setCookie(name, value, days) {
-        let date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        document.cookie = `${name}=${value}; expires=${date.toUTCString()}; path=/`;
-    }
-
-       // Affiche la bannière si le consentement n'est pas encore donné
-    document.addEventListener('DOMContentLoaded', () => {
-        if (!getCookie('cookies-accepted')) {
-            document.getElementById('cookie-banner').style.display = 'flex';
-        }
-
-        // Accepter les cookies
-        document.getElementById('accept-cookies').addEventListener('click', () => {
-            setCookie('cookies-accepted', 'true', 365);
-            document.getElementById('cookie-banner').style.display = 'none';
-        });
-
-        // Refuser les cookies
-        document.getElementById('decline-cookies').addEventListener('click', () => {
-            setCookie('cookies-accepted', 'false', 365);
-            document.getElementById('cookie-banner').style.display = 'none';
-        });
-    });
-    </script>
-  <script>
-    if (getCookie('cookies-accepted') === 'true') {
-        const recaptchaScript = document.createElement('script');
-        recaptchaScript.src = "https://www.google.com/recaptcha/enterprise.js?render=6Lfx0ZgqAAAAACuBGXsYgBHKE36ltUCI4wPOclPw";
-        document.head.appendChild(recaptchaScript);
-    }
-  </script>
-             <script>
-    const quartiers = [
-      "Belle-de-Mai", "Saint-Antoine", "Marseille 1er", "Marseille 2ème",
-      "Marseille 3ème", "Marseille 4ème", "Marseille 5ème",
-      "Marseille 6ème", "Marseille 7ème", "Marseille 8ème", "Marseille 9ème"
-    ];
-
-    const produits = [
-      "une bouteille de crème de luxe",
-      "un panier gourmand de nuit",
-      "un mélange spécial apéritif"
-    ];
-
-    const delais = ["5 minutes", "10 minutes", "15 minutes", "20 minutes", "30 minutes"];
-
-    const couleurs = ["#007BFF", "#28A745", "#FFC107", "#DC3545", "#6F42C1", "#17A2B8"];
-
-    let notificationsEnabled = false; // Notifications sont désactivées au départ
-    const container = document.getElementById("notification-container");
-
-    // Fonction pour générer une notification
-    function showNotification() {
-      if (!notificationsEnabled) return; // Si notifications sont désactivées, on ne montre pas de notification
-
-      const produit = produits[Math.floor(Math.random() * produits.length)];
-      const quartier = quartiers[Math.floor(Math.random() * quartiers.length)];
-      const delai = delais[Math.floor(Math.random() * delais.length)];
-      const couleur = couleurs[Math.floor(Math.random() * couleurs.length)];
-
-      const message = `Une livraison de ${produit} a été effectuée à ${quartier} il y a ${delai}.`;
-
-      const notification = document.createElement("div");
-      notification.classList.add("notification");
-      notification.style.backgroundColor = couleur;
-      notification.textContent = message;
-      container.appendChild(notification);
-
-      // Supprime la notification après 7 secondes
-      setTimeout(() => {
-        notification.remove();
-      }, 5000);
-    }
-
-    // Affichage initial des notifications (elles ne s'affichent pas car notifications sont désactivées)
-    setTimeout(() => showNotification(), 9000); // Première notification après 3 secondes
-    setTimeout(() => showNotification(), 12000); // Deuxième notification après 8 secondes
-
-    // Notifications régulières toutes les 7 secondes (elles ne s'affichent pas tant que désactivées)
-    setInterval(() => showNotification(), 16000);
-
-    // Bouton d'activation/désactivation des notifications
-    document.getElementById("toggle-notifications").addEventListener("click", () => {
-      notificationsEnabled = !notificationsEnabled; // Inverser l'état de notifications
-      document.getElementById("toggle-notifications").textContent = notificationsEnabled ? "🔔" : "🔕"; // Modifier l'icône du bouton
-    });
-             </script>
+// Fermer le zoom
+function closeImage() {
+    const modal = document.getElementById('imageModal');
+    modal.style.display = 'none'; // Cacher le modal
+}
     
+    
+    document.getElementById('showShopButton').addEventListener('click', function(event) {
+    event.preventDefault(); // Empêche le comportement par défaut du lien
+
+    const element = document.getElementById('showShopButton');
+    element.scrollIntoView({
+        behavior: 'smooth', // Pour un défilement en douceur
+        block: 'start'       // Aligne le haut de l'élément avec le haut de la zone visible
+    });
+});
+
+</script>
+
 </body>
-  </html>
+</html>
