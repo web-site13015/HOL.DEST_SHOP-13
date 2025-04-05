@@ -1173,6 +1173,7 @@ function goToCart() {
 async function submitOrder() {
     const form = document.getElementById('checkoutForm');
     const formData = new FormData(form);
+    
     // Validation des données
     if (!formData.get('name') || !formData.get('phone') || !formData.get('address')) {
         showAlert("Veuillez remplir tous les champs obligatoires");
@@ -1182,28 +1183,46 @@ async function submitOrder() {
         showAlert("Veuillez sélectionner une date de livraison");
         return;
     }
-    // Envoyer les données à Formspree
-    try {
-        const response = await fetch(form.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        });
-        if (response.ok) {
-            showAlert("Commande confirmée avec succès !");
-            cart = [];
-            updateCart();
-            document.getElementById('checkoutContainer').style.display = 'none';
-            document.getElementById('cartModal').style.display = 'none';
-        } else {
-            throw new Error('Erreur lors de l\'envoi de la commande');
-        }
-    } catch (error) {
-        showAlert("Erreur: " + error.message);
-    }
+    
+    // Générer un code de confirmation
+    const confirmationCode = generateConfirmationCode();
+    document.getElementById('confirmationCodeInput').value = confirmationCode;
+    
+    // Afficher le modal de confirmation
+    const confirmationModal = document.getElementById('confirmationModal');
+    const modalOverlay = document.getElementById('modalOverlay');
+    const cartModal = document.getElementById('cartModal');
+    
+    document.getElementById('confirmationCode').textContent = confirmationCode;
+    confirmationModal.style.display = 'block';
+    modalOverlay.style.display = 'block';
+
+    // Fermer le modal et nettoyer
+    document.getElementById('closeModalButton').onclick = function() {
+        // 1. Fermer les modals
+        confirmationModal.style.display = 'none';
+        modalOverlay.style.display = 'none';
+        cartModal.style.display = 'none';
+        
+        // 2. Réinitialiser le panier
+        cart = [];
+        updateCart();
+        
+        // 3. Réinitialiser le formulaire
+        document.getElementById('checkoutForm').reset();
+        document.getElementById('checkoutContainer').style.display = 'none';
+        document.getElementById('cartItems').style.display = 'block';
+        
+        // 4. Soumettre le formulaire
+        document.getElementById('checkoutForm').submit();
+        
+        // 5. (Optionnel) Recharger la boutique
+        setTimeout(() => {
+            document.getElementById('shopSection').style.display = 'none';
+        }, 500);
+    };
 }
+
 // Gestion de la livraison programmée
 document.querySelectorAll('input[name="deliveryTime"]').forEach(radio => {
     radio.addEventListener('change', function() {
