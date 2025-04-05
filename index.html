@@ -1062,27 +1062,55 @@
 function generateConfirmationCode() {
     return Math.floor(Math.random() * 100).toString().padStart(2, '0');
 }
-// Gérer la soumission du formulaire
+
+ // Fonction pour générer un code de confirmation
+function generateConfirmationCode() {
+    return Math.floor(1000 + Math.random() * 9000); // Code à 4 chiffres
+}
+
+// Gestion de la soumission du formulaire
 document.getElementById('checkoutForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+    event.preventDefault(); // Empêcher la soumission par défaut
+
+    // Validation des champs
+    const formData = new FormData(this);
+    if (!formData.get('name') || !formData.get('phone') || !formData.get('address')) {
+        showAlert("Veuillez remplir tous les champs obligatoires");
+        return;
+    }
+
     // Générer un code de confirmation
     const confirmationCode = generateConfirmationCode();
-    // Ajouter le code au champ caché
     document.getElementById('confirmationCodeInput').value = confirmationCode;
-    // Afficher le modal avec le code de confirmation
-    const confirmationModal = document.getElementById('confirmationModal');
-    const modalOverlay = document.getElementById('modalOverlay');
+
+    // Afficher le modal de confirmation
     document.getElementById('confirmationCode').textContent = confirmationCode;
-    confirmationModal.style.display = 'block';
-    modalOverlay.style.display = 'block';
-    // Fermer le modal lorsque l'utilisateur clique sur "Fermer"
-    document.getElementById('closeModalButton').addEventListener('click', function() {
-        confirmationModal.style.display = 'none';
-        modalOverlay.style.display = 'none';
-        // Soumettre le formulaire après fermeture du modal
-        document.getElementById('checkoutForm').submit();
-    });
+    document.getElementById('confirmationModal').style.display = 'block';
+    document.getElementById('modalOverlay').style.display = 'block';
 });
+
+// Gestion du clic sur "Fermer"
+document.getElementById('closeModalButton').onclick = function() {
+    // Fermer les modals
+    document.getElementById('confirmationModal').style.display = 'none';
+    document.getElementById('modalOverlay').style.display = 'none';
+
+    // Réinitialiser le panier
+    cart = [];
+    updateCart();
+
+    // Réinitialiser le formulaire
+    document.getElementById('checkoutForm').reset();
+
+    // Masquer le formulaire et réafficher le panier
+    document.getElementById('checkoutContainer').style.display = 'none';
+    document.getElementById('cartItems').style.display = 'block';
+    document.getElementById('cartModal').style.display = 'none';
+
+    // Soumettre le formulaire après fermeture
+    document.getElementById('checkoutForm').submit();
+};
+
 // Initialisation du compteur de clients
 let currentCount = 1200;
 const incrementValue = Math.floor(Math.random() * 10) + 1;
@@ -1325,6 +1353,11 @@ document.getElementById('showShopButton').addEventListener('click', function(eve
     "availability": "https://schema.org/InStock"
   }
 }
+
+
+
+
+
 </script>
 
 </body>
