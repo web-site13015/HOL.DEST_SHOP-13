@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr">
 <head>
 <!-- Balise titre optimisée -->
@@ -421,12 +421,12 @@
 
 
 
-.details:nth-child(6) {
-  color: #27ae60;  /* Livraison gratuite color */
+.details {
+  color: #2980b9;  /* Livraison gratuite color */
   font-weight: 600;
 }
 
-.details:nth-child(7) {
+.details{
   color: #e67e22;  /* Frais de livraison color */
   font-style: italic;
 }
@@ -439,7 +439,7 @@
 
 /* Style pour les évaluations */
 .details:nth-child(3) {
-  color: #f39c12;  /* Jaune pour les évaluations */
+  color: #333;  /* Jaune pour les évaluations */
   font-weight: 700;
 }
 
@@ -518,6 +518,62 @@
     transform: translateY(-2px);
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: all 0.3s ease;
+}
+/* Conteneur principal */
+.shop-profile {
+    max-width: 280px;
+    padding: 20px;
+    background: #111;
+    border-radius: 10px;
+    border: 1px solid #333;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    text-align: center; /* Centrage du texte */
+    margin: 0 auto; /* Centrage horizontal */
+}
+
+/* Titre de la boutique */
+.shop-name {
+    font-family: 'Bungee', cursive;
+    font-size: 26px;
+    color: #ffeb3b;
+    margin-bottom: 10px;
+    text-shadow: 0 0 8px rgba(255, 235, 59, 0.3);
+}
+
+/* Slogan ou tagline */
+.shop-tag {
+    font-size: 13px;
+    color: #aaa;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* Section des fonctionnalités */
+.shop-features {
+    margin-bottom: 15px;
+}
+
+/* Chaque fonctionnalité */
+.feature {
+    font-size: 13px;
+    padding: 8px;
+    background: #222;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    display: inline-block; /* Alignement en ligne */
+    text-align: left; /* Texte aligné à gauche */
+    width: 90%; /* Largeur ajustée */
+}
+
+/* Pied de page */
+.shop-footer {
+    font-size: 12px;
+    color: #ddd;
+    display: flex;
+    justify-content: center; /* Centrage horizontal */
+    gap: 10px;
 }
 
     </style>
@@ -617,10 +673,28 @@
 
     
     <div class="content-section" id="profileDetails">
-  <div class="content-title">Détails de la Boutique</div>
-  <div class="details">Nom de la boutique : Holdest 🇯🇲 SHOP 🛍</div>
-  <div class="details">Produits : 580 articles en stock</div>
-  <div class="details">Évaluations : ★★★★★ (4.8)</div>
+        
+        <div class="shop-profile">
+    <div class="shop-name">HDS SHOP</div>
+    <div class="shop-tag">Votre partenaire lifestyle nocturne</div>
+    
+    <div class="shop-features">
+        <div class="feature">🔋 Alimentations & Accessoires</div>
+        <div class="feature">🍾 Boissons Premium</div>
+        <div class="feature">🎉 Kits Soirée</div>
+    </div>
+    
+    <div class="shop-footer">
+        <span>🚀 Livraison 24h</span>
+        <span>•</span>
+        <span>🔐 Service Discret</span>
+    </div>
+</div>
+
+        
+        
+        
+   <div class="details">Évaluations : ★★★★★ (4.8)</div>
   <div class="details client-count" id="clientCount">Clients : 1 200+ satisfaits</div>
   <div class="details">Livraison gratuite à partir de 30€</div>
   <div class="details">Frais de livraison de 1€ à 2€ selon la distance</div>
@@ -1230,7 +1304,6 @@ document.getElementById('showShopButton').addEventListener('click', function(eve
 
 </body>
 </html>
-
 
 
 
