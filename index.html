@@ -398,20 +398,20 @@
 }
 
 .content-title {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 700;
   color: #1f2d3d;
-  margin-bottom: 20px;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 10px;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
   text-align: center;
+  border-bottom: 2px solid #ddd;
 }
 
 .details {
   font-size: 16px;
   color: #333;
-  margin-bottom: 12px;
-  line-height: 1.5;
+  margin-bottom: 14px;
+  line-height: 1.6;
 }
 
 .details span {
@@ -419,20 +419,65 @@
   color: #000;
 }
 
-.client-count {
-  color: #16a085;
+
+
+.details:nth-child(6) {
+  color: #27ae60;  /* Livraison gratuite color */
   font-weight: 600;
 }
 
-.details:nth-child(6) {
-  color: #27ae60;
-  font-weight: bold;
+.details:nth-child(7) {
+  color: #e67e22;  /* Frais de livraison color */
+  font-style: italic;
 }
 
+/* Style pour le Nom de la boutique */
+.details:nth-child(2) {
+  color: #2980b9;  /* Bleu pour le nom de la boutique */
+  font-weight: 600;
+}
+
+/* Style pour les évaluations */
+.details:nth-child(3) {
+  color: #f39c12;  /* Jaune pour les évaluations */
+  font-weight: 700;
+}
+
+/* Style des étoiles dans les évaluations */
+.details:nth-child(3) span {
+  color: #f39c12;  /* Jaune pour les étoiles */
+}
+
+.details:nth-child(3)::before {
+  content: "★★★★★";
+  color: #f39c12;  /* Jaune pour les étoiles */
+  margin-right: 5px;
+}
+
+/* Ajustement global des marges et espacements */
+.details,
+.client-count {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.details:nth-child(2),
+.details:nth-child(3),
+.details:nth-child(6),
 .details:nth-child(7) {
-  color: #e67e22;
-  font-style: italic;
-            }
+  text-align: left; /* Alignement des éléments à gauche */
+}
+
+.details:nth-child(3) {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.details:nth-child(3)::before {
+  font-size: 18px;
+  margin-right: 10px; /* Espacement entre les étoiles et le texte */
+        }
     </style>
 </head>
 <body>
@@ -521,11 +566,11 @@
     </div>
     <div class="content-section" id="profileDetails">
   <div class="content-title">Détails de la Boutique</div>
-  <div class="details">Nom de la boutique : Holdest Boutique</div>
+  <div class="details">Nom de la boutique : Holdest 🇯🇲 SHOP 🛍</div>
   <div class="details">Produits : 580 articles en stock</div>
   <div class="details">Évaluations : ★★★★★ (4.8)</div>
   <div class="details client-count" id="clientCount">Clients : 1 200+ satisfaits</div>
-  <div class="details">Livraison gratuite à partir de 35€</div>
+  <div class="details">Livraison gratuite à partir de 30€</div>
   <div class="details">Frais de livraison de 1€ à 2€ selon la distance</div>
     </div>
     <div class="content-section">
