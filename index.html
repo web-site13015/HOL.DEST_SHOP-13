@@ -478,6 +478,48 @@
   font-size: 18px;
   margin-right: 10px; /* Espacement entre les étoiles et le texte */
         }
+
+        /* Conteneur principal */
+.hds-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Élément "Livraison express" */
+.delivery-badge {
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0);
+    padding: 10px 16px;
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.delivery-badge::before {
+    content: "⚡";
+    font-size: 16px;
+    color: #ffc107;
+}
+
+/* Animation hover */
+.delivery-badge:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
     </style>
 </head>
 <body>
@@ -564,13 +606,15 @@
         <span>Détails de la Boutique</span>
         <span class="material-symbols-outlined">expand_more</span>
     </div>
-<div style="display: flex; flex-wrap: wrap; align-items: center; gap: 15px;">
-    <!-- Votre logo -->   
-    <!-- Autres éléments à côté -->
-    <div style="background: #eee; padding: 8px 12px; border-radius: 8px;">
+<div class="hds-container">
+    <!-- Votre logo ici -->
+    
+    <!-- Badge "Livraison express" -->
+    <div class="delivery-badge">
         Livraison express
     </div>
 </div>
+
     
     <div class="content-section" id="profileDetails">
   <div class="content-title">Détails de la Boutique</div>
