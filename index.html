@@ -689,14 +689,66 @@
         Livraison express
     </div>
 </div>
+<div id="delivery-notification" class="delivery-notification" style="display: none;">
+    <span>Livraison exclusivement sur <span style="color: red;">Marseille</span></span>
+    <button onclick="closeNotification()" style="background: transparent; border: none; color: white; font-weight: bold;">×</button>
+</div>
 
+<style>
+    .delivery-notification {
+        background-color: #333;
+        color: white;
+        padding: 10px 20px;
+        font-weight: bold;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        border-radius: 25px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 250px;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .delivery-notification span {
+        display: inline-block;
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .delivery-notification button {
+        font-size: 20px;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    // Afficher la notification après 5 secondes
+    setTimeout(function() {
+        document.getElementById("delivery-notification").style.display = "flex";
+    }, 5000);
+
+    // Fermeture de la notification
+    function closeNotification() {
+        document.getElementById("delivery-notification").style.opacity = "0";
+        setTimeout(function() {
+            document.getElementById("delivery-notification").style.display = "none";
+        }, 500); // Attendre la fin de l'animation avant de cacher
+    }
+</script>
     
     <div class="content-section" id="profileDetails">
         
         <div class="shop-profile">
     <div class="shop-name">🗿HOLDEST🇯🇲  🛒SHOP</div>
     <div class="shop-tag">Votre partenaire lifestyle nocturne</div>
-    
+    <div class="shop-tag">
+  Livraison exclusivement sur <span style="color: red; font-weight: bold;">Marseille</span> et ses alentours
+    </div>
     <div class="shop-features">
         <div class="feature">🔋 Alimentations & Accessoires</div>
         <div class="feature">🍾 Boissons Premium</div>
@@ -709,10 +761,7 @@
         <span>🔐 Service Discret</span>
     </div>
 </div>
-
-        
-        
-        
+                       
    <div class="details">Évaluations : ★★★★★ (4.8)</div>
   <div class="details client-count" id="clientCount">Clients : 1 200+ satisfaits</div>
   <div class="details">Livraison gratuite à partir de 30€</div>
