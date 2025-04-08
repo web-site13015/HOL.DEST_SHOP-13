@@ -690,8 +690,8 @@
     </div>
 </div>
 <div id="delivery-notification" class="delivery-notification" style="display: none;">
+    <button onclick="closeNotification()" style="background: transparent; border: none; color: white; font-weight: bold; margin-right: 10px; font-size: 20px; cursor: pointer;">×</button>
     <span>Livraison exclusivement sur <span style="color: red;">Marseille</span></span>
-    <button onclick="closeNotification()" style="background: transparent; border: none; color: white; font-weight: bold;">×</button>
 </div>
 
 <style>
@@ -706,38 +706,29 @@
         border-radius: 25px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
         display: flex;
-        justify-content: space-between;
+        justify-content: start;
         align-items: center;
-        width: 250px;
+        width: 280px;
         opacity: 1;
         transition: opacity 0.5s ease-in-out;
-    }
-
-    .delivery-notification span {
-        display: inline-block;
-        max-width: 200px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-
-    .delivery-notification button {
-        font-size: 20px;
-        cursor: pointer;
     }
 </style>
 
 <script>
-    // Afficher la notification après 5 secondes
-    setTimeout(function() {
-        document.getElementById("delivery-notification").style.display = "flex";
+    // Affiche la notification après 5 secondes
+    setTimeout(function () {
+        const notif = document.getElementById("delivery-notification");
+        notif.style.display = "flex";
+
+        // Ferme automatiquement après 5 secondes d'affichage
+        setTimeout(function () {
+            notif.style.opacity = "0";
+        }, 5000);
     }, 5000);
 
-    // Fermeture de la notification
+    // Fermeture manuelle
     function closeNotification() {
         document.getElementById("delivery-notification").style.opacity = "0";
-        setTimeout(function() {
-            document.getElementById("delivery-notification").style.display = "none";
-        }, 500); // Attendre la fin de l'animation avant de cacher
     }
 </script>
     
