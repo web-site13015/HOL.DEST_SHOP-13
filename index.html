@@ -576,6 +576,25 @@
     gap: 10px;
 }
 
+
+     /* Flèche ajustée */
+.arrow {
+    font-size: 20px; /* Flèche plus grosse */
+    color: #000; /* Couleur noire pour la flèche */
+    animation: bounce 1s infinite;
+}
+
+/* Animation de la flèche */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(3px); }
+}
+
+/* Effet hover */
+.shop-toggle:hover {
+    background: #ffd600;
+    transform: scale(1.05);
+}
     </style>
 </head>
 <body>
@@ -706,6 +725,8 @@
     <!-- Icône storefront avec interaction -->
     <div class="toggle-button" id="showShopButton">
         <span class="material-symbols-outlined" id="storeIcon">storefront</span>
+     <span class="button-label">Voir la boutique</span>
+    <span class="arrow">▼</span>
     </div>
     <!-- Section boutique -->
     <div class="shop-section" id="shopSection">
