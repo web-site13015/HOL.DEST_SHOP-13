@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
 <!-- Balise titre optimisée -->
@@ -681,14 +681,7 @@
         <span>Détails de la Boutique</span>
         <span class="material-symbols-outlined">expand_more</span>
     </div>
-<div class="hds-container">
-    <!-- Votre logo ici -->
-    
-    <!-- Badge "Livraison express" -->
-    <div class="delivery-badge">
-        Livraison express
-    </div>
-</div>
+
 <div id="delivery-notification" class="delivery-notification" style="display: none;">
     <button onclick="closeNotification()" style="background: transparent; border: none; color: white; font-weight: bold; margin-right: 10px; font-size: 20px; cursor: pointer;">×</button>
     <span>Livraison exclusivement sur <span style="color: red;">Marseille</span></span>
@@ -768,7 +761,7 @@
      <span class="button-label">Voir la boutique</span>
     <span class="arrow">▼</span>
     </div>
-    <!-- Section boutique -->
+  <!-- Section boutique -->
     <div class="shop-section" id="shopSection">
         <div class="content-title">Produits Disponibles</div>
       <!-- Produit 1 - Crème Deluxe Cobra -->
@@ -998,8 +991,8 @@
     </div>
     <p>Description : Profitez de votre musique sans fil avec ces écouteurs Bluetooth.</p>
 </div>
-
-        <footer>
+    <!-- ... -->
+<footer>
     <div class="footer-video">
         <h3>Découvrez notre boutique</h3>
        <div style="max-width: 640px; margin: auto;">
@@ -1014,8 +1007,7 @@
 </div>
     </div>
         </footer>
-
-        <div style="display: flex; align-items: center; gap: 10px; background: linear-gradient(to right, #000000, #333); 
+<div style="display: flex; align-items: center; gap: 10px; background: linear-gradient(to right, #000000, #333); 
             padding: 12px 20px; border-radius: 30px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
     <span style="font-size: 28px; color: #ffeb3b;">🛒</span>
     <div style="display: flex; flex-direction: column; line-height: 1;">
@@ -1053,188 +1045,98 @@
         Livraison express
     </div>
 </div>
-  <!-- Modal du Panier et Formulaire -->
-        <div id='cartModal'>
-            <h3>Mon Panier</h3>
-            <div id='cartItems'></div>
-            <div id='cartTotal' class="cart-total">Total : 0€</div>
-            <button class='checkout-button' onclick='checkout()'>Passer à la caisse</button>
-            <!-- Formulaire commande -->
-            <div id='checkoutContainer' class="form-container">
-                <h3>Finaliser votre commande</h3>
-               <form id='checkoutForm' action="https://formspree.io/f/xnnqeejj" method="POST">
-    <div class="form-group">
-        <input type='text' name='name' placeholder='Nom complet' required />
-        <input type='tel' name='phone' placeholder='Téléphone' required />
-        <textarea name='address' placeholder='Adresse de livraison' required></textarea>
-    </div>
-    <div class="form-group">
-        <h4>Options de livraison</h4>
-        <div class="delivery-option">
-            <input type="radio" id="deliveryNow" name="deliveryTime" value="now" checked required>
-            <label for="deliveryNow">Livraison rapide (dans l'heure)</label>
-        </div>
-        <div class="delivery-option">
-            <input type="radio" id="deliveryLater" name="deliveryTime" value="later">
-            <label for="deliveryLater">Livraison programmée</label>
-        </div>
-        <div id="deliveryTimeContainer">
-            <input type="datetime-local" name="deliveryDateTime">
-        </div>
-    </div>
-    <div class="form-group">
-        <h4>Méthode de paiement</h4>
-        <div class="payment-method">
-            <input type="radio" id="cash" name="paymentMethod" value="cash" checked required>
-            <label for="cash">Espèces</label>
-        </div>
-        <div class="payment-method">
-            <input type="radio" id="card" name="paymentMethod" value="card">
-            <label for="card">Carte bancaire</label>
+    <!-- PANIER ET FORMULAIRE -->
+    <div id="cartModal" style="display:none;">
+        <h3>Mon Panier</h3>
+        <div id="cartItems"></div>
+        <div id="cartTotal" class="cart-total">Total : 0€</div>
+        <button class="checkout-button" onclick="checkout()">Passer à la caisse</button>
+        <div id="checkoutContainer" class="form-container" style="display:none;">
+            <h3>Finaliser votre commande</h3>
+            <form id="checkoutForm" action="https://formspree.io/f/xeokdgzz" method="POST">
+                <div>
+                    <input type="text" name="name" placeholder="Nom complet" required />
+                    <input type="tel" name="phone" placeholder="Téléphone" required />
+                    <textarea name="address" placeholder="Adresse de livraison" required></textarea>
+                </div>
+                <div>
+                    <h4>Options de livraison</h4>
+                    <input type="radio" id="deliveryNow" name="deliveryTime" value="now" checked required>
+                    <label for="deliveryNow">Livraison rapide (dans l'heure)</label>
+                    <input type="radio" id="deliveryLater" name="deliveryTime" value="later">
+                    <label for="deliveryLater">Livraison programmée</label>
+                    <div id="deliveryTimeContainer" style="display:none;">
+                        <input type="datetime-local" name="deliveryDateTime">
+                    </div>
+                </div>
+                <div>
+                    <h4>Méthode de paiement</h4>
+                    <input type="radio" id="cash" name="paymentMethod" value="cash" checked required>
+                    <label for="cash">Espèces</label>
+                    <input type="radio" id="card" name="paymentMethod" value="card">
+                    <label for="card">Carte bancaire</label>
+                </div>
+                <input type="hidden" name="orderDetails" id="orderDetails" />
+                <input type="hidden" id="confirmationCodeInput" name="confirmationCode" />
+                <button type="submit" class="checkout-button">Confirmer la commande</button>
+                <button type="button" class="checkout-button" onclick="goToCart()">Retour au panier</button>
+            </form>
         </div>
     </div>
-    <input type='hidden' name='orderDetails' id='orderDetails'>
-    <input type="hidden" name="_gotcha" style="display:none">
-    <!-- Champ caché pour le code de confirmation -->
-    <input type="hidden" id="confirmationCodeInput" name="confirmationCode">
-    <button type='submit' class="checkout-button">Confirmer la commande</button>
-    <button type='button' class="checkout-button" onclick='goToCart()'>Retour au panier</button>
-</form>
-            </div>
-        </div>
-        <!-- Bouton flottant pour ouvrir le panier -->
-        <button id='openCartButton'>🛒<span id="cartCount">0</span></button>
-    </div>
-    <!-- Modal d'alerte -->
-    <div id="alertModal" class="modal">
-        <span id="alertMessage"></span>
-    </div>
+    <button id="openCartButton">🛒<span id="cartCount">0</span></button>
 </div>
-<!-- Zoom sur l'image -->
-<div id="imageModal" class="image-modal" onclick="closeImage()">
-    <img id="zoomedImage" src="" alt="Zoomed Image">
-</div>
-<!-- Modal de confirmation -->
-<div id="confirmationModal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); text-align: center; z-index: 1001;">
+
+<!-- MODAL DE CONFIRMATION -->
+<div id="confirmationModal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); background:#fff; padding:20px; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.22); z-index:1001;">
     <h2>Code de Confirmation</h2>
     <p>Voici votre code :</p>
     <div id="confirmationCode" style="font-weight: bold; font-size: 24px; color: red; border: 2px solid black; padding: 10px; display: inline-block; border-radius: 5px;"></div>
     <p>Veuillez montrer ce code au livreur.</p>
-    <button id="closeModalButton" style="margin-top: 20px; padding: 10px 20px; border: none; background-color: #4CAF50; color: white; border-radius: 5px; cursor: pointer;">Fermer</button>
+    <p style="font-size:14px; color:gray;">Faites une capture d’écran de ce code pour le montrer facilement au livreur.</p>
+    <button id="closeModalButton" style="margin-top:20px;padding:10px 20px;">Fermer</button>
 </div>
-<div id="modalOverlay" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); z-index: 999;"></div>
+<div id="modalOverlay" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5); z-index:999;"></div>
+
+<!-- MODAL IMAGE ZOOM -->
+<div id="imageModal" style="display:none;justify-content:center;align-items:center;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.6);z-index:1100;" onclick="closeImage()">
+    <img id="zoomedImage" src="" alt="Zoomed Image" style="max-width:80vw;max-height:80vh;">
+</div>
+
+<!-- ALERT MODAL -->
+<div id="alertModal" style="display:none;position:fixed;top:20%;left:50%;transform:translateX(-50%);background:white;padding:24px 36px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.16);z-index:1200;">
+    <span id="alertMessage"></span>
+</div>
+
+    
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-  const button = document.getElementById('toggleDetails');
-  const target = document.getElementById('statusText');
+// PANIER
+let cart = [];
 
-  if (button && target) {
-    button.addEventListener('click', () => {
-      target.scrollIntoView({ behavior: 'smooth' });
-    });
-  }
-});
-</script>
-        <script>
-// Fonction pour générer un code de confirmation
-function generateConfirmationCode() {
-    return Math.floor(Math.random() * 100).toString().padStart(2, '0');
-}
-// Gérer la soumission du formulaire
-document.getElementById('checkoutForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    // Générer un code de confirmation
-    const confirmationCode = generateConfirmationCode();
-    // Ajouter le code au champ caché
-    document.getElementById('confirmationCodeInput').value = confirmationCode;
-    // Afficher le modal avec le code de confirmation
-    const confirmationModal = document.getElementById('confirmationModal');
-    const modalOverlay = document.getElementById('modalOverlay');
-    document.getElementById('confirmationCode').textContent = confirmationCode;
-    confirmationModal.style.display = 'block';
-    modalOverlay.style.display = 'block';
-    // Fermer le modal lorsque l'utilisateur clique sur "Fermer"
-    document.getElementById('closeModalButton').addEventListener('click', function() {
-        confirmationModal.style.display = 'none';
-        modalOverlay.style.display = 'none';
-        // Soumettre le formulaire après fermeture du modal
-        document.getElementById('checkoutForm').submit();
-    });
-});
-    
-    
-    
-    
-    // Gestion du clic sur "Fermer"
-document.getElementById('closeModalButton').onclick = function() {
-    // Fermer les modals
-    document.getElementById('confirmationModal').style.display = 'none';
-    document.getElementById('modalOverlay').style.display = 'none';
-
-    // Réinitialiser le panier
-    cart = [];
-    updateCart();
-
-  
-    // Masquer le formulaire et réafficher le panier
-    document.getElementById('checkoutContainer').style.display = 'none';
-    document.getElementById('cartItems').style.display = 'block';
-    document.getElementById('cartModal').style.display = 'none';
-
-    // Soumettre le formulaire après fermeture
-    document.getElementById('checkoutForm').submit();
-};
-
- </script>
-
-
-  <script>     
-// Initialisation du compteur de clients
-let currentCount = 1200;
-const incrementValue = Math.floor(Math.random() * 10) + 1;
-const clientCountElement = document.getElementById('clientCount');
-function updateClientCount() {
-    currentCount += incrementValue;
-    clientCountElement.innerText = `Clients : ${currentCount.toLocaleString()} satisfaits`;
-}
-setInterval(updateClientCount, 5000);
-// Gestion des quantités
 function incrementQuantity(button) {
     const input = button.parentElement.querySelector('.quantity-input');
     input.value = parseInt(input.value) + 1;
 }
 function decrementQuantity(button) {
     const input = button.parentElement.querySelector('.quantity-input');
-    if (input.value > 1) {
+    if (parseInt(input.value) > 1) {
         input.value = parseInt(input.value) - 1;
     }
 }
-// Initialisation du panier
-let cart = [];
-// Ajouter un produit au panier avec quantité
 function addToCartWithQuantity(productName, price, button) {
     const productElement = button.closest('.product');
     const quantity = parseInt(productElement.querySelector('.quantity-input').value);
     const totalPrice = quantity * parseFloat(price);
-    // Vérifier si le produit est déjà dans le panier
-    const existingItemIndex = cart.findIndex(item => item.name === productName);
-    if (existingItemIndex >= 0) {
-        // Mettre à jour la quantité si le produit existe déjà
-        cart[existingItemIndex].quantity += quantity;
-        cart[existingItemIndex].total += totalPrice;
+    // Cherche si produit déjà là
+    const existingItem = cart.find(item => item.name === productName);
+    if (existingItem) {
+        existingItem.quantity += quantity;
+        existingItem.total += totalPrice;
     } else {
-        // Ajouter un nouvel item
-        cart.push({
-            name: productName,
-            price: price,
-            quantity: quantity,
-            total: totalPrice
-        });
+        cart.push({ name: productName, price: parseFloat(price), quantity: quantity, total: totalPrice });
     }
     updateCart();
     showAlert(`${quantity} ${productName} ajouté(s) au panier`);
 }
-// Mettre à jour l'affichage du panier
 function updateCart() {
     const cartItems = document.getElementById('cartItems');
     cartItems.innerHTML = '';
@@ -1245,7 +1147,7 @@ function updateCart() {
         itemElement.innerHTML = `
             <span>${item.quantity}x ${item.name}</span>
             <span>${item.total.toFixed(2)}€</span>
-            <button onclick='removeFromCart(${index})'>✕</button>
+            <button onclick="removeFromCart(${index})">✕</button>
         `;
         cartItems.appendChild(itemElement);
         grandTotal += item.total;
@@ -1254,12 +1156,10 @@ function updateCart() {
     document.getElementById('cartCount').innerText = cart.reduce((sum, item) => sum + item.quantity, 0);
     document.getElementById('orderDetails').value = JSON.stringify(cart);
 }
-// Supprimer un produit du panier
 function removeFromCart(index) {
     cart.splice(index, 1);
     updateCart();
 }
-// Passer à la caisse
 function checkout() {
     if (cart.length === 0) {
         showAlert("Votre panier est vide");
@@ -1269,171 +1169,102 @@ function checkout() {
     document.getElementById('cartItems').style.display = 'none';
     document.querySelector('#cartModal h3').textContent = 'Finaliser la commande';
 }
-// Retourner au panier
 function goToCart() {
     document.getElementById('checkoutContainer').style.display = 'none';
     document.getElementById('cartItems').style.display = 'block';
     document.querySelector('#cartModal h3').textContent = 'Mon Panier';
 }
-// Soumettre la commande
-async function submitOrder() {
-    const form = document.getElementById('checkoutForm');
-    const formData = new FormData(form);
-    
-    // Validation des données
-    if (!formData.get('name') || !formData.get('phone') || !formData.get('address')) {
-        showAlert("Veuillez remplir tous les champs obligatoires");
-        return;
-    }
-    if (formData.get('deliveryTime') === 'later' && !formData.get('deliveryDateTime')) {
-        showAlert("Veuillez sélectionner une date de livraison");
-        return;
-    }
-    
-    // Générer un code de confirmation
-    const confirmationCode = generateConfirmationCode();
-    document.getElementById('confirmationCodeInput').value = confirmationCode;
-    
-    // Afficher le modal de confirmation
-    const confirmationModal = document.getElementById('confirmationModal');
-    const modalOverlay = document.getElementById('modalOverlay');
-    const cartModal = document.getElementById('cartModal');
-    
-    document.getElementById('confirmationCode').textContent = confirmationCode;
-    confirmationModal.style.display = 'block';
-    modalOverlay.style.display = 'block';
-
-    // Fermer le modal et nettoyer
-    document.getElementById('closeModalButton').onclick = function() {
-        // 1. Fermer les modals
-        confirmationModal.style.display = 'none';
-        modalOverlay.style.display = 'none';
-        cartModal.style.display = 'none';
-        
-        // 2. Réinitialiser le panier
-        cart = [];
-        updateCart();
-        
-        // 3. Réinitialiser le formulaire
-        document.getElementById('checkoutForm').reset();
-        document.getElementById('checkoutContainer').style.display = 'none';
-        document.getElementById('cartItems').style.display = 'block';
-        
-        // 4. Soumettre le formulaire
-        document.getElementById('checkoutForm').submit();
-        
-        // 5. (Optionnel) Recharger la boutique
-        setTimeout(() => {
-            document.getElementById('shopSection').style.display = 'none';
-        }, 500);
-    };
-}
-
-// Gestion de la livraison programmée
-document.querySelectorAll('input[name="deliveryTime"]').forEach(radio => {
-    radio.addEventListener('change', function() {
-        document.getElementById('deliveryTimeContainer').style.display = this.value === 'later' ? 'block' : 'none';
-    });
-});
-
-// Afficher une alerte
 function showAlert(message) {
     const alertModal = document.getElementById('alertModal');
-    const alertMessage = document.getElementById('alertMessage');
-    alertMessage.textContent = message;
+    document.getElementById('alertMessage').textContent = message;
     alertModal.style.display = 'block';
     setTimeout(() => {
         alertModal.style.display = 'none';
-    }, 3000);
+    }, 2000);
 }
-// Ouvrir et fermer le modal du panier
 document.getElementById('openCartButton').onclick = function() {
     document.getElementById('cartModal').style.display = 'block';
     document.getElementById('checkoutContainer').style.display = 'none';
     document.getElementById('cartItems').style.display = 'block';
     document.querySelector('#cartModal h3').textContent = 'Mon Panier';
 };
-window.onclick = function(event) {
-    const cartModal = document.getElementById('cartModal');
-    if (event.target === cartModal) {
-        cartModal.style.display = 'none';
-    }
-};
-// Afficher/masquer les détails du profil
-document.getElementById('toggleDetails').onclick = function() {
-    const profileDetails = document.getElementById('profileDetails');
-    profileDetails.style.display = profileDetails.style.display === 'block' ? 'none' : 'block';
-};
-// Afficher/masquer la boutique
-document.getElementById('showShopButton').onclick = function(event) {
-    event.preventDefault();
-    const shopSection = document.getElementById('shopSection');
-    shopSection.style.display = shopSection.style.display === 'block' ? 'none' : 'block';
-};
-// Zoom sur l'image
+
+// FONCTIONS IMAGE ZOOM
 function showImage(img) {
-    const modal = document.getElementById('imageModal');
-    const zoomedImage = document.getElementById('zoomedImage');
-    zoomedImage.src = img.src;
-    modal.style.display = 'flex';
+    document.getElementById('zoomedImage').src = img.src;
+    document.getElementById('imageModal').style.display = 'flex';
 }
-// Fermer le zoom
 function closeImage() {
-    const modal = document.getElementById('imageModal');
-    modal.style.display = 'none';
+    document.getElementById('imageModal').style.display = 'none';
 }
-document.getElementById('showShopButton').addEventListener('click', function(event) {
+
+// VALIDATION & FORMULAIRE, CONFIRMATION
+function generateConfirmationCode() {
+    return Math.floor(Math.random() * 100).toString().padStart(2, '0');
+}
+document.getElementById('checkoutForm').addEventListener('submit', function(event) {
     event.preventDefault();
-    const element = document.getElementById('showShopButton');
-    element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+    // Mets à jour les détails de commande au dernier moment
+    document.getElementById('orderDetails').value = JSON.stringify(cart);
+    // Génére et affiche le code
+    const confirmationCode = generateConfirmationCode();
+    document.getElementById('confirmationCodeInput').value = confirmationCode;
+    document.getElementById('confirmationCode').textContent = confirmationCode;
+    document.getElementById('confirmationModal').style.display = 'block';
+    document.getElementById('modalOverlay').style.display = 'block';
+    // Lorsque le client ferme le modal, on soumet
+    document.getElementById('closeModalButton').onclick = function() {
+        document.getElementById('confirmationModal').style.display = 'none';
+        document.getElementById('modalOverlay').style.display = 'none';
+        document.getElementById('cartModal').style.display = 'none';
+        document.getElementById('checkoutForm').submit();
+        cart = [];
+        updateCart();
+        document.getElementById('checkoutContainer').style.display = 'none';
+        document.getElementById('cartItems').style.display = 'block';
+        document.querySelector('#cartModal h3').textContent = 'Mon Panier';
+    };
+});
+// Affiche/masque date de livraison si livraison programmée
+document.querySelectorAll('input[name="deliveryTime"]').forEach(radio => {
+    radio.addEventListener('change', function() {
+        document.getElementById('deliveryTimeContainer').style.display = (this.value === 'later') ? 'block' : 'none';
     });
 });
 </script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "H.D.S SHOP",
-  "url": "https://web-site13015.github.io/H_D_S-SHOP/",
-  "description": "Découvrez notre boutique en ligne avec une large gamme de produits : boissons, accessoires et plus encore.",
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://web-site13015.github.io/H_D_S-SHOP/?q={search_term_string}",
-    "query-input": "required name=search_term_string"
-  }
-}
+
+  <script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Pour le bouton "Voir la boutique"
+    const showShopButton = document.getElementById('showShopButton');
+    const shopSection = document.getElementById('shopSection');
+    if (showShopButton && shopSection) {
+        showShopButton.addEventListener('click', function(event) {
+            event.preventDefault();
+            if (shopSection.style.display === 'block') {
+                shopSection.style.display = 'none';
+            } else {
+                shopSection.style.display = 'block';
+                shopSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    }
+    // Pour le bouton "Détails de la boutique"
+    const toggleDetails = document.getElementById('toggleDetails');
+    const profileDetails = document.getElementById('profileDetails');
+    if (toggleDetails && profileDetails) {
+        toggleDetails.addEventListener('click', function() {
+            if (profileDetails.style.display === 'block') {
+                profileDetails.style.display = 'none';
+            } else {
+                profileDetails.style.display = 'block';
+                profileDetails.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    }
+});
 </script>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Product",
-  "name": "Crème Deluxe Cobra",
-  "image": "https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/bc49a018-064b-af44-b264-1f821d3f40e0.jpg",
-  "description": "Une creme deluxe pour votre soirée.",
-  "brand": {
-    "@type": "Brand",
-    "name": "Holdest Boutique"
-  },
-  "offers": {
-    "@type": "Offer",
-    "priceCurrency": "EUR",
-    "price": "25.00",
-    "availability": "https://schema.org/InStock"
-  }
-}
-</script>
-
+  
 </body>
-</html>
-
-
-
-
-
-
-
-
+    
+ </html>
