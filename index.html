@@ -621,7 +621,27 @@
 }
     
     
-    
+
+
+        .product-unavailable {
+    position: relative;
+    opacity: 0.5;
+}
+
+.unavailable-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #e53935;
+    color: white;
+    padding: 6px 18px;
+    border-radius: 16px;
+    font-weight: bold;
+    font-size: 14px;
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
     </style>
 </head>
 <body>
@@ -789,10 +809,8 @@
     <span class="arrow">▼</span>
     </div>
   <!-- Section boutique -->
-    <div class="shop-section" id="shopSection">
-        <div class="content-title">Produits Disponibles</div>
-      <!-- Produit 1 - Crème Deluxe Cobra -->
-        <div class="product">
+    <div class="product product-unavailable"> <!-- Ajout de la classe product-unavailable -->
+    <span class="unavailable-badge">Indisponible</span> <!-- Badge rouge ajouté -->
     <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/bc49a018-064b-af44-b264-1f821d3f40e0.jpg" alt="Crème Deluxe Cobra" onclick="showImage(this)">
     <div class="product-name bungee-spice">Crème Deluxe Cobra</div>
     <div class="product-price">€25.00</div>
@@ -806,6 +824,7 @@
     </div>
     <p>Description : Une creme deluxe pourvotre soirée nocturne.</p>
 </div>
+
 
 
      <!-- Produit 2 - Fast Gaz -->
