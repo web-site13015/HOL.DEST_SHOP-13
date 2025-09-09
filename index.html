@@ -1127,6 +1127,22 @@
     </div>
     
 <script>
+// Ouvrir et fermer le modal du panier
+document.getElementById('openCartButton').onclick = function() {
+    document.getElementById('cartModal').style.display = 'block';
+    document.getElementById('checkoutContainer').style.display = 'none';
+    document.getElementById('cartItems').style.display = 'block';
+    document.querySelector('#cartModal h3').textContent = 'Mon Panier';
+};
+window.onclick = function(event) {
+    const cartModal = document.getElementById('cartModal');
+    if (event.target === cartModal) {
+        cartModal.style.display = 'none';
+    }
+};
+
+
+    
 // PANIER
 let cart = [];
 
