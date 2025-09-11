@@ -806,13 +806,16 @@
     <div class="toggle-button" id="showShopButton">
         <span class="material-symbols-outlined" id="storeIcon">storefront</span>
      <span class="button-label">Voir la boutique</span>
-    <span class="arrow">▼</span>
+    <span class="arrow">👇🏻</span>
     </div>
-  <!-- Section boutique -->
-    <div class="product product-unavailable"> <!-- Ajout de la classe product-unavailable -->
+    <!-- Section boutique -->
+    <div class="shop-section" id="shopSection">
+        <div class="content-title">Produits Disponibles</div>    
+       <!-- Produit 1 - Crème Deluxe -->      
+<div class="product product-unavailable"> <!-- Ajout de la classe product-unavailable -->
     <span class="unavailable-badge">Indisponible</span> <!-- Badge rouge ajouté -->
     <img src="https://mcusercontent.com/ecbcd3e0a3ef2c00dbcaefee8/images/bc49a018-064b-af44-b264-1f821d3f40e0.jpg" alt="Crème Deluxe Cobra" onclick="showImage(this)">
-    <div class="product-name bungee-spice">Crème Deluxe Cobra</div>
+    <div class="product-name bungee-spice">Creme Deluxe</div>
     <div class="product-price">€25.00</div>
     <div class="product-actions">
         <div class="quantity-selector">
@@ -820,11 +823,10 @@
             <input type="number" value="1" min="1" class="quantity-input">
             <button onclick="incrementQuantity(this)">+</button>
         </div>
-        <button class="buy-button" onclick="addToCartWithQuantity('Crème Deluxe Cobra', '25', this)">Acheter</button>
+        <button class="buy-button" onclick="addToCartWithQuantity('Crème Deluxe', '25', this)">Acheter</button>
     </div>
     <p>Description : Une creme deluxe pourvotre soirée nocturne.</p>
 </div>
-
 
 
      <!-- Produit 2 - Fast Gaz -->
